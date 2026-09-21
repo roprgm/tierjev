@@ -15,7 +15,7 @@ export async function POST(request: Request) {
     return Response.json({ error: 'Invalid request' }, { status: 400 })
 
   const key = await hashKey(
-    'rank',
+    'rank2',
     query,
     set.items.map((it) => it.name),
   )
