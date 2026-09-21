@@ -11,8 +11,8 @@ const docRect = (el: Element): Rect => {
 }
 
 // Animates elements marked with data-flip="<key>" from where they were on the previous render to
-// where they are now. Clones fly in a fixed overlay so row clipping cannot cut them off; a clone whose
-// destination lies outside its data-clip ancestor's visible box stops at the clip edge and fades out.
+// where they are now. Each clone flies inside its destination's data-flip-host, so a row's overflow
+// clips the whole flight and the tile appears to enter through the row's edge.
 export function useFlip(container: RefObject<HTMLElement | null>, deps: unknown[], enabled = true) {
   const previous = useRef(new Map<string, Rect>())
 
@@ -25,52 +25,37 @@ export function useFlip(container: RefObject<HTMLElement | null>, deps: unknown[
     previous.current = next
     if (!enabled || before.size === 0 || matchMedia('(prefers-reduced-motion: reduce)').matches) return
 
-    const overlay = document.createElement('div')
-    overlay.style.cssText = 'position:fixed;inset:0;z-index:40;pointer-events:none'
-    let flying = 0
-
+    const cleanups: (() => void)[] = []
     tiles.forEach((el, i) => {
-      const from = before.get(el.dataset.flip as string)
-      const to = next.get(el.dataset.flip as string)
-      if (!from || !to || (from.left === to.left && from.top === to.top)) return
+      const key = el.dataset.flip as string
+      const from = before.get(key)
+      const to = next.get(key)
+      const host = el.closest<HTMLElement>('[data-flip-host]')
+      if (!from || !to || !host || (from.left === to.left && from.top === to.top)) return
 
-      const clipEl = el.closest<HTMLElement>('[data-clip]')
-      const clip = clipEl ? docRect(clipEl) : null
-      let target = to
-      let fade = false
-      if (clip && to.left >= clip.left + clip.width) {
-        target = { ...to, left: clip.left + clip.width - to.width }
-        fade = true
-      }
-
+      const hostRect = docRect(host)
       const clone = el.cloneNode(true) as HTMLElement
       clone.removeAttribute('data-flip')
-      clone.style.cssText += `;position:absolute;margin:0;left:${from.left - scrollX}px;top:${from.top - scrollY}px;width:${from.width}px;height:${from.height}px`
-      overlay.appendChild(clone)
+      clone.style.cssText += `;position:absolute;margin:0;z-index:1;pointer-events:none;left:${from.left - hostRect.left + host.scrollLeft}px;top:${from.top - hostRect.top + host.scrollTop}px;width:${from.width}px;height:${from.height}px`
+      host.appendChild(clone)
       el.style.visibility = 'hidden'
-      flying += 1
 
       const animation = clone.animate(
         [
-          { transform: 'translate(0, 0)', opacity: 1 },
-          {
-            transform: `translate(${target.left - from.left}px, ${target.top - from.top}px)`,
-            opacity: fade ? 0 : 1,
-          },
+          { transform: 'translate(0, 0)' },
+          { transform: `translate(${to.left - from.left}px, ${to.top - from.top}px)` },
         ],
         { duration: DURATION, delay: i * 15, easing: EASING, fill: 'forwards' },
       )
-      animation.onfinish = () => {
+      const finish = () => {
         el.style.visibility = ''
         clone.remove()
-        if (--flying === 0) overlay.remove()
       }
+      animation.onfinish = finish
+      cleanups.push(finish)
     })
-
-    if (flying > 0) document.body.appendChild(overlay)
     return () => {
-      overlay.remove()
-      for (const el of tiles) el.style.visibility = ''
+      for (const cleanup of cleanups) cleanup()
     }
   }, deps)
 }

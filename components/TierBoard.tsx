@@ -169,8 +169,9 @@ function Row({ tier, names, droppable, children }: RowProps) {
       <div
         ref={setNodeRef}
         data-clip
+        data-flip-host
         className={cn(
-          'scrollbar-none flex min-w-0 flex-1 gap-1 overflow-x-auto overflow-y-hidden overscroll-x-contain bg-muted/40 p-1 transition-colors',
+          'scrollbar-none relative flex min-w-0 flex-1 gap-1 overflow-x-auto overflow-y-hidden overscroll-x-contain bg-muted/40 p-1 transition-colors',
           isOver && 'bg-muted',
         )}
       >
@@ -187,7 +188,11 @@ function Pool({ names, droppable, children }: { names: string[]; droppable: bool
   return (
     <div
       ref={setNodeRef}
-      className={cn('flex min-h-20 flex-wrap gap-1 rounded-xl transition-colors', isOver && 'bg-muted/40')}
+      data-flip-host
+      className={cn(
+        'relative flex min-h-20 flex-wrap gap-1 rounded-xl transition-colors',
+        isOver && 'bg-muted/40',
+      )}
     >
       <SortableContext id={POOL} items={names} strategy={rectSortingStrategy}>
         {children}

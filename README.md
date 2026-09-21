@@ -39,7 +39,7 @@ Either way `POST /api/colors` asks Jev to pick each item's colour from the CSS n
 
 ## Motion
 
-Tiles fly to their destination with a small FLIP hook (`lib/use-flip.ts`): clones animate in a fixed overlay so row clipping cannot cut them off, and a tile whose destination is scrolled out of view stops at the row edge and fades.
+Tiles fly to their destination with a small FLIP hook (`lib/use-flip.ts`). Each clone is appended inside its destination row, so the row's overflow clips the whole flight and the tile appears to enter through the row's edge.
 
 ## Manual sorting
 
