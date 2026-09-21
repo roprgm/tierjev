@@ -70,7 +70,7 @@ export function NewSetDialog({ open, credits, onOpenChange, onCreate, onError }:
         <DialogTitle>New set</DialogTitle>
         <DialogDescription>Let AI build one, or paste your own list.</DialogDescription>
 
-        <div className="grid grid-cols-2 gap-1 rounded-lg bg-muted p-1 text-sm">
+        <div role="tablist" className="grid grid-cols-2 gap-1 rounded-lg bg-muted p-1 text-sm shadow-groove">
           <ModeButton active={mode === 'ai'} onClick={() => setMode('ai')}>
             Generate with AI
           </ModeButton>
@@ -79,8 +79,13 @@ export function NewSetDialog({ open, credits, onOpenChange, onCreate, onError }:
           </ModeButton>
         </div>
 
-        {mode === 'ai' ? (
-          <form onSubmit={generate} className="space-y-5">
+        {/* Both forms share one grid cell so the dialog keeps the taller one's height. */}
+        <div className="grid">
+          <form
+            id="new-set-ai"
+            onSubmit={generate}
+            className={cn('space-y-5 [grid-area:1/1]', mode !== 'ai' && 'invisible')}
+          >
             <Field label="Topic">
               <Input
                 value={topic}
@@ -91,12 +96,15 @@ export function NewSetDialog({ open, credits, onOpenChange, onCreate, onError }:
                 autoFocus
               />
             </Field>
-            <Actions hint={`1 credit · you have ${credits}`} disabled={busy || credits < 1}>
-              {busy ? 'Generating…' : 'Create set'}
-            </Actions>
+            <p className="text-xs leading-5 text-muted-foreground">
+              DeepSeek writes 20 to 30 items with emoji. Sets are saved on this device.
+            </p>
           </form>
-        ) : (
-          <form onSubmit={addList} className="space-y-5">
+          <form
+            id="new-set-list"
+            onSubmit={addList}
+            className={cn('space-y-5 [grid-area:1/1]', mode !== 'list' && 'invisible')}
+          >
             <Field label="Name">
               <Input
                 value={title}
@@ -116,11 +124,29 @@ export function NewSetDialog({ open, credits, onOpenChange, onCreate, onError }:
                 className={cn(listError && 'border-tier-s/60')}
               />
             </Field>
-            <Actions hint={listItems ? `${listItems.length} items · free` : 'Free'} disabled={!listItems}>
-              Create set
-            </Actions>
           </form>
-        )}
+        </div>
+
+        <div className="flex items-center justify-between gap-3">
+          <span className="text-xs whitespace-nowrap text-muted-foreground">
+            {mode === 'ai'
+              ? `1 credit · you have ${credits}`
+              : listItems
+                ? `${listItems.length} items · free`
+                : 'Free'}
+          </span>
+          <div className="flex shrink-0 gap-2">
+            <DialogClose render={<Button variant="ghost" />}>Cancel</DialogClose>
+            <Button
+              type="submit"
+              form={mode === 'ai' ? 'new-set-ai' : 'new-set-list'}
+              disabled={mode === 'ai' ? busy || credits < 1 : !listItems}
+              className="whitespace-nowrap"
+            >
+              {busy ? 'Generating…' : 'Create set'}
+            </Button>
+          </div>
+        </div>
       </DialogContent>
     </DialogRoot>
   )
@@ -130,9 +156,13 @@ function ModeButton({ active, ...props }: { active: boolean } & ComponentProps<'
   return (
     <button
       type="button"
+      role="tab"
+      aria-selected={active}
       className={cn(
-        'rounded-md py-1.5 font-medium transition-colors',
-        active ? 'bg-background text-foreground shadow-xs' : 'text-muted-foreground hover:text-foreground',
+        'cursor-pointer rounded-md py-1.5 font-medium transition-[background-color,color,box-shadow] duration-150',
+        active
+          ? 'bg-primary text-primary-foreground shadow-ridge'
+          : 'text-muted-foreground hover:text-foreground',
       )}
       {...props}
     />
@@ -147,20 +177,6 @@ function Field({ label, error, children }: { label: string; error?: string | nul
         {error && <span className="font-normal text-tier-s">{error}</span>}
       </span>
       {children}
-    </div>
-  )
-}
-
-function Actions({ hint, disabled, children }: { hint: string; disabled: boolean; children: ReactNode }) {
-  return (
-    <div className="flex items-center justify-between gap-3">
-      <span className="text-xs whitespace-nowrap text-muted-foreground">{hint}</span>
-      <div className="flex shrink-0 gap-2">
-        <DialogClose render={<Button variant="ghost" />}>Cancel</DialogClose>
-        <Button type="submit" disabled={disabled} className="whitespace-nowrap">
-          {children}
-        </Button>
-      </div>
     </div>
   )
 }
