@@ -33,9 +33,10 @@ type Props = {
   loading?: boolean
   poolLabel?: string
   onMove?: (name: string, tier: Tier | null) => void
+  onEmoji?: (name: string, emoji: string) => void
 }
 
-export function TierBoard({ items, placements, loading = false, poolLabel, onMove }: Props) {
+export function TierBoard({ items, placements, loading = false, poolLabel, onMove, onEmoji }: Props) {
   const boardRef = useRef<HTMLDivElement>(null)
   useFlip(boardRef, [placements])
   const [dragging, setDragging] = useState<Item | null>(null)
@@ -76,6 +77,7 @@ export function TierBoard({ items, placements, loading = false, poolLabel, onMov
                       p.confidence == null ? undefined : `${Math.round(p.confidence * 100)}% confident`
                     }
                     draggable={interactive}
+                    onEmoji={onEmoji && ((emoji) => onEmoji(p.name, emoji))}
                   />
                 ))}
               </Row>
@@ -89,6 +91,7 @@ export function TierBoard({ items, placements, loading = false, poolLabel, onMov
                   key={it.name}
                   item={it}
                   draggable={interactive}
+                  onEmoji={onEmoji && ((emoji) => onEmoji(it.name, emoji))}
                   className={loading ? 'animate-pulse' : undefined}
                 />
               ))}
@@ -97,7 +100,7 @@ export function TierBoard({ items, placements, loading = false, poolLabel, onMov
         </div>
       </TooltipProvider>
       <DragOverlay dropAnimation={null}>
-        {dragging && <ItemTile item={dragging} data-flip={undefined} className="shadow-lg" />}
+        {dragging && <ItemTile item={dragging} className="shadow-lg" />}
       </DragOverlay>
     </DndContext>
   )

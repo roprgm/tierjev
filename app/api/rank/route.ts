@@ -1,5 +1,4 @@
-import { SETS } from '@/data/sets'
-import { pickSet, rankItems } from '@/lib/jev'
+import { rankItems } from '@/lib/jev'
 import { hashKey, normalize, parseSet } from '@/lib/parse'
 import { clientIp, rateLimited } from '@/lib/ratelimit'
 import { redis } from '@/lib/redis'
@@ -11,11 +10,15 @@ const CACHE_TTL = 60 * 60 * 24
 export async function POST(request: Request) {
   const body = await request.json().catch(() => null)
   const query = typeof body?.query === 'string' ? normalize(body.query) : ''
-  if (!query || query.length > 200) return Response.json({ error: 'Tell me what to rank.' }, { status: 400 })
-  const given = body?.set === undefined ? undefined : parseSet(body.set)
-  if (given === null) return Response.json({ error: 'Invalid set' }, { status: 400 })
+  const set = parseSet(body?.set)
+  if (!query || query.length > 200 || !set)
+    return Response.json({ error: 'Invalid request' }, { status: 400 })
 
-  const key = await hashKey('rank', query, given?.items.map((it) => it.name) ?? 'auto')
+  const key = await hashKey(
+    'rank',
+    query,
+    set.items.map((it) => it.name),
+  )
   const cached = await redis?.get<RankResponse>(key)
   if (cached) return Response.json(cached)
 
@@ -32,10 +35,7 @@ export async function POST(request: Request) {
   }
 
   try {
-    const set = given ?? (await pickSet(query, SETS))
-    const result: RankResponse = set
-      ? { set, placements: await rankItems(query, set.items) }
-      : { needsSet: true }
+    const result: RankResponse = { placements: await rankItems(query, set.items) }
     await redis?.set(key, result, { ex: CACHE_TTL })
     return Response.json(result)
   } catch (err) {

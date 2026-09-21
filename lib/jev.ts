@@ -1,7 +1,6 @@
-import { type Item, type Placement, TIERS, type TierSet } from '@/lib/types'
+import { type Item, type Placement, TIERS } from '@/lib/types'
 
 const MODEL = 'typesafe-ai/jev'
-const NONE = 'none'
 
 const TIER_CRITERIA = {
   S: 'exceptional, the single best possible pick',
@@ -30,29 +29,6 @@ async function evaluate(state: unknown, questions: Record<string, Choice>) {
   if (!res.ok) throw new Error(`Jev ${res.status}: ${await res.text()}`)
   const { answers } = (await res.json()) as { answers: Record<string, Answer> }
   return answers
-}
-
-// Which catalogue set the request is about, or null when none fits.
-export async function pickSet(query: string, sets: TierSet[]): Promise<TierSet | null> {
-  const criteria = Object.fromEntries(
-    sets.map((set) => [
-      set.id,
-      `${set.title}: ${set.items
-        .slice(0, 8)
-        .map((it) => it.name)
-        .join(', ')}…`,
-    ]),
-  )
-  const { set } = await evaluate(query, {
-    set: {
-      type: 'choice',
-      instructions:
-        'Which set contains the kind of things this request wants ranked? Choose none when no set holds those things.',
-      criteria: { ...criteria, [NONE]: 'None of the sets contain the things the request is about' },
-    },
-  })
-  if (set.choice === NONE || (set.probabilities[set.choice] ?? 0) < 0.3) return null
-  return sets.find((s) => s.id === set.choice) ?? null
 }
 
 // Tiers every item for the request. Items Jev marks as not applicable are left out.

@@ -20,16 +20,18 @@ Next.js App Router. The classifier lives in `src/app/api/classify/route.ts`; pay
 
 ## How ranking works
 
-One input. `POST /api/rank` makes two Jev calls over the gateway's `/v1/evaluate` endpoint:
-
-1. A `choice` question over the catalogue picks the set the request is about, with a `none` option. `none` (or a weak pick) returns `{ needsSet: true }`.
-2. One `choice` question per item with the tiers S to F plus `skip` for items the request cannot rate. Skipped items land in a "Not applicable" pool. The tier is the top option, the score is the probability-weighted tier index used for ordering, and the top probability is the confidence shown on hover.
+Pick a set, type a criterion, Rank. `POST /api/rank` receives the criterion and the set and asks Jev one `choice` question per item over the gateway's `/v1/evaluate` endpoint, with the tiers S to F plus `skip` for items the criterion cannot rate. Skipped items land in a "Not applicable" pool. The tier is the top option, the score is the probability-weighted tier index used for ordering, and the top probability is the confidence shown on hover.
 
 Jev is called with plain `fetch` rather than the AI SDK's `experimental_evaluate`, which rejects answers whose top probabilities tie after rounding.
 
 ## Custom sets
 
-When no set fits, a dialog offers to create one for 1 credit. Credits are a placeholder wallet in `localStorage` (10 to start) until billing exists. `POST /api/sets` turns the request into a set with `deepseek/deepseek-v4.1-flash` through the AI Gateway (`generateText` + `Output.object`, thinking disabled), cached 30 days by topic and limited to 10 an hour per IP. The client then ranks by sending the new set along with the request. Generated sets are not yet part of the catalogue Jev picks from.
+The "+ New set" chip opens a dialog with two modes:
+
+- **Generate with AI**, 1 credit. `POST /api/sets` turns a topic into a set with `deepseek/deepseek-v4.1-flash` through the AI Gateway (`generateText` + `Output.object`, thinking disabled), cached 30 days by topic and limited to 10 an hour per IP.
+- **Paste a list**, free. One item per line, validated locally (`lib/list.ts`): no commas, no empty lines, no duplicates, 3 to 40 items. Items get a stable colored dot; clicking it opens an emoji picker.
+
+Credits are a placeholder wallet in `localStorage` (10 to start) until billing exists. Custom sets live in the client session and, for generated ones, in the Redis cache.
 
 ## Motion
 
