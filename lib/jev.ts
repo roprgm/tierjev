@@ -1,34 +1,92 @@
-import { experimental_evaluate as evaluate } from 'ai'
-import { type Placement, type RankRequest, TIERS } from '@/lib/types'
+import { type Item, type Placement, TIERS, type TierSet } from '@/lib/types'
 
-const RUBRIC = [
-  'F: terrible, the worst possible pick',
-  'D: bad, clearly below average',
-  'C: average, unremarkable',
-  'B: good, above average',
-  'A: excellent, among the best',
-  'S: exceptional, the single best possible pick',
-]
+const MODEL = 'typesafe-ai/jev'
+const NONE = 'none'
 
-export async function askJev({ criterion, items }: RankRequest): Promise<Placement[]> {
-  const { answers } = await evaluate({
-    model: 'typesafe-ai/jev',
-    state: { criterion, items: items.map((it) => it.name) },
-    questions: Object.fromEntries(
+const TIER_CRITERIA = {
+  S: 'exceptional, the single best possible pick',
+  A: 'excellent, among the best',
+  B: 'good, above average',
+  C: 'average, unremarkable',
+  D: 'bad, clearly below average',
+  F: 'terrible, the worst possible pick',
+  skip: 'does not apply: this item is not something the request can meaningfully rate',
+}
+
+type Choice = { type: 'choice'; instructions: string; criteria: Record<string, string> }
+type Answer = { choice: string; probabilities: Record<string, number> }
+
+// Raw HTTP instead of the AI SDK's experimental `evaluate`: the SDK rejects answers whose top
+// probabilities tie after rounding, which Jev produces regularly for 7-way tier questions.
+async function evaluate(state: unknown, questions: Record<string, Choice>) {
+  const res = await fetch('https://ai-gateway.vercel.sh/v1/evaluate', {
+    method: 'POST',
+    headers: {
+      Authorization: `Bearer ${process.env.AI_GATEWAY_API_KEY}`,
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({ model: MODEL, state, questions }),
+  })
+  if (!res.ok) throw new Error(`Jev ${res.status}: ${await res.text()}`)
+  const { answers } = (await res.json()) as { answers: Record<string, Answer> }
+  return answers
+}
+
+// Which catalogue set the request is about, or null when none fits.
+export async function pickSet(query: string, sets: TierSet[]): Promise<TierSet | null> {
+  const criteria = Object.fromEntries(
+    sets.map((set) => [
+      set.id,
+      `${set.title}: ${set.items
+        .slice(0, 8)
+        .map((it) => it.name)
+        .join(', ')}…`,
+    ]),
+  )
+  const { set } = await evaluate(query, {
+    set: {
+      type: 'choice',
+      instructions:
+        'Which set contains the kind of things this request wants ranked? Choose none when no set holds those things.',
+      criteria: { ...criteria, [NONE]: 'None of the sets contain the things the request is about' },
+    },
+  })
+  if (set.choice === NONE || (set.probabilities[set.choice] ?? 0) < 0.3) return null
+  return sets.find((s) => s.id === set.choice) ?? null
+}
+
+// Tiers every item for the request. Items Jev marks as not applicable are left out.
+export async function rankItems(query: string, items: Item[]): Promise<Placement[]> {
+  const answers = await evaluate(
+    { request: query, items: items.map((it) => it.name) },
+    Object.fromEntries(
       items.map((it, i) => [
         `i${i}`,
         {
-          type: 'score' as const,
-          instructions: `Criterion: "${criterion}". Tier "${it.name}" relative to the other items in the list.`,
-          criteria: RUBRIC,
+          type: 'choice',
+          instructions: `Tier "${it.name}" for the request, relative to the other items. Pick skip if it does not apply.`,
+          criteria: TIER_CRITERIA,
         },
       ]),
     ),
+  )
+  const placements: Placement[] = []
+  items.forEach((it, i) => {
+    const { choice, probabilities } = answers[`i${i}`]
+    if (choice === 'skip') return
+    const tier = choice as (typeof TIERS)[number]
+    let weight = 0
+    let score = 0
+    for (const [index, t] of [...TIERS].reverse().entries()) {
+      weight += probabilities[t] ?? 0
+      score += (probabilities[t] ?? 0) * index
+    }
+    placements.push({
+      name: it.name,
+      tier,
+      score: weight ? score / weight : 0,
+      confidence: probabilities[tier] ?? 0,
+    })
   })
-  return items.map((it, i) => {
-    const answer = answers[`i${i}`]
-    const ranked = Object.entries(answer.probabilities ?? {}).sort((a, b) => b[1] - a[1])
-    const [rung, confidence] = ranked[0] ?? [String(Math.round(answer.score)), 1]
-    return { name: it.name, tier: TIERS[TIERS.length - 1 - Number(rung)], score: answer.score, confidence }
-  })
+  return placements
 }

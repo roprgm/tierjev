@@ -1,34 +1,70 @@
 'use client'
 
 import { type FormEvent, useState } from 'react'
-import { CreateSet } from '@/components/CreateSet'
+import { CreateSetDialog } from '@/components/CreateSetDialog'
 import { GitHubIcon } from '@/components/GitHubIcon'
-import { SetPicker } from '@/components/SetPicker'
 import { TierBoard } from '@/components/TierBoard'
 import { Toast, useToast } from '@/components/Toast'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
-import { SETS } from '@/data/sets'
-import { RankError, rank } from '@/lib/rank'
+import { ApiError, createSet, createShare, rank } from '@/lib/api'
+import { useCredits } from '@/lib/credits'
 import type { Placement, Share, Tier, TierSet } from '@/lib/types'
 import { formatCountdown, useCountdown } from '@/lib/use-countdown'
 
 export function TierMaker() {
-  const [sets, setSets] = useState<TierSet[]>(SETS)
-  const [set, setSet] = useState<TierSet>(SETS[0])
-  const [criterion, setCriterion] = useState(set.criterion)
+  const [query, setQuery] = useState('')
+  const [set, setSet] = useState<TierSet | null>(null)
   const [placements, setPlacements] = useState<Placement[]>([])
   const [loading, setLoading] = useState(false)
+  const [asking, setAsking] = useState(false)
   const [lockedUntil, setLockedUntil] = useState<number | null>(null)
   const [manual, setManual] = useState(false)
   const lockSeconds = useCountdown(lockedUntil)
+  const { credits, spend } = useCredits()
   const { message, notify } = useToast()
-  const canDrag = manual || lockSeconds > 0
+  const canDrag = Boolean(set) && (manual || lockSeconds > 0)
 
-  function selectSet(next: TierSet) {
-    setSet(next)
-    setCriterion(next.criterion)
-    setPlacements([])
+  function fail(err: unknown) {
+    const retryAfter = err instanceof ApiError ? err.retryAfter : undefined
+    if (retryAfter) setLockedUntil(Date.now() + retryAfter * 1000)
+    const text = err instanceof Error ? err.message : 'Something went wrong'
+    notify(
+      retryAfter ? `${text} Meanwhile, drag the tiles into tiers yourself.` : text,
+      retryAfter ? 8000 : 5000,
+    )
+  }
+
+  async function submit(e: FormEvent) {
+    e.preventDefault()
+    setLoading(true)
+    try {
+      const res = await rank({ query })
+      if ('needsSet' in res) return setAsking(true)
+      setSet(res.set)
+      setPlacements(res.placements)
+    } catch (err) {
+      fail(err)
+    } finally {
+      setLoading(false)
+    }
+  }
+
+  async function createAndRank() {
+    setLoading(true)
+    try {
+      const created = await createSet(query)
+      spend(1)
+      setAsking(false)
+      setSet(created)
+      setPlacements([])
+      const res = await rank({ query, set: created })
+      if (!('needsSet' in res)) setPlacements(res.placements)
+    } catch (err) {
+      fail(err)
+    } finally {
+      setLoading(false)
+    }
   }
 
   function move(name: string, tier: Tier | null) {
@@ -38,44 +74,24 @@ export function TierMaker() {
     })
   }
 
-  async function submit(e: FormEvent) {
-    e.preventDefault()
-    setLoading(true)
-    try {
-      const res = await rank({ criterion, items: set.items })
-      setPlacements(res.placements)
-    } catch (err) {
-      const retryAfter = err instanceof RankError ? err.retryAfter : undefined
-      if (retryAfter) setLockedUntil(Date.now() + retryAfter * 1000)
-      const text = err instanceof Error ? err.message : 'Something went wrong'
-      notify(
-        retryAfter ? `${text} Meanwhile, drag the tiles into tiers yourself.` : text,
-        retryAfter ? 8000 : 5000,
-      )
-    } finally {
-      setLoading(false)
-    }
-  }
-
   async function share() {
+    if (!set) return
     const body: Share = {
       title: set.title,
-      criterion,
+      criterion: query,
       items: set.items,
       placements,
       jev: placements.every((p) => p.confidence != null),
     }
-    const res = await fetch('/api/share', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(body),
-    })
-    const data = await res.json()
-    if (!res.ok) return notify(data.error ?? 'Could not share')
-    const url = `${location.origin}/s/${data.id}`
-    if (navigator.share) return navigator.share({ title: criterion, url }).catch(() => {})
-    await navigator.clipboard.writeText(url)
-    notify('Link copied')
+    try {
+      const { id } = await createShare(body)
+      const url = `${location.origin}/s/${id}`
+      if (navigator.share) return navigator.share({ title: query, url }).catch(() => {})
+      await navigator.clipboard.writeText(url)
+      notify('Link copied')
+    } catch (err) {
+      fail(err)
+    }
   }
 
   return (
@@ -84,7 +100,7 @@ export function TierMaker() {
         <div className="space-y-1">
           <h1 className="text-2xl font-semibold tracking-tight">tierjev</h1>
           <p className="text-sm text-muted-foreground">
-            Pick a set, state a criterion, let Jev sort it into tiers.
+            Say what to rank. Jev picks the set and sorts it into tiers.
           </p>
         </div>
         <a
@@ -96,23 +112,14 @@ export function TierMaker() {
         </a>
       </header>
 
-      <SetPicker sets={sets} selected={set} onSelect={selectSet} />
-
-      <CreateSet
-        onCreate={(created) => {
-          setSets((prev) => [...prev.filter((s) => s.id !== created.id), created])
-          selectSet(created)
-        }}
-        onError={notify}
-      />
-
       <form onSubmit={submit} className="flex gap-2">
         <Input
-          value={criterion}
-          onChange={(e) => setCriterion(e.target.value)}
-          placeholder="Rank by…"
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
+          placeholder="Best fruit for a picnic, first language to learn, pizza toppings that belong…"
           maxLength={200}
           required
+          autoFocus
         />
         <Button type="submit" disabled={loading || lockSeconds > 0} className="w-24 shrink-0 tabular-nums">
           {loading ? 'Ranking…' : lockSeconds > 0 ? formatCountdown(lockSeconds) : 'Rank'}
@@ -128,10 +135,19 @@ export function TierMaker() {
         </Button>
       </form>
 
+      <p className="h-5 text-sm text-muted-foreground">
+        {set && (
+          <>
+            {set.emoji} {set.title} · {set.items.length} items
+          </>
+        )}
+      </p>
+
       <TierBoard
-        items={set.items}
+        items={set?.items ?? []}
         placements={placements}
         loading={loading}
+        poolLabel={placements.length > 0 ? 'Not applicable' : undefined}
         onMove={canDrag ? move : undefined}
       />
 
@@ -143,18 +159,28 @@ export function TierMaker() {
           </a>
           , TypeSafe AI's classifier. Hover a tile for confidence.
         </span>
-        {lockSeconds > 0 ? (
-          <span className="shrink-0">Drag tiles to sort while Jev rests</span>
-        ) : (
-          <button
-            type="button"
-            onClick={() => setManual((m) => !m)}
-            className="shrink-0 underline-offset-2 transition-colors hover:text-foreground hover:underline"
-          >
-            {manual ? 'Done sorting' : 'Customize'}
-          </button>
-        )}
+        {set &&
+          (lockSeconds > 0 ? (
+            <span className="shrink-0">Drag tiles to sort while Jev rests</span>
+          ) : (
+            <button
+              type="button"
+              onClick={() => setManual((m) => !m)}
+              className="shrink-0 underline-offset-2 transition-colors hover:text-foreground hover:underline"
+            >
+              {manual ? 'Done sorting' : 'Customize'}
+            </button>
+          ))}
       </footer>
+
+      <CreateSetDialog
+        open={asking}
+        query={query}
+        credits={credits}
+        busy={loading}
+        onOpenChange={setAsking}
+        onConfirm={createAndRank}
+      />
       <Toast message={message} />
     </main>
   )

@@ -20,15 +20,16 @@ Next.js App Router. The classifier lives in `src/app/api/classify/route.ts`; pay
 
 ## How ranking works
 
-One `evaluate` call per set through the AI SDK. The whole item list is the shared `state`; each item gets a `score` question with the rubric F, D, C, B, A, S. The tier is the rung with the highest probability, the score orders items within a tier, and the probability is shown as confidence on hover.
+One input. `POST /api/rank` makes two Jev calls over the gateway's `/v1/evaluate` endpoint:
+
+1. A `choice` question over the catalogue picks the set the request is about, with a `none` option. `none` (or a weak pick) returns `{ needsSet: true }`.
+2. One `choice` question per item with the tiers S to F plus `skip` for items the request cannot rate. Skipped items land in a "Not applicable" pool. The tier is the top option, the score is the probability-weighted tier index used for ordering, and the top probability is the confidence shown on hover.
+
+Jev is called with plain `fetch` rather than the AI SDK's `experimental_evaluate`, which rejects answers whose top probabilities tie after rounding.
 
 ## Custom sets
 
-`POST /api/sets` turns a short topic into a set with `deepseek/deepseek-v4.1-flash` through the AI Gateway (`generateText` + `Output.object`, thinking disabled). Results are cached in Redis for 30 days by normalised topic, and creation is limited to 10 an hour per IP. Generated sets live only in the client session and the cache for now.
-
-## Sharing
-
-`POST /api/share` stores the list in Redis under an 8-character id. `/s/<id>` renders once, then Vercel serves the cached page from the CDN. Its social image at `/s/<id>/og` is generated with `next/og` and cached at the edge for a year. Shared pages never call Jev.
+When no set fits, a dialog offers to create one for 1 credit. Credits are a placeholder wallet in `localStorage` (10 to start) until billing exists. `POST /api/sets` turns the request into a set with `deepseek/deepseek-v4.1-flash` through the AI Gateway (`generateText` + `Output.object`, thinking disabled), cached 30 days by topic and limited to 10 an hour per IP. The client then ranks by sending the new set along with the request. Generated sets are not yet part of the catalogue Jev picks from.
 
 ## Motion
 

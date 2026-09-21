@@ -11,12 +11,12 @@ export type TierSet = {
   items: Item[]
 }
 
-export type RankRequest = { criterion: string; items: Item[] }
-
 // score and confidence come from Jev; a tile the user dragged has neither.
 export type Placement = { name: string; tier: Tier; score?: number; confidence?: number }
 
-export type RankResponse = { placements: Placement[] }
+export type RankRequest = { query: string; set?: TierSet }
+
+export type RankResponse = { set: TierSet; placements: Placement[] } | { needsSet: true }
 
 export type Share = {
   title: string
