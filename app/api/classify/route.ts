@@ -4,7 +4,7 @@ import type { Item, Placement, RankRequest, RankResponse } from '@/lib/types'
 
 const MAX_ITEMS = 40
 const LIMIT_PER_HOUR = 30
-const CACHE_TTL = 60 * 60 * 24 * 30
+const CACHE_TTL = 60 * 60 * 24
 
 function parse(body: unknown): RankRequest | null {
   if (typeof body !== 'object' || body === null) return null

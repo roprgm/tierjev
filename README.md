@@ -24,7 +24,7 @@ One request per set. The whole item list is the shared `state`; each item gets a
 
 ## Cache and limits
 
-- Rankings are cached in Redis for 30 days, keyed by a hash of the normalised criterion and the sorted item names. Cache hits never reach Jev and do not count against the rate limit.
+- Rankings are cached in Redis for 24 hours, keyed by a hash of the normalised criterion and the sorted item names. Cache hits never reach Jev and do not count against the rate limit.
 - 40 items per request, 30 uncached requests per IP per hour, counted in Redis so the limit holds across function instances.
 - Budget: a cache miss costs about four Redis commands, a hit one. The Upstash free tier covers 500K commands a month.
 

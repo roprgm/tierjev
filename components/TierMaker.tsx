@@ -2,6 +2,7 @@
 
 import { type FormEvent, useState } from 'react'
 import { flushSync } from 'react-dom'
+import { GitHubIcon } from '@/components/GitHubIcon'
 import { SetPicker } from '@/components/SetPicker'
 import { TierBoard } from '@/components/TierBoard'
 import { Button } from '@/components/ui/button'
@@ -49,11 +50,20 @@ export function TierMaker() {
 
   return (
     <main className="mx-auto max-w-4xl space-y-6 px-4 py-10">
-      <header className="space-y-1">
-        <h1 className="text-2xl font-semibold tracking-tight">tierjev</h1>
-        <p className="text-sm text-muted-foreground">
-          Pick a set, state a criterion, let Jev sort it into tiers.
-        </p>
+      <header className="flex items-start justify-between gap-4">
+        <div className="space-y-1">
+          <h1 className="text-2xl font-semibold tracking-tight">tierjev</h1>
+          <p className="text-sm text-muted-foreground">
+            Pick a set, state a criterion, let Jev sort it into tiers.
+          </p>
+        </div>
+        <a
+          href="https://github.com/roprgm/tierjev"
+          aria-label="Source on GitHub"
+          className="mt-1 text-muted-foreground transition-colors hover:text-foreground"
+        >
+          <GitHubIcon />
+        </a>
       </header>
 
       <SetPicker sets={SETS} selected={set} onSelect={selectSet} />
