@@ -24,7 +24,7 @@ One request per set. The whole item list is the shared `state`; each item gets a
 
 ## Sharing
 
-`POST /api/share` stores the list in Redis under an 8-character id. `/s/<id>` renders it once, then Vercel serves the cached page and its `opengraph-image` from the CDN. Shared pages never call Jev.
+`POST /api/share` stores the list in Redis under an 8-character id. `/s/<id>` renders once, then Vercel serves the cached page from the CDN. Its social image at `/s/<id>/og` is generated with `next/og` and cached at the edge for a year. Shared pages never call Jev.
 
 ## Manual sorting
 

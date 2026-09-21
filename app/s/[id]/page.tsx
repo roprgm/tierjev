@@ -13,15 +13,17 @@ export function generateStaticParams() {
 type Props = { params: Promise<{ id: string }> }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const share = await getShare((await params).id)
+  const { id } = await params
+  const share = await getShare(id)
   if (!share) return { title: 'Not found' }
   const title = `${share.criterion} · ${share.title}`
   const description = `${share.title} ranked ${share.jev ? 'by Jev' : 'by hand'} on tierjev.`
+  const images = [{ url: `/s/${id}/og`, width: 1200, height: 630 }]
   return {
     title,
     description,
-    openGraph: { title, description, type: 'article' },
-    twitter: { card: 'summary_large_image', title, description },
+    openGraph: { title, description, type: 'article', images },
+    twitter: { card: 'summary_large_image', title, description, images },
   }
 }
 

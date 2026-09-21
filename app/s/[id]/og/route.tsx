@@ -2,14 +2,7 @@ import { ImageResponse } from 'next/og'
 import { getShare } from '@/lib/shares'
 import { TIERS, type Tier } from '@/lib/types'
 
-// Generated once per id, then served from the cache like the page.
-export const dynamicParams = true
-export function generateStaticParams() {
-  return []
-}
-
-export const size = { width: 1200, height: 630 }
-export const contentType = 'image/png'
+const size = { width: 1200, height: 630 }
 
 const COLORS: Record<Tier, string> = {
   S: '#f27272',
@@ -20,7 +13,8 @@ const COLORS: Record<Tier, string> = {
   F: '#8b93b3',
 }
 
-export default async function Image({ params }: { params: Promise<{ id: string }> }) {
+// Cached at the CDN for a year per id; the function runs once per id per region.
+export async function GET(_: Request, { params }: { params: Promise<{ id: string }> }) {
   const share = await getShare((await params).id)
   const rows = TIERS.map((tier) => ({
     tier,
@@ -33,7 +27,7 @@ export default async function Image({ params }: { params: Promise<{ id: string }
       }),
   }))
 
-  return new ImageResponse(
+  const image = new ImageResponse(
     <div
       style={{
         width: '100%',
@@ -117,4 +111,6 @@ export default async function Image({ params }: { params: Promise<{ id: string }
     </div>,
     size,
   )
+  image.headers.set('Cache-Control', 'public, max-age=3600, s-maxage=31536000, immutable')
+  return image
 }
