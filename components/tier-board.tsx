@@ -1,24 +1,21 @@
 'use client'
 
 import {
+  type CollisionDetection,
   closestCorners,
   DndContext,
   type DragEndEvent,
   type DragOverEvent,
   DragOverlay,
+  defaultDropAnimationSideEffects,
   MouseSensor,
+  pointerWithin,
   TouchSensor,
   useDroppable,
   useSensor,
   useSensors,
 } from '@dnd-kit/core'
-import {
-  arrayMove,
-  horizontalListSortingStrategy,
-  rectSortingStrategy,
-  SortableContext,
-  useSortable,
-} from '@dnd-kit/sortable'
+import { arrayMove, rectSortingStrategy, SortableContext, useSortable } from '@dnd-kit/sortable'
 import { CSS } from '@dnd-kit/utilities'
 import { type ComponentProps, type ReactNode, type RefObject, useLayoutEffect, useRef, useState } from 'react'
 import { ItemTile } from '@/components/item-tile'
@@ -48,7 +45,7 @@ const docRect = (el: Element): Rect => {
 // Animates elements marked with data-flip="<key>" from where they were on the previous render to
 // where they are now. Each clone flies inside its destination's data-flip-host, so a row's overflow
 // clips the whole flight and the tile appears to enter through the row's edge.
-function useFlip(container: RefObject<HTMLElement | null>, deps: unknown[], enabled = true) {
+function useFlip(container: RefObject<HTMLElement | null>, deps: unknown[], enabled: () => boolean) {
   const previous = useRef(new Map<string, Rect>())
 
   useLayoutEffect(() => {
@@ -58,7 +55,7 @@ function useFlip(container: RefObject<HTMLElement | null>, deps: unknown[], enab
     const next = new Map(tiles.map((el) => [el.dataset.flip as string, docRect(el)]))
     const before = previous.current
     previous.current = next
-    if (!enabled || before.size === 0 || matchMedia('(prefers-reduced-motion: reduce)').matches) return
+    if (!enabled() || before.size === 0 || matchMedia('(prefers-reduced-motion: reduce)').matches) return
 
     const cleanups: (() => void)[] = []
     tiles.forEach((el, i) => {
@@ -95,7 +92,37 @@ function useFlip(container: RefObject<HTMLElement | null>, deps: unknown[], enab
   }, deps)
 }
 
+// Animates height changes of elements marked data-grow, so rows and the pool glide when tiles wrap.
+// While `frozen` (a drag in progress) rows may grow but never shrink; the shrink plays on release.
+function useAnimatedHeights(container: RefObject<HTMLElement | null>, deps: unknown[], frozen: boolean) {
+  const heights = useRef(new WeakMap<Element, number>())
+  useLayoutEffect(() => {
+    const root = container.current
+    if (!root) return
+    const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches
+    for (const el of root.querySelectorAll<HTMLElement>('[data-grow]')) {
+      el.style.minHeight = frozen ? `${el.offsetHeight}px` : ''
+      const next = el.offsetHeight
+      const previous = heights.current.get(el)
+      heights.current.set(el, next)
+      if (previous === undefined || previous === next || reduced) continue
+      el.animate([{ height: `${previous}px` }, { height: `${next}px` }], { duration: 350, easing: EASING })
+    }
+  }, [...deps, frozen])
+}
+
 const POOL = 'pool'
+
+const isContainer = (id: unknown) => id === POOL || (TIERS as readonly string[]).includes(String(id))
+
+// Whatever is under the pointer wins, tiles before the row that holds them, so sorting inside a row
+// and dropping on an empty row both resolve to the right target.
+const collision: CollisionDetection = (args) => {
+  const within = pointerWithin(args)
+  const tiles = within.filter((c) => !isContainer(c.id))
+  if (tiles.length > 0) return tiles
+  return within.length > 0 ? within : closestCorners(args)
+}
 type Container = Tier | typeof POOL
 type Layout = Record<Container, string[]>
 
@@ -122,8 +149,15 @@ const containerOf = (layout: Layout, id: string): Container | undefined =>
 export function TierBoard({ items, placements, loading = false, hint, onChange, onIcon }: Props) {
   const boardRef = useRef<HTMLDivElement>(null)
   const [dragging, setDragging] = useState<string | null>(null)
-  // While dragging, dnd-kit animates the siblings itself; the FLIP hook only runs for other updates.
-  useFlip(boardRef, [placements], !dragging)
+  // dnd-kit moves tiles during a drag and the drop leaves them where they are, so the FLIP hook only
+  // animates changes that come from elsewhere: rankings, set switches, manual edits.
+  const settledByDrag = useRef(false)
+  useFlip(boardRef, [placements], () => {
+    const skip = settledByDrag.current
+    settledByDrag.current = false
+    return !skip && !dragging
+  })
+  useAnimatedHeights(boardRef, [placements], Boolean(dragging))
   const sensors = useSensors(
     useSensor(MouseSensor, { activationConstraint: { distance: 4 } }),
     useSensor(TouchSensor, { activationConstraint: { delay: 200, tolerance: 8 } }),
@@ -134,21 +168,31 @@ export function TierBoard({ items, placements, loading = false, hint, onChange, 
   const layout = toLayout(items, placements)
 
   function emit(next: Layout) {
+    settledByDrag.current = true
     const { pool: _, ...tiers } = next
     onChange?.(tiers)
   }
 
-  // Moving over another container inserts the item there so the gap opens where it will land.
+  // Moving over another container inserts the item there, on the side of the hovered tile the pointer
+  // is on, so the state matches the gap dnd-kit draws and nothing shifts after the drop.
   function handleDragOver({ active, over }: DragOverEvent) {
     if (!over) return
     const from = containerOf(layout, String(active.id))
     const to = containerOf(layout, String(over.id))
     if (!from || !to || from === to) return
-    const next = { ...layout, [from]: layout[from].filter((n) => n !== active.id) }
-    const index = layout[to].indexOf(String(over.id))
-    const target = [...layout[to]]
-    target.splice(index === -1 ? target.length : index, 0, String(active.id))
-    emit({ ...next, [to]: target })
+    const target = layout[to].filter((n) => n !== active.id)
+    const overIndex = target.indexOf(String(over.id))
+    let index = target.length
+    if (overIndex !== -1) {
+      const moving = active.rect.current.translated
+      const after =
+        moving &&
+        (moving.top > over.rect.top + over.rect.height ||
+          moving.left + moving.width / 2 > over.rect.left + over.rect.width / 2)
+      index = overIndex + (after ? 1 : 0)
+    }
+    target.splice(index, 0, String(active.id))
+    emit({ ...layout, [from]: layout[from].filter((n) => n !== active.id), [to]: target })
   }
 
   function handleDragEnd({ active, over }: DragEndEvent) {
@@ -181,7 +225,7 @@ export function TierBoard({ items, placements, loading = false, hint, onChange, 
     <DndContext
       id="tiers"
       sensors={sensors}
-      collisionDetection={closestCorners}
+      collisionDetection={collision}
       onDragStart={({ active }) => setDragging(String(active.id))}
       onDragOver={handleDragOver}
       onDragCancel={() => setDragging(null)}
@@ -197,14 +241,16 @@ export function TierBoard({ items, placements, loading = false, hint, onChange, 
             ))}
           </div>
           {hint && layout.pool.length > 0 && <p className="text-xs text-muted-foreground">{hint}</p>}
-          {layout.pool.length > 0 && (
-            <Pool names={layout.pool} droppable={interactive}>
-              {layout.pool.map(tile)}
-            </Pool>
-          )}
+          <Pool names={layout.pool} droppable={interactive}>
+            {layout.pool.map(tile)}
+          </Pool>
         </div>
       </TooltipProvider>
-      <DragOverlay dropAnimation={null}>
+      <DragOverlay
+        dropAnimation={{
+          sideEffects: defaultDropAnimationSideEffects({ styles: { active: { opacity: '0' } } }),
+        }}
+      >
         {dragging && <ItemTile item={byName.get(dragging) ?? { name: dragging }} className="shadow-lg" />}
       </DragOverlay>
     </DndContext>
@@ -216,7 +262,7 @@ type RowProps = { tier: Tier; names: string[]; droppable: boolean; children: Rea
 function Row({ tier, names, droppable, children }: RowProps) {
   const { setNodeRef, isOver } = useDroppable({ id: tier, disabled: !droppable })
   return (
-    <div className="flex h-22 border-b last:border-b-0">
+    <div className="flex min-h-22 border-b last:border-b-0">
       <div
         className={cn(
           'flex w-14 shrink-0 items-center justify-center text-2xl font-bold text-black/80 sm:w-20',
@@ -229,12 +275,13 @@ function Row({ tier, names, droppable, children }: RowProps) {
         ref={setNodeRef}
         data-clip
         data-flip-host
+        data-grow
         className={cn(
-          'scrollbar-none relative flex min-w-0 flex-1 gap-1 overflow-x-auto overflow-y-hidden overscroll-x-contain bg-muted/40 p-1 transition-colors',
+          'relative flex min-w-0 flex-1 flex-wrap gap-1 overflow-hidden bg-muted/40 p-1 transition-colors',
           isOver && 'bg-muted',
         )}
       >
-        <SortableContext id={tier} items={names} strategy={horizontalListSortingStrategy}>
+        <SortableContext id={tier} items={names} strategy={rectSortingStrategy}>
           {children}
         </SortableContext>
       </div>
@@ -248,8 +295,10 @@ function Pool({ names, droppable, children }: { names: string[]; droppable: bool
     <div
       ref={setNodeRef}
       data-flip-host
+      data-grow
       className={cn(
-        'relative flex min-h-20 flex-wrap gap-1 rounded-xl transition-colors',
+        'relative flex flex-wrap gap-1 overflow-hidden rounded-xl transition-colors',
+        names.length > 0 && 'min-h-20',
         isOver && 'bg-muted/40',
       )}
     >

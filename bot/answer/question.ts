@@ -9,10 +9,12 @@ export type ChoiceAnswer = EvaluationAnswer<ChoiceQuestion>
 
 export const NONE = 'none_of_the_above'
 const MAX_OPTIONS = 255
-const MIN_PROBABILITY = 0.5
+const MIN_PROBABILITY = 0.3
 
 export const INSTRUCTIONS =
-  'Which option best answers the question asked in the summons, or the question asked in the thread when the summons only calls the bot? When the question is a matter of opinion, pick the option most people would agree with. Choose none_of_the_above only when no option answers the question at all.'
+  'Which option best answers the question asked in the summons, or the question asked earlier in the thread when the summons only calls the bot? ' +
+  'This includes polls and other matters of taste: when the options are competing named answers to the same question, pick the one most people would choose, even on a close call. ' +
+  'Choose none_of_the_above only when the options do not address the question at all.'
 
 // One option per candidate, escape option last. Candidates come from the thread, so NONE cannot collide.
 export function choiceQuestion(candidates: Candidates): ChoiceQuestion {

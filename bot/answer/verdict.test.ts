@@ -61,13 +61,22 @@ test('stays quiet without asking jev when nothing is proposed', async () => {
   expect(calls).toHaveLength(0)
 })
 
-test('stays quiet when jev picks the escape option or is unsure', async () => {
+test('commits to the top pick on a close three-way call, the way a poll needs', async () => {
+  const options = propose(['Jupiter', 'Mars', 'Venus'])
+  const close = await answerThread(thread, {
+    propose: options,
+    jev: jev({ jupiter: 0.34, mars: 0.33, venus: 0.33 }),
+  })
+  expect(close.reply).toBe('Jupiter')
+})
+
+test('stays quiet on the escape option or when the top pick has too little support', async () => {
   const options = propose(['Jupiter', 'Mars', 'Venus'])
   const escaped = await answerThread(thread, { propose: options, jev: jev({ [NONE]: 0.8, mars: 0.2 }) })
   expect(escaped.reply).toBeNull()
   const unsure = await answerThread(thread, {
     propose: options,
-    jev: jev({ jupiter: 0.4, mars: 0.3, venus: 0.3 }),
+    jev: jev({ jupiter: 0.28, mars: 0.27, venus: 0.25, [NONE]: 0.2 }),
   })
   expect(unsure.reply).toBeNull()
 })
