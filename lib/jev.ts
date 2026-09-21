@@ -15,7 +15,8 @@ const RUBRIC = [
 export type Question =
   | { type: 'choice'; instructions: string; criteria: Record<string, string> }
   | { type: 'score'; instructions: string; criteria: string[] }
-type Answer = { choice?: string; score?: number; probabilities: Record<string, number> }
+  | { type: 'boolean'; instructions: string }
+type Answer = { choice?: string; score?: number; probability?: number; probabilities: Record<string, number> }
 
 // Raw HTTP instead of the AI SDK's experimental `evaluate`: the SDK rejects answers whose top
 // probabilities tie after rounding, which Jev produces regularly for 7-way tier questions.

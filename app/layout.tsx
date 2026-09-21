@@ -1,3 +1,4 @@
+import { Analytics } from '@vercel/analytics/next'
 import type { Metadata } from 'next'
 import type { ReactNode } from 'react'
 import './globals.css'
@@ -8,17 +9,20 @@ const siteUrl =
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: 'tierjev',
-  description: 'Tier lists ranked by Jev, the classifier model.',
-  icons: {
-    icon: 'data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏆</text></svg>',
-  },
+  title: { default: 'tierjev', template: '%s · tierjev' },
+  description:
+    'Tier lists ranked by Jev, the classifier model. Pick a set, state a criterion, share the result.',
+  openGraph: { siteName: 'tierjev', type: 'website' },
+  twitter: { card: 'summary_large_image' },
 }
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        {children}
+        <Analytics />
+      </body>
     </html>
   )
 }

@@ -1,4 +1,6 @@
 import { clientIp, rateLimited } from '@/lib/ratelimit'
+import { reportError } from '@/lib/report'
+import { isUnsafe } from '@/lib/safety'
 import { createShare, parseShare } from '@/lib/shares'
 
 const LIMIT_PER_HOUR = 20
@@ -11,10 +13,15 @@ export async function POST(request: Request) {
     return Response.json({ error: 'Too many shares for now. Try again in a bit.' }, { status: 429 })
   }
 
+  const text = `${share.title}. ${share.criterion}. ${share.items.map((it) => it.name).join(', ')}`
+  if (await isUnsafe(text).catch(() => false)) {
+    return Response.json({ error: "That list can't be shared publicly." }, { status: 400 })
+  }
+
   try {
     return Response.json({ id: await createShare(share) })
   } catch (err) {
-    console.error(err)
+    reportError(err)
     return Response.json({ error: 'Sharing is unavailable right now.' }, { status: 502 })
   }
 }

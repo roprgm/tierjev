@@ -44,6 +44,7 @@ type Props = {
   items: Item[]
   placements: Placement[]
   loading?: boolean
+  hint?: string
   onChange?: (layout: Record<Tier, string[]>) => void
   onIcon?: (name: string, look: Pick<Item, 'emoji' | 'color'>) => void
 }
@@ -59,7 +60,7 @@ function toLayout(items: Item[], placements: Placement[]): Layout {
 const containerOf = (layout: Layout, id: string): Container | undefined =>
   id in layout ? (id as Container) : (Object.keys(layout) as Container[]).find((c) => layout[c].includes(id))
 
-export function TierBoard({ items, placements, loading = false, onChange, onIcon }: Props) {
+export function TierBoard({ items, placements, loading = false, hint, onChange, onIcon }: Props) {
   const boardRef = useRef<HTMLDivElement>(null)
   const [dragging, setDragging] = useState<string | null>(null)
   // While dragging, dnd-kit animates the siblings itself; the FLIP hook only runs for other updates.
@@ -136,6 +137,7 @@ export function TierBoard({ items, placements, loading = false, onChange, onIcon
               </Row>
             ))}
           </div>
+          {hint && layout.pool.length > 0 && <p className="text-xs text-muted-foreground">{hint}</p>}
           {layout.pool.length > 0 && (
             <Pool names={layout.pool} droppable={interactive}>
               {layout.pool.map(tile)}

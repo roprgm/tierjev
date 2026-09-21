@@ -1,6 +1,8 @@
 import { finalizeSet, streamSet } from '@/lib/generate-set'
 import { clientIp, rateLimited } from '@/lib/ratelimit'
 import { redis } from '@/lib/redis'
+import { reportError } from '@/lib/report'
+import { isUnsafe } from '@/lib/safety'
 import type { TierSet } from '@/lib/types'
 
 const LIMIT_PER_HOUR = 10
@@ -25,6 +27,10 @@ export async function POST(request: Request) {
     )
   }
 
+  if (await isUnsafe(topic).catch(() => false)) {
+    return Response.json({ error: "That's not a topic we'll build a set for." }, { status: 400 })
+  }
+
   const encoder = new TextEncoder()
   const stream = new ReadableStream({
     async start(controller) {
@@ -39,7 +45,7 @@ export async function POST(request: Request) {
         await redis?.set(key, set, { ex: CACHE_TTL })
         send({ done: set })
       } catch (err) {
-        console.error(err)
+        reportError(err)
         send({ error: 'Could not create that set right now.' })
       }
       controller.close()

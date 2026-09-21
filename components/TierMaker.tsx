@@ -1,6 +1,7 @@
 'use client'
 
-import { type FormEvent, useState } from 'react'
+import Link from 'next/link'
+import { type FormEvent, useEffect, useState } from 'react'
 import { GitHubIcon } from '@/components/GitHubIcon'
 import { NewSetDialog } from '@/components/NewSetDialog'
 import { SetPicker } from '@/components/SetPicker'
@@ -31,6 +32,11 @@ export function TierMaker() {
   const { credits, spend } = useCredits()
   const { message, notify } = useToast()
   const canDrag = manual || lockSeconds > 0
+
+  // First paint shows a real ranking: the default set's criterion is always a cache hit.
+  useEffect(() => {
+    void submit()
+  }, [])
 
   function fail(err: unknown) {
     const retryAfter = err instanceof ApiError ? err.retryAfter : undefined
@@ -76,8 +82,8 @@ export function TierMaker() {
     custom.update(updated)
   }
 
-  async function submit(e: FormEvent) {
-    e.preventDefault()
+  async function submit(e?: FormEvent) {
+    e?.preventDefault()
     setLoading(true)
     try {
       const { placements: ranked } = await rank({ query: criterion, set })
@@ -175,6 +181,11 @@ export function TierMaker() {
         items={set.items}
         placements={placements}
         loading={loading}
+        hint={
+          placements.length === 0 && !loading
+            ? 'Press Rank and Jev sorts these into tiers. Edit the criterion first if you like.'
+            : undefined
+        }
         onChange={canDrag ? applyLayout : undefined}
         onIcon={isCustom ? setIcon : undefined}
       />
@@ -185,7 +196,10 @@ export function TierMaker() {
           <a className="underline" href="https://vercel.com/ai-gateway/models/jev">
             Jev
           </a>
-          , TypeSafe AI's classifier. Hover a tile for confidence.
+          , TypeSafe AI's classifier. Hover a tile for confidence.{' '}
+          <Link href="/privacy" className="underline-offset-2 hover:underline">
+            Privacy
+          </Link>
         </span>
         <span className="flex shrink-0 gap-3">
           {isCustom && (

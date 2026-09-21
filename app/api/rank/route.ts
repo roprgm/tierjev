@@ -2,6 +2,7 @@ import { rankItems } from '@/lib/jev'
 import { hashKey, normalize, parseSet } from '@/lib/parse'
 import { clientIp, rateLimited } from '@/lib/ratelimit'
 import { redis } from '@/lib/redis'
+import { reportError } from '@/lib/report'
 import type { RankResponse } from '@/lib/types'
 
 const LIMIT_PER_HOUR = 30
@@ -39,7 +40,7 @@ export async function POST(request: Request) {
     await redis?.set(key, result, { ex: CACHE_TTL })
     return Response.json(result)
   } catch (err) {
-    console.error(err)
+    reportError(err)
     return Response.json({ error: 'Jev is unavailable right now.' }, { status: 502 })
   }
 }
