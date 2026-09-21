@@ -37,6 +37,10 @@ The "+ New set" chip opens a dialog with two ways in, and both land on the same 
 
 Either way `POST /api/colors` asks Jev to pick each item's colour from the CSS named-colour palette (`lib/palette.ts`, picked in `lib/jev.ts`, whites and greys removed), six items per request. Items keep both an emoji and a colour: the tile shows the emoji on a coloured disc, or whichever one exists. Custom sets and a placeholder credit wallet (10 to start) live in `localStorage`; the user can restyle their tiles later and delete their own sets from the footer.
 
+## Bot
+
+`@tierjev` on X answers mentions with one option taken from the thread: DeepSeek proposes the candidates, Jev picks one or abstains. The bot is self-contained in `bot/` (pipeline in `bot/answer`, X and Chat SDK glue in `bot/x`, scripts and tests alongside); `app/api/webhooks/x/route.ts` only hands X's deliveries to it. Setup, local simulation and costs are in `bot/README.md`.
+
 ## Motion
 
 Tiles fly to their destination with a small FLIP hook inside `tier-board.tsx`. Each clone is appended inside its destination row, so the row's overflow clips the whole flight and the tile appears to enter through the row's edge.
