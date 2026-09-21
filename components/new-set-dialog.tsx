@@ -1,8 +1,8 @@
 'use client'
 
 import { type ComponentProps, type FormEvent, type ReactNode, useState } from 'react'
-import { IconPicker } from '@/components/IconPicker'
-import { ItemIcon } from '@/components/ItemTile'
+import { IconPicker } from '@/components/icon-picker'
+import { ItemIcon } from '@/components/item-tile'
 import { Button } from '@/components/ui/button'
 import {
   DialogClose,

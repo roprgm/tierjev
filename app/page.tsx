@@ -1,4 +1,4 @@
-import { TierMaker } from '@/components/TierMaker'
+import { TierMaker } from '@/components/tier-maker'
 
 export default function Page() {
   return <TierMaker />

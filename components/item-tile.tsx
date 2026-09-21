@@ -1,7 +1,7 @@
 'use client'
 
 import type { ComponentProps } from 'react'
-import { IconPicker } from '@/components/IconPicker'
+import { IconPicker } from '@/components/icon-picker'
 import type { Item } from '@/lib/types'
 import { cn } from '@/lib/utils'
 

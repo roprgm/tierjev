@@ -21,6 +21,15 @@
     "rules": {
       "performance": {
         "noImgElement": "off"
+      },
+      "style": {
+        "useFilenamingConvention": {
+          "level": "error",
+          "options": {
+            "filenameCases": ["kebab-case"],
+            "strictCase": true
+          }
+        }
       }
     }
   },

@@ -21,7 +21,7 @@ import {
 } from '@dnd-kit/sortable'
 import { CSS } from '@dnd-kit/utilities'
 import { type ComponentProps, type ReactNode, type RefObject, useLayoutEffect, useRef, useState } from 'react'
-import { ItemTile } from '@/components/ItemTile'
+import { ItemTile } from '@/components/item-tile'
 import { TooltipContent, TooltipProvider, TooltipRoot, TooltipTrigger } from '@/components/ui/popup'
 import { type Item, type Placement, TIERS, type Tier } from '@/lib/types'
 import { cn } from '@/lib/utils'

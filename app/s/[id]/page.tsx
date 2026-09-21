@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
-import { TierBoard } from '@/components/TierBoard'
+import { TierBoard } from '@/components/tier-board'
 import { getShare } from './share'
 
 // Rendered once per id, then served from the cache. Never calls Jev.
