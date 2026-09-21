@@ -19,8 +19,6 @@ export async function rateLimited(scope: string, ip: string, limit: number) {
 export const clientIp = (request: Request) =>
   request.headers.get('x-forwarded-for')?.split(',')[0].trim() ?? 'local'
 
-export const normalize = (text: string) => text.trim().replace(/\s+/g, ' ').toLowerCase()
-
 export async function hashKey(prefix: string, ...parts: unknown[]) {
   const bytes = new TextEncoder().encode(JSON.stringify(parts))
   const hash = await crypto.subtle.digest('SHA-256', bytes)

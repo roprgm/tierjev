@@ -8,10 +8,82 @@ import { TierBoard } from '@/components/TierBoard'
 import { Toast, useToast } from '@/components/Toast'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/field'
-import { SETS } from '@/data/sets'
+import catalogue from '@/data/catalogue.json'
 import { ApiError, createShare, rank } from '@/lib/api'
-import { formatCountdown, useCountdown, useCredits, useCustomSets } from '@/lib/hooks'
 import { type Item, type Placement, type Share, TIERS, type Tier, type TierSet } from '@/lib/types'
+
+// Pinned first; the rest keep the order they were generated in.
+const PINNED = [
+  'programming-languages',
+  'ai-companies',
+  'large-language-models',
+  'tech-ceos',
+  'frontend-frameworks',
+  'cryptocurrencies',
+]
+
+// Trims generator verbosity: "… Tier List" suffixes and parenthetical asides in criteria.
+const clean = (set: TierSet): TierSet => ({
+  ...set,
+  title: set.title.replace(/\s*tier list$/i, ''),
+  criterion: set.criterion.replace(/\s*\(.*$/, '').trim(),
+})
+
+export const SETS: TierSet[] = [...(catalogue as TierSet[])].map(clean).sort((a, b) => {
+  const ia = PINNED.indexOf(a.id)
+  const ib = PINNED.indexOf(b.id)
+  return (ia === -1 ? PINNED.length : ia) - (ib === -1 ? PINNED.length : ib)
+})
+
+function useStored<T>(key: string, initial: T) {
+  const [value, setValue] = useState(initial)
+  useEffect(() => {
+    try {
+      const stored = localStorage.getItem(key)
+      if (stored !== null) setValue(JSON.parse(stored))
+    } catch {}
+  }, [key])
+  const save = (next: T) => {
+    setValue(next)
+    try {
+      localStorage.setItem(key, JSON.stringify(next))
+    } catch {}
+  }
+  return [value, save] as const
+}
+
+// Placeholder wallet kept in localStorage until real billing exists.
+export function useCredits() {
+  const [credits, save] = useStored('tierjev.credits', 10)
+  return { credits, spend: (amount = 1) => save(Math.max(0, credits - amount)) }
+}
+
+// Sets the user created, kept in localStorage until accounts exist.
+export function useCustomSets() {
+  const [sets, save] = useStored<TierSet[]>('tierjev.sets', [])
+  return {
+    sets,
+    add: (set: TierSet) => save([...sets.filter((s) => s.id !== set.id), set]),
+    update: (set: TierSet) => save(sets.map((s) => (s.id === set.id ? set : s))),
+    remove: (id: string) => save(sets.filter((s) => s.id !== id)),
+    clear: () => save([]),
+  }
+}
+
+// Seconds left until `until` (epoch ms), ticking once a second. 0 when null or elapsed.
+export function useCountdown(until: number | null) {
+  const left = () => (until ? Math.max(0, Math.ceil((until - Date.now()) / 1000)) : 0)
+  const [seconds, setSeconds] = useState(left)
+  useEffect(() => {
+    setSeconds(left())
+    if (!until) return
+    const id = setInterval(() => setSeconds(left()), 1000)
+    return () => clearInterval(id)
+  }, [until])
+  return seconds
+}
+
+export const formatCountdown = (s: number) => `${Math.floor(s / 60)}:${String(s % 60).padStart(2, '0')}`
 
 const footerLink = 'cursor-pointer underline-offset-2 transition-colors hover:text-foreground hover:underline'
 

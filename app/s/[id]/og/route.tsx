@@ -1,6 +1,6 @@
 import { boardImage } from '@/lib/og'
-import { getShare } from '@/lib/shares'
 import { TIERS } from '@/lib/types'
+import { getShare } from '../share'
 
 // Cached at the CDN for a year per id; the function runs once per id per region.
 export async function GET(_: Request, { params }: { params: Promise<{ id: string }> }) {

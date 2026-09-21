@@ -1,8 +1,40 @@
 import { isUnsafe } from '@/lib/jev'
-import { clientIp, rateLimited, reportError } from '@/lib/server'
-import { createShare, parseShare } from '@/lib/shares'
+import { parseItems, parsePlacements } from '@/lib/parse'
+import { clientIp, rateLimited, redis, reportError } from '@/lib/server'
+import type { Share } from '@/lib/types'
 
 const LIMIT_PER_HOUR = 20
+
+const ALPHABET = 'abcdefghijkmnpqrstuvwxyzABCDEFGHJKLMNPQRSTUVWXYZ23456789'
+
+function newId() {
+  const bytes = crypto.getRandomValues(new Uint8Array(8))
+  return Array.from(bytes, (b) => ALPHABET[b % ALPHABET.length]).join('')
+}
+
+function parseShare(body: unknown): Share | null {
+  if (typeof body !== 'object' || body === null) return null
+  const { title, criterion, items, placements, jev } = body as Record<string, unknown>
+  if (typeof title !== 'string' || !title.trim() || title.length > 60) return null
+  if (typeof criterion !== 'string' || !criterion.trim() || criterion.length > 200) return null
+  const cleanItems = parseItems(items)
+  const cleanPlacements = cleanItems && parsePlacements(placements, cleanItems)
+  if (!cleanItems || !cleanPlacements) return null
+  return {
+    title: title.trim(),
+    criterion: criterion.trim(),
+    items: cleanItems,
+    placements: cleanPlacements,
+    jev: jev === true,
+  }
+}
+
+async function createShare(share: Share) {
+  if (!redis) throw new Error('Redis is not configured')
+  const id = newId()
+  await redis.set(`share:${id}`, share, { nx: true })
+  return id
+}
 
 export async function POST(request: Request) {
   const share = parseShare(await request.json().catch(() => null))

@@ -1,10 +1,59 @@
-import { rankItems } from '@/lib/jev'
-import { parseSet } from '@/lib/parse'
-import { clientIp, hashKey, normalize, rateLimited, redis, reportError } from '@/lib/server'
-import type { RankResponse } from '@/lib/types'
+import { evaluate } from '@/lib/jev'
+import { parseItems } from '@/lib/parse'
+import { clientIp, hashKey, rateLimited, redis, reportError } from '@/lib/server'
+import { type Item, type Placement, type RankResponse, TIERS, type TierSet } from '@/lib/types'
 
 const LIMIT_PER_HOUR = 30
 const CACHE_TTL = 60 * 60 * 24
+
+const normalize = (text: string) => text.trim().replace(/\s+/g, ' ').toLowerCase()
+
+function parseSet(value: unknown): TierSet | null {
+  if (typeof value !== 'object' || value === null) return null
+  const { id, title, emoji, criterion } = value as Record<string, unknown>
+  const items = parseItems((value as Record<string, unknown>).items)
+  if (!items || typeof title !== 'string' || !title.trim() || title.length > 60) return null
+  return {
+    id: typeof id === 'string' ? id.slice(0, 80) : 'custom',
+    title: title.trim(),
+    emoji: typeof emoji === 'string' ? emoji.slice(0, 8) : '',
+    criterion: typeof criterion === 'string' ? criterion.slice(0, 200) : '',
+    items,
+  }
+}
+
+// Ordered low to high, the shape Jev's score questions expect.
+const RUBRIC = [
+  'F: terrible, the worst of the list',
+  'D: bad, clearly below the rest',
+  'C: middling, unremarkable',
+  'B: good, above most of the list',
+  'A: excellent, among the very best',
+  'S: exceptional, the single best pick',
+]
+
+// Tiers every item for the criterion. The tier is the most likely rung; the probability-weighted
+// rung index orders items inside a tier.
+async function rankItems(criterion: string, items: Item[]): Promise<Placement[]> {
+  const answers = await evaluate(
+    { criterion, items: items.map((it) => it.name) },
+    Object.fromEntries(
+      items.map((it, i) => [
+        `i${i}`,
+        {
+          type: 'score',
+          instructions: `Rate "${it.name}" on: ${criterion}. Judge it against the other items in the list and use the whole scale.`,
+          criteria: RUBRIC,
+        },
+      ]),
+    ),
+  )
+  return items.map((it, i) => {
+    const { score = 0, probabilities } = answers[`i${i}`]
+    const [rung, confidence] = Object.entries(probabilities).sort((a, b) => b[1] - a[1])[0] ?? ['0', 0]
+    return { name: it.name, tier: TIERS[TIERS.length - 1 - Number(rung)], score, confidence }
+  })
+}
 
 export async function POST(request: Request) {
   const body = await request.json().catch(() => null)

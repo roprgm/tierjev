@@ -13,7 +13,7 @@ import {
 } from '@/components/ui/dialog'
 import { Input, Textarea } from '@/components/ui/field'
 import { ApiError, pickColors, streamSet } from '@/lib/api'
-import { parseList } from '@/lib/parse'
+import { MAX_ITEMS } from '@/lib/parse'
 import type { Item, TierSet } from '@/lib/types'
 import { cn } from '@/lib/utils'
 
@@ -27,6 +27,32 @@ type Props = {
 }
 
 type Draft = { id: string; title: string; emoji: string; criterion: string; items: Item[] }
+
+const MIN_ITEMS = 3
+
+// Turns a pasted "one item per line" list into items, or explains the first problem found.
+function parseList(text: string): { items: Item[] } | { error: string } {
+  const lines = text.split('\n')
+  const items: Item[] = []
+  const seen = new Set<string>()
+  for (const [i, raw] of lines.entries()) {
+    const line = raw.trim()
+    const at = `Line ${i + 1}`
+    if (!line) {
+      if (i === lines.length - 1) continue
+      return { error: `${at} is empty.` }
+    }
+    if (line.includes(',')) return { error: `${at} has a comma. Put one item per line.` }
+    if (line.length > 40) return { error: `${at} is longer than 40 characters.` }
+    const key = line.toLowerCase()
+    if (seen.has(key)) return { error: `${at} repeats "${line}".` }
+    seen.add(key)
+    items.push({ name: line })
+  }
+  if (items.length < MIN_ITEMS) return { error: `Add at least ${MIN_ITEMS} items.` }
+  if (items.length > MAX_ITEMS) return { error: `Keep it to ${MAX_ITEMS} items or fewer.` }
+  return { items }
+}
 
 const slug = (s: string) =>
   s

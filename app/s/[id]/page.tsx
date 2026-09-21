@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { TierBoard } from '@/components/TierBoard'
-import { getShare } from '@/lib/shares'
+import { getShare } from './share'
 
 // Rendered once per id, then served from the cache. Never calls Jev.
 export const dynamicParams = true
