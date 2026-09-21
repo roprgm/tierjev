@@ -3,9 +3,9 @@ import { createRedisState } from '@chat-adapter/state-redis'
 import type { XRawMessage } from '@chat-adapter/x'
 import { Chat, ConsoleLogger, type LogLevel, type StateAdapter } from 'chat'
 import { answerThread } from '@/bot/answer/verdict'
-import { log, logError } from '@/bot/log'
+import { describe, log, logError } from '@/bot/log'
 import { ThreadXAdapter } from '@/bot/x/adapter'
-import { saveAnswer } from '@/bot/x/answers'
+import { type AnswerRecord, saveAnswer } from '@/bot/x/answers'
 
 const MENTIONS_PER_AUTHOR_PER_HOUR = 20
 const HOUR_MS = 3_600_000
@@ -25,34 +25,40 @@ export function createBot({ x, state, answer, logger = 'info' }: Deps) {
       return
     }
     const started = Date.now()
+    const at = new Date().toISOString()
+    let record: Omit<AnswerRecord, 'ms'> = {
+      id: post.id,
+      author,
+      at,
+      thread: [],
+      reply: null,
+      source: 'none',
+      options: [],
+    }
     try {
       if (await overCap(state, post.author_id)) {
         log('mention.capped', { id: post.id, author })
         return
       }
       const posts = await x.fetchPosts(post.id)
+      record.thread = posts
       const verdict = await answer(posts)
-      const ms = Date.now() - started
+      record = { ...record, ...verdict }
       log('mention', {
         id: post.id,
         author,
         posts: posts.length,
         reply: verdict.reply,
         confidence: verdict.confidence,
-        ms,
       })
       if (verdict.reply) await thread.post(verdict.reply)
-      await saveAnswer(state, {
-        ...verdict,
-        id: post.id,
-        author,
-        thread: posts,
-        ms,
-        at: new Date().toISOString(),
-      })
     } catch (error) {
-      logError('mention.failed', error, { id: post.id, author, ms: Date.now() - started })
+      record.error = describe(error)
+      logError('mention.failed', error, { id: post.id, author })
     }
+    await saveAnswer(state, { ...record, ms: Date.now() - started }).catch((error) =>
+      logError('answers.save_failed', error),
+    )
   })
 
   return bot

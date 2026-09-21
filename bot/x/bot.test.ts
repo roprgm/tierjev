@@ -103,3 +103,14 @@ test('caps the mentions answered per author and hour', async () => {
   for (let i = 0; i < 21; i++) await deliver(bot, signedDelivery(mention({ id: String(600 + i) })))
   expect(replies()).toHaveLength(20)
 })
+
+test('records a mention whose handling failed, with the error', async () => {
+  const bot = botWith(async () => {
+    throw new Error('gateway down')
+  })
+  await deliver(bot, signedDelivery(mention()))
+  expect(replies()).toHaveLength(0)
+  const [record] = await listAnswers(bot.state, 10)
+  expect(record).toMatchObject({ id: '501', reply: null, error: 'Error: gateway down' })
+  expect(record.thread.map((p) => p.id)).toEqual(['501'])
+})

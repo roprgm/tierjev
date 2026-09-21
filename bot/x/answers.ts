@@ -12,6 +12,7 @@ export type AnswerRecord = Verdict & {
   thread: Post[]
   ms: number
   at: string
+  error?: string
 }
 
 // Every handled mention, newest last, capped; one key per mention id for a future permalink.
