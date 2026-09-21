@@ -33,9 +33,9 @@ Jev is called with plain `fetch` rather than the AI SDK's `experimental_evaluate
 The "+ New set" chip opens a dialog with two ways in, and both land on the same preview where the user curates the list before it exists: remove items, or click an icon to change its colour or emoji.
 
 - **Generate with AI**, 1 credit. `POST /api/sets` streams NDJSON partial drafts from `deepseek/deepseek-v4.1-flash` (`streamText` + `Output.object`, thinking disabled) so items appear as they are written, then a final `{ done }` line. Results are cached 30 days by topic and limited to 10 an hour per IP.
-- **Paste a list**, free. One item per line, validated locally (`lib/list.ts`): no commas, no empty lines, no duplicates, 3 to 40 items.
+- **Paste a list**, free. One item per line, validated locally (`lib/parse.ts`): no commas, no empty lines, no duplicates, 3 to 40 items.
 
-Either way `POST /api/colors` asks Jev to pick each item's colour from the CSS named-colour palette (`lib/palette.ts`, whites and greys removed), six items per request. Items keep both an emoji and a colour: the tile shows the emoji on a coloured disc, or whichever one exists. Custom sets and a placeholder credit wallet (10 to start) live in `localStorage`; the user can restyle their tiles later and delete their own sets from the footer.
+Either way `POST /api/colors` asks Jev to pick each item's colour from the CSS named-colour palette (`lib/palette.ts`, picked in `lib/jev.ts`, whites and greys removed), six items per request. Items keep both an emoji and a colour: the tile shows the emoji on a coloured disc, or whichever one exists. Custom sets and a placeholder credit wallet (10 to start) live in `localStorage`; the user can restyle their tiles later and delete their own sets from the footer.
 
 ## Motion
 

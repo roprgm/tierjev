@@ -42,10 +42,28 @@ export function parsePlacements(value: unknown, items: Item[]): Placement[] | nu
   return placements
 }
 
-export const normalize = (text: string) => text.trim().replace(/\s+/g, ' ').toLowerCase()
+const MIN = 3
 
-export async function hashKey(prefix: string, ...parts: unknown[]) {
-  const bytes = new TextEncoder().encode(JSON.stringify(parts))
-  const hash = await crypto.subtle.digest('SHA-256', bytes)
-  return `${prefix}:${Buffer.from(hash).toString('base64url')}`
+// Turns a pasted "one item per line" list into items, or explains the first problem found.
+export function parseList(text: string): { items: Item[] } | { error: string } {
+  const lines = text.split('\n')
+  const items: Item[] = []
+  const seen = new Set<string>()
+  for (const [i, raw] of lines.entries()) {
+    const line = raw.trim()
+    const at = `Line ${i + 1}`
+    if (!line) {
+      if (i === lines.length - 1) continue
+      return { error: `${at} is empty.` }
+    }
+    if (line.includes(',')) return { error: `${at} has a comma. Put one item per line.` }
+    if (line.length > 40) return { error: `${at} is longer than 40 characters.` }
+    const key = line.toLowerCase()
+    if (seen.has(key)) return { error: `${at} repeats "${line}".` }
+    seen.add(key)
+    items.push({ name: line })
+  }
+  if (items.length < MIN) return { error: `Add at least ${MIN} items.` }
+  if (items.length > MAX_ITEMS) return { error: `Keep it to ${MAX_ITEMS} items or fewer.` }
+  return { items }
 }

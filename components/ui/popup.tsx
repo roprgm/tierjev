@@ -1,3 +1,7 @@
+'use client'
+
+import { Popover as PopoverPrimitive } from '@base-ui/react/popover'
+import { Tooltip as TooltipPrimitive } from '@base-ui/react/tooltip'
 import type { ComponentProps } from 'react'
 import { cn } from '@/lib/utils'
 
@@ -48,5 +52,57 @@ export function PopupArrow({ className, ...props }: ComponentProps<'svg'>) {
         vectorEffect="non-scaling-stroke"
       />
     </svg>
+  )
+}
+
+export const PopoverRoot = PopoverPrimitive.Root
+export const PopoverTrigger = PopoverPrimitive.Trigger
+
+type PopoverContentProps = Omit<PopoverPrimitive.Popup.Props, 'className'> & {
+  className?: string
+  side?: PopoverPrimitive.Positioner.Props['side']
+}
+
+export function PopoverContent({ className, side = 'top', ...props }: PopoverContentProps) {
+  return (
+    <PopoverPrimitive.Portal>
+      <PopoverPrimitive.Positioner side={side} sideOffset={8} className="z-50">
+        <PopoverPrimitive.Popup render={<PopupSurface className={cn('p-2', className)} />} {...props}>
+          <PopoverPrimitive.Arrow render={<PopupArrow />} />
+          {props.children}
+        </PopoverPrimitive.Popup>
+      </PopoverPrimitive.Positioner>
+    </PopoverPrimitive.Portal>
+  )
+}
+
+export function TooltipProvider({
+  delay = 500,
+  closeDelay = 100,
+  ...props
+}: TooltipPrimitive.Provider.Props) {
+  return <TooltipPrimitive.Provider closeDelay={closeDelay} delay={delay} {...props} />
+}
+
+export const TooltipRoot = TooltipPrimitive.Root
+export const TooltipTrigger = TooltipPrimitive.Trigger
+
+export function TooltipContent({
+  className,
+  children,
+  ...props
+}: Omit<TooltipPrimitive.Popup.Props, 'className'> & { className?: string }) {
+  return (
+    <TooltipPrimitive.Portal>
+      <TooltipPrimitive.Positioner side="top" sideOffset={8} className="z-50">
+        <TooltipPrimitive.Popup
+          render={<PopupSurface className={cn('max-w-64 px-2 py-1.5 text-xs leading-4', className)} />}
+          {...props}
+        >
+          <TooltipPrimitive.Arrow render={<PopupArrow />} />
+          {children}
+        </TooltipPrimitive.Popup>
+      </TooltipPrimitive.Positioner>
+    </TooltipPrimitive.Portal>
   )
 }

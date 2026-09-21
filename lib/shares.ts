@@ -1,6 +1,6 @@
 import { cache } from 'react'
 import { parseItems, parsePlacements } from '@/lib/parse'
-import { redis } from '@/lib/redis'
+import { redis } from '@/lib/server'
 import type { Share } from '@/lib/types'
 
 const ALPHABET = 'abcdefghijkmnpqrstuvwxyzABCDEFGHJKLMNPQRSTUVWXYZ23456789'

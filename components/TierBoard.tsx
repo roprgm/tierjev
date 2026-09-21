@@ -22,7 +22,7 @@ import {
 import { CSS } from '@dnd-kit/utilities'
 import { type ComponentProps, type ReactNode, useRef, useState } from 'react'
 import { ItemTile } from '@/components/ItemTile'
-import { TooltipContent, TooltipProvider, TooltipRoot, TooltipTrigger } from '@/components/ui/tooltip'
+import { TooltipContent, TooltipProvider, TooltipRoot, TooltipTrigger } from '@/components/ui/popup'
 import { type Item, type Placement, TIERS, type Tier } from '@/lib/types'
 import { useFlip } from '@/lib/use-flip'
 import { cn } from '@/lib/utils'

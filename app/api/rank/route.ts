@@ -1,8 +1,6 @@
 import { rankItems } from '@/lib/jev'
-import { hashKey, normalize, parseSet } from '@/lib/parse'
-import { clientIp, rateLimited } from '@/lib/ratelimit'
-import { redis } from '@/lib/redis'
-import { reportError } from '@/lib/report'
+import { parseSet } from '@/lib/parse'
+import { clientIp, hashKey, normalize, rateLimited, redis, reportError } from '@/lib/server'
 import type { RankResponse } from '@/lib/types'
 
 const LIMIT_PER_HOUR = 30

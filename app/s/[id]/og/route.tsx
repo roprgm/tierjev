@@ -1,115 +1,22 @@
-import { ImageResponse } from 'next/og'
+import { boardImage } from '@/lib/og'
 import { getShare } from '@/lib/shares'
-import { TIERS, type Tier } from '@/lib/types'
-
-const size = { width: 1200, height: 630 }
-
-const COLORS: Record<Tier, string> = {
-  S: '#f27272',
-  A: '#f2a35c',
-  B: '#efc95a',
-  C: '#e9e35c',
-  D: '#a9df6d',
-  F: '#8b93b3',
-}
+import { TIERS } from '@/lib/types'
 
 // Cached at the CDN for a year per id; the function runs once per id per region.
 export async function GET(_: Request, { params }: { params: Promise<{ id: string }> }) {
   const share = await getShare((await params).id)
+  const label = (name: string) => {
+    const emoji = share?.items.find((it) => it.name === name)?.emoji
+    return emoji ? `${emoji} ${name}` : name
+  }
   const rows = TIERS.map((tier) => ({
     tier,
-    names: (share?.placements ?? [])
-      .filter((p) => p.tier === tier)
-      .map((p) => {
-        const item = share?.items.find((it) => it.name === p.name)
-        return item?.emoji ? `${item.emoji} ${p.name}` : p.name
-      }),
+    names: (share?.placements ?? []).filter((p) => p.tier === tier).map((p) => label(p.name)),
   }))
-
-  const image = new ImageResponse(
-    <div
-      style={{
-        width: '100%',
-        height: '100%',
-        display: 'flex',
-        flexDirection: 'column',
-        background: '#0a0a0a',
-        color: '#fafafa',
-        padding: 48,
-        fontFamily: 'sans-serif',
-      }}
-    >
-      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline' }}>
-        <div
-          style={{ fontSize: 40, fontWeight: 700, maxWidth: 950, overflow: 'hidden', whiteSpace: 'nowrap' }}
-        >
-          {share?.criterion ?? 'tierjev'}
-        </div>
-        <div style={{ fontSize: 24, color: '#a1a1a1' }}>tierjev</div>
-      </div>
-      <div style={{ fontSize: 22, color: '#a1a1a1', marginTop: 4 }}>
-        {share ? `${share.title} · ranked ${share.jev ? 'by Jev' : 'by hand'}` : ''}
-      </div>
-      <div
-        style={{
-          display: 'flex',
-          flexDirection: 'column',
-          marginTop: 24,
-          borderRadius: 16,
-          overflow: 'hidden',
-          border: '1px solid #262626',
-        }}
-      >
-        {rows.map(({ tier, names }) => (
-          <div key={tier} style={{ display: 'flex', height: 74, borderBottom: '1px solid #262626' }}>
-            <div
-              style={{
-                width: 80,
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                fontSize: 32,
-                fontWeight: 700,
-                color: '#111',
-                background: COLORS[tier],
-              }}
-            >
-              {tier}
-            </div>
-            <div
-              style={{
-                display: 'flex',
-                flex: 1,
-                alignItems: 'center',
-                gap: 8,
-                padding: '0 12px',
-                overflow: 'hidden',
-                background: '#171717',
-              }}
-            >
-              {names.map((name) => (
-                <div
-                  key={name}
-                  style={{
-                    display: 'flex',
-                    padding: '8px 14px',
-                    borderRadius: 8,
-                    border: '1px solid #333',
-                    background: '#0a0a0a',
-                    fontSize: 22,
-                    whiteSpace: 'nowrap',
-                  }}
-                >
-                  {name}
-                </div>
-              ))}
-            </div>
-          </div>
-        ))}
-      </div>
-    </div>,
-    size,
-  )
+  const image = boardImage(rows, {
+    title: share?.criterion ?? 'tierjev',
+    subtitle: share ? `${share.title} · ranked ${share.jev ? 'by Jev' : 'by hand'}` : '',
+  })
   image.headers.set('Cache-Control', 'public, max-age=3600, s-maxage=31536000, immutable')
   return image
 }

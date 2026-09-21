@@ -1,8 +1,8 @@
 'use client'
 
 import type { ReactElement } from 'react'
-import { Input } from '@/components/ui/input'
-import { PopoverContent, PopoverRoot, PopoverTrigger } from '@/components/ui/popover'
+import { Input } from '@/components/ui/field'
+import { PopoverContent, PopoverRoot, PopoverTrigger } from '@/components/ui/popup'
 import { SWATCHES } from '@/lib/palette'
 import type { Item } from '@/lib/types'
 import { cn } from '@/lib/utils'

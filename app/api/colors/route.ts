@@ -1,8 +1,5 @@
-import { pickColors } from '@/lib/colors'
-import { hashKey } from '@/lib/parse'
-import { clientIp, rateLimited } from '@/lib/ratelimit'
-import { redis } from '@/lib/redis'
-import { reportError } from '@/lib/report'
+import { pickColors } from '@/lib/jev'
+import { clientIp, hashKey, rateLimited, redis, reportError } from '@/lib/server'
 
 const LIMIT_PER_HOUR = 20
 const CACHE_TTL = 60 * 60 * 24 * 30

@@ -2,8 +2,8 @@
 // Usage: bun --env-file=.env.local scripts/generate-catalogue.ts
 
 import { existsSync, readFileSync, writeFileSync } from 'node:fs'
-import { pickColors } from '@/lib/colors'
 import { finalizeSet, streamSet } from '@/lib/generate-set'
+import { pickColors } from '@/lib/jev'
 import type { TierSet } from '@/lib/types'
 
 // Pass topics as arguments to regenerate only those and merge into the existing file.

@@ -2,7 +2,7 @@
 
 import { type ComponentProps, type FormEvent, type ReactNode, useState } from 'react'
 import { IconPicker } from '@/components/IconPicker'
-import { ItemIcon } from '@/components/ItemIcon'
+import { ItemIcon } from '@/components/ItemTile'
 import { Button } from '@/components/ui/button'
 import {
   DialogClose,
@@ -11,10 +11,9 @@ import {
   DialogRoot,
   DialogTitle,
 } from '@/components/ui/dialog'
-import { Input } from '@/components/ui/input'
-import { Textarea } from '@/components/ui/textarea'
+import { Input, Textarea } from '@/components/ui/field'
 import { ApiError, pickColors, streamSet } from '@/lib/api'
-import { parseList } from '@/lib/list'
+import { parseList } from '@/lib/parse'
 import type { Item, TierSet } from '@/lib/types'
 import { cn } from '@/lib/utils'
 
