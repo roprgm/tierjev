@@ -1,15 +1,15 @@
-import type { CSSProperties } from 'react'
+import type { ComponentProps } from 'react'
 import type { Item } from '@/lib/types'
 import { cn } from '@/lib/utils'
 
-type Props = { item: Item; title?: string; animate?: boolean; className?: string; style?: CSSProperties }
+type Props = ComponentProps<'div'> & { item: Item; animate?: boolean }
 
 const slug = (name: string) => name.toLowerCase().replace(/[^a-z0-9]+/g, '-')
 
-export function ItemTile({ item, title, animate = true, className, style }: Props) {
+export function ItemTile({ item, animate = true, className, style, ...props }: Props) {
   return (
     <div
-      title={title}
+      {...props}
       style={{ viewTransitionName: animate ? `tile-${slug(item.name)}` : undefined, ...style }}
       className={cn(
         'flex size-20 shrink-0 flex-col items-center justify-center gap-1 overflow-hidden rounded-md border bg-background p-1 text-center',

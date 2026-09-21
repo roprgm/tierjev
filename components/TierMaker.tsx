@@ -5,11 +5,13 @@ import { flushSync } from 'react-dom'
 import { GitHubIcon } from '@/components/GitHubIcon'
 import { SetPicker } from '@/components/SetPicker'
 import { TierBoard } from '@/components/TierBoard'
+import { Toast, useToast } from '@/components/Toast'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { SETS } from '@/data/sets'
-import { rank } from '@/lib/rank'
-import type { Placement, TierSet } from '@/lib/types'
+import { RankError, rank } from '@/lib/rank'
+import type { Placement, Share, Tier, TierSet } from '@/lib/types'
+import { formatCountdown, useCountdown } from '@/lib/use-countdown'
 
 // Animates DOM moves (pool → tier) where the browser supports it, otherwise applies them at once.
 function transition(update: () => void) {
@@ -20,32 +22,67 @@ function transition(update: () => void) {
 export function TierMaker() {
   const [set, setSet] = useState<TierSet>(SETS[0])
   const [criterion, setCriterion] = useState(set.criterion)
-  const [placements, setPlacements] = useState<Placement[] | null>(null)
+  const [placements, setPlacements] = useState<Placement[]>([])
   const [loading, setLoading] = useState(false)
-  const [error, setError] = useState<string | null>(null)
+  const [lockedUntil, setLockedUntil] = useState<number | null>(null)
+  const [manual, setManual] = useState(false)
+  const lockSeconds = useCountdown(lockedUntil)
+  const { message, notify } = useToast()
+  const canDrag = manual || lockSeconds > 0
 
   function selectSet(next: TierSet) {
     transition(() => {
       setSet(next)
       setCriterion(next.criterion)
-      setPlacements(null)
-      setError(null)
+      setPlacements([])
+    })
+  }
+
+  function move(name: string, tier: Tier | null) {
+    setPlacements((prev) => {
+      const rest = prev.filter((p) => p.name !== name)
+      return tier ? [...rest, { name, tier }] : rest
     })
   }
 
   async function submit(e: FormEvent) {
     e.preventDefault()
     setLoading(true)
-    setError(null)
-    setPlacements(null)
     try {
-      const { placements } = await rank({ criterion, items: set.items })
-      transition(() => setPlacements(placements))
+      const res = await rank({ criterion, items: set.items })
+      transition(() => setPlacements(res.placements))
     } catch (err) {
-      setError(err instanceof Error ? err.message : 'Something went wrong')
+      const retryAfter = err instanceof RankError ? err.retryAfter : undefined
+      if (retryAfter) setLockedUntil(Date.now() + retryAfter * 1000)
+      const text = err instanceof Error ? err.message : 'Something went wrong'
+      notify(
+        retryAfter ? `${text} Meanwhile, drag the tiles into tiers yourself.` : text,
+        retryAfter ? 8000 : 5000,
+      )
     } finally {
       setLoading(false)
     }
+  }
+
+  async function share() {
+    const body: Share = {
+      title: set.title,
+      criterion,
+      items: set.items,
+      placements,
+      jev: placements.every((p) => p.confidence != null),
+    }
+    const res = await fetch('/api/share', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(body),
+    })
+    const data = await res.json()
+    if (!res.ok) return notify(data.error ?? 'Could not share')
+    const url = `${location.origin}/s/${data.id}`
+    if (navigator.share) return navigator.share({ title: criterion, url }).catch(() => {})
+    await navigator.clipboard.writeText(url)
+    notify('Link copied')
   }
 
   return (
@@ -76,28 +113,48 @@ export function TierMaker() {
           maxLength={200}
           required
         />
-        <Button type="submit" disabled={loading} className="w-24 shrink-0">
-          {loading ? 'Ranking…' : 'Rank'}
+        <Button type="submit" disabled={loading || lockSeconds > 0} className="w-24 shrink-0 tabular-nums">
+          {loading ? 'Ranking…' : lockSeconds > 0 ? formatCountdown(lockSeconds) : 'Rank'}
+        </Button>
+        <Button
+          type="button"
+          variant="ghost"
+          onClick={share}
+          disabled={placements.length === 0}
+          className="shrink-0"
+        >
+          Share
         </Button>
       </form>
 
-      <div className="min-h-10">
-        {error && (
-          <p role="alert" className="rounded-lg border border-tier-s/40 bg-tier-s/10 px-3 py-2 text-sm">
-            {error}
-          </p>
+      <TierBoard
+        items={set.items}
+        placements={placements}
+        loading={loading}
+        onMove={canDrag ? move : undefined}
+      />
+
+      <footer className="flex items-center justify-between gap-4 text-xs text-muted-foreground">
+        <span>
+          Ranked by{' '}
+          <a className="underline" href="https://vercel.com/ai-gateway/models/jev">
+            Jev
+          </a>
+          , TypeSafe AI's classifier. Hover a tile for confidence.
+        </span>
+        {lockSeconds > 0 ? (
+          <span className="shrink-0">Drag tiles to sort while Jev rests</span>
+        ) : (
+          <button
+            type="button"
+            onClick={() => setManual((m) => !m)}
+            className="shrink-0 underline-offset-2 transition-colors hover:text-foreground hover:underline"
+          >
+            {manual ? 'Done sorting' : 'Customize'}
+          </button>
         )}
-      </div>
-
-      <TierBoard items={set.items} placements={placements} loading={loading} />
-
-      <footer className="text-xs text-muted-foreground">
-        Ranked by{' '}
-        <a className="underline" href="https://vercel.com/ai-gateway/models/jev">
-          Jev
-        </a>
-        , TypeSafe AI's classifier. Hover a tile for confidence.
       </footer>
+      <Toast message={message} />
     </main>
   )
 }

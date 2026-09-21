@@ -22,10 +22,18 @@ Next.js App Router. The classifier lives in `src/app/api/classify/route.ts`; pay
 
 One request per set. The whole item list is the shared `state`; each item gets a `score` question with the rubric F, D, C, B, A, S. The tier is the rung with the highest probability, the score orders items within a tier, and the probability is shown as confidence on hover.
 
+## Sharing
+
+`POST /api/share` stores the list in Redis under an 8-character id. `/s/<id>` renders it once, then Vercel serves the cached page and its `opengraph-image` from the CDN. Shared pages never call Jev.
+
+## Manual sorting
+
+Tiles become draggable when the rate limit kicks in or after the Customize link in the footer. Manual moves drop the Jev confidence for that tile.
+
 ## Cache and limits
 
 - Rankings are cached in Redis for 24 hours, keyed by a hash of the normalised criterion and the sorted item names. Cache hits never reach Jev and do not count against the rate limit.
-- 40 items per request, 30 uncached requests per IP per hour, counted in Redis so the limit holds across function instances.
+- 40 items per request, 30 uncached rankings and 20 shares per IP per hour, counted in Redis so the limit holds across function instances. A 429 carries `Retry-After`, and the UI locks the Rank button with a countdown.
 - Budget: a cache miss costs about four Redis commands, a hit one. The Upstash free tier covers 500K commands a month.
 
 ## Next

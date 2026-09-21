@@ -1,4 +1,5 @@
 import { askJev } from '@/lib/jev'
+import { clientIp, rateLimited } from '@/lib/ratelimit'
 import { redis } from '@/lib/redis'
 import type { Item, Placement, RankRequest, RankResponse } from '@/lib/types'
 
@@ -27,16 +28,6 @@ async function cacheKey({ criterion, items }: RankRequest) {
   return `rank:${Buffer.from(hash).toString('base64url')}`
 }
 
-// Returns seconds until the hourly window resets when the limit is exceeded.
-async function rateLimited(ip: string) {
-  if (!redis) return 0
-  const window = Math.floor(Date.now() / 3_600_000)
-  const key = `rl:${ip}:${window}`
-  const [count] = await redis.multi().incr(key).expire(key, 3600).exec<[number, number]>()
-  if (count <= LIMIT_PER_HOUR) return 0
-  return Math.ceil(((window + 1) * 3_600_000 - Date.now()) / 1000)
-}
-
 export async function POST(request: Request) {
   const req = parse(await request.json().catch(() => null))
   if (!req) return Response.json({ error: 'Invalid request' }, { status: 400 })
@@ -45,13 +36,13 @@ export async function POST(request: Request) {
   const cached = await redis?.get<Placement[]>(key)
   if (cached) return Response.json({ placements: cached } satisfies RankResponse)
 
-  const ip = request.headers.get('x-forwarded-for')?.split(',')[0].trim() ?? 'local'
-  const retryAfter = await rateLimited(ip)
+  const retryAfter = await rateLimited('rank', clientIp(request), LIMIT_PER_HOUR)
   if (retryAfter) {
     const minutes = Math.max(1, Math.ceil(retryAfter / 60))
     return Response.json(
       {
-        error: `You've used the ${LIMIT_PER_HOUR} free rankings for this hour. Try again in ${minutes} min.`,
+        error: `You've used the ${LIMIT_PER_HOUR} free rankings for this hour. Jev is back in ${minutes} min.`,
+        retryAfter,
       },
       { status: 429, headers: { 'Retry-After': String(retryAfter) } },
     )
