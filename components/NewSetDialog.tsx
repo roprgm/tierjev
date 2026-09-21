@@ -1,6 +1,6 @@
 'use client'
 
-import { type FormEvent, useState } from 'react'
+import { type ComponentProps, type FormEvent, type ReactNode, useState } from 'react'
 import { Button } from '@/components/ui/button'
 import {
   DialogClose,
@@ -37,6 +37,8 @@ export function NewSetDialog({ open, credits, onOpenChange, onCreate, onError }:
   const [list, setList] = useState('')
   const [busy, setBusy] = useState(false)
   const parsed = list.trim() ? parseList(list) : null
+  const listError = parsed && 'error' in parsed ? parsed.error : null
+  const listItems = parsed && 'items' in parsed ? parsed.items : null
 
   async function generate(e: FormEvent) {
     e.preventDefault()
@@ -66,78 +68,99 @@ export function NewSetDialog({ open, credits, onOpenChange, onCreate, onError }:
     <DialogRoot open={open} onOpenChange={onOpenChange}>
       <DialogContent>
         <DialogTitle>New set</DialogTitle>
-        <DialogDescription>Let AI build it for a credit, or paste your own list.</DialogDescription>
-        <div className="flex gap-1 rounded-lg bg-muted p-1 text-sm">
-          {(['ai', 'list'] as const).map((m) => (
-            <button
-              type="button"
-              key={m}
-              onClick={() => setMode(m)}
-              className={cn(
-                'flex-1 rounded-md py-1 transition-colors',
-                mode === m && 'bg-background shadow-xs',
-              )}
-            >
-              {m === 'ai' ? 'Generate with AI' : 'Paste a list'}
-            </button>
-          ))}
+        <DialogDescription>Let AI build one, or paste your own list.</DialogDescription>
+
+        <div className="grid grid-cols-2 gap-1 rounded-lg bg-muted p-1 text-sm">
+          <ModeButton active={mode === 'ai'} onClick={() => setMode('ai')}>
+            Generate with AI
+          </ModeButton>
+          <ModeButton active={mode === 'list'} onClick={() => setMode('list')}>
+            Paste a list
+          </ModeButton>
         </div>
 
         {mode === 'ai' ? (
-          <form onSubmit={generate} className="space-y-3">
-            <Input
-              value={topic}
-              onChange={(e) => setTopic(e.target.value)}
-              placeholder="90s sitcoms, Argentine rock bands, pasta shapes…"
-              maxLength={80}
-              required
-              autoFocus
-            />
-            <div className="flex items-center justify-between gap-2">
-              <span className="text-xs text-muted-foreground">You have {credits} credits</span>
-              <div className="flex gap-2">
-                <DialogClose render={<Button variant="ghost" />}>Cancel</DialogClose>
-                <Button type="submit" disabled={busy || credits < 1}>
-                  {busy ? 'Generating…' : 'Generate · 1 credit'}
-                </Button>
-              </div>
-            </div>
+          <form onSubmit={generate} className="space-y-5">
+            <Field label="Topic">
+              <Input
+                value={topic}
+                onChange={(e) => setTopic(e.target.value)}
+                placeholder="90s sitcoms"
+                maxLength={80}
+                required
+                autoFocus
+              />
+            </Field>
+            <Actions hint={`1 credit · you have ${credits}`} disabled={busy || credits < 1}>
+              {busy ? 'Generating…' : 'Create set'}
+            </Actions>
           </form>
         ) : (
-          <form onSubmit={addList} className="space-y-3">
-            <Input
-              value={title}
-              onChange={(e) => setTitle(e.target.value)}
-              placeholder="Set name"
-              maxLength={60}
-              required
-            />
-            <Textarea
-              value={list}
-              onChange={(e) => setList(e.target.value)}
-              placeholder={'One item per line\nPizza\nSushi\nTacos'}
-              rows={8}
-              required
-            />
-            <div className="flex items-center justify-between gap-2">
-              <span
-                className={cn(
-                  'text-xs',
-                  parsed && 'error' in parsed ? 'text-tier-s' : 'text-muted-foreground',
-                )}
-              >
-                {parsed ? ('error' in parsed ? parsed.error : `${parsed.items.length} items`) : 'Free'}
-              </span>
-              <div className="flex gap-2">
-                <DialogClose render={<Button variant="ghost" />}>Cancel</DialogClose>
-                <Button type="submit" disabled={!parsed || 'error' in parsed}>
-                  Add set
-                </Button>
-              </div>
-            </div>
+          <form onSubmit={addList} className="space-y-5">
+            <Field label="Name">
+              <Input
+                value={title}
+                onChange={(e) => setTitle(e.target.value)}
+                placeholder="Street food"
+                maxLength={60}
+                required
+              />
+            </Field>
+            <Field label="Items, one per line" error={listError}>
+              <Textarea
+                value={list}
+                onChange={(e) => setList(e.target.value)}
+                placeholder={'Tacos\nArepas\nEmpanadas'}
+                rows={7}
+                required
+                className={cn(listError && 'border-tier-s/60')}
+              />
+            </Field>
+            <Actions hint={listItems ? `${listItems.length} items · free` : 'Free'} disabled={!listItems}>
+              Create set
+            </Actions>
           </form>
         )}
       </DialogContent>
     </DialogRoot>
+  )
+}
+
+function ModeButton({ active, ...props }: { active: boolean } & ComponentProps<'button'>) {
+  return (
+    <button
+      type="button"
+      className={cn(
+        'rounded-md py-1.5 font-medium transition-colors',
+        active ? 'bg-background text-foreground shadow-xs' : 'text-muted-foreground hover:text-foreground',
+      )}
+      {...props}
+    />
+  )
+}
+
+function Field({ label, error, children }: { label: string; error?: string | null; children: ReactNode }) {
+  return (
+    <div className="space-y-1.5">
+      <span className="flex items-baseline justify-between text-xs font-medium text-muted-foreground">
+        {label}
+        {error && <span className="font-normal text-tier-s">{error}</span>}
+      </span>
+      {children}
+    </div>
+  )
+}
+
+function Actions({ hint, disabled, children }: { hint: string; disabled: boolean; children: ReactNode }) {
+  return (
+    <div className="flex items-center justify-between gap-3">
+      <span className="text-xs whitespace-nowrap text-muted-foreground">{hint}</span>
+      <div className="flex shrink-0 gap-2">
+        <DialogClose render={<Button variant="ghost" />}>Cancel</DialogClose>
+        <Button type="submit" disabled={disabled} className="whitespace-nowrap">
+          {children}
+        </Button>
+      </div>
+    </div>
   )
 }

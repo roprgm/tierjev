@@ -11,11 +11,13 @@ import { Input } from '@/components/ui/input'
 import { SETS } from '@/data/sets'
 import { ApiError, createShare, rank } from '@/lib/api'
 import { useCredits } from '@/lib/credits'
+import { useCustomSets } from '@/lib/custom-sets'
 import type { Placement, Share, Tier, TierSet } from '@/lib/types'
 import { formatCountdown, useCountdown } from '@/lib/use-countdown'
 
 export function TierMaker() {
-  const [sets, setSets] = useState<TierSet[]>(SETS)
+  const custom = useCustomSets()
+  const sets = [...SETS, ...custom.sets]
   const [set, setSet] = useState<TierSet>(SETS[0])
   const [criterion, setCriterion] = useState(set.criterion)
   const [placements, setPlacements] = useState<Placement[]>([])
@@ -46,16 +48,16 @@ export function TierMaker() {
 
   function addSet(created: TierSet, paid: boolean) {
     if (paid) spend(1)
-    setSets((prev) => [...prev.filter((s) => s.id !== created.id), created])
+    custom.add(created)
     selectSet(created)
     setCreating(false)
   }
 
-  // Lets a tile without an emoji take one, on the selected set and in the list.
+  // Lets a tile without an emoji take one, on the selected set and in storage.
   function setEmoji(name: string, emoji: string) {
     const updated = { ...set, items: set.items.map((it) => (it.name === name ? { ...it, emoji } : it)) }
     setSet(updated)
-    setSets((prev) => prev.map((s) => (s.id === updated.id ? updated : s)))
+    custom.update(updated)
   }
 
   async function submit(e: FormEvent) {
