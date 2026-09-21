@@ -56,10 +56,17 @@ export function TierMaker() {
     setCreating(false)
   }
 
-  function deleteSet() {
-    custom.remove(set.id)
-    selectSet(SETS[0])
+  function deleteSet(id = set.id) {
+    custom.remove(id)
+    if (id === set.id) selectSet(SETS[0])
     notify('Set deleted')
+  }
+
+  function clearSets() {
+    if (!confirm(`Delete your ${custom.sets.length} sets? This cannot be undone.`)) return
+    custom.clear()
+    if (isCustom) selectSet(SETS[0])
+    notify('Your sets were deleted')
   }
 
   // Restyles a tile of the user's own set, on screen and in storage.
@@ -125,7 +132,15 @@ export function TierMaker() {
         </a>
       </header>
 
-      <SetPicker sets={sets} selected={set} onSelect={selectSet} onNew={() => setCreating(true)} />
+      <SetPicker
+        sets={sets}
+        customIds={new Set(custom.sets.map((s) => s.id))}
+        selected={set}
+        onSelect={selectSet}
+        onNew={() => setCreating(true)}
+        onDelete={deleteSet}
+        onClear={clearSets}
+      />
 
       <form onSubmit={submit} className="flex gap-2">
         <Input
@@ -167,7 +182,7 @@ export function TierMaker() {
         </span>
         <span className="flex shrink-0 gap-3">
           {isCustom && (
-            <button type="button" onClick={deleteSet} className={footerLink}>
+            <button type="button" onClick={() => deleteSet()} className={footerLink}>
               Delete set
             </button>
           )}
