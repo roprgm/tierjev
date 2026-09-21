@@ -1,3 +1,6 @@
+'use client'
+
+import { useEffect, useRef } from 'react'
 import type { TierSet } from '@/lib/types'
 import { cn } from '@/lib/utils'
 
@@ -12,28 +15,56 @@ type Props = {
 }
 
 const chip =
-  'flex items-center gap-2 rounded-full border px-3 py-1.5 text-sm transition-[color,background-color,border-color,transform] duration-200 hover:bg-muted active:scale-95'
+  'flex shrink-0 items-center gap-2 rounded-full border px-3 py-1.5 text-sm whitespace-nowrap transition-[color,background-color,border-color,transform] duration-200 hover:bg-muted active:scale-95'
 
+// One scrolling row: new-set action first, then the user's own sets, then the catalogue.
 export function SetPicker({ sets, customIds, selected, onSelect, onNew, onDelete, onClear }: Props) {
+  const rowRef = useRef<HTMLDivElement>(null)
+  const ordered = [...sets].sort((a, b) => Number(customIds.has(b.id)) - Number(customIds.has(a.id)))
+
+  useEffect(() => {
+    rowRef.current
+      ?.querySelector<HTMLElement>('[aria-current="true"]')
+      ?.scrollIntoView({ inline: 'nearest', block: 'nearest', behavior: 'smooth' })
+  }, [])
+
   return (
-    <div className="flex flex-wrap items-center gap-2">
-      {sets.map((set) => {
+    <div ref={rowRef} className="scrollbar-none -mx-4 flex items-center gap-2 overflow-x-auto px-4 py-1">
+      <button
+        type="button"
+        onClick={onNew}
+        className={cn(chip, 'border-dashed text-muted-foreground hover:text-foreground')}
+      >
+        + New set
+      </button>
+      {customIds.size > 1 && (
+        <button
+          type="button"
+          onClick={onClear}
+          className="shrink-0 cursor-pointer px-1 text-xs whitespace-nowrap text-muted-foreground underline-offset-2 transition-colors hover:text-foreground hover:underline"
+        >
+          Clear mine
+        </button>
+      )}
+      {ordered.map((set) => {
         const active = set.id === selected.id
+        const own = customIds.has(set.id)
         return (
-          <span key={set.id} className="group relative">
+          <span key={set.id} className="group relative shrink-0">
             <button
               type="button"
+              aria-current={active}
               onClick={() => onSelect(set)}
               className={cn(
                 chip,
-                customIds.has(set.id) && 'pr-7',
+                own && 'pr-7',
                 active && 'border-foreground bg-foreground text-background hover:bg-foreground',
               )}
             >
               <span>{set.emoji || '•'}</span>
               {set.title}
             </button>
-            {customIds.has(set.id) && (
+            {own && (
               <button
                 type="button"
                 aria-label={`Delete ${set.title}`}
@@ -52,22 +83,6 @@ export function SetPicker({ sets, customIds, selected, onSelect, onNew, onDelete
           </span>
         )
       })}
-      <button
-        type="button"
-        onClick={onNew}
-        className={cn(chip, 'border-dashed text-muted-foreground hover:text-foreground')}
-      >
-        + New set
-      </button>
-      {customIds.size > 1 && (
-        <button
-          type="button"
-          onClick={onClear}
-          className="cursor-pointer px-1 text-xs text-muted-foreground underline-offset-2 transition-colors hover:text-foreground hover:underline"
-        >
-          Clear mine
-        </button>
-      )}
     </div>
   )
 }

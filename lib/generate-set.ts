@@ -35,7 +35,7 @@ const slug = (s: string) =>
     .replace(/^-|-$/g, '')
 
 // Streams partial drafts as DeepSeek writes them; the caller finalises the last one.
-export function streamSet(topic: string) {
+export function streamSet(topic: string, language = 'the language the topic is written in') {
   return streamText({
     model: MODEL,
     output: Output.object({ schema: setSchema }),
@@ -43,7 +43,7 @@ export function streamSet(topic: string) {
     providerOptions: { deepseek: { thinking: { type: 'disabled' } } },
     instructions:
       'You build sets of items for tier lists. Return well-known, real, distinct items that fit the topic. ' +
-      'Prefer 20 to 30 items. Use concise names people would recognise. Answer in the language of the topic. ' +
+      `Prefer 20 to 30 items. Use concise names people would recognise. Answer in ${language}. ` +
       'The criterion must be something to rank the items by, not a restatement of the topic.',
     prompt: `Topic: ${topic}`,
   }).partialOutputStream

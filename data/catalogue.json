@@ -1,0 +1,6607 @@
+[
+  {
+    "id": "ai-companies",
+    "title": "AI Companies",
+    "emoji": "🤖",
+    "criterion": "Best overall AI products and research impact",
+    "items": [
+      {
+        "name": "OpenAI",
+        "emoji": "🌀",
+        "color": "#008000"
+      },
+      {
+        "name": "Anthropic",
+        "emoji": "🔶",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Google DeepMind",
+        "emoji": "🧠",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Meta AI",
+        "emoji": "📘",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Microsoft AI",
+        "emoji": "🪟",
+        "color": "#0000ff"
+      },
+      {
+        "name": "NVIDIA",
+        "emoji": "🟩",
+        "color": "#008000"
+      },
+      {
+        "name": "xAI",
+        "emoji": "✖️",
+        "color": "#808080"
+      },
+      {
+        "name": "Mistral AI",
+        "emoji": "🌬️",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Cohere",
+        "emoji": "🧭",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Hugging Face",
+        "emoji": "🤗",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Stability AI",
+        "emoji": "🎨",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Midjourney",
+        "emoji": "⛵",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Runway",
+        "emoji": "🎬",
+        "color": "#808080"
+      },
+      {
+        "name": "ElevenLabs",
+        "emoji": "🔊",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Suno",
+        "emoji": "🎵",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Perplexity",
+        "emoji": "🔍",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Scale AI",
+        "emoji": "📏",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Databricks",
+        "emoji": "🧱",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Snowflake",
+        "emoji": "❄️",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Palantir",
+        "emoji": "🛡️",
+        "color": "#0000ff"
+      },
+      {
+        "name": "IBM Watson",
+        "emoji": "💼",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Baidu",
+        "emoji": "🐾",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Alibaba Cloud",
+        "emoji": "☁️",
+        "color": "#0000ff"
+      },
+      {
+        "name": "DeepSeek",
+        "emoji": "🐋",
+        "color": "#0000ff"
+      },
+      {
+        "name": "AI21 Labs",
+        "emoji": "📚",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Character.AI",
+        "emoji": "🎭",
+        "color": "#0000ff"
+      }
+    ]
+  },
+  {
+    "id": "ai-chatbots-and-assistants",
+    "title": "AI Chatbots & Assistants",
+    "emoji": "🤖",
+    "criterion": "Best AI assistant overall",
+    "items": [
+      {
+        "name": "ChatGPT",
+        "emoji": "💬",
+        "color": "#008000"
+      },
+      {
+        "name": "Claude",
+        "emoji": "📜",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Gemini",
+        "emoji": "✨",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Microsoft Copilot",
+        "emoji": "🪟",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Perplexity",
+        "emoji": "🔍",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Grok",
+        "emoji": "🚀",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Meta AI",
+        "emoji": "📘",
+        "color": "#0000ff"
+      },
+      {
+        "name": "DeepSeek",
+        "emoji": "🐋",
+        "color": "#00008b"
+      },
+      {
+        "name": "Mistral Le Chat",
+        "emoji": "🇫🇷",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Poe",
+        "emoji": "🐦",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Character.AI",
+        "emoji": "🎭",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Replika",
+        "emoji": "💞",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Pi",
+        "emoji": "🧩",
+        "color": "#0000ff"
+      },
+      {
+        "name": "You.com",
+        "emoji": "🌐",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Jasper",
+        "emoji": "🖋️",
+        "color": "#008000"
+      },
+      {
+        "name": "Copy.ai",
+        "emoji": "📝",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Writesonic",
+        "emoji": "⚡",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Siri",
+        "emoji": "🍎",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Amazon Alexa",
+        "emoji": "🔊",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Google Assistant",
+        "emoji": "🎙️",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Cortana",
+        "emoji": "🟣",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Chatbot GPT-4o",
+        "emoji": "🌀",
+        "color": "#008000"
+      },
+      {
+        "name": "Cohere Coral",
+        "emoji": "🪸",
+        "color": "#ff7f50"
+      },
+      {
+        "name": "AI21 Jurassic",
+        "emoji": "🦕",
+        "color": "#008000"
+      },
+      {
+        "name": "Anthropic Claude Opus",
+        "emoji": "🏛️",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Qwen",
+        "emoji": "🌏",
+        "color": "#0000ff"
+      },
+      {
+        "name": "llama.cpp",
+        "emoji": "🦙",
+        "color": "#a52a2a"
+      }
+    ]
+  },
+  {
+    "id": "large-language-models",
+    "title": "Large Language Models",
+    "emoji": "🤖",
+    "criterion": "Best overall capability and impact",
+    "items": [
+      {
+        "name": "GPT-4",
+        "emoji": "🧠",
+        "color": "#0000ff"
+      },
+      {
+        "name": "GPT-4o",
+        "emoji": "🗣️",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Claude 3.5 Sonnet",
+        "emoji": "📝",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Claude 3 Opus",
+        "emoji": "🎼",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Gemini 1.5 Pro",
+        "emoji": "♊",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Gemini Ultra",
+        "emoji": "💎",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Llama 3",
+        "emoji": "🦙",
+        "color": "#a52a2a"
+      },
+      {
+        "name": "Llama 2",
+        "emoji": "🐐",
+        "color": "#a52a2a"
+      },
+      {
+        "name": "Mistral Large",
+        "emoji": "🌬️",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Mixtral 8x7B",
+        "emoji": "🧩",
+        "color": "#0000ff"
+      },
+      {
+        "name": "GPT-3.5",
+        "emoji": "⚡",
+        "color": "#0000ff"
+      },
+      {
+        "name": "PaLM 2",
+        "emoji": "🌴",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Falcon 180B",
+        "emoji": "🦅",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Command R+",
+        "emoji": "🎯",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Grok-1",
+        "emoji": "🛸",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Phi-3",
+        "emoji": "🔬",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Gemma",
+        "emoji": "💠",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Qwen 2",
+        "emoji": "🐉",
+        "color": "#0000ff"
+      },
+      {
+        "name": "DeepSeek-V2",
+        "emoji": "🔍",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Yi-34B",
+        "emoji": "🀄",
+        "color": "#0000ff"
+      },
+      {
+        "name": "DBRX",
+        "emoji": "📊",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Titan",
+        "emoji": "🏛️",
+        "color": "#808080"
+      },
+      {
+        "name": "Jurassic-2",
+        "emoji": "🦕",
+        "color": "#008000"
+      },
+      {
+        "name": "Vicuna",
+        "emoji": "🦙",
+        "color": "#d2b48c"
+      },
+      {
+        "name": "Alpaca",
+        "emoji": "🦙",
+        "color": "#f5f5dc"
+      },
+      {
+        "name": "BLOOM",
+        "emoji": "🌸",
+        "color": "#0000ff"
+      }
+    ]
+  },
+  {
+    "id": "tech-ceos",
+    "title": "Tech CEOs",
+    "emoji": "🏢",
+    "criterion": "Influence on the tech industry and consumer products",
+    "items": [
+      {
+        "name": "Bill Gates",
+        "emoji": "🖥️",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Steve Jobs",
+        "emoji": "🍎",
+        "color": "#c0c0c0"
+      },
+      {
+        "name": "Elon Musk",
+        "emoji": "🚀",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Tim Cook",
+        "emoji": "📱",
+        "color": "#808080"
+      },
+      {
+        "name": "Satya Nadella",
+        "emoji": "☁️",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Sundar Pichai",
+        "emoji": "🔍",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Mark Zuckerberg",
+        "emoji": "📘",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Jeff Bezos",
+        "emoji": "📦",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Jensen Huang",
+        "emoji": "🎮",
+        "color": "#008000"
+      },
+      {
+        "name": "Larry Page",
+        "emoji": "🔎",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Sergey Brin",
+        "emoji": "🧪",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Jack Dorsey",
+        "emoji": "🐦",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Larry Ellison",
+        "emoji": "🗄️",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Michael Dell",
+        "emoji": "💻",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Reed Hastings",
+        "emoji": "🎬",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Sam Altman",
+        "emoji": "🤖",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Susan Wojcicki",
+        "emoji": "▶️",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Ginni Rometty",
+        "emoji": "💼",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Meg Whitman",
+        "emoji": "🛒",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Marissa Mayer",
+        "emoji": "🌐",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Jony Ive",
+        "emoji": "✏️",
+        "color": "#c0c0c0"
+      },
+      {
+        "name": "Palmer Luckey",
+        "emoji": "🥽",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Evan Spiegel",
+        "emoji": "👻",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Jack Ma",
+        "emoji": "🛍️",
+        "color": "#ff0000"
+      },
+      {
+        "name": "Masayoshi Son",
+        "emoji": "📡",
+        "color": "#0000ff"
+      }
+    ]
+  },
+  {
+    "id": "big-tech-companies",
+    "title": "Big Tech Companies",
+    "emoji": "💻",
+    "criterion": "Most influential tech company in the world",
+    "items": [
+      {
+        "name": "Apple",
+        "emoji": "🍎",
+        "color": "#ff0000"
+      },
+      {
+        "name": "Microsoft",
+        "emoji": "🪟",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Alphabet (Google)",
+        "emoji": "🔍",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Amazon",
+        "emoji": "📦",
+        "color": "#ffa500"
+      },
+      {
+        "name": "Meta (Facebook)",
+        "emoji": "👍",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Nvidia",
+        "emoji": "🎮",
+        "color": "#008000"
+      },
+      {
+        "name": "Tesla",
+        "emoji": "🚗",
+        "color": "#c0c0c0"
+      },
+      {
+        "name": "Samsung",
+        "emoji": "📱",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Intel",
+        "emoji": "🔲",
+        "color": "#0000ff"
+      },
+      {
+        "name": "AMD",
+        "emoji": "⚙️",
+        "color": "#0000ff"
+      },
+      {
+        "name": "IBM",
+        "emoji": "🔵",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Oracle",
+        "emoji": "🗄️",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Salesforce",
+        "emoji": "☁️",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Adobe",
+        "emoji": "🎨",
+        "color": "#ff0000"
+      },
+      {
+        "name": "Netflix",
+        "emoji": "🎬",
+        "color": "#ff0000"
+      },
+      {
+        "name": "Qualcomm",
+        "emoji": "📡",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Broadcom",
+        "emoji": "🔌",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Cisco",
+        "emoji": "🌐",
+        "color": "#0000ff"
+      },
+      {
+        "name": "X (Twitter)",
+        "emoji": "🐦",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Uber",
+        "emoji": "🚕",
+        "color": "#a9a9a9"
+      },
+      {
+        "name": "Airbnb",
+        "emoji": "🏠",
+        "color": "#0000ff"
+      },
+      {
+        "name": "ByteDance (TikTok)",
+        "emoji": "🎵",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Tencent",
+        "emoji": "🐧",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Alibaba",
+        "emoji": "🛒",
+        "color": "#ffa500"
+      },
+      {
+        "name": "SAP",
+        "emoji": "🏢",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Dell",
+        "emoji": "🖥️",
+        "color": "#0000ff"
+      },
+      {
+        "name": "HP",
+        "emoji": "🖨️",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Sony",
+        "emoji": "🎮",
+        "color": "#0000ff"
+      }
+    ]
+  },
+  {
+    "id": "programming-languages",
+    "title": "Programming Languages Tier List",
+    "emoji": "💻",
+    "criterion": "Best programming language to learn first",
+    "items": [
+      {
+        "name": "Python",
+        "emoji": "🐍",
+        "color": "#0000ff"
+      },
+      {
+        "name": "JavaScript",
+        "emoji": "🌐",
+        "color": "#ffff00"
+      },
+      {
+        "name": "Java",
+        "emoji": "☕",
+        "color": "#0000ff"
+      },
+      {
+        "name": "C",
+        "emoji": "🔧",
+        "color": "#808080"
+      },
+      {
+        "name": "C++",
+        "emoji": "⚙️",
+        "color": "#0000ff"
+      },
+      {
+        "name": "C#",
+        "emoji": "🎯",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Go",
+        "emoji": "🐹",
+        "color": "#008000"
+      },
+      {
+        "name": "Rust",
+        "emoji": "🦀",
+        "color": "#a52a2a"
+      },
+      {
+        "name": "Swift",
+        "emoji": "🦅",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Kotlin",
+        "emoji": "🟣",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Ruby",
+        "emoji": "💎",
+        "color": "#ff0000"
+      },
+      {
+        "name": "PHP",
+        "emoji": "🐘",
+        "color": "#0000ff"
+      },
+      {
+        "name": "TypeScript",
+        "emoji": "📘",
+        "color": "#0000ff"
+      },
+      {
+        "name": "SQL",
+        "emoji": "🗄️",
+        "color": "#0000ff"
+      },
+      {
+        "name": "R",
+        "emoji": "📊",
+        "color": "#008000"
+      },
+      {
+        "name": "MATLAB",
+        "emoji": "📐",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Scala",
+        "emoji": "🔺",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Perl",
+        "emoji": "🐫",
+        "color": "#008000"
+      },
+      {
+        "name": "Haskell",
+        "emoji": "λ",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Lua",
+        "emoji": "🌙",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Dart",
+        "emoji": "🎯",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Elixir",
+        "emoji": "💧",
+        "color": "#008000"
+      },
+      {
+        "name": "Clojure",
+        "emoji": "🌿",
+        "color": "#008000"
+      },
+      {
+        "name": "Fortran",
+        "emoji": "📜",
+        "color": "#0000ff"
+      },
+      {
+        "name": "COBOL",
+        "emoji": "🏦",
+        "color": "#008000"
+      },
+      {
+        "name": "Assembly",
+        "emoji": "🔩",
+        "color": "#808080"
+      }
+    ]
+  },
+  {
+    "id": "frontend-frameworks",
+    "title": "Frontend Frameworks",
+    "emoji": "⚡",
+    "criterion": "Adoption and ecosystem maturity",
+    "items": [
+      {
+        "name": "React",
+        "emoji": "⚛️",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Vue",
+        "emoji": "🟩",
+        "color": "#008000"
+      },
+      {
+        "name": "Angular",
+        "emoji": "🅰️",
+        "color": "#ff0000"
+      },
+      {
+        "name": "Svelte",
+        "emoji": "🔥",
+        "color": "#0000ff"
+      },
+      {
+        "name": "SolidJS",
+        "emoji": "🧱",
+        "color": "#008000"
+      },
+      {
+        "name": "Preact",
+        "emoji": "🌱",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Lit",
+        "emoji": "💡",
+        "color": "#ffff00"
+      },
+      {
+        "name": "Alpine.js",
+        "emoji": "🏔️",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Ember",
+        "emoji": "🛠️",
+        "color": "#ffa500"
+      },
+      {
+        "name": "Backbone.js",
+        "emoji": "🦴",
+        "color": "#808080"
+      },
+      {
+        "name": "Knockout",
+        "emoji": "🥊",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Mithril",
+        "emoji": "⚔️",
+        "color": "#c0c0c0"
+      },
+      {
+        "name": "Aurelia",
+        "emoji": "🔷",
+        "color": "#ffd700"
+      },
+      {
+        "name": "Marko",
+        "emoji": "🏷️",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Qwik",
+        "emoji": "⚡",
+        "color": "#ffff00"
+      },
+      {
+        "name": "Astro",
+        "emoji": "🚀",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Remix",
+        "emoji": "🔄",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Next.js",
+        "emoji": "▲",
+        "color": "#a9a9a9"
+      },
+      {
+        "name": "Nuxt",
+        "emoji": "🧊",
+        "color": "#008000"
+      },
+      {
+        "name": "SvelteKit",
+        "emoji": "🧰",
+        "color": "#008000"
+      },
+      {
+        "name": "Gatsby",
+        "emoji": "🎩",
+        "color": "#ffd700"
+      },
+      {
+        "name": "Dojo",
+        "emoji": "🥋",
+        "color": "#a52a2a"
+      },
+      {
+        "name": "Stencil",
+        "emoji": "🖊️",
+        "color": "#808080"
+      },
+      {
+        "name": "Riot.js",
+        "emoji": "🎤",
+        "color": "#ff0000"
+      },
+      {
+        "name": "Hyperapp",
+        "emoji": "🔬",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Inferno",
+        "emoji": "🔥",
+        "color": "#ff0000"
+      },
+      {
+        "name": "Polymer",
+        "emoji": "🧬",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Cycle.js",
+        "emoji": "🔁",
+        "color": "#0000ff"
+      }
+    ]
+  },
+  {
+    "id": "databases",
+    "title": "Databases",
+    "emoji": "🗄️",
+    "criterion": "Popularity and breadth of adoption in 2024 (developer mindshare, job demand, and",
+    "items": [
+      {
+        "name": "PostgreSQL",
+        "emoji": "🐘",
+        "color": "#0000ff"
+      },
+      {
+        "name": "MySQL",
+        "emoji": "🐬",
+        "color": "#0000ff"
+      },
+      {
+        "name": "SQLite",
+        "emoji": "📄",
+        "color": "#0000ff"
+      },
+      {
+        "name": "MongoDB",
+        "emoji": "🍃",
+        "color": "#008000"
+      },
+      {
+        "name": "Microsoft SQL Server",
+        "emoji": "🪟",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Oracle Database",
+        "emoji": "🔴",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Redis",
+        "emoji": "⚡",
+        "color": "#ff0000"
+      },
+      {
+        "name": "Elasticsearch",
+        "emoji": "🔍",
+        "color": "#ffa500"
+      },
+      {
+        "name": "Cassandra",
+        "emoji": "👁️",
+        "color": "#ffd700"
+      },
+      {
+        "name": "MariaDB",
+        "emoji": "🦭",
+        "color": "#0000ff"
+      },
+      {
+        "name": "DynamoDB",
+        "emoji": "🧨",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Neo4j",
+        "emoji": "🕸️",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Snowflake",
+        "emoji": "❄️",
+        "color": "#0000ff"
+      },
+      {
+        "name": "BigQuery",
+        "emoji": "☁️",
+        "color": "#0000ff"
+      },
+      {
+        "name": "DuckDB",
+        "emoji": "🦆",
+        "color": "#ffff00"
+      },
+      {
+        "name": "CockroachDB",
+        "emoji": "🪳",
+        "color": "#a52a2a"
+      },
+      {
+        "name": "ClickHouse",
+        "emoji": "🏠",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Firebase Realtime Database",
+        "emoji": "🔥",
+        "color": "#ff0000"
+      },
+      {
+        "name": "Supabase",
+        "emoji": "⚡",
+        "color": "#0000ff"
+      },
+      {
+        "name": "InfluxDB",
+        "emoji": "🌊",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Couchbase",
+        "emoji": "🛋️",
+        "color": "#0000ff"
+      },
+      {
+        "name": "IBM Db2",
+        "emoji": "🔵",
+        "color": "#0000ff"
+      },
+      {
+        "name": "SAP HANA",
+        "emoji": "🟦",
+        "color": "#0000ff"
+      },
+      {
+        "name": "HBase",
+        "emoji": "🧱",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Presto",
+        "emoji": "🎩",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Trino",
+        "emoji": "🚀",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Firebird",
+        "emoji": "🦅",
+        "color": "#ff0000"
+      },
+      {
+        "name": "Amazon Aurora",
+        "emoji": "🌌",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Memcached",
+        "emoji": "💾",
+        "color": "#0000ff"
+      },
+      {
+        "name": "RethinkDB",
+        "emoji": "🔁",
+        "color": "#0000ff"
+      }
+    ]
+  },
+  {
+    "id": "cloud-providers",
+    "title": "Cloud Providers",
+    "emoji": "☁️",
+    "criterion": "Market Share (IaaS/PaaS)",
+    "items": [
+      {
+        "name": "AWS",
+        "emoji": "🟧",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Microsoft Azure",
+        "emoji": "🔷",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Google Cloud",
+        "emoji": "🔴",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Alibaba Cloud",
+        "emoji": "🟠",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Oracle Cloud",
+        "emoji": "🔺",
+        "color": "#0000ff"
+      },
+      {
+        "name": "IBM Cloud",
+        "emoji": "🔵",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Salesforce (Heroku)",
+        "emoji": "☁️",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Tencent Cloud",
+        "emoji": "🐧",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Huawei Cloud",
+        "emoji": "🌸",
+        "color": "#0000ff"
+      },
+      {
+        "name": "DigitalOcean",
+        "emoji": "🐬",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Linode (Akamai)",
+        "emoji": "🟢",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Vultr",
+        "emoji": "🔹",
+        "color": "#0000ff"
+      },
+      {
+        "name": "OVHcloud",
+        "emoji": "🇫🇷",
+        "color": "#0000ff"
+      },
+      {
+        "name": "IBM SoftLayer",
+        "emoji": "🧱",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Rackspace",
+        "emoji": "🛠️",
+        "color": "#0000ff"
+      },
+      {
+        "name": "VMware Cloud",
+        "emoji": "🟩",
+        "color": "#0000ff"
+      },
+      {
+        "name": "SAP Cloud",
+        "emoji": "🟦",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Cloudflare",
+        "emoji": "🌐",
+        "color": "#ffa500"
+      },
+      {
+        "name": "Akamai",
+        "emoji": "🌍",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Netlify",
+        "emoji": "🟣",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Vercel",
+        "emoji": "▲",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Firebase",
+        "emoji": "🔥",
+        "color": "#ff0000"
+      },
+      {
+        "name": "Supabase",
+        "emoji": "⚡",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Fly.io",
+        "emoji": "🛫",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Render",
+        "emoji": "🖥️",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Railway",
+        "emoji": "🚂",
+        "color": "#808080"
+      },
+      {
+        "name": "Scaleway",
+        "emoji": "🇫🇷",
+        "color": "#0000ff"
+      },
+      {
+        "name": "UpCloud",
+        "emoji": "⬆️",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Kamatera",
+        "emoji": "🟨",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Hostinger",
+        "emoji": "🟪",
+        "color": "#0000ff"
+      }
+    ]
+  },
+  {
+    "id": "code-editors-and-ides",
+    "title": "Code Editors & IDEs",
+    "emoji": "💻",
+    "criterion": "Best overall for everyday coding",
+    "items": [
+      {
+        "name": "Visual Studio Code",
+        "emoji": "🟦",
+        "color": "#0000ff"
+      },
+      {
+        "name": "IntelliJ IDEA",
+        "emoji": "🧠",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Vim",
+        "emoji": "🟩",
+        "color": "#008000"
+      },
+      {
+        "name": "Neovim",
+        "emoji": "💚",
+        "color": "#008000"
+      },
+      {
+        "name": "Emacs",
+        "emoji": "🐃",
+        "color": "#008000"
+      },
+      {
+        "name": "Sublime Text",
+        "emoji": "🟧",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Atom",
+        "emoji": "⚛️",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Notepad++",
+        "emoji": "📝",
+        "color": "#0000ff"
+      },
+      {
+        "name": "PyCharm",
+        "emoji": "🐍",
+        "color": "#0000ff"
+      },
+      {
+        "name": "WebStorm",
+        "emoji": "🌐",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Eclipse",
+        "emoji": "🌑",
+        "color": "#0000ff"
+      },
+      {
+        "name": "NetBeans",
+        "emoji": "🟫",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Android Studio",
+        "emoji": "🤖",
+        "color": "#008000"
+      },
+      {
+        "name": "Xcode",
+        "emoji": "🍏",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Visual Studio",
+        "emoji": "🟪",
+        "color": "#0000ff"
+      },
+      {
+        "name": "CLion",
+        "emoji": "🔷",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Rider",
+        "emoji": "🎠",
+        "color": "#0000ff"
+      },
+      {
+        "name": "GoLand",
+        "emoji": "🐹",
+        "color": "#008000"
+      },
+      {
+        "name": "RubyMine",
+        "emoji": "💎",
+        "color": "#ff0000"
+      },
+      {
+        "name": "PhpStorm",
+        "emoji": "🐘",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Komodo Edit",
+        "emoji": "🐉",
+        "color": "#008000"
+      },
+      {
+        "name": "Geany",
+        "emoji": "⚙️",
+        "color": "#008000"
+      },
+      {
+        "name": "Brackets",
+        "emoji": "🖌️",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Spacemacs",
+        "emoji": "🌌",
+        "color": "#a9a9a9"
+      },
+      {
+        "name": "Helix",
+        "emoji": "🌀",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Zed",
+        "emoji": "⚡",
+        "color": "#a9a9a9"
+      },
+      {
+        "name": "Cursor",
+        "emoji": "🖱️",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Nano",
+        "emoji": "📄",
+        "color": "#008000"
+      },
+      {
+        "name": "Kate",
+        "emoji": "🧶",
+        "color": "#0000ff"
+      },
+      {
+        "name": "BBEdit",
+        "emoji": "🧰",
+        "color": "#0000ff"
+      }
+    ]
+  },
+  {
+    "id": "cryptocurrencies",
+    "title": "Cryptocurrencies",
+    "emoji": "🪙",
+    "criterion": "Market Capitalization",
+    "items": [
+      {
+        "name": "Bitcoin",
+        "emoji": "₿",
+        "color": "#ffd700"
+      },
+      {
+        "name": "Ethereum",
+        "emoji": "⟠",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Tether",
+        "emoji": "💵",
+        "color": "#008000"
+      },
+      {
+        "name": "XRP",
+        "emoji": "✕",
+        "color": "#0000ff"
+      },
+      {
+        "name": "BNB",
+        "emoji": "🔶",
+        "color": "#ffff00"
+      },
+      {
+        "name": "Solana",
+        "emoji": "◎",
+        "color": "#ee82ee"
+      },
+      {
+        "name": "USDC",
+        "emoji": "🔵",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Dogecoin",
+        "emoji": "🐕",
+        "color": "#ffff00"
+      },
+      {
+        "name": "Cardano",
+        "emoji": "🔷",
+        "color": "#0000ff"
+      },
+      {
+        "name": "TRON",
+        "emoji": "⚡",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Avalanche",
+        "emoji": "🏔️",
+        "color": "#008000"
+      },
+      {
+        "name": "Chainlink",
+        "emoji": "🔗",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Shiba Inu",
+        "emoji": "🐶",
+        "color": "#d2b48c"
+      },
+      {
+        "name": "Polkadot",
+        "emoji": "⚫",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Toncoin",
+        "emoji": "💎",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Bitcoin Cash",
+        "emoji": "💚",
+        "color": "#ffd700"
+      },
+      {
+        "name": "Litecoin",
+        "emoji": "Ł",
+        "color": "#c0c0c0"
+      },
+      {
+        "name": "Uniswap",
+        "emoji": "🦄",
+        "color": "#ee82ee"
+      },
+      {
+        "name": "NEAR Protocol",
+        "emoji": "🌐",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Aptos",
+        "emoji": "🅰️",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Internet Computer",
+        "emoji": "♾️",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Polygon",
+        "emoji": "🟣",
+        "color": "#ee82ee"
+      },
+      {
+        "name": "Stellar",
+        "emoji": "⭐",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Monero",
+        "emoji": "🔒",
+        "color": "#808080"
+      },
+      {
+        "name": "Cosmos",
+        "emoji": "🌌",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Arbitrum",
+        "emoji": "🟦",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Filecoin",
+        "emoji": "📁",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Optimism",
+        "emoji": "🔴",
+        "color": "#ffff00"
+      },
+      {
+        "name": "Injective",
+        "emoji": "📈",
+        "color": "#0000ff"
+      },
+      {
+        "name": "The Graph",
+        "emoji": "🗺️",
+        "color": "#0000ff"
+      }
+    ]
+  },
+  {
+    "id": "social-media-apps",
+    "title": "Social Media Apps",
+    "emoji": "📱",
+    "criterion": "Most addictive social media app",
+    "items": [
+      {
+        "name": "Instagram",
+        "emoji": "📸",
+        "color": "#ffc0cb"
+      },
+      {
+        "name": "TikTok",
+        "emoji": "🎵",
+        "color": "#40e0d0"
+      },
+      {
+        "name": "Facebook",
+        "emoji": "👥",
+        "color": "#0000ff"
+      },
+      {
+        "name": "X (Twitter)",
+        "emoji": "🐦",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Snapchat",
+        "emoji": "👻",
+        "color": "#ffff00"
+      },
+      {
+        "name": "Reddit",
+        "emoji": "🤖",
+        "color": "#ffa500"
+      },
+      {
+        "name": "LinkedIn",
+        "emoji": "💼",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Pinterest",
+        "emoji": "📌",
+        "color": "#ff0000"
+      },
+      {
+        "name": "WhatsApp",
+        "emoji": "💬",
+        "color": "#008000"
+      },
+      {
+        "name": "Telegram",
+        "emoji": "✈️",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Discord",
+        "emoji": "🎮",
+        "color": "#800080"
+      },
+      {
+        "name": "YouTube",
+        "emoji": "▶️",
+        "color": "#ff0000"
+      },
+      {
+        "name": "Threads",
+        "emoji": "🧵",
+        "color": "#808080"
+      },
+      {
+        "name": "Tumblr",
+        "emoji": "🌀",
+        "color": "#0000ff"
+      },
+      {
+        "name": "WeChat",
+        "emoji": "🟢",
+        "color": "#008000"
+      },
+      {
+        "name": "Line",
+        "emoji": "🟩",
+        "color": "#008000"
+      },
+      {
+        "name": "Viber",
+        "emoji": "🟣",
+        "color": "#ee82ee"
+      },
+      {
+        "name": "Mastodon",
+        "emoji": "🐘",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Bluesky",
+        "emoji": "🦋",
+        "color": "#87ceeb"
+      },
+      {
+        "name": "BeReal",
+        "emoji": "📷",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Clubhouse",
+        "emoji": "🎙️",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Twitch",
+        "emoji": "🟪",
+        "color": "#ee82ee"
+      },
+      {
+        "name": "Quora",
+        "emoji": "❓",
+        "color": "#ffa500"
+      },
+      {
+        "name": "VK",
+        "emoji": "🇷🇺",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Flickr",
+        "emoji": "🖼️",
+        "color": "#0000ff"
+      }
+    ]
+  },
+  {
+    "id": "streaming-services",
+    "title": "Streaming Services",
+    "emoji": "▶️",
+    "criterion": "Number of global subscribers",
+    "items": [
+      {
+        "name": "Netflix",
+        "emoji": "🎬",
+        "color": "#ff0000"
+      },
+      {
+        "name": "Amazon Prime Video",
+        "emoji": "🎬",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Disney+",
+        "emoji": "🏰",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Max (HBO Max)",
+        "emoji": "🎥",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Hulu",
+        "emoji": "📺",
+        "color": "#008000"
+      },
+      {
+        "name": "Apple TV+",
+        "emoji": "🍎",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Paramount+",
+        "emoji": "⛰️",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Peacock",
+        "emoji": "🦚",
+        "color": "#0000ff"
+      },
+      {
+        "name": "YouTube Premium",
+        "emoji": "📹",
+        "color": "#ff0000"
+      },
+      {
+        "name": "Disney+ Hotstar",
+        "emoji": "🔥",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Crunchyroll",
+        "emoji": "🍥",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Discovery+",
+        "emoji": "🌍",
+        "color": "#0000ff"
+      },
+      {
+        "name": "ESPN+",
+        "emoji": "🏈",
+        "color": "#ff0000"
+      },
+      {
+        "name": "Shudder",
+        "emoji": "💀",
+        "color": "#ff0000"
+      },
+      {
+        "name": "BET+",
+        "emoji": "🎤",
+        "color": "#800080"
+      },
+      {
+        "name": "BritBox",
+        "emoji": "🫖",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Acorn TV",
+        "emoji": "🌰",
+        "color": "#008000"
+      },
+      {
+        "name": "Mubi",
+        "emoji": "🍿",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Tubi",
+        "emoji": "🟣",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Pluto TV",
+        "emoji": "🪐",
+        "color": "#800080"
+      },
+      {
+        "name": "Roku Channel",
+        "emoji": "📡",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Vimeo",
+        "emoji": "🎞️",
+        "color": "#0000ff"
+      },
+      {
+        "name": "CuriosityStream",
+        "emoji": "🔬",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Hayu",
+        "emoji": "💅",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Rakuten Viki",
+        "emoji": "🌸",
+        "color": "#0000ff"
+      },
+      {
+        "name": "iQIYI",
+        "emoji": "🐉",
+        "color": "#0000ff"
+      },
+      {
+        "name": "WeTV",
+        "emoji": "🎭",
+        "color": "#0000ff"
+      },
+      {
+        "name": "U-NEXT",
+        "emoji": "🗾",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Stan",
+        "emoji": "🦘",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Binge",
+        "emoji": "🍿",
+        "color": "#0000ff"
+      }
+    ]
+  },
+  {
+    "id": "smartphone-brands",
+    "title": "Smartphone Brands",
+    "emoji": "📱",
+    "criterion": "Market presence and consumer recognition",
+    "items": [
+      {
+        "name": "Apple",
+        "emoji": "🍎",
+        "color": "#c0c0c0"
+      },
+      {
+        "name": "Samsung",
+        "emoji": "📱",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Xiaomi",
+        "emoji": "📱",
+        "color": "#ffa500"
+      },
+      {
+        "name": "Huawei",
+        "emoji": "📱",
+        "color": "#ff0000"
+      },
+      {
+        "name": "Google Pixel",
+        "emoji": "🔵",
+        "color": "#0000ff"
+      },
+      {
+        "name": "OnePlus",
+        "emoji": "1️⃣",
+        "color": "#ff0000"
+      },
+      {
+        "name": "Oppo",
+        "emoji": "📱",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Vivo",
+        "emoji": "📱",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Realme",
+        "emoji": "📱",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Motorola",
+        "emoji": "🦇",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Nokia",
+        "emoji": "📞",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Sony Xperia",
+        "emoji": "🎮",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Asus ROG Phone",
+        "emoji": "🎮",
+        "color": "#ff0000"
+      },
+      {
+        "name": "Nothing Phone",
+        "emoji": "🕳️",
+        "color": "#008000"
+      },
+      {
+        "name": "Honor",
+        "emoji": "📱",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Tecno",
+        "emoji": "📱",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Infinix",
+        "emoji": "📱",
+        "color": "#0000ff"
+      },
+      {
+        "name": "itel",
+        "emoji": "📱",
+        "color": "#0000ff"
+      },
+      {
+        "name": "ZTE",
+        "emoji": "📡",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Nubia",
+        "emoji": "🔴",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Meizu",
+        "emoji": "🎵",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Blackberry",
+        "emoji": "⌨️",
+        "color": "#800080"
+      },
+      {
+        "name": "HTC",
+        "emoji": "📱",
+        "color": "#0000ff"
+      },
+      {
+        "name": "LG",
+        "emoji": "📱",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Fairphone",
+        "emoji": "♻️",
+        "color": "#008000"
+      },
+      {
+        "name": "Sharp Aquos",
+        "emoji": "📺",
+        "color": "#00ffff"
+      },
+      {
+        "name": "Poco",
+        "emoji": "⚡",
+        "color": "#0000ff"
+      },
+      {
+        "name": "iQOO",
+        "emoji": "🏁",
+        "color": "#0000ff"
+      }
+    ]
+  },
+  {
+    "id": "electric-car-brands",
+    "title": "Electric Car Brands",
+    "emoji": "🔌🚗",
+    "criterion": "Market share of global EV sales",
+    "items": [
+      {
+        "name": "Tesla",
+        "emoji": "⚡",
+        "color": "#c0c0c0"
+      },
+      {
+        "name": "BYD",
+        "emoji": "🇨🇳",
+        "color": "#008000"
+      },
+      {
+        "name": "Volkswagen",
+        "emoji": "🇩🇪",
+        "color": "#0000ff"
+      },
+      {
+        "name": "SAIC-GM-Wuling",
+        "emoji": "🚐",
+        "color": "#0000ff"
+      },
+      {
+        "name": "BMW",
+        "emoji": "🏁",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Mercedes-Benz",
+        "emoji": "⭐",
+        "color": "#c0c0c0"
+      },
+      {
+        "name": "Hyundai",
+        "emoji": "🇰🇷",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Kia",
+        "emoji": "🚙",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Nissan",
+        "emoji": "🌸",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Audi",
+        "emoji": "🔗",
+        "color": "#c0c0c0"
+      },
+      {
+        "name": "Volvo",
+        "emoji": "🛡️",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Ford",
+        "emoji": "🔵",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Chevrolet",
+        "emoji": "🎀",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Polestar",
+        "emoji": "✨",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Rivian",
+        "emoji": "🏔️",
+        "color": "#008000"
+      },
+      {
+        "name": "Lucid",
+        "emoji": "💎",
+        "color": "#0000ff"
+      },
+      {
+        "name": "NIO",
+        "emoji": "🔷",
+        "color": "#0000ff"
+      },
+      {
+        "name": "XPeng",
+        "emoji": "🛸",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Li Auto",
+        "emoji": "🏠",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Renault",
+        "emoji": "🇫🇷",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Peugeot",
+        "emoji": "🦁",
+        "color": "#c0c0c0"
+      },
+      {
+        "name": "Toyota",
+        "emoji": "🇯🇵",
+        "color": "#c0c0c0"
+      },
+      {
+        "name": "Porsche",
+        "emoji": "🏎️",
+        "color": "#ff0000"
+      },
+      {
+        "name": "Jaguar",
+        "emoji": "🐆",
+        "color": "#006400"
+      },
+      {
+        "name": "Fiat",
+        "emoji": "🍝",
+        "color": "#ff0000"
+      },
+      {
+        "name": "Mini",
+        "emoji": "🧩",
+        "color": "#0000ff"
+      },
+      {
+        "name": "GMC",
+        "emoji": "🛠️",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Cadillac",
+        "emoji": "👑",
+        "color": "#c0c0c0"
+      },
+      {
+        "name": "Genesis",
+        "emoji": "🌐",
+        "color": "#c0c0c0"
+      },
+      {
+        "name": "Lotus",
+        "emoji": "🪷",
+        "color": "#008000"
+      }
+    ]
+  },
+  {
+    "id": "video-game-consoles-of-all-time",
+    "title": "Video Game Consoles of All Time",
+    "emoji": "🎮",
+    "criterion": "Best video game console of all time",
+    "items": [
+      {
+        "name": "Atari 2600",
+        "emoji": "🕹️",
+        "color": "#808080"
+      },
+      {
+        "name": "Nintendo Entertainment System",
+        "emoji": "🍄",
+        "color": "#808080"
+      },
+      {
+        "name": "Sega Genesis",
+        "emoji": "🦔",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Super Nintendo",
+        "emoji": "🌈",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Game Boy",
+        "emoji": "📟",
+        "color": "#808080"
+      },
+      {
+        "name": "Sega Saturn",
+        "emoji": "🪐",
+        "color": "#0000ff"
+      },
+      {
+        "name": "PlayStation",
+        "emoji": "💿",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Nintendo 64",
+        "emoji": "🎯",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Dreamcast",
+        "emoji": "🌀",
+        "color": "#0000ff"
+      },
+      {
+        "name": "PlayStation 2",
+        "emoji": "🎮",
+        "color": "#0000ff"
+      },
+      {
+        "name": "GameCube",
+        "emoji": "🧊",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Xbox",
+        "emoji": "🟢",
+        "color": "#008000"
+      },
+      {
+        "name": "Game Boy Advance",
+        "emoji": "🎒",
+        "color": "#808080"
+      },
+      {
+        "name": "Xbox 360",
+        "emoji": "🔴",
+        "color": "#008000"
+      },
+      {
+        "name": "PlayStation 3",
+        "emoji": "📀",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Nintendo Wii",
+        "emoji": "🏓",
+        "color": "#c0c0c0"
+      },
+      {
+        "name": "Nintendo DS",
+        "emoji": "✌️",
+        "color": "#c0c0c0"
+      },
+      {
+        "name": "PlayStation Portable",
+        "emoji": "🎧",
+        "color": "#808080"
+      },
+      {
+        "name": "PlayStation 4",
+        "emoji": "🎬",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Xbox One",
+        "emoji": "🕹️",
+        "color": "#008000"
+      },
+      {
+        "name": "Nintendo Wii U",
+        "emoji": "📺",
+        "color": "#808080"
+      },
+      {
+        "name": "Nintendo 3DS",
+        "emoji": "👓",
+        "color": "#c0c0c0"
+      },
+      {
+        "name": "Nintendo Switch",
+        "emoji": "🔀",
+        "color": "#0000ff"
+      },
+      {
+        "name": "PlayStation 5",
+        "emoji": "⚡",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Xbox Series X/S",
+        "emoji": "❄️",
+        "color": "#008000"
+      },
+      {
+        "name": "Steam Deck",
+        "emoji": "🚂",
+        "color": "#808080"
+      },
+      {
+        "name": "Sega Game Gear",
+        "emoji": "🔋",
+        "color": "#808080"
+      },
+      {
+        "name": "Neo Geo",
+        "emoji": "👑",
+        "color": "#0000ff"
+      },
+      {
+        "name": "TurboGrafx-16",
+        "emoji": "💠",
+        "color": "#ff0000"
+      },
+      {
+        "name": "Atari Jaguar",
+        "emoji": "🐆",
+        "color": "#a9a9a9"
+      }
+    ]
+  },
+  {
+    "id": "video-game-franchises",
+    "title": "Video Game Franchises",
+    "emoji": "🎮",
+    "criterion": "Lifetime worldwide sales across all games in the franchise",
+    "items": [
+      {
+        "name": "Mario",
+        "emoji": "🍄",
+        "color": "#ff0000"
+      },
+      {
+        "name": "Pokémon",
+        "emoji": "⚡",
+        "color": "#ff0000"
+      },
+      {
+        "name": "Call of Duty",
+        "emoji": "🔫",
+        "color": "#006400"
+      },
+      {
+        "name": "Grand Theft Auto",
+        "emoji": "🚗",
+        "color": "#008000"
+      },
+      {
+        "name": "Tetris",
+        "emoji": "🟦",
+        "color": "#0000ff"
+      },
+      {
+        "name": "FIFA",
+        "emoji": "⚽",
+        "color": "#008000"
+      },
+      {
+        "name": "Minecraft",
+        "emoji": "⛏️",
+        "color": "#008000"
+      },
+      {
+        "name": "The Sims",
+        "emoji": "🏠",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Need for Speed",
+        "emoji": "🏎️",
+        "color": "#ff0000"
+      },
+      {
+        "name": "Assassin's Creed",
+        "emoji": "🗡️",
+        "color": "#808080"
+      },
+      {
+        "name": "Final Fantasy",
+        "emoji": "💎",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Sonic the Hedgehog",
+        "emoji": "💨",
+        "color": "#0000ff"
+      },
+      {
+        "name": "The Legend of Zelda",
+        "emoji": "🛡️",
+        "color": "#008000"
+      },
+      {
+        "name": "Resident Evil",
+        "emoji": "🧟",
+        "color": "#ff0000"
+      },
+      {
+        "name": "Halo",
+        "emoji": "🪖",
+        "color": "#008000"
+      },
+      {
+        "name": "Tom Clancy's",
+        "emoji": "🎯",
+        "color": "#008000"
+      },
+      {
+        "name": "Animal Crossing",
+        "emoji": "🐾",
+        "color": "#008000"
+      },
+      {
+        "name": "Madden NFL",
+        "emoji": "🏈",
+        "color": "#008000"
+      },
+      {
+        "name": "Super Smash Bros.",
+        "emoji": "🥊",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Borderlands",
+        "emoji": "💥",
+        "color": "#ffa500"
+      },
+      {
+        "name": "Metal Gear",
+        "emoji": "📦",
+        "color": "#006400"
+      },
+      {
+        "name": "Kingdom Hearts",
+        "emoji": "🗝️",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Dark Souls",
+        "emoji": "🔥",
+        "color": "#a9a9a9"
+      },
+      {
+        "name": "Elder Scrolls",
+        "emoji": "🐉",
+        "color": "#ffd700"
+      },
+      {
+        "name": "Fallout",
+        "emoji": "☢️",
+        "color": "#008000"
+      },
+      {
+        "name": "Diablo",
+        "emoji": "😈",
+        "color": "#8b0000"
+      },
+      {
+        "name": "Street Fighter",
+        "emoji": "👊",
+        "color": "#ff0000"
+      },
+      {
+        "name": "Tekken",
+        "emoji": "🥋",
+        "color": "#ff0000"
+      },
+      {
+        "name": "God of War",
+        "emoji": "🪓",
+        "color": "#ff0000"
+      },
+      {
+        "name": "Gran Turismo",
+        "emoji": "🏁",
+        "color": "#0000ff"
+      }
+    ]
+  },
+  {
+    "id": "nintendo-characters",
+    "title": "Nintendo Characters",
+    "emoji": "🎮",
+    "criterion": "Most iconic Nintendo character",
+    "items": [
+      {
+        "name": "Mario",
+        "emoji": "🍄",
+        "color": "#ff0000"
+      },
+      {
+        "name": "Luigi",
+        "emoji": "👻",
+        "color": "#008000"
+      },
+      {
+        "name": "Princess Peach",
+        "emoji": "👑",
+        "color": "#ffc0cb"
+      },
+      {
+        "name": "Bowser",
+        "emoji": "🐢",
+        "color": "#008000"
+      },
+      {
+        "name": "Yoshi",
+        "emoji": "🦎",
+        "color": "#008000"
+      },
+      {
+        "name": "Donkey Kong",
+        "emoji": "🦍",
+        "color": "#a52a2a"
+      },
+      {
+        "name": "Link",
+        "emoji": "🗡️",
+        "color": "#008000"
+      },
+      {
+        "name": "Zelda",
+        "emoji": "🛡️",
+        "color": "#ffd700"
+      },
+      {
+        "name": "Ganondorf",
+        "emoji": "🐗",
+        "color": "#800080"
+      },
+      {
+        "name": "Kirby",
+        "emoji": "⭐",
+        "color": "#ffc0cb"
+      },
+      {
+        "name": "Samus Aran",
+        "emoji": "🚀",
+        "color": "#ff0000"
+      },
+      {
+        "name": "Pikachu",
+        "emoji": "⚡",
+        "color": "#ffff00"
+      },
+      {
+        "name": "Fox McCloud",
+        "emoji": "🦊",
+        "color": "#ffa500"
+      },
+      {
+        "name": "Captain Falcon",
+        "emoji": "🏎️",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Ness",
+        "emoji": "🎒",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Pit",
+        "emoji": "🏹",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Wario",
+        "emoji": "💰",
+        "color": "#ffff00"
+      },
+      {
+        "name": "Toad",
+        "emoji": "🍄",
+        "color": "#ff0000"
+      },
+      {
+        "name": "Diddy Kong",
+        "emoji": "🐒",
+        "color": "#a52a2a"
+      },
+      {
+        "name": "Villager",
+        "emoji": "🏡",
+        "color": "#008000"
+      },
+      {
+        "name": "Isabelle",
+        "emoji": "🐶",
+        "color": "#ffff00"
+      },
+      {
+        "name": "Inkling",
+        "emoji": "🦑",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Squidward",
+        "emoji": "🐙",
+        "color": "#add8e6"
+      },
+      {
+        "name": "Tom Nook",
+        "emoji": "🦝",
+        "color": "#a52a2a"
+      },
+      {
+        "name": "Mr. Game & Watch",
+        "emoji": "🕹️",
+        "color": "#808080"
+      },
+      {
+        "name": "R.O.B.",
+        "emoji": "🤖",
+        "color": "#ff0000"
+      },
+      {
+        "name": "Duck Hunt",
+        "emoji": "🦆",
+        "color": "#ffff00"
+      },
+      {
+        "name": "Wii Fit Trainer",
+        "emoji": "🧘",
+        "color": "#008000"
+      },
+      {
+        "name": "Mii",
+        "emoji": "🧑",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Rosalina",
+        "emoji": "🌟",
+        "color": "#0000ff"
+      }
+    ]
+  },
+  {
+    "id": "marvel-cinematic-universe-films",
+    "title": "Marvel Cinematic Universe Films",
+    "emoji": "🎬",
+    "criterion": "Worldwide Box Office Gross (USD)",
+    "items": [
+      {
+        "name": "Avengers: Endgame",
+        "emoji": "🛡️",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Avengers: Infinity War",
+        "emoji": "💎",
+        "color": "#800080"
+      },
+      {
+        "name": "Spider-Man: No Way Home",
+        "emoji": "🕸️",
+        "color": "#ff0000"
+      },
+      {
+        "name": "Black Panther",
+        "emoji": "🐾",
+        "color": "#a9a9a9"
+      },
+      {
+        "name": "Avengers: Age of Ultron",
+        "emoji": "🤖",
+        "color": "#008000"
+      },
+      {
+        "name": "Iron Man 3",
+        "emoji": "🔴",
+        "color": "#ff0000"
+      },
+      {
+        "name": "Captain America: Civil War",
+        "emoji": "⚔️",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Frozen II",
+        "emoji": "❄️",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Captain Marvel",
+        "emoji": "🌟",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Spider-Man: Far From Home",
+        "emoji": "🌍",
+        "color": "#ff0000"
+      },
+      {
+        "name": "Guardians of the Galaxy Vol. 2",
+        "emoji": "🚀",
+        "color": "#008000"
+      },
+      {
+        "name": "The Avengers",
+        "emoji": "🦸",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Black Panther: Wakanda Forever",
+        "emoji": "🌊",
+        "color": "#ffd700"
+      },
+      {
+        "name": "Thor: Ragnarok",
+        "emoji": "⚡",
+        "color": "#ffa500"
+      },
+      {
+        "name": "Guardians of the Galaxy",
+        "emoji": "🎧",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Iron Man",
+        "emoji": "🤖",
+        "color": "#ff0000"
+      },
+      {
+        "name": "Thor: Love and Thunder",
+        "emoji": "🔨",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Doctor Strange in the Multiverse of Mad",
+        "emoji": "🌀",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Doctor Strange",
+        "emoji": "🧙",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Thor: The Dark World",
+        "emoji": "🌑",
+        "color": "#00008b"
+      },
+      {
+        "name": "Iron Man 2",
+        "emoji": "⚙️",
+        "color": "#ff0000"
+      },
+      {
+        "name": "Shang-Chi and the Legend of the Ten R",
+        "emoji": "🐉",
+        "color": "#ffd700"
+      },
+      {
+        "name": "Ant-Man and the Wasp",
+        "emoji": "🐜",
+        "color": "#ff0000"
+      },
+      {
+        "name": "Eternals",
+        "emoji": "🌌",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Ant-Man",
+        "emoji": "🔬",
+        "color": "#ff0000"
+      },
+      {
+        "name": "Thor",
+        "emoji": "🌩️",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Captain America: The First Avenger",
+        "emoji": "🇺🇸",
+        "color": "#0000ff"
+      },
+      {
+        "name": "The Incredible Hulk",
+        "emoji": "💚",
+        "color": "#008000"
+      },
+      {
+        "name": "Black Widow",
+        "emoji": "🕷️",
+        "color": "#ff0000"
+      }
+    ]
+  },
+  {
+    "id": "pixar-films",
+    "title": "Pixar Films",
+    "emoji": "🎬",
+    "criterion": "Best Pixar film overall",
+    "items": [
+      {
+        "name": "Toy Story",
+        "emoji": "🤠",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Toy Story 2",
+        "emoji": "🐄",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Toy Story 3",
+        "emoji": "🧸",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Toy Story 4",
+        "emoji": "🥄",
+        "color": "#0000ff"
+      },
+      {
+        "name": "A Bug's Life",
+        "emoji": "🐜",
+        "color": "#008000"
+      },
+      {
+        "name": "Monsters, Inc.",
+        "emoji": "👹",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Finding Nemo",
+        "emoji": "🐠",
+        "color": "#0000ff"
+      },
+      {
+        "name": "The Incredibles",
+        "emoji": "🦸",
+        "color": "#ff0000"
+      },
+      {
+        "name": "Cars",
+        "emoji": "🏎️",
+        "color": "#ff0000"
+      },
+      {
+        "name": "Ratatouille",
+        "emoji": "🐀",
+        "color": "#008000"
+      },
+      {
+        "name": "WALL-E",
+        "emoji": "🤖",
+        "color": "#808080"
+      },
+      {
+        "name": "Up",
+        "emoji": "🎈",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Brave",
+        "emoji": "🏹",
+        "color": "#008000"
+      },
+      {
+        "name": "Inside Out",
+        "emoji": "😊",
+        "color": "#0000ff"
+      },
+      {
+        "name": "The Good Dinosaur",
+        "emoji": "🦕",
+        "color": "#008000"
+      },
+      {
+        "name": "Coco",
+        "emoji": "💀",
+        "color": "#ffa500"
+      },
+      {
+        "name": "Onward",
+        "emoji": "🦄",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Soul",
+        "emoji": "🎷",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Luca",
+        "emoji": "🌊",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Turning Red",
+        "emoji": "🐼",
+        "color": "#ff0000"
+      },
+      {
+        "name": "Lightyear",
+        "emoji": "🚀",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Elemental",
+        "emoji": "🔥",
+        "color": "#0000ff"
+      }
+    ]
+  },
+  {
+    "id": "studio-ghibli-films",
+    "title": "Studio Ghibli Films",
+    "emoji": "🎬",
+    "criterion": "Best Studio Ghibli film overall",
+    "items": [
+      {
+        "name": "Spirited Away",
+        "emoji": "🐉",
+        "color": "#0000ff"
+      },
+      {
+        "name": "My Neighbor Totoro",
+        "emoji": "🌳",
+        "color": "#008000"
+      },
+      {
+        "name": "Princess Mononoke",
+        "emoji": "🐺",
+        "color": "#008000"
+      },
+      {
+        "name": "Howl's Moving Castle",
+        "emoji": "🏰",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Kiki's Delivery Service",
+        "emoji": "🧹",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Castle in the Sky",
+        "emoji": "☁️",
+        "color": "#87ceeb"
+      },
+      {
+        "name": "Nausicaä of the Valley of the Wind",
+        "emoji": "🦋",
+        "color": "#008000"
+      },
+      {
+        "name": "Grave of the Fireflies",
+        "emoji": "🔥",
+        "color": "#808080"
+      },
+      {
+        "name": "The Tale of the Princess Kaguya",
+        "emoji": "🎍",
+        "color": "#faebd7"
+      },
+      {
+        "name": "The Wind Rises",
+        "emoji": "✈️",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Porco Rosso",
+        "emoji": "🐷",
+        "color": "#ff0000"
+      },
+      {
+        "name": "Whisper of the Heart",
+        "emoji": "📚",
+        "color": "#ffb6c1"
+      },
+      {
+        "name": "The Secret World of Arrietty",
+        "emoji": "🍃",
+        "color": "#008000"
+      },
+      {
+        "name": "Ponyo",
+        "emoji": "🐟",
+        "color": "#0000ff"
+      },
+      {
+        "name": "The Cat Returns",
+        "emoji": "🐱",
+        "color": "#ffd700"
+      },
+      {
+        "name": "From Up on Poppy Hill",
+        "emoji": "🚩",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Only Yesterday",
+        "emoji": "🌾",
+        "color": "#ffff00"
+      },
+      {
+        "name": "Pom Poko",
+        "emoji": "🦝",
+        "color": "#a52a2a"
+      },
+      {
+        "name": "My Neighbors the Yamadas",
+        "emoji": "👨‍👩‍👧",
+        "color": "#008000"
+      },
+      {
+        "name": "The Boy and the Heron",
+        "emoji": "🦜",
+        "color": "#008000"
+      },
+      {
+        "name": "When Marnie Was There",
+        "emoji": "🌊",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Tales from Earthsea",
+        "emoji": "🐉",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Earwig and the Witch",
+        "emoji": "🧙",
+        "color": "#ee82ee"
+      },
+      {
+        "name": "The Red Turtle",
+        "emoji": "🐢",
+        "color": "#ff0000"
+      },
+      {
+        "name": "Ocean Waves",
+        "emoji": "🏖️",
+        "color": "#0000ff"
+      }
+    ]
+  },
+  {
+    "id": "sitcoms-of-all-time",
+    "title": "Sitcoms of All Time",
+    "emoji": "📺",
+    "criterion": "Cultural influence and longevity",
+    "items": [
+      {
+        "name": "I Love Lucy",
+        "emoji": "❤️",
+        "color": "#ff0000"
+      },
+      {
+        "name": "The Honeymooners",
+        "emoji": "🌙",
+        "color": "#a52a2a"
+      },
+      {
+        "name": "The Dick Van Dyke Show",
+        "emoji": "🎭",
+        "color": "#0000ff"
+      },
+      {
+        "name": "The Andy Griffith Show",
+        "emoji": "🪕",
+        "color": "#0000ff"
+      },
+      {
+        "name": "The Mary Tyler Moore Show",
+        "emoji": "🎩",
+        "color": "#0000ff"
+      },
+      {
+        "name": "All in the Family",
+        "emoji": "🪑",
+        "color": "#a52a2a"
+      },
+      {
+        "name": "M*A*S*H",
+        "emoji": "🩺",
+        "color": "#6b8e23"
+      },
+      {
+        "name": "The Bob Newhart Show",
+        "emoji": "🛋️",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Taxi",
+        "emoji": "🚕",
+        "color": "#ffff00"
+      },
+      {
+        "name": "Cheers",
+        "emoji": "🍺",
+        "color": "#a52a2a"
+      },
+      {
+        "name": "The Cosby Show",
+        "emoji": "🏠",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Family Ties",
+        "emoji": "👨‍👩‍👧",
+        "color": "#0000ff"
+      },
+      {
+        "name": "The Golden Girls",
+        "emoji": "🌴",
+        "color": "#ffd700"
+      },
+      {
+        "name": "Roseanne",
+        "emoji": "🍽️",
+        "color": "#ff0000"
+      },
+      {
+        "name": "Seinfeld",
+        "emoji": "🥨",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Friends",
+        "emoji": "🛋️",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Frasier",
+        "emoji": "☕",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Everybody Loves Raymond",
+        "emoji": "🍝",
+        "color": "#ff0000"
+      },
+      {
+        "name": "Will & Grace",
+        "emoji": "💅",
+        "color": "#ee82ee"
+      },
+      {
+        "name": "Sex and the City",
+        "emoji": "👠",
+        "color": "#ffc0cb"
+      },
+      {
+        "name": "Arrested Development",
+        "emoji": "🍌",
+        "color": "#0000ff"
+      },
+      {
+        "name": "The Office (US)",
+        "emoji": "📎",
+        "color": "#808080"
+      },
+      {
+        "name": "How I Met Your Mother",
+        "emoji": "☂️",
+        "color": "#0000ff"
+      },
+      {
+        "name": "The Big Bang Theory",
+        "emoji": "🔬",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Modern Family",
+        "emoji": "🏡",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Parks and Recreation",
+        "emoji": "🌳",
+        "color": "#008000"
+      },
+      {
+        "name": "Community",
+        "emoji": "📚",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Brooklyn Nine-Nine",
+        "emoji": "🚓",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Schitt's Creek",
+        "emoji": "💰",
+        "color": "#ffd700"
+      },
+      {
+        "name": "Ted Lasso",
+        "emoji": "⚽",
+        "color": "#0000ff"
+      }
+    ]
+  },
+  {
+    "id": "netflix-original-series",
+    "title": "Netflix Original Series Tier List",
+    "emoji": "📺",
+    "criterion": "Overall popularity and critical acclaim",
+    "items": [
+      {
+        "name": "Stranger Things",
+        "emoji": "🦑",
+        "color": "#ff0000"
+      },
+      {
+        "name": "The Crown",
+        "emoji": "👑",
+        "color": "#ffd700"
+      },
+      {
+        "name": "Wednesday",
+        "emoji": "🖤",
+        "color": "#a9a9a9"
+      },
+      {
+        "name": "Squid Game",
+        "emoji": "🦑",
+        "color": "#008000"
+      },
+      {
+        "name": "Money Heist",
+        "emoji": "💰",
+        "color": "#ff0000"
+      },
+      {
+        "name": "The Witcher",
+        "emoji": "⚔️",
+        "color": "#008000"
+      },
+      {
+        "name": "Narcos",
+        "emoji": "❄️",
+        "color": "#008000"
+      },
+      {
+        "name": "The Queen's Gambit",
+        "emoji": "♟️",
+        "color": "#ee82ee"
+      },
+      {
+        "name": "Dark",
+        "emoji": "🌌",
+        "color": "#a9a9a9"
+      },
+      {
+        "name": "Ozark",
+        "emoji": "🚣",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Bridgerton",
+        "emoji": "🎩",
+        "color": "#ffc0cb"
+      },
+      {
+        "name": "House of Cards",
+        "emoji": "🏛️",
+        "color": "#00008b"
+      },
+      {
+        "name": "Black Mirror",
+        "emoji": "🪞",
+        "color": "#a9a9a9"
+      },
+      {
+        "name": "You",
+        "emoji": "🔪",
+        "color": "#0000ff"
+      },
+      {
+        "name": "La Casa de Papel",
+        "emoji": "�mask",
+        "color": "#ff0000"
+      },
+      {
+        "name": "13 Reasons Why",
+        "emoji": "📼",
+        "color": "#ffff00"
+      },
+      {
+        "name": "Orange Is the New Black",
+        "emoji": "🟠",
+        "color": "#ffa500"
+      },
+      {
+        "name": "The Umbrella Academy",
+        "emoji": "☂️",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Lupin",
+        "emoji": "🎩",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Sex Education",
+        "emoji": "📚",
+        "color": "#ffc0cb"
+      },
+      {
+        "name": "The Haunting of Hill House",
+        "emoji": "👻",
+        "color": "#00008b"
+      },
+      {
+        "name": "Peaky Blinders",
+        "emoji": "🎩",
+        "color": "#2f4f4f"
+      },
+      {
+        "name": "Cobra Kai",
+        "emoji": "🐍",
+        "color": "#ff0000"
+      },
+      {
+        "name": "Never Have I Ever",
+        "emoji": "🙋",
+        "color": "#ffc0cb"
+      },
+      {
+        "name": "Virgin River",
+        "emoji": "🌲",
+        "color": "#008000"
+      },
+      {
+        "name": "The Sandman",
+        "emoji": "😴",
+        "color": "#191970"
+      },
+      {
+        "name": "Outer Banks",
+        "emoji": "🏝️",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Emily in Paris",
+        "emoji": "🥐",
+        "color": "#ffc0cb"
+      },
+      {
+        "name": "Bloodline",
+        "emoji": "🩸",
+        "color": "#ff0000"
+      },
+      {
+        "name": "Elite",
+        "emoji": "🎓",
+        "color": "#ffd700"
+      }
+    ]
+  },
+  {
+    "id": "rock-bands-of-all-time",
+    "title": "Rock Bands",
+    "emoji": "🎸",
+    "criterion": "Best rock band of all time",
+    "items": [
+      {
+        "name": "The Beatles",
+        "emoji": "🍎",
+        "color": "#ffff00"
+      },
+      {
+        "name": "Led Zeppelin",
+        "emoji": "🎈",
+        "color": "#ffd700"
+      },
+      {
+        "name": "Pink Floyd",
+        "emoji": "🌑",
+        "color": "#ffc0cb"
+      },
+      {
+        "name": "The Rolling Stones",
+        "emoji": "👅",
+        "color": "#ff0000"
+      },
+      {
+        "name": "Queen",
+        "emoji": "👑",
+        "color": "#ffd700"
+      },
+      {
+        "name": "AC/DC",
+        "emoji": "⚡",
+        "color": "#ff0000"
+      },
+      {
+        "name": "Nirvana",
+        "emoji": "😐",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Metallica",
+        "emoji": "🤘",
+        "color": "#c0c0c0"
+      },
+      {
+        "name": "Guns N' Roses",
+        "emoji": "🌹",
+        "color": "#ff0000"
+      },
+      {
+        "name": "The Who",
+        "emoji": "🎯",
+        "color": "#0000ff"
+      },
+      {
+        "name": "U2",
+        "emoji": "🌍",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Radiohead",
+        "emoji": "📻",
+        "color": "#808080"
+      },
+      {
+        "name": "Black Sabbath",
+        "emoji": "🦇",
+        "color": "#a9a9a9"
+      },
+      {
+        "name": "Deep Purple",
+        "emoji": "💜",
+        "color": "#800080"
+      },
+      {
+        "name": "The Doors",
+        "emoji": "🚪",
+        "color": "#ffd700"
+      },
+      {
+        "name": "Aerosmith",
+        "emoji": "🪣",
+        "color": "#ff0000"
+      },
+      {
+        "name": "Bon Jovi",
+        "emoji": "🤠",
+        "color": "#ff0000"
+      },
+      {
+        "name": "Red Hot Chili Peppers",
+        "emoji": "🌶️",
+        "color": "#ff0000"
+      },
+      {
+        "name": "Fleetwood Mac",
+        "emoji": "⛵",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Eagles",
+        "emoji": "🦅",
+        "color": "#ffd700"
+      },
+      {
+        "name": "Rush",
+        "emoji": "🍁",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Van Halen",
+        "emoji": "🎤",
+        "color": "#ff0000"
+      },
+      {
+        "name": "The Clash",
+        "emoji": "🚨",
+        "color": "#ff0000"
+      },
+      {
+        "name": "Pearl Jam",
+        "emoji": "🌊",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Green Day",
+        "emoji": "💚",
+        "color": "#008000"
+      }
+    ]
+  },
+  {
+    "id": "pop-stars-of-the-2020s",
+    "title": "Pop Stars of the 2020s",
+    "emoji": "🎤",
+    "criterion": "Global commercial success in the 2020s (streams, chart-toppers, sold-out tours)",
+    "items": [
+      {
+        "name": "Taylor Swift",
+        "emoji": "🦋",
+        "color": "#ffff00"
+      },
+      {
+        "name": "Olivia Rodrigo",
+        "emoji": "🎸",
+        "color": "#ffc0cb"
+      },
+      {
+        "name": "Billie Eilish",
+        "emoji": "🖤",
+        "color": "#008000"
+      },
+      {
+        "name": "Dua Lipa",
+        "emoji": "💃",
+        "color": "#ffc0cb"
+      },
+      {
+        "name": "Harry Styles",
+        "emoji": "🍉",
+        "color": "#ffc0cb"
+      },
+      {
+        "name": "Doja Cat",
+        "emoji": "🐱",
+        "color": "#ffc0cb"
+      },
+      {
+        "name": "The Weeknd",
+        "emoji": "🌃",
+        "color": "#ff0000"
+      },
+      {
+        "name": "Ariana Grande",
+        "emoji": "☁️",
+        "color": "#ffc0cb"
+      },
+      {
+        "name": "Sabrina Carpenter",
+        "emoji": "☕",
+        "color": "#ffc0cb"
+      },
+      {
+        "name": "SZA",
+        "emoji": "🌊",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Miley Cyrus",
+        "emoji": "🌹",
+        "color": "#ffc0cb"
+      },
+      {
+        "name": "Lizzo",
+        "emoji": "🎶",
+        "color": "#ffd700"
+      },
+      {
+        "name": "Bad Bunny",
+        "emoji": "🐰",
+        "color": "#ffc0cb"
+      },
+      {
+        "name": "Karol G",
+        "emoji": "💎",
+        "color": "#ffc0cb"
+      },
+      {
+        "name": "Peso Pluma",
+        "emoji": "💤",
+        "color": "#008000"
+      },
+      {
+        "name": "Jungkook",
+        "emoji": "🐇",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Jimin",
+        "emoji": "🎤",
+        "color": "#ffc0cb"
+      },
+      {
+        "name": "LISA",
+        "emoji": "💛",
+        "color": "#ffc0cb"
+      },
+      {
+        "name": "Rosalía",
+        "emoji": "🚗",
+        "color": "#ff0000"
+      },
+      {
+        "name": "Charli XCX",
+        "emoji": "🍏",
+        "color": "#ffc0cb"
+      },
+      {
+        "name": "Chappell Roan",
+        "emoji": "💃",
+        "color": "#ffc0cb"
+      },
+      {
+        "name": "Benson Boone",
+        "emoji": "🌙",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Teddy Swims",
+        "emoji": "🎙️",
+        "color": "#a52a2a"
+      },
+      {
+        "name": "Shaboozey",
+        "emoji": "🥃",
+        "color": "#008000"
+      },
+      {
+        "name": "Post Malone",
+        "emoji": "🌟",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Ed Sheeran",
+        "emoji": "➗",
+        "color": "#ffff00"
+      },
+      {
+        "name": "Latto",
+        "emoji": "🍑",
+        "color": "#ffc0cb"
+      },
+      {
+        "name": "Tyla",
+        "emoji": "🌊",
+        "color": "#ffd700"
+      },
+      {
+        "name": "Gracie Abrams",
+        "emoji": "🌧️",
+        "color": "#ffc0cb"
+      },
+      {
+        "name": "Tate McRae",
+        "emoji": "⏳",
+        "color": "#ffc0cb"
+      }
+    ]
+  },
+  {
+    "id": "football-clubs-in-europe",
+    "title": "Football Clubs in Europe",
+    "emoji": "⚽",
+    "criterion": "Total number of major European trophies won (European Cup/Champions League, UEFA",
+    "items": [
+      {
+        "name": "Real Madrid",
+        "emoji": "👑",
+        "color": "#c0c0c0"
+      },
+      {
+        "name": "AC Milan",
+        "emoji": "🔴",
+        "color": "#ff0000"
+      },
+      {
+        "name": "Bayern Munich",
+        "emoji": "🔵",
+        "color": "#ff0000"
+      },
+      {
+        "name": "Liverpool",
+        "emoji": "🔴",
+        "color": "#ff0000"
+      },
+      {
+        "name": "Barcelona",
+        "emoji": "🔵",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Ajax",
+        "emoji": "⚪",
+        "color": "#ff0000"
+      },
+      {
+        "name": "Inter Milan",
+        "emoji": "🔵",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Manchester United",
+        "emoji": "😈",
+        "color": "#ff0000"
+      },
+      {
+        "name": "Juventus",
+        "emoji": "⚫",
+        "color": "#808080"
+      },
+      {
+        "name": "Benfica",
+        "emoji": "🦅",
+        "color": "#ff0000"
+      },
+      {
+        "name": "Porto",
+        "emoji": "🐉",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Chelsea",
+        "emoji": "🦁",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Nottingham Forest",
+        "emoji": "🌳",
+        "color": "#228b22"
+      },
+      {
+        "name": "Celtic",
+        "emoji": "🍀",
+        "color": "#008000"
+      },
+      {
+        "name": "Feyenoord",
+        "emoji": "🔴",
+        "color": "#ff0000"
+      },
+      {
+        "name": "Aston Villa",
+        "emoji": "🟣",
+        "color": "#008000"
+      },
+      {
+        "name": "Hamburg",
+        "emoji": "⚓",
+        "color": "#ff0000"
+      },
+      {
+        "name": "Steaua Bucharest",
+        "emoji": "⭐",
+        "color": "#0000ff"
+      },
+      {
+        "name": "PSV Eindhoven",
+        "emoji": "💡",
+        "color": "#ff0000"
+      },
+      {
+        "name": "Marseille",
+        "emoji": "🔷",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Borussia Dortmund",
+        "emoji": "🐝",
+        "color": "#ffff00"
+      },
+      {
+        "name": "Atletico Madrid",
+        "emoji": "🔴",
+        "color": "#ff0000"
+      },
+      {
+        "name": "Sevilla",
+        "emoji": "🔴",
+        "color": "#ff0000"
+      },
+      {
+        "name": "Tottenham Hotspur",
+        "emoji": "🐓",
+        "color": "#c0c0c0"
+      },
+      {
+        "name": "Arsenal",
+        "emoji": "🔴",
+        "color": "#ff0000"
+      },
+      {
+        "name": "Lazio",
+        "emoji": "🦅",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Napoli",
+        "emoji": "🔵",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Roma",
+        "emoji": "🐺",
+        "color": "#ff0000"
+      },
+      {
+        "name": "Bayer Leverkusen",
+        "emoji": "💊",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Valencia",
+        "emoji": "🦇",
+        "color": "#ffa500"
+      }
+    ]
+  },
+  {
+    "id": "formula-1-teams",
+    "title": "Formula 1 Teams",
+    "emoji": "🏎️",
+    "criterion": "Best F1 team to drive for",
+    "items": [
+      {
+        "name": "Ferrari",
+        "emoji": "🐴",
+        "color": "#ff0000"
+      },
+      {
+        "name": "McLaren",
+        "emoji": "🧡",
+        "color": "#ffa500"
+      },
+      {
+        "name": "Mercedes",
+        "emoji": "⭐",
+        "color": "#c0c0c0"
+      },
+      {
+        "name": "Red Bull Racing",
+        "emoji": "🐂",
+        "color": "#00008b"
+      },
+      {
+        "name": "Williams",
+        "emoji": "🔵",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Aston Martin",
+        "emoji": "🟢",
+        "color": "#006400"
+      },
+      {
+        "name": "Alpine",
+        "emoji": "🇫🇷",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Haas",
+        "emoji": "⚪",
+        "color": "#808080"
+      },
+      {
+        "name": "Sauber",
+        "emoji": "🇨🇭",
+        "color": "#0000ff"
+      },
+      {
+        "name": "RB",
+        "emoji": "🔷",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Lotus",
+        "emoji": "🌿",
+        "color": "#008000"
+      },
+      {
+        "name": "Brabham",
+        "emoji": "🟤",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Tyrrell",
+        "emoji": "🪵",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Benetton",
+        "emoji": "🟩",
+        "color": "#008000"
+      },
+      {
+        "name": "Renault",
+        "emoji": "🟡",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Brawn GP",
+        "emoji": "🤍",
+        "color": "#a52a2a"
+      },
+      {
+        "name": "Toro Rosso",
+        "emoji": "🌪️",
+        "color": "#ff0000"
+      },
+      {
+        "name": "Jaguar",
+        "emoji": "🐆",
+        "color": "#006400"
+      },
+      {
+        "name": "Jordan",
+        "emoji": "🟨",
+        "color": "#ffff00"
+      },
+      {
+        "name": "BAR",
+        "emoji": "🔺",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Minardi",
+        "emoji": "🟦",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Force India",
+        "emoji": "🇮🇳",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Racing Point",
+        "emoji": "💗",
+        "color": "#ffc0cb"
+      },
+      {
+        "name": "AlphaTauri",
+        "emoji": "🌀",
+        "color": "#0000ff"
+      },
+      {
+        "name": "March",
+        "emoji": "🟠",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Arrows",
+        "emoji": "🏹",
+        "color": "#c0c0c0"
+      },
+      {
+        "name": "Ligier",
+        "emoji": "🟣",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Prost",
+        "emoji": "🇫🇷",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Toyota",
+        "emoji": "🔴",
+        "color": "#c0c0c0"
+      },
+      {
+        "name": "BMW Sauber",
+        "emoji": "⚙️",
+        "color": "#0000ff"
+      }
+    ]
+  },
+  {
+    "id": "nba-teams",
+    "title": "NBA Teams",
+    "emoji": "🏀",
+    "criterion": "Best NBA franchise to play for",
+    "items": [
+      {
+        "name": "Los Angeles Lakers",
+        "emoji": "💜",
+        "color": "#ffd700"
+      },
+      {
+        "name": "Boston Celtics",
+        "emoji": "🍀",
+        "color": "#008000"
+      },
+      {
+        "name": "Golden State Warriors",
+        "emoji": "🌉",
+        "color": "#ffd700"
+      },
+      {
+        "name": "Chicago Bulls",
+        "emoji": "🐂",
+        "color": "#ff0000"
+      },
+      {
+        "name": "Miami Heat",
+        "emoji": "🔥",
+        "color": "#ff0000"
+      },
+      {
+        "name": "San Antonio Spurs",
+        "emoji": "⚫",
+        "color": "#c0c0c0"
+      },
+      {
+        "name": "New York Knicks",
+        "emoji": "🗽",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Denver Nuggets",
+        "emoji": "⛏️",
+        "color": "#ffd700"
+      },
+      {
+        "name": "Milwaukee Bucks",
+        "emoji": "🦌",
+        "color": "#008000"
+      },
+      {
+        "name": "Dallas Mavericks",
+        "emoji": "🐴",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Phoenix Suns",
+        "emoji": "☀️",
+        "color": "#ffa500"
+      },
+      {
+        "name": "Philadelphia 76ers",
+        "emoji": "🔔",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Brooklyn Nets",
+        "emoji": "🕸️",
+        "color": "#000080"
+      },
+      {
+        "name": "Toronto Raptors",
+        "emoji": "🦖",
+        "color": "#ff0000"
+      },
+      {
+        "name": "Cleveland Cavaliers",
+        "emoji": "⚔️",
+        "color": "#800000"
+      },
+      {
+        "name": "Oklahoma City Thunder",
+        "emoji": "⛈️",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Minnesota Timberwolves",
+        "emoji": "🐺",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Sacramento Kings",
+        "emoji": "👑",
+        "color": "#800080"
+      },
+      {
+        "name": "Atlanta Hawks",
+        "emoji": "🦅",
+        "color": "#ff0000"
+      },
+      {
+        "name": "Portland Trail Blazers",
+        "emoji": "🌲",
+        "color": "#ff0000"
+      },
+      {
+        "name": "New Orleans Pelicans",
+        "emoji": "🦩",
+        "color": "#ffd700"
+      },
+      {
+        "name": "Indiana Pacers",
+        "emoji": "🏎️",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Orlando Magic",
+        "emoji": "✨",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Utah Jazz",
+        "emoji": "🎷",
+        "color": "#00008b"
+      },
+      {
+        "name": "Memphis Grizzlies",
+        "emoji": "🐻",
+        "color": "#808080"
+      },
+      {
+        "name": "Washington Wizards",
+        "emoji": "🪄",
+        "color": "#800000"
+      },
+      {
+        "name": "Charlotte Hornets",
+        "emoji": "🐝",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Detroit Pistons",
+        "emoji": "🔧",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Houston Rockets",
+        "emoji": "🚀",
+        "color": "#ff0000"
+      },
+      {
+        "name": "Los Angeles Clippers",
+        "emoji": "⛵",
+        "color": "#0000ff"
+      }
+    ]
+  },
+  {
+    "id": "olympic-sports",
+    "title": "Olympic Sports",
+    "emoji": "🏅",
+    "criterion": "Most physically demanding Olympic sport",
+    "items": [
+      {
+        "name": "Marathon",
+        "emoji": "🏃",
+        "color": "#ff0000"
+      },
+      {
+        "name": "Decathlon",
+        "emoji": "🏋️",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Swimming",
+        "emoji": "🏊",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Gymnastics",
+        "emoji": "🤸",
+        "color": "#ff0000"
+      },
+      {
+        "name": "Weightlifting",
+        "emoji": "🏋️‍♂️",
+        "color": "#c0c0c0"
+      },
+      {
+        "name": "Wrestling",
+        "emoji": "🤼",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Boxing",
+        "emoji": "🥊",
+        "color": "#ff0000"
+      },
+      {
+        "name": "Cycling",
+        "emoji": "🚴",
+        "color": "#008000"
+      },
+      {
+        "name": "Rowing",
+        "emoji": "🚣",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Triathlon",
+        "emoji": "🏊‍♂️🚴‍♂️",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Judo",
+        "emoji": "🥋",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Taekwondo",
+        "emoji": "🥋",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Basketball",
+        "emoji": "🏀",
+        "color": "#ffa500"
+      },
+      {
+        "name": "Handball",
+        "emoji": "🤾",
+        "color": "#ffa500"
+      },
+      {
+        "name": "Water Polo",
+        "emoji": "🤽",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Field Hockey",
+        "emoji": "🏑",
+        "color": "#008000"
+      },
+      {
+        "name": "Tennis",
+        "emoji": "🎾",
+        "color": "#7cfc00"
+      },
+      {
+        "name": "Badminton",
+        "emoji": "🏸",
+        "color": "#c0c0c0"
+      },
+      {
+        "name": "Fencing",
+        "emoji": "🤺",
+        "color": "#c0c0c0"
+      },
+      {
+        "name": "Archery",
+        "emoji": "🏹",
+        "color": "#008000"
+      },
+      {
+        "name": "Equestrian",
+        "emoji": "🐎",
+        "color": "#a52a2a"
+      },
+      {
+        "name": "Sailing",
+        "emoji": "⛵",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Canoeing",
+        "emoji": "🛶",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Speed Skating",
+        "emoji": "⛸️",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Cross-Country Skiing",
+        "emoji": "🎿",
+        "color": "#008000"
+      },
+      {
+        "name": "Bobsleigh",
+        "emoji": "🛷",
+        "color": "#c0c0c0"
+      },
+      {
+        "name": "Ice Hockey",
+        "emoji": "🏒",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Ski Jumping",
+        "emoji": "🎿",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Figure Skating",
+        "emoji": "⛸️",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Curling",
+        "emoji": "🥌",
+        "color": "#0000ff"
+      }
+    ]
+  },
+  {
+    "id": "martial-arts",
+    "title": "Martial Arts Styles",
+    "emoji": "🥋",
+    "criterion": "Best martial art for real-world self-defense",
+    "items": [
+      {
+        "name": "Brazilian Jiu-Jitsu",
+        "emoji": "🤼",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Muay Thai",
+        "emoji": "🦵",
+        "color": "#ff0000"
+      },
+      {
+        "name": "Boxing",
+        "emoji": "🥊",
+        "color": "#ff0000"
+      },
+      {
+        "name": "Wrestling",
+        "emoji": "🤼‍♂️",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Judo",
+        "emoji": "🥋",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Krav Maga",
+        "emoji": "🛡️",
+        "color": "#ff0000"
+      },
+      {
+        "name": "MMA",
+        "emoji": "🥋",
+        "color": "#ff0000"
+      },
+      {
+        "name": "Karate",
+        "emoji": "🥋",
+        "color": "#faebd7"
+      },
+      {
+        "name": "Taekwondo",
+        "emoji": "🦶",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Aikido",
+        "emoji": "🌀",
+        "color": "#808080"
+      },
+      {
+        "name": "Kung Fu",
+        "emoji": "🐉",
+        "color": "#ff0000"
+      },
+      {
+        "name": "Sambo",
+        "emoji": "🤼",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Wing Chun",
+        "emoji": "👊",
+        "color": "#ff0000"
+      },
+      {
+        "name": "Capoeira",
+        "emoji": "🎶",
+        "color": "#008000"
+      },
+      {
+        "name": "Jeet Kune Do",
+        "emoji": "💧",
+        "color": "#ffff00"
+      },
+      {
+        "name": "Kendo",
+        "emoji": "⚔️",
+        "color": "#00008b"
+      },
+      {
+        "name": "Hapkido",
+        "emoji": "🥋",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Bajiquan",
+        "emoji": "🀄",
+        "color": "#ff0000"
+      },
+      {
+        "name": "Luta Livre",
+        "emoji": "🤼",
+        "color": "#008000"
+      },
+      {
+        "name": "Savate",
+        "emoji": "👞",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Kickboxing",
+        "emoji": "🦵",
+        "color": "#ff0000"
+      },
+      {
+        "name": "Ninjutsu",
+        "emoji": "🥷",
+        "color": "#2f4f4f"
+      },
+      {
+        "name": "Systema",
+        "emoji": "❄️",
+        "color": "#808080"
+      },
+      {
+        "name": "BJJ No-Gi",
+        "emoji": "👕",
+        "color": "#0000ff"
+      }
+    ]
+  },
+  {
+    "id": "fast-food-chains",
+    "title": "Fast Food Chains",
+    "emoji": "🍔",
+    "criterion": "Most unhealthy fast food chain",
+    "items": [
+      {
+        "name": "McDonald's",
+        "emoji": "🍟",
+        "color": "#ffff00"
+      },
+      {
+        "name": "Burger King",
+        "emoji": "👑",
+        "color": "#ffa500"
+      },
+      {
+        "name": "Wendy's",
+        "emoji": "🔴",
+        "color": "#ff0000"
+      },
+      {
+        "name": "KFC",
+        "emoji": "🍗",
+        "color": "#ff0000"
+      },
+      {
+        "name": "Taco Bell",
+        "emoji": "🌮",
+        "color": "#800080"
+      },
+      {
+        "name": "Subway",
+        "emoji": "🥪",
+        "color": "#008000"
+      },
+      {
+        "name": "Domino's",
+        "emoji": "🍕",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Pizza Hut",
+        "emoji": "🧀",
+        "color": "#ff0000"
+      },
+      {
+        "name": "Papa John's",
+        "emoji": "🍕",
+        "color": "#ff0000"
+      },
+      {
+        "name": "Popeyes",
+        "emoji": "🍤",
+        "color": "#ff0000"
+      },
+      {
+        "name": "Chick-fil-A",
+        "emoji": "🐔",
+        "color": "#ff0000"
+      },
+      {
+        "name": "Arby's",
+        "emoji": "🥩",
+        "color": "#a52a2a"
+      },
+      {
+        "name": "Five Guys",
+        "emoji": "🍔",
+        "color": "#ff0000"
+      },
+      {
+        "name": "In-N-Out",
+        "emoji": "🌴",
+        "color": "#ff0000"
+      },
+      {
+        "name": "Sonic Drive-In",
+        "emoji": "🚗",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Dairy Queen",
+        "emoji": "🍦",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Jack in the Box",
+        "emoji": "📦",
+        "color": "#ff0000"
+      },
+      {
+        "name": "Carl's Jr.",
+        "emoji": "⭐",
+        "color": "#ff0000"
+      },
+      {
+        "name": "Hardee's",
+        "emoji": "🍔",
+        "color": "#ff0000"
+      },
+      {
+        "name": "Whataburger",
+        "emoji": "🧡",
+        "color": "#ff0000"
+      },
+      {
+        "name": "Shake Shack",
+        "emoji": "🥤",
+        "color": "#008000"
+      },
+      {
+        "name": "Chipotle",
+        "emoji": "🌯",
+        "color": "#008000"
+      },
+      {
+        "name": "Panera Bread",
+        "emoji": "🥖",
+        "color": "#008000"
+      },
+      {
+        "name": "Little Caesars",
+        "emoji": "🍕",
+        "color": "#ff0000"
+      },
+      {
+        "name": "Wingstop",
+        "emoji": "🍗",
+        "color": "#ffa500"
+      }
+    ]
+  },
+  {
+    "id": "coffee-chains",
+    "title": "Coffee Chains",
+    "emoji": "☕",
+    "criterion": "Best coffee chain overall",
+    "items": [
+      {
+        "name": "Starbucks",
+        "emoji": "⭐",
+        "color": "#008000"
+      },
+      {
+        "name": "Dunkin'",
+        "emoji": "🍩",
+        "color": "#ffa500"
+      },
+      {
+        "name": "Costa Coffee",
+        "emoji": "🇬🇧",
+        "color": "#008000"
+      },
+      {
+        "name": "Tim Hortons",
+        "emoji": "🍁",
+        "color": "#ff0000"
+      },
+      {
+        "name": "Peet's Coffee",
+        "emoji": "🌰",
+        "color": "#a52a2a"
+      },
+      {
+        "name": "Caribou Coffee",
+        "emoji": "🦌",
+        "color": "#008000"
+      },
+      {
+        "name": "The Coffee Bean & Tea Leaf",
+        "emoji": "🫘",
+        "color": "#008000"
+      },
+      {
+        "name": "Dutch Bros",
+        "emoji": "🌷",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Pret A Manger",
+        "emoji": "🥐",
+        "color": "#008000"
+      },
+      {
+        "name": "Caffè Nero",
+        "emoji": "🎩",
+        "color": "#a52a2a"
+      },
+      {
+        "name": "Gloria Jean's",
+        "emoji": "🌏",
+        "color": "#a52a2a"
+      },
+      {
+        "name": "Coffee Republic",
+        "emoji": "🏛️",
+        "color": "#a52a2a"
+      },
+      {
+        "name": "McCafé",
+        "emoji": "🍔",
+        "color": "#a52a2a"
+      },
+      {
+        "name": "Panera Bread",
+        "emoji": "🥖",
+        "color": "#a52a2a"
+      },
+      {
+        "name": "Krispy Kreme",
+        "emoji": "🍩",
+        "color": "#ff0000"
+      },
+      {
+        "name": "Doutor Coffee",
+        "emoji": "🍮",
+        "color": "#a52a2a"
+      },
+      {
+        "name": "Café Coffee Day",
+        "emoji": "🇮🇳",
+        "color": "#a52a2a"
+      },
+      {
+        "name": "Luckin Coffee",
+        "emoji": "🦌",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Segafredo",
+        "emoji": "🇮🇹",
+        "color": "#a52a2a"
+      },
+      {
+        "name": "Lavazza",
+        "emoji": "☕",
+        "color": "#a52a2a"
+      },
+      {
+        "name": "Luckin",
+        "emoji": "🌙",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Blue Bottle Coffee",
+        "emoji": "🔵",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Philz Coffee",
+        "emoji": "🌿",
+        "color": "#a52a2a"
+      },
+      {
+        "name": "Coffee Fellows",
+        "emoji": "🥨",
+        "color": "#a52a2a"
+      },
+      {
+        "name": "Ediya Coffee",
+        "emoji": "🌱",
+        "color": "#a52a2a"
+      },
+      {
+        "name": "Angel-in-us",
+        "emoji": "👼",
+        "color": "#a52a2a"
+      },
+      {
+        "name": "Hollys Coffee",
+        "emoji": "🌺",
+        "color": "#a52a2a"
+      },
+      {
+        "name": "Tom N Toms",
+        "emoji": "🥯",
+        "color": "#a52a2a"
+      }
+    ]
+  },
+  {
+    "id": "pizza-toppings",
+    "title": "Pizza Toppings",
+    "emoji": "🍕",
+    "criterion": "How popular and widely loved these toppings are",
+    "items": [
+      {
+        "name": "Pepperoni",
+        "emoji": "🍕",
+        "color": "#ff0000"
+      },
+      {
+        "name": "Mushrooms",
+        "emoji": "🍄",
+        "color": "#a52a2a"
+      },
+      {
+        "name": "Onions",
+        "emoji": "🧅",
+        "color": "#ffff00"
+      },
+      {
+        "name": "Sausage",
+        "emoji": "🌭",
+        "color": "#a52a2a"
+      },
+      {
+        "name": "Bacon",
+        "emoji": "🥓",
+        "color": "#a52a2a"
+      },
+      {
+        "name": "Extra Cheese",
+        "emoji": "🧀",
+        "color": "#ffff00"
+      },
+      {
+        "name": "Black Olives",
+        "emoji": "🫒",
+        "color": "#808000"
+      },
+      {
+        "name": "Green Peppers",
+        "emoji": "🫑",
+        "color": "#008000"
+      },
+      {
+        "name": "Pineapple",
+        "emoji": "🍍",
+        "color": "#ffff00"
+      },
+      {
+        "name": "Ham",
+        "emoji": "🐖",
+        "color": "#ffc0cb"
+      },
+      {
+        "name": "Spinach",
+        "emoji": "🥬",
+        "color": "#008000"
+      },
+      {
+        "name": "Tomatoes",
+        "emoji": "🍅",
+        "color": "#ff0000"
+      },
+      {
+        "name": "Chicken",
+        "emoji": "🍗",
+        "color": "#ffff00"
+      },
+      {
+        "name": "Jalapeños",
+        "emoji": "🌶️",
+        "color": "#008000"
+      },
+      {
+        "name": "Anchovies",
+        "emoji": "🐟",
+        "color": "#c0c0c0"
+      },
+      {
+        "name": "Basil",
+        "emoji": "🌿",
+        "color": "#008000"
+      },
+      {
+        "name": "Garlic",
+        "emoji": "🧄",
+        "color": "#faebd7"
+      },
+      {
+        "name": "Italian Sausage",
+        "emoji": "🌭",
+        "color": "#a52a2a"
+      },
+      {
+        "name": "Beef",
+        "emoji": "🥩",
+        "color": "#a52a2a"
+      },
+      {
+        "name": "Eggplant",
+        "emoji": "🍆",
+        "color": "#800080"
+      },
+      {
+        "name": "Artichoke",
+        "emoji": "🌵",
+        "color": "#008000"
+      },
+      {
+        "name": "Feta Cheese",
+        "emoji": "🧀",
+        "color": "#faebd7"
+      },
+      {
+        "name": "Red Peppers",
+        "emoji": "🌶️",
+        "color": "#ff0000"
+      },
+      {
+        "name": "Sun-Dried Tomatoes",
+        "emoji": "🍅",
+        "color": "#ff0000"
+      },
+      {
+        "name": "Capers",
+        "emoji": "🫒",
+        "color": "#008000"
+      },
+      {
+        "name": "Prosciutto",
+        "emoji": "🥓",
+        "color": "#ffc0cb"
+      },
+      {
+        "name": "Ricotta",
+        "emoji": "🧀",
+        "color": "#faebd7"
+      },
+      {
+        "name": "Pesto",
+        "emoji": "🌿",
+        "color": "#008000"
+      },
+      {
+        "name": "BBQ Chicken",
+        "emoji": "🍗",
+        "color": "#a52a2a"
+      },
+      {
+        "name": "Zucchini",
+        "emoji": "🥒",
+        "color": "#008000"
+      }
+    ]
+  },
+  {
+    "id": "fruits",
+    "title": "Fruits",
+    "emoji": "🍎",
+    "criterion": "Sweetness",
+    "items": [
+      {
+        "name": "Apple",
+        "emoji": "🍎",
+        "color": "#ff0000"
+      },
+      {
+        "name": "Banana",
+        "emoji": "🍌",
+        "color": "#ffff00"
+      },
+      {
+        "name": "Orange",
+        "emoji": "🍊",
+        "color": "#ffa500"
+      },
+      {
+        "name": "Strawberry",
+        "emoji": "🍓",
+        "color": "#ff0000"
+      },
+      {
+        "name": "Grapes",
+        "emoji": "🍇",
+        "color": "#800080"
+      },
+      {
+        "name": "Watermelon",
+        "emoji": "🍉",
+        "color": "#008000"
+      },
+      {
+        "name": "Pineapple",
+        "emoji": "🍍",
+        "color": "#ffff00"
+      },
+      {
+        "name": "Mango",
+        "emoji": "🥭",
+        "color": "#ffa500"
+      },
+      {
+        "name": "Peach",
+        "emoji": "🍑",
+        "color": "#ffa500"
+      },
+      {
+        "name": "Cherry",
+        "emoji": "🍒",
+        "color": "#ff0000"
+      },
+      {
+        "name": "Blueberry",
+        "emoji": "🫐",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Raspberry",
+        "emoji": "🍇",
+        "color": "#ff0000"
+      },
+      {
+        "name": "Lemon",
+        "emoji": "🍋",
+        "color": "#ffff00"
+      },
+      {
+        "name": "Lime",
+        "emoji": "🍋‍🟩",
+        "color": "#008000"
+      },
+      {
+        "name": "Kiwi",
+        "emoji": "🥝",
+        "color": "#008000"
+      },
+      {
+        "name": "Pear",
+        "emoji": "🍐",
+        "color": "#008000"
+      },
+      {
+        "name": "Coconut",
+        "emoji": "🥥",
+        "color": "#a52a2a"
+      },
+      {
+        "name": "Papaya",
+        "emoji": "🍈",
+        "color": "#ffa500"
+      },
+      {
+        "name": "Pomegranate",
+        "emoji": "🥭",
+        "color": "#ff0000"
+      },
+      {
+        "name": "Apricot",
+        "emoji": "🍑",
+        "color": "#ffa500"
+      },
+      {
+        "name": "Fig",
+        "emoji": "🍈",
+        "color": "#800080"
+      },
+      {
+        "name": "Plum",
+        "emoji": "🍑",
+        "color": "#800080"
+      },
+      {
+        "name": "Cantaloupe",
+        "emoji": "🍈",
+        "color": "#ffa500"
+      },
+      {
+        "name": "Grapefruit",
+        "emoji": "🍊",
+        "color": "#ffa500"
+      },
+      {
+        "name": "Avocado",
+        "emoji": "🥑",
+        "color": "#008000"
+      }
+    ]
+  },
+  {
+    "id": "breakfast-foods",
+    "title": "Breakfast Foods Tier List",
+    "emoji": "🍳",
+    "criterion": "Overall popularity and how classic/iconic they are as breakfast choices",
+    "items": [
+      {
+        "name": "Pancakes",
+        "emoji": "🥞",
+        "color": "#a52a2a"
+      },
+      {
+        "name": "Waffles",
+        "emoji": "🧇",
+        "color": "#a52a2a"
+      },
+      {
+        "name": "Scrambled Eggs",
+        "emoji": "🍳",
+        "color": "#ffff00"
+      },
+      {
+        "name": "Bacon",
+        "emoji": "🥓",
+        "color": "#ff0000"
+      },
+      {
+        "name": "Sausage",
+        "emoji": "🌭",
+        "color": "#a52a2a"
+      },
+      {
+        "name": "French Toast",
+        "emoji": "🍞",
+        "color": "#a52a2a"
+      },
+      {
+        "name": "Oatmeal",
+        "emoji": "🥣",
+        "color": "#f5f5dc"
+      },
+      {
+        "name": "Cereal",
+        "emoji": "🥛",
+        "color": "#ffff00"
+      },
+      {
+        "name": "Bagel with Cream Cheese",
+        "emoji": "🥯",
+        "color": "#f5deb3"
+      },
+      {
+        "name": "Croissant",
+        "emoji": "🥐",
+        "color": "#ffd700"
+      },
+      {
+        "name": "English Muffin",
+        "emoji": "🍞",
+        "color": "#f5f5dc"
+      },
+      {
+        "name": "Breakfast Burrito",
+        "emoji": "🌯",
+        "color": "#a52a2a"
+      },
+      {
+        "name": "Eggs Benedict",
+        "emoji": "🍳",
+        "color": "#ffff00"
+      },
+      {
+        "name": "Hash Browns",
+        "emoji": "🥔",
+        "color": "#a52a2a"
+      },
+      {
+        "name": "Home Fries",
+        "emoji": "🍟",
+        "color": "#a52a2a"
+      },
+      {
+        "name": "Yogurt with Granola",
+        "emoji": "🥛",
+        "color": "#f5deb3"
+      },
+      {
+        "name": "Smoothie",
+        "emoji": "🥤",
+        "color": "#008000"
+      },
+      {
+        "name": "Avocado Toast",
+        "emoji": "🥑",
+        "color": "#008000"
+      },
+      {
+        "name": "Breakfast Sandwich",
+        "emoji": "🥪",
+        "color": "#a52a2a"
+      },
+      {
+        "name": "Biscuits and Gravy",
+        "emoji": "🍪",
+        "color": "#a52a2a"
+      },
+      {
+        "name": "Grits",
+        "emoji": "🍚",
+        "color": "#ffff00"
+      },
+      {
+        "name": "Crepes",
+        "emoji": "🥞",
+        "color": "#ffff00"
+      },
+      {
+        "name": "Muffin",
+        "emoji": "🧁",
+        "color": "#a52a2a"
+      },
+      {
+        "name": "Donut",
+        "emoji": "🍩",
+        "color": "#ffc0cb"
+      },
+      {
+        "name": "Breakfast Cereal Bar",
+        "emoji": "🍫",
+        "color": "#a52a2a"
+      },
+      {
+        "name": "Toast with Butter and Jam",
+        "emoji": "🍞",
+        "color": "#a52a2a"
+      },
+      {
+        "name": "Breakfast Potatoes",
+        "emoji": "🥔",
+        "color": "#a52a2a"
+      },
+      {
+        "name": "Orange Juice",
+        "emoji": "🍊",
+        "color": "#ffa500"
+      },
+      {
+        "name": "Coffee",
+        "emoji": "☕",
+        "color": "#a52a2a"
+      },
+      {
+        "name": "Milk",
+        "emoji": "🥛",
+        "color": "#faebd7"
+      }
+    ]
+  },
+  {
+    "id": "cuisines-of-the-world",
+    "title": "World Cuisines",
+    "emoji": "🌍",
+    "criterion": "Global popularity and recognizability (how widespread each cuisine is and how in",
+    "items": [
+      {
+        "name": "Italian",
+        "emoji": "🇮🇹",
+        "color": "#008000"
+      },
+      {
+        "name": "Japanese",
+        "emoji": "🇯🇵",
+        "color": "#ff0000"
+      },
+      {
+        "name": "Mexican",
+        "emoji": "🇲🇽",
+        "color": "#008000"
+      },
+      {
+        "name": "Chinese",
+        "emoji": "🇨🇳",
+        "color": "#ff0000"
+      },
+      {
+        "name": "Indian",
+        "emoji": "🇮🇳",
+        "color": "#ffa500"
+      },
+      {
+        "name": "French",
+        "emoji": "🇫🇷",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Thai",
+        "emoji": "🇹🇭",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Greek",
+        "emoji": "🇬🇷",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Spanish",
+        "emoji": "🇪🇸",
+        "color": "#ff0000"
+      },
+      {
+        "name": "Korean",
+        "emoji": "🇰🇷",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Vietnamese",
+        "emoji": "🇻🇳",
+        "color": "#ffff00"
+      },
+      {
+        "name": "Turkish",
+        "emoji": "🇹🇷",
+        "color": "#ff0000"
+      },
+      {
+        "name": "Lebanese",
+        "emoji": "🇱🇧",
+        "color": "#ff0000"
+      },
+      {
+        "name": "Brazilian",
+        "emoji": "🇧🇷",
+        "color": "#008000"
+      },
+      {
+        "name": "Peruvian",
+        "emoji": "🇵🇪",
+        "color": "#ff0000"
+      },
+      {
+        "name": "Ethiopian",
+        "emoji": "🇪🇹",
+        "color": "#008000"
+      },
+      {
+        "name": "Moroccan",
+        "emoji": "🇲🇦",
+        "color": "#ff0000"
+      },
+      {
+        "name": "German",
+        "emoji": "🇩🇪",
+        "color": "#ff0000"
+      },
+      {
+        "name": "Russian",
+        "emoji": "🇷🇺",
+        "color": "#0000ff"
+      },
+      {
+        "name": "British",
+        "emoji": "🇬🇧",
+        "color": "#4169e1"
+      },
+      {
+        "name": "Caribbean",
+        "emoji": "🏝️",
+        "color": "#40e0d0"
+      },
+      {
+        "name": "Filipino",
+        "emoji": "🇵🇭",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Indonesian",
+        "emoji": "🇮🇩",
+        "color": "#ff0000"
+      },
+      {
+        "name": "Argentinian",
+        "emoji": "🇦🇷",
+        "color": "#add8e6"
+      },
+      {
+        "name": "Scandinavian",
+        "emoji": "🇸🇪",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Cajun / Creole",
+        "emoji": "🦐",
+        "color": "#ff0000"
+      },
+      {
+        "name": "Soul Food",
+        "emoji": "🍗",
+        "color": "#a52a2a"
+      }
+    ]
+  },
+  {
+    "id": "dog-breeds",
+    "title": "Dog Breeds",
+    "emoji": "🐕",
+    "criterion": "Easiest to train",
+    "items": [
+      {
+        "name": "Border Collie",
+        "emoji": "🐕",
+        "color": "#808080"
+      },
+      {
+        "name": "Poodle",
+        "emoji": "🐩",
+        "color": "#faebd7"
+      },
+      {
+        "name": "German Shepherd",
+        "emoji": "🐕‍🦺",
+        "color": "#d2b48c"
+      },
+      {
+        "name": "Golden Retriever",
+        "emoji": "🦮",
+        "color": "#ffd700"
+      },
+      {
+        "name": "Labrador Retriever",
+        "emoji": "🐕",
+        "color": "#a52a2a"
+      },
+      {
+        "name": "Rottweiler",
+        "emoji": "🐕",
+        "color": "#a52a2a"
+      },
+      {
+        "name": "Doberman Pinscher",
+        "emoji": "🐕",
+        "color": "#2f4f4f"
+      },
+      {
+        "name": "Australian Shepherd",
+        "emoji": "🐕",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Papillon",
+        "emoji": "🐶",
+        "color": "#a52a2a"
+      },
+      {
+        "name": "Shetland Sheepdog",
+        "emoji": "🐕",
+        "color": "#a52a2a"
+      },
+      {
+        "name": "Belgian Malinois",
+        "emoji": "🐕",
+        "color": "#d2b48c"
+      },
+      {
+        "name": "Jack Russell Terrier",
+        "emoji": "🐕",
+        "color": "#faebd7"
+      },
+      {
+        "name": "Pembroke Welsh Corgi",
+        "emoji": "🐕",
+        "color": "#d2b48c"
+      },
+      {
+        "name": "Miniature Schnauzer",
+        "emoji": "🐕",
+        "color": "#808080"
+      },
+      {
+        "name": "Boston Terrier",
+        "emoji": "🐕",
+        "color": "#808080"
+      },
+      {
+        "name": "Yorkshire Terrier",
+        "emoji": "🐕",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Boxer",
+        "emoji": "🐕",
+        "color": "#d2b48c"
+      },
+      {
+        "name": "Havanese",
+        "emoji": "🐶",
+        "color": "#fff8dc"
+      },
+      {
+        "name": "Bichon Frise",
+        "emoji": "🐶",
+        "color": "#faebd7"
+      },
+      {
+        "name": "Shih Tzu",
+        "emoji": "🐶",
+        "color": "#ffd700"
+      },
+      {
+        "name": "Chihuahua",
+        "emoji": "🐕",
+        "color": "#a52a2a"
+      },
+      {
+        "name": "Pug",
+        "emoji": "🐕",
+        "color": "#d2b48c"
+      },
+      {
+        "name": "Bulldog",
+        "emoji": "🐕",
+        "color": "#d2b48c"
+      },
+      {
+        "name": "Beagle",
+        "emoji": "🐕",
+        "color": "#a52a2a"
+      },
+      {
+        "name": "Siberian Husky",
+        "emoji": "🐕",
+        "color": "#808080"
+      },
+      {
+        "name": "Afghan Hound",
+        "emoji": "🐕",
+        "color": "#d2b48c"
+      },
+      {
+        "name": "Basset Hound",
+        "emoji": "🐕",
+        "color": "#a52a2a"
+      },
+      {
+        "name": "Dachshund",
+        "emoji": "🐕",
+        "color": "#a52a2a"
+      }
+    ]
+  },
+  {
+    "id": "countries-of-south-america",
+    "title": "Countries of South America",
+    "emoji": "🌎",
+    "criterion": "Best country in South America to travel",
+    "items": [
+      {
+        "name": "Brazil",
+        "emoji": "🇧🇷",
+        "color": "#008000"
+      },
+      {
+        "name": "Argentina",
+        "emoji": "🇦🇷",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Chile",
+        "emoji": "🇨🇱",
+        "color": "#ff0000"
+      },
+      {
+        "name": "Colombia",
+        "emoji": "🇨🇴",
+        "color": "#ffff00"
+      },
+      {
+        "name": "Peru",
+        "emoji": "🇵🇪",
+        "color": "#cd853f"
+      },
+      {
+        "name": "Venezuela",
+        "emoji": "🇻🇪",
+        "color": "#ffff00"
+      },
+      {
+        "name": "Ecuador",
+        "emoji": "🇪🇨",
+        "color": "#ffff00"
+      },
+      {
+        "name": "Bolivia",
+        "emoji": "🇧🇴",
+        "color": "#ff0000"
+      },
+      {
+        "name": "Paraguay",
+        "emoji": "🇵🇾",
+        "color": "#ff0000"
+      },
+      {
+        "name": "Uruguay",
+        "emoji": "🇺🇾",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Guyana",
+        "emoji": "🇬🇾",
+        "color": "#008000"
+      },
+      {
+        "name": "Suriname",
+        "emoji": "🇸🇷",
+        "color": "#008000"
+      },
+      {
+        "name": "French Guiana",
+        "emoji": "🇬🇫",
+        "color": "#008000"
+      }
+    ]
+  },
+  {
+    "id": "european-capitals",
+    "title": "European Capitals",
+    "emoji": "🏛️",
+    "criterion": "Best European capital to visit as a tourist",
+    "items": [
+      {
+        "name": "Paris",
+        "emoji": "🗼",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Rome",
+        "emoji": "🏛️",
+        "color": "#ffd700"
+      },
+      {
+        "name": "London",
+        "emoji": "🇬🇧",
+        "color": "#4169e1"
+      },
+      {
+        "name": "Barcelona",
+        "emoji": "🏖️",
+        "color": "#ff0000"
+      },
+      {
+        "name": "Amsterdam",
+        "emoji": "🚲",
+        "color": "#ffa500"
+      },
+      {
+        "name": "Prague",
+        "emoji": "🏰",
+        "color": "#ffd700"
+      },
+      {
+        "name": "Vienna",
+        "emoji": "🎼",
+        "color": "#ffd700"
+      },
+      {
+        "name": "Berlin",
+        "emoji": "🧱",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Madrid",
+        "emoji": "🐂",
+        "color": "#ff0000"
+      },
+      {
+        "name": "Lisbon",
+        "emoji": "🚋",
+        "color": "#ffff00"
+      },
+      {
+        "name": "Budapest",
+        "emoji": "♨️",
+        "color": "#ffd700"
+      },
+      {
+        "name": "Copenhagen",
+        "emoji": "🧜",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Stockholm",
+        "emoji": "🏙️",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Oslo",
+        "emoji": "⛷️",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Helsinki",
+        "emoji": "❄️",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Dublin",
+        "emoji": "🍀",
+        "color": "#008000"
+      },
+      {
+        "name": "Edinburgh",
+        "emoji": "🏴",
+        "color": "#808080"
+      },
+      {
+        "name": "Brussels",
+        "emoji": "🍫",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Zurich",
+        "emoji": "🏦",
+        "color": "#ff0000"
+      },
+      {
+        "name": "Geneva",
+        "emoji": "🕊️",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Munich",
+        "emoji": "🍺",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Milan",
+        "emoji": "👗",
+        "color": "#00008b"
+      },
+      {
+        "name": "Venice",
+        "emoji": "🚤",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Florence",
+        "emoji": "🎨",
+        "color": "#ff0000"
+      },
+      {
+        "name": "Athens",
+        "emoji": "🏺",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Warsaw",
+        "emoji": "🏗️",
+        "color": "#ff0000"
+      },
+      {
+        "name": "Krakow",
+        "emoji": "🐉",
+        "color": "#ff0000"
+      },
+      {
+        "name": "Tallinn",
+        "emoji": "🏰",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Reykjavik",
+        "emoji": "🌋",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Bucharest",
+        "emoji": "🏛️",
+        "color": "#0000ff"
+      }
+    ]
+  },
+  {
+    "id": "planets-and-moons-of-the-solar-system",
+    "title": "Planets and Moons of the Solar System",
+    "emoji": "🪐",
+    "criterion": "Size (diameter)",
+    "items": [
+      {
+        "name": "Jupiter",
+        "emoji": "🟠",
+        "color": "#ffa500"
+      },
+      {
+        "name": "Saturn",
+        "emoji": "🪐",
+        "color": "#ffff00"
+      },
+      {
+        "name": "Uranus",
+        "emoji": "🔵",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Neptune",
+        "emoji": "🔷",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Earth",
+        "emoji": "🌍",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Venus",
+        "emoji": "🟡",
+        "color": "#ffff00"
+      },
+      {
+        "name": "Mars",
+        "emoji": "🔴",
+        "color": "#ff0000"
+      },
+      {
+        "name": "Mercury",
+        "emoji": "⚪",
+        "color": "#c0c0c0"
+      },
+      {
+        "name": "Ganymede",
+        "emoji": "🌕",
+        "color": "#808080"
+      },
+      {
+        "name": "Titan",
+        "emoji": "🟤",
+        "color": "#ffa500"
+      },
+      {
+        "name": "Callisto",
+        "emoji": "🌑",
+        "color": "#808080"
+      },
+      {
+        "name": "Io",
+        "emoji": "🟨",
+        "color": "#ffa500"
+      },
+      {
+        "name": "Moon",
+        "emoji": "🌙",
+        "color": "#808080"
+      },
+      {
+        "name": "Europa",
+        "emoji": "🧊",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Triton",
+        "emoji": "🔹",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Pluto",
+        "emoji": "🤍",
+        "color": "#808080"
+      },
+      {
+        "name": "Titania",
+        "emoji": "💠",
+        "color": "#c0c0c0"
+      },
+      {
+        "name": "Rhea",
+        "emoji": "⬜",
+        "color": "#d3d3d3"
+      },
+      {
+        "name": "Oberon",
+        "emoji": "🟫",
+        "color": "#808080"
+      },
+      {
+        "name": "Iapetus",
+        "emoji": "⚫",
+        "color": "#808080"
+      },
+      {
+        "name": "Charon",
+        "emoji": "🌒",
+        "color": "#808080"
+      },
+      {
+        "name": "Umbriel",
+        "emoji": "🌚",
+        "color": "#a9a9a9"
+      },
+      {
+        "name": "Ariel",
+        "emoji": "🩵",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Dione",
+        "emoji": "🔘",
+        "color": "#d3d3d3"
+      },
+      {
+        "name": "Tethys",
+        "emoji": "❄️",
+        "color": "#d3d3d3"
+      },
+      {
+        "name": "Enceladus",
+        "emoji": "🧊",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Miranda",
+        "emoji": "🔻",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Mimas",
+        "emoji": "🔘",
+        "color": "#808080"
+      }
+    ]
+  },
+  {
+    "id": "sneaker-brands",
+    "title": "Sneaker Brands",
+    "emoji": "👟",
+    "criterion": "Best sneaker brand overall",
+    "items": [
+      {
+        "name": "Nike",
+        "emoji": "✅",
+        "color": "#ff0000"
+      },
+      {
+        "name": "Adidas",
+        "emoji": "🦓",
+        "color": "#808080"
+      },
+      {
+        "name": "Jordan",
+        "emoji": "🏀",
+        "color": "#ff0000"
+      },
+      {
+        "name": "New Balance",
+        "emoji": "🅱️",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Puma",
+        "emoji": "🐆",
+        "color": "#008000"
+      },
+      {
+        "name": "Asics",
+        "emoji": "🌀",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Reebok",
+        "emoji": "🔴",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Converse",
+        "emoji": "⭐",
+        "color": "#ff0000"
+      },
+      {
+        "name": "Vans",
+        "emoji": "🛹",
+        "color": "#808080"
+      },
+      {
+        "name": "Under Armour",
+        "emoji": "🛡️",
+        "color": "#808080"
+      },
+      {
+        "name": "Saucony",
+        "emoji": "🌊",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Brooks",
+        "emoji": "🏃",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Hoka",
+        "emoji": "⛰️",
+        "color": "#0000ff"
+      },
+      {
+        "name": "On",
+        "emoji": "☁️",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Salomon",
+        "emoji": "🏔️",
+        "color": "#008000"
+      },
+      {
+        "name": "Yeezy",
+        "emoji": "🌵",
+        "color": "#f5f5dc"
+      },
+      {
+        "name": "Balenciaga",
+        "emoji": "🦅",
+        "color": "#808080"
+      },
+      {
+        "name": "Gucci",
+        "emoji": "🇮🇹",
+        "color": "#008000"
+      },
+      {
+        "name": "Louis Vuitton",
+        "emoji": "👜",
+        "color": "#a52a2a"
+      },
+      {
+        "name": "Skechers",
+        "emoji": "👞",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Fila",
+        "emoji": "🧵",
+        "color": "#0000ff"
+      },
+      {
+        "name": "K-Swiss",
+        "emoji": "🎾",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Mizuno",
+        "emoji": "🌾",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Diadora",
+        "emoji": "🔵",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Karhu",
+        "emoji": "🐻",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Veja",
+        "emoji": "🌍",
+        "color": "#008000"
+      },
+      {
+        "name": "Common Projects",
+        "emoji": "✨",
+        "color": "#d3d3d3"
+      },
+      {
+        "name": "Rick Owens",
+        "emoji": "🖤",
+        "color": "#a9a9a9"
+      },
+      {
+        "name": "Supra",
+        "emoji": "🪩",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Etnies",
+        "emoji": "🚧",
+        "color": "#ffa500"
+      }
+    ]
+  },
+  {
+    "id": "luxury-fashion-houses",
+    "title": "Luxury Fashion Houses",
+    "emoji": "👗",
+    "criterion": "Best overall prestige and influence in fashion",
+    "items": [
+      {
+        "name": "Chanel",
+        "emoji": "🖤",
+        "color": "#f5f5dc"
+      },
+      {
+        "name": "Hermès",
+        "emoji": "🧣",
+        "color": "#ffa500"
+      },
+      {
+        "name": "Louis Vuitton",
+        "emoji": "👜",
+        "color": "#a52a2a"
+      },
+      {
+        "name": "Dior",
+        "emoji": "🌸",
+        "color": "#f5f5dc"
+      },
+      {
+        "name": "Gucci",
+        "emoji": "🐍",
+        "color": "#008000"
+      },
+      {
+        "name": "Prada",
+        "emoji": "🕶️",
+        "color": "#008000"
+      },
+      {
+        "name": "Balenciaga",
+        "emoji": "👟",
+        "color": "#808080"
+      },
+      {
+        "name": "Saint Laurent",
+        "emoji": "🖤",
+        "color": "#a9a9a9"
+      },
+      {
+        "name": "Versace",
+        "emoji": "🌞",
+        "color": "#ffd700"
+      },
+      {
+        "name": "Burberry",
+        "emoji": "🧥",
+        "color": "#f5f5dc"
+      },
+      {
+        "name": "Fendi",
+        "emoji": "🦊",
+        "color": "#f5f5dc"
+      },
+      {
+        "name": "Givenchy",
+        "emoji": "🖤",
+        "color": "#808080"
+      },
+      {
+        "name": "Valentino",
+        "emoji": "🔴",
+        "color": "#ff0000"
+      },
+      {
+        "name": "Armani",
+        "emoji": "👔",
+        "color": "#808080"
+      },
+      {
+        "name": "Dolce & Gabbana",
+        "emoji": "🌹",
+        "color": "#ffd700"
+      },
+      {
+        "name": "Bottega Veneta",
+        "emoji": "🍃",
+        "color": "#a52a2a"
+      },
+      {
+        "name": "Celine",
+        "emoji": "🕶️",
+        "color": "#f5f5dc"
+      },
+      {
+        "name": "Loewe",
+        "emoji": "🪡",
+        "color": "#a52a2a"
+      },
+      {
+        "name": "Tom Ford",
+        "emoji": "🕴️",
+        "color": "#a9a9a9"
+      },
+      {
+        "name": "Alexander McQueen",
+        "emoji": "💀",
+        "color": "#a9a9a9"
+      },
+      {
+        "name": "Balmain",
+        "emoji": "⚔️",
+        "color": "#ffd700"
+      },
+      {
+        "name": "Chloé",
+        "emoji": "🌾",
+        "color": "#f5f5dc"
+      },
+      {
+        "name": "Ralph Lauren",
+        "emoji": "🐎",
+        "color": "#000080"
+      },
+      {
+        "name": "Miu Miu",
+        "emoji": "🎀",
+        "color": "#ffc0cb"
+      },
+      {
+        "name": "Cartier",
+        "emoji": "💎",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Tiffany & Co.",
+        "emoji": "💍",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Rolex",
+        "emoji": "⌚",
+        "color": "#ffd700"
+      },
+      {
+        "name": "Van Cleef & Arpels",
+        "emoji": "🍀",
+        "color": "#ffd700"
+      }
+    ]
+  },
+  {
+    "id": "airlines",
+    "title": "Airlines",
+    "emoji": "✈️",
+    "criterion": "Best airline overall",
+    "items": [
+      {
+        "name": "Singapore Airlines",
+        "emoji": "🇸🇬",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Qatar Airways",
+        "emoji": "🇶🇦",
+        "color": "#800000"
+      },
+      {
+        "name": "Emirates",
+        "emoji": "🇦🇪",
+        "color": "#ff0000"
+      },
+      {
+        "name": "ANA",
+        "emoji": "🇯🇵",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Cathay Pacific",
+        "emoji": "🇭🇰",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Japan Airlines",
+        "emoji": "🎌",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Turkish Airlines",
+        "emoji": "🇹🇷",
+        "color": "#ff0000"
+      },
+      {
+        "name": "Air France",
+        "emoji": "🇫🇷",
+        "color": "#0000ff"
+      },
+      {
+        "name": "KLM",
+        "emoji": "🇳🇱",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Lufthansa",
+        "emoji": "🇩🇪",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Swiss International Air Lines",
+        "emoji": "🇨🇭",
+        "color": "#ff0000"
+      },
+      {
+        "name": "British Airways",
+        "emoji": "🇬🇧",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Delta Air Lines",
+        "emoji": "🔺",
+        "color": "#0000ff"
+      },
+      {
+        "name": "United Airlines",
+        "emoji": "🇺🇸",
+        "color": "#0000ff"
+      },
+      {
+        "name": "American Airlines",
+        "emoji": "🦅",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Qantas",
+        "emoji": "🦘",
+        "color": "#ff0000"
+      },
+      {
+        "name": "Air New Zealand",
+        "emoji": "🥝",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Korean Air",
+        "emoji": "🇰🇷",
+        "color": "#0000ff"
+      },
+      {
+        "name": "EVA Air",
+        "emoji": "🇹🇼",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Ethiopian Airlines",
+        "emoji": "🇪🇹",
+        "color": "#008000"
+      },
+      {
+        "name": "LATAM Airlines",
+        "emoji": "🌎",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Ryanair",
+        "emoji": "💶",
+        "color": "#ffff00"
+      },
+      {
+        "name": "easyJet",
+        "emoji": "🧳",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Southwest Airlines",
+        "emoji": "❤️",
+        "color": "#ff0000"
+      },
+      {
+        "name": "Air Canada",
+        "emoji": "🍁",
+        "color": "#ff0000"
+      }
+    ]
+  },
+  {
+    "id": "board-games",
+    "title": "Board Games",
+    "emoji": "🎲",
+    "criterion": "Best board game",
+    "items": [
+      {
+        "name": "Chess",
+        "emoji": "♟️",
+        "color": "#808080"
+      },
+      {
+        "name": "Go",
+        "emoji": "⚫",
+        "color": "#008000"
+      },
+      {
+        "name": "Monopoly",
+        "emoji": "🏠",
+        "color": "#008000"
+      },
+      {
+        "name": "Scrabble",
+        "emoji": "🔤",
+        "color": "#008000"
+      },
+      {
+        "name": "Catan",
+        "emoji": "🌾",
+        "color": "#008000"
+      },
+      {
+        "name": "Ticket to Ride",
+        "emoji": "🚂",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Carcassonne",
+        "emoji": "🏰",
+        "color": "#008000"
+      },
+      {
+        "name": "Pandemic",
+        "emoji": "🦠",
+        "color": "#ff0000"
+      },
+      {
+        "name": "Risk",
+        "emoji": "🌍",
+        "color": "#ff0000"
+      },
+      {
+        "name": "Clue",
+        "emoji": "🔍",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Sorry!",
+        "emoji": "🤷",
+        "color": "#ff0000"
+      },
+      {
+        "name": "Trouble",
+        "emoji": "🎯",
+        "color": "#ff0000"
+      },
+      {
+        "name": "Connect Four",
+        "emoji": "🔴",
+        "color": "#ff0000"
+      },
+      {
+        "name": "Battleship",
+        "emoji": "🚢",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Yahtzee",
+        "emoji": "🎲",
+        "color": "#0000ff"
+      },
+      {
+        "name": "The Game of Life",
+        "emoji": "🛣️",
+        "color": "#008000"
+      },
+      {
+        "name": "Twister",
+        "emoji": "🌀",
+        "color": "#ff0000"
+      },
+      {
+        "name": "Pictionary",
+        "emoji": "🎨",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Taboo",
+        "emoji": "🚫",
+        "color": "#ff0000"
+      },
+      {
+        "name": "Trivial Pursuit",
+        "emoji": "🧠",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Dominion",
+        "emoji": "🏛️",
+        "color": "#ffd700"
+      },
+      {
+        "name": "7 Wonders",
+        "emoji": "🏛️",
+        "color": "#ffd700"
+      },
+      {
+        "name": "Agricola",
+        "emoji": "🚜",
+        "color": "#008000"
+      },
+      {
+        "name": "Puerto Rico",
+        "emoji": "🏝️",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Power Grid",
+        "emoji": "⚡",
+        "color": "#008000"
+      },
+      {
+        "name": "Terraforming Mars",
+        "emoji": "🔴",
+        "color": "#ff0000"
+      },
+      {
+        "name": "Gloomhaven",
+        "emoji": "⚔️",
+        "color": "#2f4f4f"
+      },
+      {
+        "name": "Scythe",
+        "emoji": "🚜",
+        "color": "#008000"
+      },
+      {
+        "name": "Wingspan",
+        "emoji": "🐦",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Azul",
+        "emoji": "🔵",
+        "color": "#0000ff"
+      }
+    ]
+  },
+  {
+    "id": "philosophers",
+    "title": "Famous Philosophers",
+    "emoji": "🧠",
+    "criterion": "Historical influence on modern thought",
+    "items": [
+      {
+        "name": "Socrates",
+        "emoji": "🏛️",
+        "color": "#808080"
+      },
+      {
+        "name": "Plato",
+        "emoji": "📜",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Aristotle",
+        "emoji": "🔬",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Confucius",
+        "emoji": "🎎",
+        "color": "#ffd700"
+      },
+      {
+        "name": "Immanuel Kant",
+        "emoji": "⚖️",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Friedrich Nietzsche",
+        "emoji": "💥",
+        "color": "#ffff00"
+      },
+      {
+        "name": "René Descartes",
+        "emoji": "🤔",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Karl Marx",
+        "emoji": "⚒️",
+        "color": "#ff0000"
+      },
+      {
+        "name": "John Locke",
+        "emoji": "🗝️",
+        "color": "#a52a2a"
+      },
+      {
+        "name": "David Hume",
+        "emoji": "🔍",
+        "color": "#808080"
+      },
+      {
+        "name": "Jean-Jacques Rousseau",
+        "emoji": "🌿",
+        "color": "#008000"
+      },
+      {
+        "name": "Thomas Aquinas",
+        "emoji": "✝️",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Augustine of Hippo",
+        "emoji": "🕊️",
+        "color": "#ee82ee"
+      },
+      {
+        "name": "Georg Hegel",
+        "emoji": "🌀",
+        "color": "#808080"
+      },
+      {
+        "name": "Arthur Schopenhauer",
+        "emoji": "🌑",
+        "color": "#808080"
+      },
+      {
+        "name": "John Stuart Mill",
+        "emoji": "📊",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Ludwig Wittgenstein",
+        "emoji": "🗣️",
+        "color": "#808080"
+      },
+      {
+        "name": "Martin Heidegger",
+        "emoji": "🏔️",
+        "color": "#808080"
+      },
+      {
+        "name": "Jean-Paul Sartre",
+        "emoji": "🚬",
+        "color": "#808080"
+      },
+      {
+        "name": "Simone de Beauvoir",
+        "emoji": "📖",
+        "color": "#808080"
+      },
+      {
+        "name": "Michel Foucault",
+        "emoji": "🔎",
+        "color": "#808080"
+      },
+      {
+        "name": "Hannah Arendt",
+        "emoji": "🏙️",
+        "color": "#808080"
+      },
+      {
+        "name": "Epicurus",
+        "emoji": "🍇",
+        "color": "#008000"
+      },
+      {
+        "name": "Zeno of Citium",
+        "emoji": "🧘",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Baruch Spinoza",
+        "emoji": "🕸️",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Gottfried Leibniz",
+        "emoji": "♾️",
+        "color": "#0000ff"
+      },
+      {
+        "name": "Søren Kierkegaard",
+        "emoji": "🎭",
+        "color": "#a9a9a9"
+      },
+      {
+        "name": "Bertrand Russell",
+        "emoji": "🧮",
+        "color": "#808080"
+      }
+    ]
+  }
+]
