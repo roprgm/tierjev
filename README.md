@@ -16,7 +16,7 @@ Next.js App Router. The classifier lives in `src/app/api/classify/route.ts`; pay
 
 1. Import the repo on Vercel. Next.js is detected automatically. The main page is prerendered static and served from the CDN; only `/api/classify` runs as a function.
 2. Set `AI_GATEWAY_API_KEY` in the project's environment variables.
-3. Add Upstash Redis from the Vercel Marketplace (Storage tab). It injects `UPSTASH_REDIS_REST_URL` and `UPSTASH_REDIS_REST_TOKEN`. Without it the app still works but nothing is cached or rate limited.
+3. Add Upstash Redis from the Vercel Marketplace (Storage tab). It injects `KV_REST_API_URL` and `KV_REST_API_TOKEN`. Without it the app still works but nothing is cached or rate limited.
 
 ## How ranking works
 
