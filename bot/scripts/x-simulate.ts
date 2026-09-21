@@ -52,10 +52,15 @@ const server = Bun.spawn(['./node_modules/.bin/next', 'dev', '--port', String(BO
   stdout: 'pipe',
   stderr: 'pipe',
 })
-forwardEvents(server.stdout)
+const output: string[] = []
+forwardEvents(server.stdout, output)
+forwardEvents(server.stderr, output)
 
 try {
-  await waitForServer(`http://localhost:${BOT_PORT}/`)
+  await waitForServer(`http://localhost:${BOT_PORT}/`).catch((error) => {
+    console.error(output.slice(-20).join('\n'))
+    throw error
+  })
   const mention = posts[posts.length - 1]
   const event = {
     event_type: 'post.mention.create',
@@ -97,13 +102,16 @@ async function waitForServer(url: string) {
   throw new Error(`Dev server did not start within ${START_TIMEOUT_MS / 1000}s`)
 }
 
-// Prints the bot's JSON log lines (options, jev, mention) while the server runs.
-async function forwardEvents(stream: ReadableStream<Uint8Array>) {
+// Prints the bot's JSON log lines (options, jev, mention) while the server runs and keeps the rest for errors.
+async function forwardEvents(stream: ReadableStream<Uint8Array>, output: string[]) {
   const decoder = new TextDecoder()
   let rest = ''
   for await (const chunk of stream) {
     const lines = (rest + decoder.decode(chunk)).split('\n')
     rest = lines.pop() ?? ''
-    for (const line of lines) if (line.startsWith('{"event"')) console.log(line)
+    for (const line of lines) {
+      if (line.startsWith('{"event"')) console.log(line)
+      else if (line.trim()) output.push(line)
+    }
   }
 }
