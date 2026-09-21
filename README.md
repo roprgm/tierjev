@@ -26,12 +26,12 @@ Jev is called with plain `fetch` rather than the AI SDK's `experimental_evaluate
 
 ## Custom sets
 
-The "+ New set" chip opens a dialog with two modes:
+The "+ New set" chip opens a dialog with two ways in, and both land on the same preview where the user curates the list before it exists: remove items, or click an icon to change its colour or emoji.
 
-- **Generate with AI**, 1 credit. `POST /api/sets` turns a topic into a set with `deepseek/deepseek-v4.1-flash` through the AI Gateway (`generateText` + `Output.object`, thinking disabled), cached 30 days by topic and limited to 10 an hour per IP.
-- **Paste a list**, free. One item per line, validated locally (`lib/list.ts`): no commas, no empty lines, no duplicates, 3 to 40 items. `POST /api/colors` then asks Jev to pick each item's colour from the CSS named-colour palette (`lib/colors.ts`, whites and greys removed), so the dots mean something. If that call fails the dots fall back to a colour hashed from the name. Clicking a dot opens an emoji picker.
+- **Generate with AI**, 1 credit. `POST /api/sets` streams NDJSON partial drafts from `deepseek/deepseek-v4.1-flash` (`streamText` + `Output.object`, thinking disabled) so items appear as they are written, then a final `{ done }` line. Results are cached 30 days by topic and limited to 10 an hour per IP.
+- **Paste a list**, free. One item per line, validated locally (`lib/list.ts`): no commas, no empty lines, no duplicates, 3 to 40 items.
 
-Credits are a placeholder wallet in `localStorage` (10 to start) until billing exists. Custom sets are stored in `localStorage` too, and generated ones are also in the Redis cache.
+Either way `POST /api/colors` asks Jev to pick each item's colour from the CSS named-colour palette (`lib/palette.ts`, whites and greys removed), six items per request. Items keep both an emoji and a colour: the tile shows the emoji on a coloured disc, or whichever one exists. Custom sets and a placeholder credit wallet (10 to start) live in `localStorage`; the user can restyle their tiles later and delete their own sets from the footer.
 
 ## Motion
 

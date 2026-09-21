@@ -1,10 +1,10 @@
-import { generateText, Output } from 'ai'
+import { Output, streamText } from 'ai'
 import { z } from 'zod'
 import type { TierSet } from '@/lib/types'
 
 const MODEL = 'deepseek/deepseek-v4.1-flash'
 
-const schema = z.object({
+export const setSchema = z.object({
   title: z.string().max(40).describe('Short set title in the language of the topic'),
   emoji: z.string().max(8).describe('One emoji for the set'),
   criterion: z
@@ -24,6 +24,8 @@ const schema = z.object({
     .max(30),
 })
 
+export type SetDraft = z.infer<typeof setSchema>
+
 const slug = (s: string) =>
   s
     .toLowerCase()
@@ -32,10 +34,11 @@ const slug = (s: string) =>
     .replace(/[^a-z0-9]+/g, '-')
     .replace(/^-|-$/g, '')
 
-export async function generateSet(topic: string): Promise<TierSet> {
-  const { output } = await generateText({
+// Streams partial drafts as DeepSeek writes them; the caller finalises the last one.
+export function streamSet(topic: string) {
+  return streamText({
     model: MODEL,
-    output: Output.object({ schema }),
+    output: Output.object({ schema: setSchema }),
     maxOutputTokens: 1200,
     providerOptions: { deepseek: { thinking: { type: 'disabled' } } },
     instructions:
@@ -43,7 +46,11 @@ export async function generateSet(topic: string): Promise<TierSet> {
       'Prefer 20 to 30 items. Use concise names people would recognise. Answer in the language of the topic. ' +
       'The criterion must be something to rank the items by, not a restatement of the topic.',
     prompt: `Topic: ${topic}`,
-  })
+  }).partialOutputStream
+}
+
+export function finalizeSet(topic: string, draft: unknown): TierSet {
+  const output = setSchema.parse(draft)
   const seen = new Set<string>()
   const items = output.items.filter((it) => {
     const key = it.name.trim().toLowerCase()

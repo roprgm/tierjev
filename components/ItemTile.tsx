@@ -1,27 +1,15 @@
 'use client'
 
 import type { ComponentProps } from 'react'
-import { EmojiPicker } from '@/components/EmojiPicker'
+import { IconPicker } from '@/components/IconPicker'
+import { ItemIcon } from '@/components/ItemIcon'
 import type { Item } from '@/lib/types'
 import { cn } from '@/lib/utils'
 
-type Props = ComponentProps<'div'> & { item: Item; onEmoji?: (emoji: string) => void }
+type Props = ComponentProps<'div'> & { item: Item; onIcon?: (look: Pick<Item, 'emoji' | 'color'>) => void }
 
-// Stable colour per name for items without an emoji.
-const hue = (name: string) => [...name].reduce((h, c) => (h * 31 + c.charCodeAt(0)) % 360, 7)
-
-export function ItemTile({ item, onEmoji, className, ...props }: Props) {
-  const color = { background: item.color ?? `hsl(${hue(item.name)} 65% 55%)` }
-  const dot = onEmoji ? (
-    <button
-      type="button"
-      aria-label="Choose an emoji"
-      className="block size-7 cursor-pointer rounded-full ring-ring ring-offset-2 ring-offset-background hover:ring-2"
-      style={color}
-    />
-  ) : (
-    <span className="block size-7 rounded-full" style={color} />
-  )
+export function ItemTile({ item, onIcon, className, ...props }: Props) {
+  const icon = <ItemIcon item={item} />
   return (
     <div
       {...props}
@@ -34,12 +22,22 @@ export function ItemTile({ item, onEmoji, className, ...props }: Props) {
     >
       {item.image ? (
         <img src={item.image} alt="" className="size-10 rounded object-cover" />
-      ) : item.emoji ? (
-        <span className="text-2xl leading-none">{item.emoji}</span>
-      ) : onEmoji ? (
-        <EmojiPicker trigger={dot} onPick={onEmoji} />
+      ) : onIcon ? (
+        <IconPicker
+          value={item}
+          onChange={onIcon}
+          trigger={
+            <button
+              type="button"
+              aria-label="Change icon"
+              className="cursor-pointer rounded-full ring-ring ring-offset-2 ring-offset-background hover:ring-2"
+            >
+              {icon}
+            </button>
+          }
+        />
       ) : (
-        dot
+        icon
       )}
       <span className="line-clamp-2 text-[11px] leading-tight font-medium">{item.name}</span>
     </div>

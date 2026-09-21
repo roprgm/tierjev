@@ -1,4 +1,4 @@
-import { generateSet } from '@/lib/generate-set'
+import { finalizeSet, streamSet } from '@/lib/generate-set'
 import { clientIp, rateLimited } from '@/lib/ratelimit'
 import { redis } from '@/lib/redis'
 import type { TierSet } from '@/lib/types'
@@ -6,6 +6,8 @@ import type { TierSet } from '@/lib/types'
 const LIMIT_PER_HOUR = 10
 const CACHE_TTL = 60 * 60 * 24 * 30
 
+// Streams NDJSON: partial drafts as they are written, then {"done": set} or {"error": message}.
+// A cached set is returned as plain JSON instead.
 export async function POST(request: Request) {
   const body = await request.json().catch(() => null)
   const topic = typeof body?.topic === 'string' ? body.topic.trim().replace(/\s+/g, ' ') : ''
@@ -23,12 +25,25 @@ export async function POST(request: Request) {
     )
   }
 
-  try {
-    const set = await generateSet(topic)
-    await redis?.set(key, set, { ex: CACHE_TTL })
-    return Response.json(set)
-  } catch (err) {
-    console.error(err)
-    return Response.json({ error: 'Could not create that set right now.' }, { status: 502 })
-  }
+  const encoder = new TextEncoder()
+  const stream = new ReadableStream({
+    async start(controller) {
+      const send = (value: unknown) => controller.enqueue(encoder.encode(`${JSON.stringify(value)}\n`))
+      let last: unknown
+      try {
+        for await (const partial of streamSet(topic)) {
+          last = partial
+          send(partial)
+        }
+        const set = finalizeSet(topic, last)
+        await redis?.set(key, set, { ex: CACHE_TTL })
+        send({ done: set })
+      } catch (err) {
+        console.error(err)
+        send({ error: 'Could not create that set right now.' })
+      }
+      controller.close()
+    },
+  })
+  return new Response(stream, { headers: { 'Content-Type': 'application/x-ndjson' } })
 }

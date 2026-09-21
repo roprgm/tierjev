@@ -22,5 +22,6 @@ export function useCustomSets() {
     sets,
     add: (set: TierSet) => save([...sets.filter((s) => s.id !== set.id), set]),
     update: (set: TierSet) => save(sets.map((s) => (s.id === set.id ? set : s))),
+    remove: (id: string) => save(sets.filter((s) => s.id !== id)),
   }
 }

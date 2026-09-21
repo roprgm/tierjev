@@ -12,8 +12,10 @@ import { SETS } from '@/data/sets'
 import { ApiError, createShare, rank } from '@/lib/api'
 import { useCredits } from '@/lib/credits'
 import { useCustomSets } from '@/lib/custom-sets'
-import type { Placement, Share, Tier, TierSet } from '@/lib/types'
+import type { Item, Placement, Share, Tier, TierSet } from '@/lib/types'
 import { formatCountdown, useCountdown } from '@/lib/use-countdown'
+
+const footerLink = 'cursor-pointer underline-offset-2 transition-colors hover:text-foreground hover:underline'
 
 export function TierMaker() {
   const custom = useCustomSets()
@@ -46,16 +48,23 @@ export function TierMaker() {
     setPlacements([])
   }
 
-  function addSet(created: TierSet, paid: boolean) {
-    if (paid) spend(1)
+  const isCustom = custom.sets.some((s) => s.id === set.id)
+
+  function addSet(created: TierSet) {
     custom.add(created)
     selectSet(created)
     setCreating(false)
   }
 
-  // Lets a tile without an emoji take one, on the selected set and in storage.
-  function setEmoji(name: string, emoji: string) {
-    const updated = { ...set, items: set.items.map((it) => (it.name === name ? { ...it, emoji } : it)) }
+  function deleteSet() {
+    custom.remove(set.id)
+    selectSet(SETS[0])
+    notify('Set deleted')
+  }
+
+  // Restyles a tile of the user's own set, on screen and in storage.
+  function setIcon(name: string, look: Pick<Item, 'emoji' | 'color'>) {
+    const updated = { ...set, items: set.items.map((it) => (it.name === name ? { ...it, ...look } : it)) }
     setSet(updated)
     custom.update(updated)
   }
@@ -145,7 +154,7 @@ export function TierMaker() {
         placements={placements}
         loading={loading}
         onMove={canDrag ? move : undefined}
-        onEmoji={setEmoji}
+        onIcon={isCustom ? setIcon : undefined}
       />
 
       <footer className="flex items-center justify-between gap-4 text-xs text-muted-foreground">
@@ -156,17 +165,20 @@ export function TierMaker() {
           </a>
           , TypeSafe AI's classifier. Hover a tile for confidence.
         </span>
-        {lockSeconds > 0 ? (
-          <span className="shrink-0">Drag tiles to sort while Jev rests</span>
-        ) : (
-          <button
-            type="button"
-            onClick={() => setManual((m) => !m)}
-            className="shrink-0 underline-offset-2 transition-colors hover:text-foreground hover:underline"
-          >
-            {manual ? 'Done sorting' : 'Customize'}
-          </button>
-        )}
+        <span className="flex shrink-0 gap-3">
+          {isCustom && (
+            <button type="button" onClick={deleteSet} className={footerLink}>
+              Delete set
+            </button>
+          )}
+          {lockSeconds > 0 ? (
+            <span>Drag tiles to sort while Jev rests</span>
+          ) : (
+            <button type="button" onClick={() => setManual((m) => !m)} className={footerLink}>
+              {manual ? 'Done sorting' : 'Customize'}
+            </button>
+          )}
+        </span>
       </footer>
 
       <NewSetDialog
@@ -174,6 +186,7 @@ export function TierMaker() {
         credits={credits}
         onOpenChange={setCreating}
         onCreate={addSet}
+        onSpend={() => spend(1)}
         onError={notify}
       />
       <Toast message={message} />

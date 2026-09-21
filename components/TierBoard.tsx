@@ -32,10 +32,10 @@ type Props = {
   placements: Placement[]
   loading?: boolean
   onMove?: (name: string, tier: Tier | null) => void
-  onEmoji?: (name: string, emoji: string) => void
+  onIcon?: (name: string, look: Pick<Item, 'emoji' | 'color'>) => void
 }
 
-export function TierBoard({ items, placements, loading = false, onMove, onEmoji }: Props) {
+export function TierBoard({ items, placements, loading = false, onMove, onIcon }: Props) {
   const boardRef = useRef<HTMLDivElement>(null)
   useFlip(boardRef, [placements])
   const [dragging, setDragging] = useState<Item | null>(null)
@@ -76,7 +76,7 @@ export function TierBoard({ items, placements, loading = false, onMove, onEmoji 
                       p.confidence == null ? undefined : `${Math.round(p.confidence * 100)}% confident`
                     }
                     draggable={interactive}
-                    onEmoji={onEmoji && ((emoji) => onEmoji(p.name, emoji))}
+                    onIcon={onIcon && ((look) => onIcon(p.name, look))}
                   />
                 ))}
               </Row>
@@ -89,7 +89,7 @@ export function TierBoard({ items, placements, loading = false, onMove, onEmoji 
                   key={it.name}
                   item={it}
                   draggable={interactive}
-                  onEmoji={onEmoji && ((emoji) => onEmoji(it.name, emoji))}
+                  onIcon={onIcon && ((look) => onIcon(it.name, look))}
                   className={loading ? 'animate-pulse' : undefined}
                 />
               ))}

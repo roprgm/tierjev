@@ -1,48 +1,10 @@
-import cssColors from 'color-name'
 import { evaluate } from '@/lib/jev'
-
-const SKIP = new Set([
-  'white',
-  'snow',
-  'ghostwhite',
-  'whitesmoke',
-  'ivory',
-  'floralwhite',
-  'mintcream',
-  'azure',
-  'aliceblue',
-  'honeydew',
-  'seashell',
-  'lavenderblush',
-  'oldlace',
-  'linen',
-  'black',
-  'grey',
-  'darkgrey',
-  'dimgrey',
-  'lightgrey',
-  'slategrey',
-  'darkslategrey',
-  'lightslategrey',
-])
-const WORDS =
-  /(dark|light|medium|pale|deep|dim|hot|lawn|spring|sky|slate|steel|royal|dodger|cornflower|cadet|powder|midnight|navy|forest|lime|yellow|green|blue|violet|red|orchid|salmon|coral|wood|goldenrod|gray|turquoise|aquamarine|aqua|cyan|magenta|pink|rose|brown|sandy|saddle|olive|drab|indian|fire|brick|lemon|chiffon|papaya|whip|peach|puff|blanched|almond|antique|burly|misty|rosy|sienna|tan|khaki|wheat|bisque|beige|moccasin|thistle|plum|lavender|tomato|orange|gold|crimson|maroon|indigo|purple|teal|silver|chartreuse|chocolate|peru|sea|white)/g
-
-const hex = ([r, g, b]: [number, number, number]) =>
-  `#${[r, g, b].map((n) => n.toString(16).padStart(2, '0')).join('')}`
-
-// CSS named colours minus whites, blacks and grey spellings, described as spaced words for Jev.
-export const PALETTE = Object.fromEntries(
-  Object.entries(cssColors)
-    .filter(([name]) => !SKIP.has(name))
-    .map(([name, rgb]) => [name, { hex: hex(rgb), label: name.replace(WORDS, ' $1').trim() }]),
-)
+import { PALETTE } from '@/lib/palette'
 
 const CRITERIA = Object.fromEntries(Object.entries(PALETTE).map(([name, { label }]) => [name, label]))
 // Jev rejects requests with roughly a thousand options in total; 6 items × 130 colours stays under.
 const BATCH = 6
 
-// The colour people would associate with each item, chosen by Jev from the palette.
 // The colour people would associate with each item, chosen by Jev from the palette.
 // Batches run sequentially (parallel ones get 503s), and a batch the provider rejects is split down to
 // single items so one odd name only loses its own colour.
