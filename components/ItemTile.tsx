@@ -1,6 +1,6 @@
-import { cn } from '@/lib/utils'
-import type { Item } from '@/lib/types'
 import type { CSSProperties } from 'react'
+import type { Item } from '@/lib/types'
+import { cn } from '@/lib/utils'
 
 type Props = { item: Item; title?: string; className?: string; style?: CSSProperties }
 

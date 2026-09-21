@@ -1,8 +1,13 @@
 import { ItemTile } from '@/components/ItemTile'
-import { TIERS, type Item, type Placement, type Tier } from '@/lib/types'
+import { type Item, type Placement, TIERS, type Tier } from '@/lib/types'
 
 const COLORS: Record<Tier, string> = {
-  S: 'bg-tier-s', A: 'bg-tier-a', B: 'bg-tier-b', C: 'bg-tier-c', D: 'bg-tier-d', F: 'bg-tier-f',
+  S: 'bg-tier-s',
+  A: 'bg-tier-a',
+  B: 'bg-tier-b',
+  C: 'bg-tier-c',
+  D: 'bg-tier-d',
+  F: 'bg-tier-f',
 }
 
 type Props = { items: Item[]; placements: Placement[] | null; loading: boolean }
@@ -20,7 +25,9 @@ export function TierBoard({ items, placements, loading }: Props) {
       <div className="overflow-hidden rounded-xl border">
         {rows.map(({ tier, placed }) => (
           <div key={tier} className="flex h-22 border-b last:border-b-0">
-            <div className={`flex w-14 shrink-0 items-center justify-center text-2xl font-bold sm:w-20 text-black/80 ${COLORS[tier]}`}>
+            <div
+              className={`flex w-14 shrink-0 items-center justify-center text-2xl font-bold sm:w-20 text-black/80 ${COLORS[tier]}`}
+            >
               {tier}
             </div>
             <div className="scrollbar-none flex min-w-0 flex-1 gap-1 overflow-x-auto overscroll-x-contain bg-muted/40 p-1">

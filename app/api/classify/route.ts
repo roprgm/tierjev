@@ -27,11 +27,14 @@ async function cacheKey({ criterion, items }: RankRequest) {
   return `rank:${Buffer.from(hash).toString('base64url')}`
 }
 
+// Returns seconds until the hourly window resets when the limit is exceeded.
 async function rateLimited(ip: string) {
-  if (!redis) return false
-  const key = `rl:${ip}:${Math.floor(Date.now() / 3_600_000)}`
+  if (!redis) return 0
+  const window = Math.floor(Date.now() / 3_600_000)
+  const key = `rl:${ip}:${window}`
   const [count] = await redis.multi().incr(key).expire(key, 3600).exec<[number, number]>()
-  return count > LIMIT_PER_HOUR
+  if (count <= LIMIT_PER_HOUR) return 0
+  return Math.ceil(((window + 1) * 3_600_000 - Date.now()) / 1000)
 }
 
 export async function POST(request: Request) {
@@ -43,8 +46,15 @@ export async function POST(request: Request) {
   if (cached) return Response.json({ placements: cached } satisfies RankResponse)
 
   const ip = request.headers.get('x-forwarded-for')?.split(',')[0].trim() ?? 'local'
-  if (await rateLimited(ip)) {
-    return Response.json({ error: 'Rate limit reached. Try again in an hour.' }, { status: 429 })
+  const retryAfter = await rateLimited(ip)
+  if (retryAfter) {
+    const minutes = Math.max(1, Math.ceil(retryAfter / 60))
+    return Response.json(
+      {
+        error: `You've used the ${LIMIT_PER_HOUR} free rankings for this hour. Try again in ${minutes} min.`,
+      },
+      { status: 429, headers: { 'Retry-After': String(retryAfter) } },
+    )
   }
 
   try {

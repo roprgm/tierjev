@@ -1,5 +1,5 @@
-import { cn } from '@/lib/utils'
 import type { TierSet } from '@/lib/types'
+import { cn } from '@/lib/utils'
 
 type Props = { sets: TierSet[]; selected: TierSet; onSelect: (set: TierSet) => void }
 
@@ -8,6 +8,7 @@ export function SetPicker({ sets, selected, onSelect }: Props) {
     <div className="flex flex-wrap gap-2">
       {sets.map((set) => (
         <button
+          type="button"
           key={set.id}
           onClick={() => onSelect(set)}
           className={cn(

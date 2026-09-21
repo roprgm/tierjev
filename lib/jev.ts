@@ -1,4 +1,4 @@
-import { TIERS, type Placement, type RankRequest } from './types'
+import { type Placement, type RankRequest, TIERS } from './types'
 
 const RUBRIC = [
   'F: terrible, the worst possible pick',
@@ -24,7 +24,10 @@ export async function askJev({ criterion, items }: RankRequest): Promise<Placeme
   )
   const res = await fetch('https://ai-gateway.vercel.sh/v1/evaluate', {
     method: 'POST',
-    headers: { Authorization: `Bearer ${process.env.AI_GATEWAY_API_KEY}`, 'Content-Type': 'application/json' },
+    headers: {
+      Authorization: `Bearer ${process.env.AI_GATEWAY_API_KEY}`,
+      'Content-Type': 'application/json',
+    },
     body: JSON.stringify({
       model: 'typesafe-ai/jev',
       state: { criterion, items: items.map((it) => it.name) },
