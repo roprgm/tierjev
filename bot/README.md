@@ -8,6 +8,8 @@ X delivers `post.mention.create` events to `/api/webhooks/x`, where the [Chat SD
 
 Redis (the Upstash instance of the site, through `REDIS_URL`) holds the dedupe keys, the per-thread locks, the OAuth refresh token that X rotates on every refresh, and a log of every handled mention: the thread as sent to the models, the candidates and where they came from, Jev's choice, the full probability distribution, Jev's confidence, the reply and the timing (`x/answers.ts`, last 1000 mentions, one key per mention id for a future permalink).
 
+Every handled mention also becomes a Vercel Web Analytics event (`bot_reply`, `bot_silent`, `bot_failed`, `bot_capped`) with the source of the candidates, their count, the thread length, Jev's confidence and the time taken (`x/analytics.ts`), so the dashboard shows how often the bot answers and how sure it is.
+
 ## Try it locally
 
 `bun run bot:ask` runs a thread through DeepSeek and Jev and prints the reply; the `options` and `jev` log lines show the candidates and the probabilities. Each argument is one post and the last one is the mention; it only needs `AI_GATEWAY_API_KEY`:

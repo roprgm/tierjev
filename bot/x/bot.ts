@@ -5,6 +5,7 @@ import { Chat, ConsoleLogger, type LogLevel, type StateAdapter } from 'chat'
 import { answerThread } from '@/bot/answer/verdict'
 import { describe, log, logError } from '@/bot/log'
 import { ThreadXAdapter } from '@/bot/x/adapter'
+import { trackCapped, trackMention } from '@/bot/x/analytics'
 import { type AnswerRecord, saveAnswer } from '@/bot/x/answers'
 
 const MENTIONS_PER_AUTHOR_PER_HOUR = 20
@@ -38,6 +39,7 @@ export function createBot({ x, state, answer, logger = 'info' }: Deps) {
     try {
       if (await overCap(state, post.author_id)) {
         log('mention.capped', { id: post.id, author })
+        await trackCapped()
         return
       }
       const posts = await x.fetchPosts(post.id)
@@ -56,9 +58,9 @@ export function createBot({ x, state, answer, logger = 'info' }: Deps) {
       record.error = describe(error)
       logError('mention.failed', error, { id: post.id, author })
     }
-    await saveAnswer(state, { ...record, ms: Date.now() - started }).catch((error) =>
-      logError('answers.save_failed', error),
-    )
+    const stored = { ...record, ms: Date.now() - started }
+    await saveAnswer(state, stored).catch((error) => logError('answers.save_failed', error))
+    await trackMention(stored)
   })
 
   return bot

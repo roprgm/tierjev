@@ -110,7 +110,7 @@ async function forwardEvents(stream: ReadableStream<Uint8Array>, output: string[
     const lines = (rest + decoder.decode(chunk)).split('\n')
     rest = lines.pop() ?? ''
     for (const line of lines) {
-      if (line.startsWith('{"event"')) console.log(line)
+      if (line.startsWith('{"event"') || line.includes('[Vercel Web Analytics]')) console.log(line)
       else if (line.trim()) output.push(line)
     }
   }

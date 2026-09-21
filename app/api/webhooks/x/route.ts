@@ -1,4 +1,5 @@
 import { after } from 'next/server'
+import { withRequest } from '@/bot/x/analytics'
 import { getBot } from '@/bot/x/bot'
 
 export const runtime = 'nodejs'
@@ -9,5 +10,5 @@ export function GET(request: Request) {
 }
 
 export function POST(request: Request) {
-  return getBot().webhooks.x(request, { waitUntil: (task) => after(() => task) })
+  return withRequest(request, () => getBot().webhooks.x(request, { waitUntil: (task) => after(() => task) }))
 }
