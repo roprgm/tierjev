@@ -19,7 +19,8 @@ const INSTRUCTIONS =
   'or to the question asked earlier in the thread when the summons only calls the bot. ' +
   'Only list options that literally appear in the thread; never add answers from your own knowledge. ' +
   'Each option is the thing itself as written there, a name, a number or a phrase of at most four words, ' +
-  'without the surrounding words of the post. No duplicates, no @handles, no links. ' +
+  'without the surrounding words of the post. When the thread labels its options with letters or numbers, ' +
+  'list the things behind the labels, never the labels. No duplicates, no @handles, no links. ' +
   'Return an empty list when the thread asks nothing that its own words can answer.'
 
 export type Propose = (state: State) => Promise<string[]>
