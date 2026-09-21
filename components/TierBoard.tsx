@@ -11,10 +11,11 @@ import {
   useSensor,
   useSensors,
 } from '@dnd-kit/core'
-import { type ComponentProps, type ReactNode, type Ref, useLayoutEffect, useRef, useState } from 'react'
+import { type ComponentProps, type ReactNode, useRef, useState } from 'react'
 import { ItemTile } from '@/components/ItemTile'
 import { TooltipContent, TooltipProvider, TooltipRoot, TooltipTrigger } from '@/components/ui/tooltip'
 import { type Item, type Placement, TIERS, type Tier } from '@/lib/types'
+import { useFlip } from '@/lib/use-flip'
 import { cn } from '@/lib/utils'
 
 const COLORS: Record<Tier, string> = {
@@ -26,24 +27,6 @@ const COLORS: Record<Tier, string> = {
   F: 'bg-tier-f',
 }
 
-const TILE = 80
-const GAP = 4
-
-// How many tiles fit in a row without scrolling. Tiles beyond it skip the view transition,
-// otherwise their snapshots animate outside the row's clip.
-function useRowCapacity() {
-  const ref = useRef<HTMLDivElement>(null)
-  const [capacity, setCapacity] = useState(Number.POSITIVE_INFINITY)
-  useLayoutEffect(() => {
-    const observer = new ResizeObserver(([entry]) => {
-      setCapacity(Math.floor((entry.contentRect.width + GAP) / (TILE + GAP)))
-    })
-    if (ref.current) observer.observe(ref.current)
-    return () => observer.disconnect()
-  }, [])
-  return { ref, capacity }
-}
-
 type Props = {
   items: Item[]
   placements: Placement[]
@@ -52,7 +35,8 @@ type Props = {
 }
 
 export function TierBoard({ items, placements, loading = false, onMove }: Props) {
-  const { ref, capacity } = useRowCapacity()
+  const boardRef = useRef<HTMLDivElement>(null)
+  useFlip(boardRef, [placements])
   const [dragging, setDragging] = useState<Item | null>(null)
   const sensors = useSensors(
     useSensor(MouseSensor, { activationConstraint: { distance: 4 } }),
@@ -79,18 +63,17 @@ export function TierBoard({ items, placements, loading = false, onMove }: Props)
       onDragEnd={handleDragEnd}
     >
       <TooltipProvider>
-        <div className="select-none space-y-6">
+        <div ref={boardRef} className="select-none space-y-6">
           <div className="overflow-hidden rounded-xl border">
-            {TIERS.map((tier, rowIndex) => (
-              <Row key={tier} tier={tier} rowRef={rowIndex === 0 ? ref : undefined} droppable={interactive}>
-                {inTier(tier).map((p, i) => (
+            {TIERS.map((tier) => (
+              <Row key={tier} tier={tier} droppable={interactive}>
+                {inTier(tier).map((p) => (
                   <Tile
                     key={p.name}
                     item={byName.get(p.name) ?? { name: p.name }}
                     tooltip={
                       p.confidence == null ? undefined : `${Math.round(p.confidence * 100)}% confident`
                     }
-                    animate={i < capacity}
                     draggable={interactive}
                   />
                 ))}
@@ -112,15 +95,15 @@ export function TierBoard({ items, placements, loading = false, onMove }: Props)
         </div>
       </TooltipProvider>
       <DragOverlay dropAnimation={null}>
-        {dragging && <ItemTile item={dragging} animate={false} className="shadow-lg" />}
+        {dragging && <ItemTile item={dragging} data-flip={undefined} className="shadow-lg" />}
       </DragOverlay>
     </DndContext>
   )
 }
 
-type RowProps = { tier: Tier; rowRef?: Ref<HTMLDivElement>; droppable: boolean; children: ReactNode }
+type RowProps = { tier: Tier; droppable: boolean; children: ReactNode }
 
-function Row({ tier, rowRef, droppable, children }: RowProps) {
+function Row({ tier, droppable, children }: RowProps) {
   const { setNodeRef, isOver } = useDroppable({ id: tier, disabled: !droppable })
   return (
     <div className="flex h-22 border-b last:border-b-0">
@@ -134,14 +117,13 @@ function Row({ tier, rowRef, droppable, children }: RowProps) {
       </div>
       <div
         ref={setNodeRef}
+        data-clip
         className={cn(
-          'scrollbar-none flex min-w-0 flex-1 overflow-x-auto overflow-y-hidden overscroll-x-contain bg-muted/40 p-1 transition-colors',
+          'scrollbar-none flex min-w-0 flex-1 gap-1 overflow-x-auto overflow-y-hidden overscroll-x-contain bg-muted/40 p-1 transition-colors',
           isOver && 'bg-muted',
         )}
       >
-        <div ref={rowRef} className="flex gap-1">
-          {children}
-        </div>
+        {children}
       </div>
     </div>
   )

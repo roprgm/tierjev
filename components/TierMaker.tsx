@@ -1,7 +1,7 @@
 'use client'
 
 import { type FormEvent, useState } from 'react'
-import { flushSync } from 'react-dom'
+import { CreateSet } from '@/components/CreateSet'
 import { GitHubIcon } from '@/components/GitHubIcon'
 import { SetPicker } from '@/components/SetPicker'
 import { TierBoard } from '@/components/TierBoard'
@@ -13,13 +13,8 @@ import { RankError, rank } from '@/lib/rank'
 import type { Placement, Share, Tier, TierSet } from '@/lib/types'
 import { formatCountdown, useCountdown } from '@/lib/use-countdown'
 
-// Animates DOM moves (pool → tier) where the browser supports it, otherwise applies them at once.
-function transition(update: () => void) {
-  if (!document.startViewTransition) return update()
-  document.startViewTransition(() => flushSync(update))
-}
-
 export function TierMaker() {
+  const [sets, setSets] = useState<TierSet[]>(SETS)
   const [set, setSet] = useState<TierSet>(SETS[0])
   const [criterion, setCriterion] = useState(set.criterion)
   const [placements, setPlacements] = useState<Placement[]>([])
@@ -31,11 +26,9 @@ export function TierMaker() {
   const canDrag = manual || lockSeconds > 0
 
   function selectSet(next: TierSet) {
-    transition(() => {
-      setSet(next)
-      setCriterion(next.criterion)
-      setPlacements([])
-    })
+    setSet(next)
+    setCriterion(next.criterion)
+    setPlacements([])
   }
 
   function move(name: string, tier: Tier | null) {
@@ -50,7 +43,7 @@ export function TierMaker() {
     setLoading(true)
     try {
       const res = await rank({ criterion, items: set.items })
-      transition(() => setPlacements(res.placements))
+      setPlacements(res.placements)
     } catch (err) {
       const retryAfter = err instanceof RankError ? err.retryAfter : undefined
       if (retryAfter) setLockedUntil(Date.now() + retryAfter * 1000)
@@ -103,7 +96,15 @@ export function TierMaker() {
         </a>
       </header>
 
-      <SetPicker sets={SETS} selected={set} onSelect={selectSet} />
+      <SetPicker sets={sets} selected={set} onSelect={selectSet} />
+
+      <CreateSet
+        onCreate={(created) => {
+          setSets((prev) => [...prev.filter((s) => s.id !== created.id), created])
+          selectSet(created)
+        }}
+        onError={notify}
+      />
 
       <form onSubmit={submit} className="flex gap-2">
         <Input

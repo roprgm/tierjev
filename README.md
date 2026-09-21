@@ -20,11 +20,19 @@ Next.js App Router. The classifier lives in `src/app/api/classify/route.ts`; pay
 
 ## How ranking works
 
-One request per set. The whole item list is the shared `state`; each item gets a `score` question with the rubric F, D, C, B, A, S. The tier is the rung with the highest probability, the score orders items within a tier, and the probability is shown as confidence on hover.
+One `evaluate` call per set through the AI SDK. The whole item list is the shared `state`; each item gets a `score` question with the rubric F, D, C, B, A, S. The tier is the rung with the highest probability, the score orders items within a tier, and the probability is shown as confidence on hover.
+
+## Custom sets
+
+`POST /api/sets` turns a short topic into a set with `deepseek/deepseek-v4.1-flash` through the AI Gateway (`generateText` + `Output.object`, thinking disabled). Results are cached in Redis for 30 days by normalised topic, and creation is limited to 10 an hour per IP. Generated sets live only in the client session and the cache for now.
 
 ## Sharing
 
 `POST /api/share` stores the list in Redis under an 8-character id. `/s/<id>` renders once, then Vercel serves the cached page from the CDN. Its social image at `/s/<id>/og` is generated with `next/og` and cached at the edge for a year. Shared pages never call Jev.
+
+## Motion
+
+Tiles fly to their destination with a small FLIP hook (`lib/use-flip.ts`): clones animate in a fixed overlay so row clipping cannot cut them off, and a tile whose destination is scrolled out of view stops at the row edge and fades.
 
 ## Manual sorting
 
