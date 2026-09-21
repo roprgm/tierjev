@@ -19,11 +19,11 @@ export function TierBoard({ items, placements, loading }: Props) {
     <div className="space-y-6">
       <div className="overflow-hidden rounded-xl border">
         {rows.map(({ tier, placed }) => (
-          <div key={tier} className="flex min-h-22 border-b last:border-b-0">
-            <div className={`flex w-20 shrink-0 items-center justify-center text-2xl font-bold text-black/80 ${COLORS[tier]}`}>
+          <div key={tier} className="flex h-22 border-b last:border-b-0">
+            <div className={`flex w-14 shrink-0 items-center justify-center text-2xl font-bold sm:w-20 text-black/80 ${COLORS[tier]}`}>
               {tier}
             </div>
-            <div className="flex flex-1 flex-wrap gap-1 bg-muted/40 p-1">
+            <div className="scrollbar-none flex min-w-0 flex-1 gap-1 overflow-x-auto overscroll-x-contain bg-muted/40 p-1">
               {placed.map((p) => (
                 <ItemTile
                   key={p.name}

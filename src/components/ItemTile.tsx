@@ -12,7 +12,7 @@ export function ItemTile({ item, title, className, style }: Props) {
       title={title}
       style={{ viewTransitionName: `tile-${slug(item.name)}`, ...style }}
       className={cn(
-        'flex size-20 flex-col items-center justify-center gap-1 overflow-hidden rounded-md border bg-background p-1 text-center',
+        'flex size-20 shrink-0 flex-col items-center justify-center gap-1 overflow-hidden rounded-md border bg-background p-1 text-center',
         'transition-transform duration-200 ease-out hover:-translate-y-0.5 hover:shadow-sm motion-reduce:transition-none',
         className,
       )}
