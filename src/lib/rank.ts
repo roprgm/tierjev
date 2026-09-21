@@ -1,4 +1,4 @@
-import type { RankRequest, RankResponse } from '../../shared/types'
+import type { RankRequest, RankResponse } from '@/lib/types'
 
 export async function rank(req: RankRequest): Promise<RankResponse> {
   const res = await fetch('/api/classify', {

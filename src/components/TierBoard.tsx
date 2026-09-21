@@ -1,5 +1,5 @@
 import { ItemTile } from '@/components/ItemTile'
-import { TIERS, type Item, type Placement, type Tier } from '../../shared/types'
+import { TIERS, type Item, type Placement, type Tier } from '@/lib/types'
 
 const COLORS: Record<Tier, string> = {
   S: 'bg-tier-s', A: 'bg-tier-a', B: 'bg-tier-b', C: 'bg-tier-c', D: 'bg-tier-d', F: 'bg-tier-f',
@@ -17,7 +17,7 @@ export function TierBoard({ items, placements, loading }: Props) {
 
   return (
     <div className="space-y-6">
-      <div className="overflow-hidden rounded-xl border">
+      <div className="animate-rise overflow-hidden rounded-xl border">
         {rows.map(({ tier, placed }) => (
           <div key={tier} className="flex min-h-22 border-b last:border-b-0">
             <div className={`flex w-20 shrink-0 items-center justify-center text-2xl font-bold text-black/80 ${COLORS[tier]}`}>
@@ -38,8 +38,15 @@ export function TierBoard({ items, placements, loading }: Props) {
         ))}
       </div>
       {pool.length > 0 && (
-        <div className={`flex flex-wrap gap-1 transition-opacity ${loading ? 'animate-pulse opacity-60' : ''}`}>
-          {pool.map((it) => <ItemTile key={it.name} item={it} />)}
+        <div className="flex flex-wrap gap-1">
+          {pool.map((it, i) => (
+            <ItemTile
+              key={it.name}
+              item={it}
+              className={loading ? 'animate-pulse' : 'animate-rise'}
+              style={{ animationDelay: `${i * 25}ms` }}
+            />
+          ))}
         </div>
       )}
     </div>

@@ -10,11 +10,11 @@ bun install
 bun dev
 ```
 
-`bun dev` serves the Vite app and the `api/` functions on one port.
+Next.js App Router. The classifier lives in `src/app/api/classify/route.ts`; payment endpoints go next to it.
 
 ## Deploy
 
-Push to Vercel. Set `AI_GATEWAY_API_KEY` in the project's environment variables. Vite output and `api/classify.ts` are picked up automatically.
+Push to Vercel. Set `AI_GATEWAY_API_KEY` in the project's environment variables. Next.js is detected automatically.
 
 ## How ranking works
 

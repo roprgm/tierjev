@@ -1,4 +1,4 @@
-import type { TierSet } from '../../shared/types'
+import type { TierSet } from '@/lib/types'
 
 const set = (id: string, emoji: string, title: string, criterion: string, items: string): TierSet => ({
   id,

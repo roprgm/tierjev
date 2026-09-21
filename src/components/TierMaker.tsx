@@ -1,13 +1,15 @@
+'use client'
+
 import { SetPicker } from '@/components/SetPicker'
 import { TierBoard } from '@/components/TierBoard'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { SETS } from '@/data/sets'
 import { rank } from '@/lib/rank'
+import type { Placement, TierSet } from '@/lib/types'
 import { useState, type FormEvent } from 'react'
-import type { Placement, TierSet } from '../shared/types'
 
-export default function App() {
+export function TierMaker() {
   const [set, setSet] = useState<TierSet>(SETS[0])
   const [criterion, setCriterion] = useState(set.criterion)
   const [placements, setPlacements] = useState<Placement[] | null>(null)
@@ -57,7 +59,7 @@ export default function App() {
         </Button>
       </form>
 
-      {error && <p className="text-sm text-tier-s">{error}</p>}
+      {error && <p className="animate-rise text-sm text-tier-s">{error}</p>}
 
       <TierBoard items={set.items} placements={placements} loading={loading} />
 

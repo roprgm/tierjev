@@ -1,7 +1,8 @@
 import { cn } from '@/lib/utils'
-import type { Item } from '../../shared/types'
+import type { Item } from '@/lib/types'
+import type { CSSProperties } from 'react'
 
-type Props = { item: Item; title?: string; className?: string; style?: React.CSSProperties }
+type Props = { item: Item; title?: string; className?: string; style?: CSSProperties }
 
 export function ItemTile({ item, title, className, style }: Props) {
   return (
@@ -10,6 +11,7 @@ export function ItemTile({ item, title, className, style }: Props) {
       style={style}
       className={cn(
         'flex size-20 flex-col items-center justify-center gap-1 overflow-hidden rounded-md border bg-background p-1 text-center',
+        'transition-transform duration-200 ease-out hover:-translate-y-0.5 hover:shadow-sm motion-reduce:transition-none',
         className,
       )}
     >
