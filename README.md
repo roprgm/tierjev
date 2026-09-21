@@ -39,7 +39,7 @@ Tiles fly to their destination with a small FLIP hook (`lib/use-flip.ts`): clone
 
 ## Manual sorting
 
-Tiles become draggable when the rate limit kicks in or after the Customize link in the footer. Manual moves drop the Jev confidence for that tile.
+Tiles become draggable when the rate limit kicks in or after the Customize link in the footer. Sorting uses dnd-kit's sortable lists per row, so neighbours slide aside and the tile lands where it was dropped; placements keep that order. A tile moved to another tier drops its Jev confidence.
 
 ## Cache and limits
 

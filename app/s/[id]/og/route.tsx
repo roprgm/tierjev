@@ -20,7 +20,6 @@ export async function GET(_: Request, { params }: { params: Promise<{ id: string
     tier,
     names: (share?.placements ?? [])
       .filter((p) => p.tier === tier)
-      .sort((a, b) => (b.score ?? -1) - (a.score ?? -1))
       .map((p) => {
         const item = share?.items.find((it) => it.name === p.name)
         return item?.emoji ? `${item.emoji} ${p.name}` : p.name

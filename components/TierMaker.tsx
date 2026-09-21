@@ -12,7 +12,7 @@ import { SETS } from '@/data/sets'
 import { ApiError, createShare, rank } from '@/lib/api'
 import { useCredits } from '@/lib/credits'
 import { useCustomSets } from '@/lib/custom-sets'
-import type { Item, Placement, Share, Tier, TierSet } from '@/lib/types'
+import { type Item, type Placement, type Share, TIERS, type Tier, type TierSet } from '@/lib/types'
 import { formatCountdown, useCountdown } from '@/lib/use-countdown'
 
 const footerLink = 'cursor-pointer underline-offset-2 transition-colors hover:text-foreground hover:underline'
@@ -80,7 +80,8 @@ export function TierMaker() {
     e.preventDefault()
     setLoading(true)
     try {
-      setPlacements((await rank({ query: criterion, set })).placements)
+      const { placements: ranked } = await rank({ query: criterion, set })
+      setPlacements([...ranked].sort((a, b) => (b.score ?? 0) - (a.score ?? 0)))
     } catch (err) {
       fail(err)
     } finally {
@@ -88,11 +89,17 @@ export function TierMaker() {
     }
   }
 
-  function move(name: string, tier: Tier | null) {
-    setPlacements((prev) => {
-      const rest = prev.filter((p) => p.name !== name)
-      return tier ? [...rest, { name, tier }] : rest
-    })
+  // Applies a drag result. Tiles that stay in their tier keep Jev's score; moved ones become manual.
+  function applyLayout(layout: Record<Tier, string[]>) {
+    const previous = new Map(placements.map((p) => [p.name, p]))
+    setPlacements(
+      TIERS.flatMap((tier) =>
+        layout[tier].map((name) => {
+          const before = previous.get(name)
+          return before?.tier === tier ? before : { name, tier }
+        }),
+      ),
+    )
   }
 
   async function share() {
@@ -168,7 +175,7 @@ export function TierMaker() {
         items={set.items}
         placements={placements}
         loading={loading}
-        onMove={canDrag ? move : undefined}
+        onChange={canDrag ? applyLayout : undefined}
         onIcon={isCustom ? setIcon : undefined}
       />
 

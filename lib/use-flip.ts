@@ -13,7 +13,7 @@ const docRect = (el: Element): Rect => {
 // Animates elements marked with data-flip="<key>" from where they were on the previous render to
 // where they are now. Clones fly in a fixed overlay so row clipping cannot cut them off; a clone whose
 // destination lies outside its data-clip ancestor's visible box stops at the clip edge and fades out.
-export function useFlip(container: RefObject<HTMLElement | null>, deps: unknown[]) {
+export function useFlip(container: RefObject<HTMLElement | null>, deps: unknown[], enabled = true) {
   const previous = useRef(new Map<string, Rect>())
 
   useLayoutEffect(() => {
@@ -23,7 +23,7 @@ export function useFlip(container: RefObject<HTMLElement | null>, deps: unknown[
     const next = new Map(tiles.map((el) => [el.dataset.flip as string, docRect(el)]))
     const before = previous.current
     previous.current = next
-    if (before.size === 0 || matchMedia('(prefers-reduced-motion: reduce)').matches) return
+    if (!enabled || before.size === 0 || matchMedia('(prefers-reduced-motion: reduce)').matches) return
 
     const overlay = document.createElement('div')
     overlay.style.cssText = 'position:fixed;inset:0;z-index:40;pointer-events:none'
