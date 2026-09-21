@@ -8,6 +8,13 @@ import { SETS } from '@/data/sets'
 import { rank } from '@/lib/rank'
 import type { Placement, TierSet } from '@/lib/types'
 import { useState, type FormEvent } from 'react'
+import { flushSync } from 'react-dom'
+
+// Animates DOM moves (pool → tier) where the browser supports it, otherwise applies them at once.
+function transition(update: () => void) {
+  if (!document.startViewTransition) return update()
+  document.startViewTransition(() => flushSync(update))
+}
 
 export function TierMaker() {
   const [set, setSet] = useState<TierSet>(SETS[0])
@@ -17,10 +24,12 @@ export function TierMaker() {
   const [error, setError] = useState<string | null>(null)
 
   function selectSet(next: TierSet) {
-    setSet(next)
-    setCriterion(next.criterion)
-    setPlacements(null)
-    setError(null)
+    transition(() => {
+      setSet(next)
+      setCriterion(next.criterion)
+      setPlacements(null)
+      setError(null)
+    })
   }
 
   async function submit(e: FormEvent) {
@@ -29,7 +38,8 @@ export function TierMaker() {
     setError(null)
     setPlacements(null)
     try {
-      setPlacements((await rank({ criterion, items: set.items })).placements)
+      const { placements } = await rank({ criterion, items: set.items })
+      transition(() => setPlacements(placements))
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Something went wrong')
     } finally {
@@ -38,7 +48,7 @@ export function TierMaker() {
   }
 
   return (
-    <main className="mx-auto max-w-4xl space-y-8 px-4 py-10">
+    <main className="mx-auto max-w-4xl space-y-6 px-4 py-10">
       <header className="space-y-1">
         <h1 className="text-2xl font-semibold tracking-tight">tierjev</h1>
         <p className="text-sm text-muted-foreground">Pick a set, state a criterion, let Jev sort it into tiers.</p>
@@ -54,12 +64,12 @@ export function TierMaker() {
           maxLength={200}
           required
         />
-        <Button type="submit" disabled={loading} className="shrink-0">
+        <Button type="submit" disabled={loading} className="w-24 shrink-0">
           {loading ? 'Ranking…' : 'Rank'}
         </Button>
       </form>
 
-      {error && <p className="animate-rise text-sm text-tier-s">{error}</p>}
+      <p className="h-5 text-sm text-tier-s">{error}</p>
 
       <TierBoard items={set.items} placements={placements} loading={loading} />
 

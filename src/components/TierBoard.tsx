@@ -17,20 +17,18 @@ export function TierBoard({ items, placements, loading }: Props) {
 
   return (
     <div className="space-y-6">
-      <div className="animate-rise overflow-hidden rounded-xl border">
+      <div className="overflow-hidden rounded-xl border">
         {rows.map(({ tier, placed }) => (
           <div key={tier} className="flex min-h-22 border-b last:border-b-0">
             <div className={`flex w-20 shrink-0 items-center justify-center text-2xl font-bold text-black/80 ${COLORS[tier]}`}>
               {tier}
             </div>
             <div className="flex flex-1 flex-wrap gap-1 bg-muted/40 p-1">
-              {placed.map((p, i) => (
+              {placed.map((p) => (
                 <ItemTile
                   key={p.name}
                   item={byName.get(p.name) ?? { name: p.name }}
                   title={`${Math.round(p.confidence * 100)}% confident`}
-                  className="animate-drop"
-                  style={{ animationDelay: `${i * 40}ms` }}
                 />
               ))}
             </div>
@@ -38,14 +36,9 @@ export function TierBoard({ items, placements, loading }: Props) {
         ))}
       </div>
       {pool.length > 0 && (
-        <div className="flex flex-wrap gap-1">
-          {pool.map((it, i) => (
-            <ItemTile
-              key={it.name}
-              item={it}
-              className={loading ? 'animate-pulse' : 'animate-rise'}
-              style={{ animationDelay: `${i * 25}ms` }}
-            />
+        <div className="flex min-h-20 flex-wrap gap-1">
+          {pool.map((it) => (
+            <ItemTile key={it.name} item={it} className={loading ? 'animate-pulse' : undefined} />
           ))}
         </div>
       )}

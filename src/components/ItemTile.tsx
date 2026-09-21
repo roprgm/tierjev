@@ -4,11 +4,13 @@ import type { CSSProperties } from 'react'
 
 type Props = { item: Item; title?: string; className?: string; style?: CSSProperties }
 
+const slug = (name: string) => name.toLowerCase().replace(/[^a-z0-9]+/g, '-')
+
 export function ItemTile({ item, title, className, style }: Props) {
   return (
     <div
       title={title}
-      style={style}
+      style={{ viewTransitionName: `tile-${slug(item.name)}`, ...style }}
       className={cn(
         'flex size-20 flex-col items-center justify-center gap-1 overflow-hidden rounded-md border bg-background p-1 text-center',
         'transition-transform duration-200 ease-out hover:-translate-y-0.5 hover:shadow-sm motion-reduce:transition-none',

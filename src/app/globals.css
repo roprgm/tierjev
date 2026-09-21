@@ -47,17 +47,11 @@
   body { @apply bg-background text-foreground antialiased; }
 }
 
-@keyframes drop {
-  from { opacity: 0; transform: translateY(-8px) scale(0.94); }
-  to { opacity: 1; transform: none; }
+::view-transition-group(*) {
+  animation-duration: 0.45s;
+  animation-timing-function: cubic-bezier(0.2, 0.8, 0.2, 1);
 }
-@keyframes rise {
-  from { opacity: 0; transform: translateY(6px); }
-  to { opacity: 1; transform: none; }
-}
-.animate-drop { animation: drop 0.4s cubic-bezier(0.2, 0.8, 0.2, 1) both; }
-.animate-rise { animation: rise 0.3s ease-out both; }
 
 @media (prefers-reduced-motion: reduce) {
-  .animate-drop, .animate-rise { animation: none; }
+  ::view-transition-group(*), ::view-transition-old(*), ::view-transition-new(*) { animation: none; }
 }
