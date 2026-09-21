@@ -23,3 +23,5 @@ async function post<T>(url: string, body: unknown): Promise<T> {
 export const rank = (req: RankRequest) => post<RankResponse>('/api/rank', req)
 export const createSet = (topic: string) => post<TierSet>('/api/sets', { topic })
 export const createShare = (share: unknown) => post<{ id: string }>('/api/share', share)
+export const pickColors = (title: string, items: string[]) =>
+  post<{ colors: Record<string, string> }>('/api/colors', { title, items })

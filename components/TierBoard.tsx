@@ -31,12 +31,11 @@ type Props = {
   items: Item[]
   placements: Placement[]
   loading?: boolean
-  poolLabel?: string
   onMove?: (name: string, tier: Tier | null) => void
   onEmoji?: (name: string, emoji: string) => void
 }
 
-export function TierBoard({ items, placements, loading = false, poolLabel, onMove, onEmoji }: Props) {
+export function TierBoard({ items, placements, loading = false, onMove, onEmoji }: Props) {
   const boardRef = useRef<HTMLDivElement>(null)
   useFlip(boardRef, [placements])
   const [dragging, setDragging] = useState<Item | null>(null)
@@ -83,7 +82,6 @@ export function TierBoard({ items, placements, loading = false, poolLabel, onMov
               </Row>
             ))}
           </div>
-          {pool.length > 0 && poolLabel && <p className="text-xs text-muted-foreground">{poolLabel}</p>}
           {pool.length > 0 && (
             <Pool droppable={interactive}>
               {pool.map((it) => (

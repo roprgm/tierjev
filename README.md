@@ -29,7 +29,7 @@ Jev is called with plain `fetch` rather than the AI SDK's `experimental_evaluate
 The "+ New set" chip opens a dialog with two modes:
 
 - **Generate with AI**, 1 credit. `POST /api/sets` turns a topic into a set with `deepseek/deepseek-v4.1-flash` through the AI Gateway (`generateText` + `Output.object`, thinking disabled), cached 30 days by topic and limited to 10 an hour per IP.
-- **Paste a list**, free. One item per line, validated locally (`lib/list.ts`): no commas, no empty lines, no duplicates, 3 to 40 items. Items get a stable colored dot; clicking it opens an emoji picker.
+- **Paste a list**, free. One item per line, validated locally (`lib/list.ts`): no commas, no empty lines, no duplicates, 3 to 40 items. `POST /api/colors` then asks Jev to pick each item's colour from the CSS named-colour palette (`lib/colors.ts`, whites and greys removed), so the dots mean something. If that call fails the dots fall back to a colour hashed from the name. Clicking a dot opens an emoji picker.
 
 Credits are a placeholder wallet in `localStorage` (10 to start) until billing exists. Custom sets are stored in `localStorage` too, and generated ones are also in the Redis cache.
 

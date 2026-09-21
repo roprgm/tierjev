@@ -11,7 +11,7 @@ import {
 } from '@/components/ui/dialog'
 import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
-import { createSet } from '@/lib/api'
+import { createSet, pickColors } from '@/lib/api'
 import { parseList } from '@/lib/list'
 import type { TierSet } from '@/lib/types'
 import { cn } from '@/lib/utils'
@@ -53,13 +53,20 @@ export function NewSetDialog({ open, credits, onOpenChange, onCreate, onError }:
     }
   }
 
-  function addList(e: FormEvent) {
+  // Jev colours the dots; if that fails the set is still created with hashed colours.
+  async function addList(e: FormEvent) {
     e.preventDefault()
-    if (!parsed || 'error' in parsed) return
-    onCreate(
-      { id: `list-${slug(title)}`, title: title.trim(), emoji: '', criterion: '', items: parsed.items },
-      false,
+    if (!listItems) return
+    setBusy(true)
+    const colors = await pickColors(
+      title,
+      listItems.map((it) => it.name),
     )
+      .then((r) => r.colors)
+      .catch(() => ({}) as Record<string, string>)
+    setBusy(false)
+    const items = listItems.map((it) => (colors[it.name] ? { ...it, color: colors[it.name] } : it))
+    onCreate({ id: `list-${slug(title)}`, title: title.trim(), emoji: '', criterion: '', items }, false)
     setTitle('')
     setList('')
   }
@@ -143,7 +150,7 @@ export function NewSetDialog({ open, credits, onOpenChange, onCreate, onError }:
               disabled={mode === 'ai' ? busy || credits < 1 : !listItems}
               className="whitespace-nowrap"
             >
-              {busy ? 'Generating…' : 'Create set'}
+              {busy ? 'Creating…' : 'Create set'}
             </Button>
           </div>
         </div>

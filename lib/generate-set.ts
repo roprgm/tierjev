@@ -10,7 +10,9 @@ const schema = z.object({
   criterion: z
     .string()
     .max(80)
-    .describe('A natural default ranking question for this set, e.g. "Best for beginners"'),
+    .describe(
+      'A ranking question for the items, never a description of the set. Start with Best, Most or Worst, e.g. "Best place to retire", "Most overrated"',
+    ),
   items: z
     .array(
       z.object({
@@ -38,7 +40,8 @@ export async function generateSet(topic: string): Promise<TierSet> {
     providerOptions: { deepseek: { thinking: { type: 'disabled' } } },
     instructions:
       'You build sets of items for tier lists. Return well-known, real, distinct items that fit the topic. ' +
-      'Prefer 20 to 30 items. Use concise names people would recognise. Answer in the language of the topic.',
+      'Prefer 20 to 30 items. Use concise names people would recognise. Answer in the language of the topic. ' +
+      'The criterion must be something to rank the items by, not a restatement of the topic.',
     prompt: `Topic: ${topic}`,
   })
   const seen = new Set<string>()

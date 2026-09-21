@@ -11,7 +11,7 @@ type Props = ComponentProps<'div'> & { item: Item; onEmoji?: (emoji: string) => 
 const hue = (name: string) => [...name].reduce((h, c) => (h * 31 + c.charCodeAt(0)) % 360, 7)
 
 export function ItemTile({ item, onEmoji, className, ...props }: Props) {
-  const color = { background: `hsl(${hue(item.name)} 65% 55%)` }
+  const color = { background: item.color ?? `hsl(${hue(item.name)} 65% 55%)` }
   const dot = onEmoji ? (
     <button
       type="button"

@@ -144,7 +144,6 @@ export function TierMaker() {
         items={set.items}
         placements={placements}
         loading={loading}
-        poolLabel={placements.length > 0 ? 'Not applicable' : undefined}
         onMove={canDrag ? move : undefined}
         onEmoji={setEmoji}
       />
