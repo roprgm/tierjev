@@ -2,6 +2,12 @@ import { ImageResponse } from 'next/og'
 import { getShare } from '@/lib/shares'
 import { TIERS, type Tier } from '@/lib/types'
 
+// Generated once per id, then served from the cache like the page.
+export const dynamicParams = true
+export function generateStaticParams() {
+  return []
+}
+
 export const size = { width: 1200, height: 630 }
 export const contentType = 'image/png'
 

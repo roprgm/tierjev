@@ -2,7 +2,12 @@ import type { Metadata } from 'next'
 import type { ReactNode } from 'react'
 import './globals.css'
 
+const productionUrl = process.env.VERCEL_PROJECT_PRODUCTION_URL
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ?? (productionUrl ? `https://${productionUrl}` : 'http://localhost:3000')
+
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
   title: 'tierjev',
   description: 'Tier lists ranked by Jev, the classifier model.',
   icons: {
