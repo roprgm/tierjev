@@ -17,7 +17,8 @@ const LIMIT = Number(arg('limit', '10'))
 const BATCH = Number(arg('batch', '40'))
 const PAUSE = Number(arg('pause', '1500'))
 const CRITERION = arg('criterion', 'Most impressive use of Jev')
-const TITLE = arg('title', 'Built with Jev')
+const TITLE = arg('title', 'Ship with Jev')
+const SITE = 'https://www.shipwithjev.com'
 const CHECKPOINT = 'data/shipwithjev-items.json'
 const ALPHABET = 'abcdefghijkmnpqrstuvwxyzABCDEFGHJKLMNPQRSTUVWXYZ23456789'
 
@@ -106,6 +107,10 @@ items ??= await (async () => {
   return withEmoji
 })()
 
+// Each build links back to its page on the catalogue it came from.
+const slugs = new Map(chosen.map((b) => [b.name, b.slug]))
+items = items.map((it) => ({ ...it, url: `${SITE}/builds/${slugs.get(it.name)}` }))
+
 // Every batch sees the whole list as context, then the curve runs once over every score.
 const scored: Scored[] = []
 for (let start = 0; start < items.length; start += BATCH) {
@@ -120,6 +125,7 @@ const share: Share = {
   items,
   placements,
   jev: true,
+  source: { label: `${items.length} builds from shipwithjev.com`, url: SITE },
 }
 const id = Array.from(crypto.getRandomValues(new Uint8Array(8)), (b) => ALPHABET[b % ALPHABET.length]).join(
   '',

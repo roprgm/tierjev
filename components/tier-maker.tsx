@@ -253,11 +253,6 @@ export function TierMaker() {
         items={set.items}
         placements={placements}
         loading={loading}
-        hint={
-          placements.length === 0 && !loading
-            ? 'Press Rank and Jev sorts these into tiers. Edit the criterion first if you like.'
-            : undefined
-        }
         onChange={canDrag ? applyLayout : undefined}
         onIcon={isCustom ? setIcon : undefined}
       />

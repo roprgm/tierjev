@@ -1,7 +1,14 @@
 export const TIERS = ['S', 'A', 'B', 'C', 'D', 'F'] as const
 export type Tier = (typeof TIERS)[number]
 
-export type Item = { name: string; emoji?: string; color?: string; image?: string; description?: string }
+export type Item = {
+  name: string
+  emoji?: string
+  color?: string
+  image?: string
+  description?: string
+  url?: string
+}
 
 export type TierSet = {
   id: string
@@ -24,4 +31,6 @@ export type Share = {
   items: Item[]
   placements: Placement[]
   jev: boolean
+  /** Where the list came from, credited under the heading. */
+  source?: { label: string; url: string }
 }

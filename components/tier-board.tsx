@@ -130,7 +130,6 @@ type Props = {
   items: Item[]
   placements: Placement[]
   loading?: boolean
-  hint?: string
   onChange?: (layout: Record<Tier, string[]>) => void
   onIcon?: (name: string, look: Pick<Item, 'emoji' | 'color'>) => void
 }
@@ -146,7 +145,7 @@ function toLayout(items: Item[], placements: Placement[]): Layout {
 const containerOf = (layout: Layout, id: string): Container | undefined =>
   id in layout ? (id as Container) : (Object.keys(layout) as Container[]).find((c) => layout[c].includes(id))
 
-export function TierBoard({ items, placements, loading = false, hint, onChange, onIcon }: Props) {
+export function TierBoard({ items, placements, loading = false, onChange, onIcon }: Props) {
   const boardRef = useRef<HTMLDivElement>(null)
   const [dragging, setDragging] = useState<string | null>(null)
   // dnd-kit moves tiles during a drag and the drop leaves them where they are, so the FLIP hook only
@@ -209,7 +208,9 @@ export function TierBoard({ items, placements, loading = false, hint, onChange, 
   }
 
   const tile = (name: string) => {
-    const item = byName.get(name) ?? { name }
+    const found = byName.get(name) ?? { name }
+    // A draggable board must not fire navigation on drop, so links are for read-only boards.
+    const item = interactive ? { ...found, url: undefined } : found
     const percent = confidence.get(name)
     return (
       <Tile
@@ -245,7 +246,6 @@ export function TierBoard({ items, placements, loading = false, hint, onChange, 
               </Row>
             ))}
           </div>
-          {hint && layout.pool.length > 0 && <p className="text-xs text-muted-foreground">{hint}</p>}
           <Pool names={layout.pool} droppable={interactive}>
             {layout.pool.map(tile)}
           </Pool>

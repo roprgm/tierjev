@@ -13,12 +13,14 @@ export function parseItems(value: unknown): Item[] | null {
     const emoji = typeof it?.emoji === 'string' && it.emoji.length <= 8 ? it.emoji : undefined
     const color = typeof it?.color === 'string' && /^#[0-9a-f]{6}$/i.test(it.color) ? it.color : undefined
     const description = typeof it?.description === 'string' ? truncate(it.description, 300) : undefined
+    const url = typeof it?.url === 'string' && /^https:\/\//.test(it.url) ? it.url.slice(0, 300) : undefined
     if (!name || name.length > 60) return null
     items.push({
       name,
       ...(emoji && { emoji }),
       ...(color && { color }),
       ...(description && { description }),
+      ...(url && { url }),
     })
   }
   return items

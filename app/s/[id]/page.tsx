@@ -33,11 +33,27 @@ export default async function SharePage({ params }: Props) {
 
   return (
     <main className="mx-auto max-w-4xl space-y-6 px-4 py-10">
-      <header className="space-y-1">
-        <h1 className="text-2xl font-semibold tracking-tight">{share.criterion}</h1>
-        <p className="text-sm text-muted-foreground">
-          {share.title} · ranked {share.jev ? 'by Jev' : 'by hand'}
-        </p>
+      <header className="space-y-4">
+        <Link
+          href="/"
+          className="inline-block text-sm font-semibold tracking-tight text-muted-foreground transition-colors hover:text-foreground"
+        >
+          tierjev
+        </Link>
+        <div className="space-y-1">
+          <h1 className="text-2xl font-semibold tracking-tight">{share.criterion}</h1>
+          <p className="text-sm text-muted-foreground">
+            {share.title} · ranked {share.jev ? 'by Jev' : 'by hand'}
+            {share.source && (
+              <>
+                {' · '}
+                <a className="underline underline-offset-2 hover:text-foreground" href={share.source.url}>
+                  {share.source.label}
+                </a>
+              </>
+            )}
+          </p>
+        </div>
       </header>
       <TierBoard items={share.items} placements={share.placements} />
       <footer className="flex items-center justify-between text-xs text-muted-foreground">

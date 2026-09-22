@@ -49,12 +49,24 @@ export function ItemTile({ item, compact, onIcon, className, ...props }: Props) 
         {...props}
         data-flip={item.name}
         className={cn(
-          'flex h-7 max-w-56 shrink-0 items-center rounded-md border bg-background px-2.5 text-xs font-medium',
+          'relative flex h-7 max-w-56 shrink-0 items-center rounded-md border bg-background px-2.5 text-xs font-medium',
           'hover:border-foreground/40',
           className,
         )}
       >
-        <span className="truncate">{item.name}</span>
+        {item.url ? (
+          // The overlay covers the chip, so the whole thing is the link without wrapping the tile.
+          <a
+            href={item.url}
+            target="_blank"
+            rel="noreferrer"
+            className="truncate after:absolute after:inset-0 after:rounded-md"
+          >
+            {item.name}
+          </a>
+        ) : (
+          <span className="truncate">{item.name}</span>
+        )}
       </div>
     )
   }
