@@ -1,10 +1,10 @@
 # tierjev
 
-[![tierjev](.github/og.png)](https://www.tierjev.com)
+[![tierjev ranking programming languages](.github/screenshot.png)](https://www.tierjev.com)
 
 Tier lists ranked by [Jev](https://vercel.com/ai-gateway/models/jev), TypeSafe AI's classifier model. Pick a set, state a criterion, and Jev sorts it into S to F. Share the result as a link with its own social card.
 
-**[tierjev.com](https://www.tierjev.com)** · example: [the 443 builds on Ship with Jev](https://www.tierjev.com/s/fQdNjTt6)
+**[tierjev.com](https://www.tierjev.com)**
 
 ## How it works
 
