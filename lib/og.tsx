@@ -18,9 +18,11 @@ type Row = { tier: Tier; names: string[] }
 export function boardImage(
   rows: Row[],
   header: { title: string; subtitle: string },
-  options?: { rowHeight?: number; aside?: boolean },
+  options?: { rowHeight?: number; aside?: boolean; perRow?: number },
 ) {
   const rowHeight = options?.rowHeight ?? 74
+  // A long list overflows the row and clips names mid-word, so show what fits and count the rest.
+  const perRow = options?.perRow ?? 4
   const board = (
     <div
       style={{
@@ -59,7 +61,7 @@ export function boardImage(
               background: '#171717',
             }}
           >
-            {names.map((name) => (
+            {names.slice(0, perRow).map((name) => (
               <div
                 key={name}
                 style={{
@@ -72,9 +74,22 @@ export function boardImage(
                   whiteSpace: 'nowrap',
                 }}
               >
-                {name}
+                {name.length > 20 ? `${[...name].slice(0, 19).join('')}…` : name}
               </div>
             ))}
+            {names.length > perRow && (
+              <div
+                style={{
+                  display: 'flex',
+                  padding: '8px 14px',
+                  fontSize: 22,
+                  color: '#a1a1a1',
+                  whiteSpace: 'nowrap',
+                }}
+              >
+                +{names.length - perRow} more
+              </div>
+            )}
           </div>
         </div>
       ))}

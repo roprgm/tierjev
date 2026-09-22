@@ -1,0 +1,2217 @@
+[
+  {
+    "name": "Flight search with Browser Use",
+    "description": "Agents & browsers. Breaking: Browser Use + Jev = Ultrafast ⚡ Findings flights took 7s and cost only $0.0039 🤯 > new action space every step > DOM state space > small LLM fallback to type (this video is at 1x speed btw) Built a tiny open source browser agent. try it below ↓",
+    "color": "#0000ff"
+  },
+  {
+    "name": "X research relevance extension",
+    "description": "Content & growth. Added a Chrome extension to my X research tool! You can now save posts straight from X into the workspace and see the relevance score. Really useful little upgrade!",
+    "color": "#0000ff"
+  },
+  {
+    "name": "iMessage Elo game",
+    "description": "Games & real time. what if your imessage had an elo bar? powered by @typesafeai jev astra makes the choices, jev scores them. repo below.",
+    "color": "#0000ff"
+  },
+  {
+    "name": "Jev plays Flappy Bird",
+    "description": "Games & real time. I turned Jev into a Flappy Bird player and I won against it (sorraay @typesafeai). Can you beat it? Let's see your score: https://t.co/ktQrUYvPHb Tech: - Results stored in @neondatabase Postgres - @nextjs App Router 16 with @DrizzleORM, @shadcn and @tailwindcss",
+    "color": "#008000"
+  },
+  {
+    "name": "Jev dating chat evaluator",
+    "description": "Tools & apps. Jev at dating: https://t.co/1JfzVmD4Ak 💔 Anonymously paste your chat / screenshot and save yourself!? 💀 - Judged by Jev (by @typesafeai) - Securely stored in @neondatabase - OCR with Tesseract.js - Built with @claudeai - Deployed to @vercel",
+    "color": "#ff0000"
+  },
+  {
+    "name": "Hacker News comment verdicts",
+    "description": "Content & growth. Had Jev (@typesafeai) read every comment on the most-discussed threads on Hacker News (@hackernews) and give a verdict ⚖️ → https://t.co/WzAWif9Ekj • Every comment judged by Jev: stance (support / critical / neutral), a substance score, a 0..1 quotability, and w",
+    "color": "#ffa500"
+  },
+  {
+    "name": "Content-aware PII redaction",
+    "description": "Triage & routing. Built content-aware PII redaction in Postgres with @neondatabase and @typesafeai's Jev where redaction on support messages is not on entire column bluntly, but only on meaningful bits: https://t.co/sOSG4tXCot 🎉 • Jev reads each message and tags the personal bits",
+    "color": "#ff0000"
+  },
+  {
+    "name": "FyleContext",
+    "description": "Tools & apps. Launching FyleContext. 1/5 Upload PDFs, docs and URLs once. Claude (or any MCP client) searches them and cites the exact page. TypeSafe Jev scores every passage before it reaches your model. Nothing relevant? It says so instead of guessing. Link in comments.",
+    "color": "#0000ff"
+  },
+  {
+    "name": "Personalized Hacker News",
+    "description": "Content & growth. I recently got access to jev from and built this, because I hated the hacker news front page. everyone gets the same stories in the same order. someone else already decided what matters, and it is never quite what matters to me so: six sliders. technical depth, ",
+    "color": "#ffa500"
+  },
+  {
+    "name": "AI Scene Director",
+    "description": "Games & real time. JEV is crazy!!! I got access, so naturally I had to try it with the Three.js Grassworks demo. I built an AI Scene Director that takes a simple prompt and changes a whole set of scene and grass parameters to customize the environment based on your instructions. ",
+    "color": "#0000ff"
+  },
+  {
+    "name": "Jev plays Ms. Pac-Man",
+    "description": "Games & real time. Can you play mspacman with @typesafeai Well kind of. You need about 70ms of latency to play properly, in the video I had an average of ~650ms. The game was paused waiting for a response and then the footage you see is with the pauses removed. I also had to give",
+    "color": "#ffc0cb"
+  },
+  {
+    "name": "s1m",
+    "description": "Agents & browsers. Turns out Jev is very good at quickly crawling through an LLM wiki to find relevant content. 10x cheaper and 40x faster than a frontier worker model like Sonnet. So I built a cli tool your agents can use: s1m - High efficiency knowledge recall from an LLM wiki,",
+    "color": "#0000ff"
+  },
+  {
+    "name": "Alan AI application review console",
+    "description": "Triage & routing. JEV is INSANE. 4,000+ people applied for internship at @tryAlanAI. So we built an in house review console to find evidence of real work at scale. Every square is a real SDE intern application > 3,518 applications checked in 4:54 > 20 surfaced for human review > ",
+    "color": "#0000ff"
+  },
+  {
+    "name": "🧵 I wanted to understand what makes Jev different from a normal LLM",
+    "description": "Games & real time. 🧵 I wanted to understand what makes Jev different from a normal LLM. So I built a tiny real-time game with it. The AI controls the player and has one goal: Don't get hit.",
+    "color": "#0000ff"
+  },
+  {
+    "name": "Jev opens up so many possibilities for gaming 🤯",
+    "description": "Games & real time. Jev opens up so many possibilities for gaming 🤯 🏁 I built Wordshift - the first semantic typing racer game built with Jev from @typesafeai Slower than a jet, bigger than an elephant, faster than a cheetah. The bigger the difference, the farther your car moves.",
+    "color": "#0000ff"
+  },
+  {
+    "name": "I built a trading agent with the all new @typesafeai Jev",
+    "description": "Tools & apps. I built a trading agent with the all new @typesafeai Jev. You can try it here : https://t.co/im4bydkUTh. Just put your own API key and start playing or clone it from https://t.co/wIYgpRWv0w and test it locally. To my surprise the agent was able to take a trade of 2.",
+    "color": "#008000"
+  },
+  {
+    "name": "724 competitor ads, broken down",
+    "description": "Content & growth. jev is INSANE. in 40 seconds it broke down 724 live ads from 37 brands. every hook. every format. offer. cta. awareness stage. landing page mismatch. used 9 cents of tokens. (will be avail in @stealads + mcp)",
+    "color": "#808080"
+  },
+  {
+    "name": "Post scoring with SuperX",
+    "description": "Content & growth. Jev + SuperX = virality solved ✅ Every post gets 61 questions in ~1s for $0.0004 🤯 > fitted on 9,481 real posts from 207 creators > picks the viral post 2 in 3 times > never rewards reply bait So: write, score, rewrite, stop when it peaks. Free, no signup. try i",
+    "color": "#008000"
+  },
+  {
+    "name": "700 leads scored in 40 seconds",
+    "description": "Content & growth. JEV is INSANE. We gave it 700 high-intent leads and personalised outreach messages. In 40 seconds, it predicted how each message would perform, assigned a confidence score and detected lead-message mismatches. All for just $0.09. JEV can also score leads, analys",
+    "color": "#008000"
+  },
+  {
+    "name": "3,282 posts, eight questions each",
+    "description": "Content & growth. I gave Jev 3,282 of my X posts across 100M views and asked it to find what actually works for growth. 4,252,330 tokens $0.1282 for the full 8m 34s run! Each post got 8 questions about the topic, hook, tone, whether it teaches something, etc. How-to posts got 150",
+    "color": "#0000ff"
+  },
+  {
+    "name": "500 emails for 3.5 cents",
+    "description": "Triage & routing. Yeah Jev by @typesafeai is very cool. It classified 500 emails in seconds. And it costed 3.5 cents.",
+    "color": "#0000ff"
+  },
+  {
+    "name": "$10,000 in Jev’s hands",
+    "description": "Trading & markets. I gave Jev $10,000 and let it trade",
+    "color": "#008000"
+  },
+  {
+    "name": "The X algorithm, rebuilt with Jev",
+    "description": "Content & growth. rebuilt the X algorithm with Jev - uses real weights - simulates virality of your post - has a global feed (you see everyone) it's insanely accurate",
+    "color": "#0000ff"
+  },
+  {
+    "name": "A filter for reply-guy comments",
+    "description": "Content & growth. Pro tip: You can use Jev to remove annoying reply guy comments that X seems to always miss. Takes 5 minutes in Astra with the docs and an API key.",
+    "color": "#008000"
+  },
+  {
+    "name": "LinkedIn Post Copilot",
+    "description": "Content & growth. Jev is INSANE. I built a LinkedIn Post Copilot to score posts, explain the results, and suggest improvements using structured analysis. No API key? It scores offline using a deterministic local heuristic. https://t.co/ys32qPwDaZ #Jev #AI #Buildinpublic @typesafe",
+    "color": "#0000ff"
+  },
+  {
+    "name": "Ad-tag domain enforcement",
+    "description": "Content & growth. unlocked a new jev usecase today a publisher, secretly, ran our ad tag on their 🌽 sites none mapped on our dashboard now jev will check at runtime > tag loaded on a related domain / subdomain / mapped domain? allow. > phishy corn site? blocked.",
+    "emoji": "🛡️"
+  },
+  {
+    "name": "Jev X relevance panel",
+    "description": "Content & growth. So instead of chasing which posts I should pay attention to, I am using Jev (combine with my original Algo) to have this floating panel Now I can quickly find which posts are most relate to my interest, and probably save ton of time because of dump scrolling, bu",
+    "emoji": "🎯"
+  },
+  {
+    "name": "Is This Startup Stupid?",
+    "description": "Tools & apps. @icantcodefyi Check this out I built this using JEV it rates how stupid your startup idea is",
+    "emoji": "🤪"
+  },
+  {
+    "name": "Kueon conversation relevance",
+    "description": "Content & growth. Kueon allows you to set your goals for conversation mentions and then shows you only the conversations relevant to your product and the ones that match your goals. A step ahead in reducing the noise. Join Kueon today 👉 https://t.co/Ect4IcbyxS",
+    "emoji": "🔕"
+  },
+  {
+    "name": "Using TypeSafe's Jev for evals",
+    "description": "Research & data. TypeSafe launched Jev mid-September 2026. It makes decisions, cannot write a single sentence, and is 20 to 200x faster and 40 to 400x cheaper than frontier models according to…",
+    "emoji": "📊"
+  },
+  {
+    "name": "pi-typesafe",
+    "description": "Research & data. TypeSafe AI (Jev) decisions for Pi: batched Choice/Score/Noul evaluation tool, terminal playground, and a typed API other extensions build on. ... Install `pi-typesafe` from npm…",
+    "emoji": "🔌"
+  },
+  {
+    "name": "LLMs Are Built to Write. Jev Is Built to Decide.",
+    "description": "Research & data. LLMs Are Built to Write. Jev Is Built to Decide. | by Dr. Fadi Shaar | AI Mindset | Sep, 2026 | Medium ... # LLMs Are Built to Write. Jev Is Built to Decide. ... Inside Jev,…",
+    "emoji": "⚖️"
+  },
+  {
+    "name": "jevlang v0.1.0",
+    "description": "Research & data. The simplest way to write decision workflows in Python, backed by TypeSafe's Jev model ... classifier, decision, jev, routing, transpiler, triage, typesafe ... ## Description…",
+    "emoji": "🐍"
+  },
+  {
+    "name": "Jev: a decision-model experiment (TH)",
+    "description": "Research & data. Jev: a decision-model experiment (TH) ... # Jev: a decision-model experiment (TH) ... 1. ### Jev ฉลาดพอไหม? - บททดสอบความสามารถของโมเดล \"ตัดสินใจ\" (ตอนที่ 1) ... Jev คืออะไร?…",
+    "emoji": "🧪"
+  },
+  {
+    "name": "Jev vs Claude: Who Wins?",
+    "description": "Research & data. That is almost exactly the territory TypeSafe claims Jev is built for. ... The narrowness of the test is important here because it relates exactly to what TypeSafe claims Jev is…",
+    "emoji": "🥊"
+  },
+  {
+    "name": "Jev by TypeSafe AI: 6 Product Ideas People Are Already Building With It",
+    "description": "Research & data. That question is already being answered for Jev, the first public System One Model from TypeSafe AI. ... ## What is Jev by Typesafe AI? ... TypeSafe AI describes Jev as AI built…",
+    "emoji": "💡"
+  },
+  {
+    "name": "JEV assisted LLM Trading",
+    "description": "Research & data. JEV is TypeSafe's System-One model (`jev-latest`), served at `api.typesafe.ai/v1/systemone`. It's text-only. No vision, no market opinions. You POST it a \"state\" string plus a…",
+    "emoji": "📈"
+  },
+  {
+    "name": "Jev and LLMs: who does what? - by Bilgin Ibryam",
+    "description": "Research & data. After two years in stealth, Diogo Almeida, one of the researchers behind ChatGPT, launched Jev at TypeSafe AI. The company advertises roughly 200 times faster and 400 times…",
+    "emoji": "🧩"
+  },
+  {
+    "name": "Jev AI Is 200x Faster Than ChatGPT.",
+    "description": "Research & data. That gap is exactly what Jev AI is built for. Jev is a System One model from TypeSafe AI that returns typed decisions with probabilities instead of generated text. You send it…",
+    "emoji": "⚡"
+  },
+  {
+    "name": "I Used AI to Audit AI Bias - The Results Exposed a Systematic Pro-American Agenda in LLM…",
+    "description": "Research & data. > TL;DR: I ran 4 experiments using TypeSafe's Jev model to quantitatively measure geopolitical bias in AI recommendations. The results? 91.5% of the time, US models are placed…",
+    "emoji": "🧭"
+  },
+  {
+    "name": "I Tested TypeSafe’s Jev, a 478× Cheaper Decision Model, Against Claude, GPT-6, Kimi,…",
+    "description": "Research & data. I Tested TypeSafe’s Jev, a 478× Cheaper Decision Model, Against Claude, GPT-6, Kimi, MiniMax and DeepSeek. Only Two Beat It. | by Manjunath Janardhan | Sep, 2026 | Medium ... # I…",
+    "emoji": "🏁"
+  },
+  {
+    "name": "I Built Non-Autoregressive Decision Models a Year Ago. Then a Frontier Lab Called It a…",
+    "description": "Research & data. And then in September 2026, a well-funded frontier lab called TypeSafe AI (founded by Diogo Almeida, a co-inventor of ChatGPT at OpenAI) launched Jev. They proposed the exact…",
+    "emoji": "⏪"
+  },
+  {
+    "name": "How to Use Jev by TypeSafe AI: A Practical Guide to Building AI Decisions",
+    "description": "Research & data. TypeSafe describes Jev as a model that takes structured or unstructured state and returns typed, probabilistic decisions that software can use directly. ... ## Step 2: Understand…",
+    "emoji": "📘"
+  },
+  {
+    "name": "How to classify, route, and score with Jev and AI SDK",
+    "description": "Research & data. Jev, a System One model from TypeSafe AI, evaluates supplied state against typed questions and returns choices, scores, and boolean probabilities without generating prose. The AI…",
+    "emoji": "🔀"
+  },
+  {
+    "name": "Five Things Developers Are Actually Building With JEV (And Why It Matters)",
+    "description": "Research & data. Actually Building With ... When TypeSafe AI came out of stealth in September 2026 with founder Diogo Almeida, a name attached to both ChatGPT and RLHF, the framing was almost…",
+    "emoji": "🛠️"
+  },
+  {
+    "name": "Early experimentation using Jev to rethink harness UX - elvex",
+    "description": "Research & data. Jev is the first public model from TypeSafe AI, released in early access on Sep 15, 2026. The announcement post is here. ... TypeSafe frames Jev as a new class of frontier model:…",
+    "emoji": "🧰"
+  },
+  {
+    "name": "Designing Production AI Systems with Jev | ArchCrux",
+    "description": "Research & data. TypeSafe released Jev on September 15 as its first System One model. The interface is built around typed questions over some application state. Instead of generating text token…",
+    "emoji": "🏗️"
+  },
+  {
+    "name": "AI Brief: Claude's Riemann Leap, Jev, Vercel's deepsec",
+    "description": "Research & data. ▸ TypeSafe's Jev outputs decisions, not text (source: @aigc1024, @https1024). The model does only three things: boolean judgments (\"search or not\"), enum choices (\"fast vs plan,…",
+    "emoji": "📰"
+  },
+  {
+    "name": "200x Faster, 400x Cheaper, Zero Words: Inside Jev",
+    "description": "Research & data. typesafe.ai built Jev to answer yes/no and multiple-choice questions in under 500ms, not to write text. Here’s the architecture behind a model that gives up string generation to…",
+    "emoji": "🚀"
+  },
+  {
+    "name": "What Jev Probably Is, And Why You Already Have One",
+    "description": "Games & real time. A company called TypeSafe AI launched a model this week called Jev. They told us how fast it is. They told us what it costs. They told us it plays Doom in a tenth of a second.…",
+    "emoji": "🕹️"
+  },
+  {
+    "name": "TypeSafe’s Jev Makes AI Decisions Fast Enough to Play Doom",
+    "description": "Games & real time. TypeSafe’s Jev Makes ... Decisions Fast Enough to Play Doom | by Kristopher Dunham | Sep, 2026 | Medium ... # TypeSafe’s Jev Makes AI Decisions Fast Enough to Play Doom ... A…",
+    "emoji": "🎮"
+  },
+  {
+    "name": "Searching for Better Game Recommendations with Jev",
+    "description": "Games & real time. To pick that list better, I tried Jev, a decision model from TypeSafe. I did not have Jev write recommendations. I asked it to rate candidate games, then handed the model that…",
+    "emoji": "🎮"
+  },
+  {
+    "name": "I used Jev to control a swarm of 15 simulated drones in real time - Web Pulse",
+    "description": "Games & real time. I used Jev to control a swarm of 15 simulated drones in real time - Web Pulse ... # I used Jev to control a swarm of 15 simulated drones in real time ... TypeSafe released an…",
+    "color": "#0000ff"
+  },
+  {
+    "name": "I Ran 300 Real Jev Calls on a Simulated Robot Fleet. The Bill Was $0.00737.",
+    "description": "Games & real time. TypeSafe's Jev came out of stealth this month and every demo I see is the same: browsers, games, toy agents. Jev doesn't chat - it takes structured state and returns typed…",
+    "emoji": "🤖"
+  },
+  {
+    "name": "Testing Jev on public and private data: classifier or filter? | Blog | Aman Kumar",
+    "description": "Triage & routing. ### Jev only answers yes/no or pick-one. 16,000 calls: against gpt-5.4-mini and gpt-5.6-luna on four public datasets, then on a few thousand real pipeline decisions. Where it…",
+    "color": "#0000ff"
+  },
+  {
+    "name": "Jev was the tipping point - I built the last MySQL search statement - WPS",
+    "description": "Triage & routing. Jev was the tipping point - I built the last MySQL search statement - WPS ... # Jev was the tipping point - I built the last MySQL search statement ... So I built AILIKE. It lets…",
+    "color": "#0000ff"
+  },
+  {
+    "name": "Building an Evidence-Based Resume Analyzer: Why Understanding Beats Guessing",
+    "description": "Triage & routing. What we're really tackling is this: How can AI truly assess a resume without falling into the trap of just echoing buzzwords? How do we know the candidate isn't just sprinkling…",
+    "emoji": "📄"
+  },
+  {
+    "name": "Valid Schema, Wrong Content: Using Jev to Guard a Google ADK Agent",
+    "description": "Tools & apps. for a short video, four segments, each tagged with type, duration, and text. The `noul` confidence scores are real Jev API results for the original Traditional Chinese text (an…",
+    "emoji": "🛡️"
+  },
+  {
+    "name": "TypeSafe Jev vs Claude Code: 4 Models, 2 Real Jobs",
+    "description": "Tools & apps. Jev is a model that answers typed questions instead of generating text: yes/no, pick-one, or a score on a scale, each returned as a calibrated probability. You can get the same…",
+    "emoji": "⚖️"
+  },
+  {
+    "name": "i built a 24/7 HFT trading bot with Jev",
+    "description": "Tools & apps. i built a 24/7 HFT trading bot with Jev and wrote an 8-page research paper on EXACTLY how to build a millisecond speed high-frequency trading system with Jev, along with COMPLETE CODEBASE here is how you set it up: 1. split your system in two, deterministic code own",
+    "emoji": "📈"
+  },
+  {
+    "name": "Semantic code search without a vector index",
+    "description": "Tools & apps. Pass two hands that shortlist to Jev, TypeSafe's decision model, in a single batched call. Jev isn't a chat model, it's what they call a System One model: it doesn't generate…",
+    "emoji": "🔎"
+  },
+  {
+    "name": "Semantic code linting with System One models",
+    "description": "Tools & apps. A semantic lint is a rule you can state in a sentence but cannot express in a regular linter. Jev turns each rule into a yes/no question over one diff hunk and returns a…",
+    "emoji": "🧹"
+  },
+  {
+    "name": "Jev: Typed decisions for enterprise AI - Michał Chromiak's blog",
+    "description": "Tools & apps. Jev is TypeSafe AI's model for that narrower job. You give it the relevant text and define the possible kinds of answer. It returns typed values and probability distributions…",
+    "color": "#0000ff"
+  },
+  {
+    "name": "Jev in SuperQode: a harness for your code and workflows with Jev agent",
+    "description": "Tools & apps. SuperQode is our terminal-first harness for coding agents. You bring a model or an agent. SuperQode owns the loop: tools, permissions, YAML exec-policy, Git Guard, session…",
+    "emoji": "🛠️"
+  },
+  {
+    "name": "Jev is the \"Internet\" moment for the AI industry",
+    "description": "Tools & apps. Jev is the \"Internet\" moment for the AI industry It tells your agents and LLMs what to do next, in milliseconds and at almost zero cost If you set it up correctly, you will have the AI engineer’s stack for 2028 In this article, I show you how",
+    "emoji": "🌐"
+  },
+  {
+    "name": "Jev Beat GPT Luna by 1 Point. GPT-6 and Claude Wrote the Answer ...",
+    "description": "Tools & apps. Two public sources now say Jev beats GPT-5.6 Luna. Vercel's CEO says so for the safety reviewer in fx, a Vercel tool whose default auto mode runs that reviewer on every command.…",
+    "emoji": "🏆"
+  },
+  {
+    "name": "Jev + Pi: a probability gate for my coding agent's shell commands",
+    "description": "Tools & apps. TypeSafe released Jev on 2026-09-15. It is a decision-only model: you give it yes/no propositions and it returns a probability instead of text. I put it in front of Pi's `bash`,…",
+    "emoji": "🔐"
+  },
+  {
+    "name": "Exploring Jev for AI-Driven QA with agent-device",
+    "description": "Tools & apps. # Exploring Jev for AI-Driven QA with agent-device ... TypeSafe recently released Jev, a model for making fast, structured decisions. The company reports response times of 70 to…",
+    "emoji": "🧪"
+  },
+  {
+    "name": "Eval agent responses with Jev - Blog - Braintrust",
+    "description": "Tools & apps. Jev handles narrow, typed decisions over unstructured data through TypeSafe's System One API. Your code supplies the relevant state and one or more questions with constrained…",
+    "color": "#0000ff"
+  },
+  {
+    "name": "Cutting MCP Round-Trips with Jev (Part 3)",
+    "description": "Tools & apps. That's where Jev comes in. From Parts 1-2 we know it's a fast, cheap \"decision model\": give it options and a question, and it returns one answer plus a confidence score - no long…",
+    "emoji": "🔗"
+  },
+  {
+    "name": "Code Enumerates, Jev Judges: Building slopcheck on a Model That Never Writes a Word |…",
+    "description": "Tools & apps. I built a CI tool this week that reads every pull request and says whether it is AI slop. It flags speculative abstractions, tests that only assert on mocks, swallowed errors,…",
+    "color": "#0000ff"
+  },
+  {
+    "name": "Can Jev Be a Better Agent Evaluator?",
+    "description": "Tools & apps. - Jev is a fundamentally different kind of evaluator. It returns typed answers directly instead of generating text like an LLM judge. - Jev was dramatically more consistent on…",
+    "emoji": "✅"
+  },
+  {
+    "name": "Building a Prompt Oscilloscope. AI coding agents can inspect…",
+    "description": "Tools & apps. The project combines TypeSafe Jev, GitHub Copilot CLI over the Agent Client Protocol (ACP), and a native VS Code chat participant. Together, they create a diagnostic layer for…",
+    "emoji": "🔬"
+  },
+  {
+    "name": "Agents Make Three Decisions All Day: 18 JEV Use Cases and When Not to Use It",
+    "description": "Tools & apps. Eric Kang Posted on Sep 20 # Agents Make Three Decisions All Day: 18 JEV Use Cases and When Not to Use It A production agent makes the same three kinds of calls all day: pick one…",
+    "emoji": "🤔"
+  },
+  {
+    "name": "Jev: AI Decisions as a Typed Function Call | StackToHeap",
+    "description": "Agents & browsers. # Jev: AI Decisions as a Typed Function Call What I learned using TypeSafe's Jev for code review, and why its more surprising uses are browser control and generative UI.…",
+    "color": "#0000ff"
+  },
+  {
+    "name": "jev_stock",
+    "description": "Trading & markets. Experiment in forecasting Hong Kong stock direction: it builds a past-only state from market data, asks for an up, flat or down call, and renders a standalone report.",
+    "emoji": "📈"
+  },
+  {
+    "name": "Jev X Sentiment Analysis",
+    "description": "Trading & markets. Crypto terminal that reads up to 1,000 posts about a ticker alongside market and funding data and turns them into a buy, sell, hold, or take-profit call.",
+    "emoji": "🐦"
+  },
+  {
+    "name": "zod-jev",
+    "description": "Tools & apps. Pairs local Zod shape validation with Jev semantic validation.",
+    "emoji": "🔗"
+  },
+  {
+    "name": "typesafeai-dotnet-sdk",
+    "description": "Tools & apps. .NET SDK for Jev.",
+    "emoji": "🔷"
+  },
+  {
+    "name": "typesafe-go",
+    "description": "Tools & apps. Idiomatic Go SDK for the TypeSafe API.",
+    "emoji": "🐹"
+  },
+  {
+    "name": "TypeSafe Swift SDK",
+    "description": "Tools & apps. SwiftPM client whose behaviour follows the official JavaScript SDK.",
+    "emoji": "🕊️"
+  },
+  {
+    "name": "triagedy",
+    "description": "Tools & apps. Security alert triage as a Unix filter: JSONL alerts in, typed decisions out.",
+    "emoji": "🚨"
+  },
+  {
+    "name": "semdecide",
+    "description": "Tools & apps. Typed semantic decisions for Unix pipelines and CI.",
+    "emoji": "⚖️"
+  },
+  {
+    "name": "kunobi-jev",
+    "description": "Tools & apps. Rust client, published on crates.io.",
+    "emoji": "🦀"
+  },
+  {
+    "name": "jevclient",
+    "description": "Tools & apps. Async Python client for typed Jev questions and probabilities.",
+    "emoji": "🐍"
+  },
+  {
+    "name": "jev.nvim",
+    "description": "Tools & apps. Neovim plugin that splits the buffer into functions with Treesitter, scores each against a plain-language question with Jev, and ranks answers by probability in the quickfix…",
+    "emoji": "📝"
+  },
+  {
+    "name": "jev-shell-history",
+    "description": "Tools & apps. Ranks existing zsh history entries for inline completion; accepting a suggestion does not execute it.",
+    "emoji": "🐚"
+  },
+  {
+    "name": "jev",
+    "description": "Tools & apps. Elixir/OTP client designed around GenServer replies and pattern matching.",
+    "emoji": "💧"
+  },
+  {
+    "name": "jeff (Alurith)",
+    "description": "Tools & apps. Read-only Go CLI that checks files against rules such as unclear responsibility or weak error handling with Jev, locally or in CI.",
+    "emoji": "🔍"
+  },
+  {
+    "name": "advocaat",
+    "description": "Tools & apps. Small type-safe client for asking Jev questions about datasets.",
+    "emoji": "🥑"
+  },
+  {
+    "name": "safer-with-jev",
+    "description": "Research & data. Neon Function proxy for the Neon AI Gateway.",
+    "emoji": "🛡️"
+  },
+  {
+    "name": "jevcal",
+    "description": "Research & data. Fits and drift-checks confidence thresholds against labeled data.",
+    "emoji": "🎯"
+  },
+  {
+    "name": "jevcache",
+    "description": "Research & data. Local decision cache keyed on (model, schema, state), with redaction and canonicalisation before hashing, for cheaper repeats and deterministic replay in CI.",
+    "emoji": "💾"
+  },
+  {
+    "name": "jev-search-rerank-eval",
+    "description": "Research & data. Chinese/English retrieval evaluation comparing Jev reranking with lexical, embedding, and fusion baselines, including judge-circularity analysis.",
+    "emoji": "🔬"
+  },
+  {
+    "name": "jev-reranker",
+    "description": "Research & data. Retrieval and RAG: uses Jev Noul judgments to assess retrieved documents for relevance and usefulness as answer evidence, then sorts results and optionally filters them using a…",
+    "emoji": "📄"
+  },
+  {
+    "name": "jev-rerank-bench",
+    "description": "Research & data. Fourteen-dataset reranking study with saved raw responses, paired bootstrap intervals, order-sensitivity checks, and no-relevant-document tests; comparisons remain study-specific.",
+    "emoji": "📊"
+  },
+  {
+    "name": "jev-rag-benchmark",
+    "description": "Research & data. Reproducible experiments on whether reranking with Jev improves a small RAG system, on a locked Turkish dataset, with quality, latency and cost reported together.",
+    "emoji": "🧪"
+  },
+  {
+    "name": "jev-orderby-bench",
+    "description": "Research & data. Measures whether ORDER BY over a Jev probability is defensible (inversion rate, Score ordinality against a human grade, calibration, wording invariants, sort-key ties) under a…",
+    "emoji": "📐"
+  },
+  {
+    "name": "jev-korean-benchmark",
+    "description": "Research & data. Small Korean/English sample study with recorded responses, including medical-text questions; not a clinical validation.",
+    "emoji": "🇰🇷"
+  },
+  {
+    "name": "jev-eval",
+    "description": "Research & data. Independent Jev versus GPT-5.6 Terra comparison on three labeled classification tasks, reporting accuracy, calibration, latency, and cost.",
+    "emoji": "⚔️"
+  },
+  {
+    "name": "jev-benchmarks",
+    "description": "Research & data. Reproducible evaluation for calibration, selective risk, and latency.",
+    "emoji": "📊"
+  },
+  {
+    "name": "jev-behavior-study",
+    "description": "Research & data. Independent synthetic-task study of Jev 1.13.0 framing sensitivity and failures, with raw responses and offline report checks.",
+    "emoji": "🔬"
+  },
+  {
+    "name": "Jev vs. ML",
+    "description": "Research & data. Compares a typed decision model with classical classification pipelines across eight datasets, with a published protocol and an interactive report.",
+    "emoji": "⚖️"
+  },
+  {
+    "name": "feelings",
+    "description": "Research & data. BAML language support for an AI if-statement: `.feels()` as a real, typed method backed by a decision model.",
+    "emoji": "💗"
+  },
+  {
+    "name": "typesafe-snake",
+    "description": "Games & real time. Snake autoplayer with one typed decision per tick and code-generated legal moves.",
+    "emoji": "🐍"
+  },
+  {
+    "name": "typesafe-mario",
+    "description": "Games & real time. Super Mario Bros.",
+    "emoji": "🍄"
+  },
+  {
+    "name": "tsai-sc",
+    "description": "Games & real time. Original StarCraft shareware controlled with recorded Jev action probabilities.",
+    "emoji": "🚀"
+  },
+  {
+    "name": "Soupbase",
+    "description": "Games & real time. Jev `Choice` judgments answer lateral-thinking puzzle questions and assess proposed solutions, while application code requires supported facts, a coherent explanation, and…",
+    "emoji": "🍲"
+  },
+  {
+    "name": "killmyidea",
+    "description": "Games & real time. Startup-idea evaluator that chooses kill, fix, or ship.",
+    "emoji": "💡"
+  },
+  {
+    "name": "Jevtown",
+    "description": "Games & real time. Town of 10,000 computed personas where Jev scores a post, listing, product, or headline against about 60 audience attributes to plan who sees it, then answers one batched Choice…",
+    "emoji": "🏘️"
+  },
+  {
+    "name": "JevScape",
+    "description": "Games & real time. RuneBench-based RuneScape harness that maps Jev choices to a bounded game-action catalog and records tick-level results.",
+    "emoji": "⚔️"
+  },
+  {
+    "name": "JevPilot",
+    "description": "Games & real time. Three.js driving simulation where Jev chooses among candidate paths and speeds while local code handles vehicle dynamics and geometry.",
+    "emoji": "🚗"
+  },
+  {
+    "name": "jev-plays-pokemon-red",
+    "description": "Games & real time. Pokemon Red on PyBoy where deterministic code owns the route and arithmetic and Jev picks only at branches, with every battle turn's faint prediction scored by Brier against the…",
+    "emoji": "🔴"
+  },
+  {
+    "name": "jev-palette",
+    "description": "Games & real time. Command-palette demo where a single Choice question over a 77-command catalog turns the returned probability distribution into the per-keystroke ranking for Portuguese or English…",
+    "emoji": "🎨"
+  },
+  {
+    "name": "jev-libero",
+    "description": "Games & real time. Fine-grained robot control on LIBERO tasks with physics previews and configurable task definitions.",
+    "emoji": "🤖"
+  },
+  {
+    "name": "jev-canvas",
+    "description": "Games & real time. Voice and finger-pointing control of a tldraw canvas: Jev picks the action, target shape and place from each partial transcript plus the fingertip position; deterministic code…",
+    "emoji": "🖌️"
+  },
+  {
+    "name": "Jev Self-Driving Sim",
+    "description": "Games & real time. A 2D top-down car in the browser that turns its sensors into a JSON state every 200 ms and executes four typed answers.",
+    "emoji": "🚙"
+  },
+  {
+    "name": "Jev Reflex Autonomy Lab",
+    "description": "Games & real time. Multi-drone simulation where typed reflexes fly the fleet and an optional slower planner may advise but never takes control.",
+    "emoji": "🛸"
+  },
+  {
+    "name": "Jev Chess Lab",
+    "description": "Games & real time. Recorded chess experiments with a candid result: Jev on its own still blunders pieces.",
+    "emoji": "♟️"
+  },
+  {
+    "name": "heist-one",
+    "description": "Games & real time. Browser stealth game where Jev judges guards while deterministic code owns the world.",
+    "emoji": "💰"
+  },
+  {
+    "name": "1v1 Jev",
+    "description": "Games & real time. Three.js quickscope arena where Jev decides movement, aiming, ADS, firing, and jumping at roughly 9 Hz.",
+    "emoji": "🎯"
+  },
+  {
+    "name": "World Monitor",
+    "description": "Triage & routing. Geopolitical dashboard that batches Jev 1.13.0 headline-severity and topic classifications, validates the answers, and falls back when classification fails.",
+    "emoji": "🌍"
+  },
+  {
+    "name": "typesafe-jev-workflow",
+    "description": "Triage & routing. LangGraph email-intent workflow using a typed Jev choice.",
+    "emoji": "📧"
+  },
+  {
+    "name": "tax-doc-classifier",
+    "description": "Triage & routing. Classifies text-bearing PDF pages into IRS form and page-kind candidates with a confidence gate; document triage, not tax advice, and scanned pages need OCR.",
+    "emoji": "🧾"
+  },
+  {
+    "name": "pg-jev",
+    "description": "Triage & routing. PostgreSQL extension for semantic questions over table rows.",
+    "emoji": "🐘"
+  },
+  {
+    "name": "neo4jev",
+    "description": "Triage & routing. Navigates a Neo4j graph by having Jev score neighbouring relationships, then beam-searching for the most probable path.",
+    "emoji": "🕸️"
+  },
+  {
+    "name": "n8n-nodes-typesafe-jev",
+    "description": "Triage & routing. Community n8n node for asking multiple typed questions over workflow state.",
+    "emoji": "🔀"
+  },
+  {
+    "name": "llama-index-jev",
+    "description": "Triage & routing. LlamaIndex reranker and selector using Jev Score and Choice answers, with configurable confidence handling.",
+    "emoji": "🦙"
+  },
+  {
+    "name": "jevsql",
+    "description": "Triage & routing. SQL-like filtering, ranking, classification, and scoring with natural-language predicates.",
+    "emoji": "🗃️"
+  },
+  {
+    "name": "JevMail",
+    "description": "Triage & routing. Read-only Gmail triage that stores messages locally and asks Jev for bounded category, urgency, and human-sender probabilities.",
+    "emoji": "📧"
+  },
+  {
+    "name": "jevlogs",
+    "description": "Triage & routing. OpenTelemetry log triage before more expensive analysis.",
+    "emoji": "📜"
+  },
+  {
+    "name": "jev-tree",
+    "description": "Triage & routing. Recursive choice over taxonomies larger than Jev's direct option limit.",
+    "emoji": "🌳"
+  },
+  {
+    "name": "jev-curate",
+    "description": "Triage & routing. Streaming filter and scorer for Parquet and JSONL datasets.",
+    "emoji": "🧹"
+  },
+  {
+    "name": "Jev Web Analyzer",
+    "description": "Triage & routing. Fetches a public SaaS page as Markdown, then asks Jev ten bounded questions about likely first-visit comprehension; URL validation, caching, sanitization, and presentation remain…",
+    "emoji": "🔎"
+  },
+  {
+    "name": "Inbox Zero",
+    "description": "Triage & routing. Email assistant where Jev is an optional classifier backend returning bounded categories and yes/no probabilities.",
+    "emoji": "📥"
+  },
+  {
+    "name": "SlidePilot",
+    "description": "Content & growth. Experimental Slidev controller that judges speech transcripts for slide completion, with deterministic checks and manual navigation.",
+    "emoji": "🎞️"
+  },
+  {
+    "name": "jevmeter",
+    "description": "Content & growth. Scores every sentence in a video and renders the result as an overlay.",
+    "emoji": "📊"
+  },
+  {
+    "name": "wakegate",
+    "description": "Tools & apps. Experimental gate where Jev decides whether a timer or incoming event is worth resuming a sleeping agent's LLM; code skips only when Jev is confident and always wakes on user…",
+    "emoji": "⏰"
+  },
+  {
+    "name": "tripwire",
+    "description": "Tools & apps. Runs seven checks on every LLM response in one Jev call, as AI SDK middleware or an OpenAI-compatible proxy.",
+    "emoji": "🚨"
+  },
+  {
+    "name": "TanStack AI",
+    "description": "Tools & apps. `@tanstack/ai-typesafe` adapter exposing typed Boolean, Choice, and Score decisions through TanStack AI's `decide()` API.",
+    "emoji": "⚛️"
+  },
+  {
+    "name": "System One Harness",
+    "description": "Tools & apps. Turns a decision model into an agent loop: it compiles the environment's finite action space into typed questions, gates each step by confidence, and records the trace.",
+    "emoji": "🔁"
+  },
+  {
+    "name": "supercov",
+    "description": "Tools & apps. Scores source files so coding agents can prioritize code-quality work.",
+    "emoji": "🧪"
+  },
+  {
+    "name": "Stanley Code",
+    "description": "Tools & apps. Bounded Jev workflows for coding agents (formerly jev-code).",
+    "emoji": "🧑‍💻"
+  },
+  {
+    "name": "slop-grader",
+    "description": "Tools & apps. Rule-based text grader that uses Jev scores and line-by-line flags to audit documents against custom rulesets and guide an AI agent to auto-fix violations.",
+    "emoji": "📝"
+  },
+  {
+    "name": "ruby_decision_model",
+    "description": "Tools & apps. Ruby client with standard-library transport for TypeSafe and OpenRouter decision endpoints.",
+    "emoji": "💎"
+  },
+  {
+    "name": "Rig",
+    "description": "Tools & apps. Rust `rig-typesafeai` crate with typed Choice, Score, and Noul queries, response validation, examples, and fixtures.",
+    "emoji": "🦀"
+  },
+  {
+    "name": "Pydantic AI",
+    "description": "Tools & apps. TypeSafe model provider that derives Jev questions from Pydantic output types and supports typed routing and fallback workflows.",
+    "emoji": "🐍"
+  },
+  {
+    "name": "Prism",
+    "description": "Tools & apps. Liquidity-provision agent for Meteora DLMM.",
+    "emoji": "💧"
+  },
+  {
+    "name": "pi-warden",
+    "description": "Tools & apps. Pi extension that judges rule compliance, risky actions, stuck loops, and completion claims; enforcement depends on the hook and policy.",
+    "emoji": "🛡️"
+  },
+  {
+    "name": "pi-fast-jev-compaction",
+    "description": "Tools & apps. Pi extension that prunes stale tool history and leaves summary compaction to Pi when pruning is insufficient.",
+    "emoji": "✂️"
+  },
+  {
+    "name": "perch",
+    "description": "Tools & apps. Semantic code linter that evaluates code units against configurable Jev questions.",
+    "emoji": "🪺"
+  },
+  {
+    "name": "oxlint-plugin-jev",
+    "description": "Tools & apps. Oxlint rules written as plain-English questions about a function, call, JSX element or file, reported when the yes-probability clears your cutoff.",
+    "emoji": "🦀"
+  },
+  {
+    "name": "opencode-jev-orchestrator",
+    "description": "Tools & apps. Keeps an OpenCode parent model fixed and uses Jev difficulty judgments to delegate harder turns to temporary subagents.",
+    "emoji": "🎛️"
+  },
+  {
+    "name": "lorenzini",
+    "description": "Tools & apps. Claude Code skills that wait for CodeRabbit, Copilot or Codex to finish reviewing a pull request, then judge whether the verdict actually permits a merge.",
+    "emoji": "🦎"
+  },
+  {
+    "name": "LiteLLM",
+    "description": "Tools & apps. Jev-backed complexity routing and an optional relevance guardrail for compacting tool results before they return to an agent.",
+    "emoji": "🪶"
+  },
+  {
+    "name": "LangChain.js",
+    "description": "Tools & apps. JavaScript/TypeScript classifier Runnable and middleware for bounded routing and tool-call checks.",
+    "emoji": "🟨"
+  },
+  {
+    "name": "LangChain",
+    "description": "Tools & apps. Python `TypeSafeClassifier` Runnable with batched typed questions plus model-routing and risky-tool middleware.",
+    "emoji": "🐍"
+  },
+  {
+    "name": "Jot",
+    "description": "Tools & apps. A general-purpose agent loop where Jev picks the next move and Jot runs it.",
+    "emoji": "📝"
+  },
+  {
+    "name": "jevvy",
+    "description": "Tools & apps. Plugins for coding agents, starting with one that auto-approves shell permission requests it judges harmless and passes everything uncertain to the normal flow.",
+    "emoji": "🐚"
+  },
+  {
+    "name": "Jevthoven",
+    "description": "Tools & apps. Symbolic-music studio where Jev chooses plans, instruments, and bar patterns, and code renders editable music and MIDI.",
+    "emoji": "🎼"
+  },
+  {
+    "name": "jevr",
+    "description": "Tools & apps. Native R client for typed questions and provider-independent answers through TypeSafe or OpenRouter.",
+    "emoji": "📊"
+  },
+  {
+    "name": "JevLint",
+    "description": "Tools & apps. Checks code against conventions written in plain English, in a write-check-fix loop with your coding agent.",
+    "emoji": "🧹"
+  },
+  {
+    "name": "Jevify",
+    "description": "Tools & apps. Agent skill for finding where Jev fits in an existing codebase, designing the typed questions, and measuring whether it helped.",
+    "emoji": "🔎"
+  },
+  {
+    "name": "Jevbridge",
+    "description": "Tools & apps. ACP/MCP adapter for using Jev alongside coding and chat models.",
+    "emoji": "🌉"
+  },
+  {
+    "name": "JevBench",
+    "description": "Tools & apps. Benchmark for typed decision models across several suites, with confidence cascades and committees reported separately.",
+    "emoji": "📋"
+  },
+  {
+    "name": "jev-trade",
+    "description": "Tools & apps. Hyperliquid trading desk where Jev answers Choice questions for long/short, open/close/hold, and leverage; application code quotes or sends no order.",
+    "emoji": "📈"
+  },
+  {
+    "name": "jev-scout",
+    "description": "Tools & apps. MCP server that scores an agent's every search query, result, and fetched page for relevance and credibility, with session budgets, SSRF-guarded fetching, and a live decision…",
+    "emoji": "🧭"
+  },
+  {
+    "name": "jev-review MCP plugin",
+    "description": "Tools & apps. Local-first continuous software-quality review for coding agents.",
+    "emoji": "🔬"
+  },
+  {
+    "name": "jev-repl",
+    "description": "Tools & apps. Terminal REPL for shaping System One requests before writing code.",
+    "emoji": "💻"
+  },
+  {
+    "name": "jev-pref",
+    "description": "Tools & apps. Linter that has Jev check code changes against project preferences from `jev-pref.json` and feeds findings back to coding agents.",
+    "emoji": "⚙️"
+  },
+  {
+    "name": "jev-logtriage",
+    "description": "Tools & apps. Jev scores collapsed log batches for noise, severity, and whether an operator should act.",
+    "emoji": "🚨"
+  },
+  {
+    "name": "jev-lint (mizchi)",
+    "description": "Tools & apps. Checks whether a function does what its name says, whether a comment is still true, and whether a test verifies what it claims, with a cutoff per rule.",
+    "emoji": "✅"
+  },
+  {
+    "name": "jev-guard",
+    "description": "Tools & apps. Cross-agent tool-call risk scoring with allow, ask, and deny outcomes.",
+    "emoji": "🛡️"
+  },
+  {
+    "name": "jev-gateway",
+    "description": "Tools & apps. Local gateway for Codex and Claude Code that asks Jev which tool to call next and passes everything else to your usual model.",
+    "emoji": "🚪"
+  },
+  {
+    "name": "jev-gates",
+    "description": "Tools & apps. Seven calibrated gates for Claude Code (rules, scope, intent, done, claims, proof, and commit honesty) that escalate but never approve.",
+    "emoji": "⛩️"
+  },
+  {
+    "name": "jev-eval-agent",
+    "description": "Tools & apps. Compares LLM tool selection with Jev routing in a personal-assistant harness containing 100 mocked tools.",
+    "emoji": "🧪"
+  },
+  {
+    "name": "jev-engineering",
+    "description": "Tools & apps. Decision layer for coding agents: deterministic hard rules, then a Jev call, exposed as a Claude Code PreToolUse hook, an MCP server, a loopback service and a shared team policy.",
+    "emoji": "🏗️"
+  },
+  {
+    "name": "jev-dsl",
+    "description": "Tools & apps. Early-alpha Haskell DSL that encodes typed question packets and decodes answers; HTTP transport is left to the caller.",
+    "emoji": "📐"
+  },
+  {
+    "name": "jev-decision-benchmarks",
+    "description": "Tools & apps. Independent evaluation of Jev on MetaTool, When2Call, and BFCL V4 agent decision tasks, focusing on tool selection, abstention, and tool-use decisions.",
+    "emoji": "📊"
+  },
+  {
+    "name": "jev-commit",
+    "description": "Tools & apps. Pre-commit hook where one Jev call judges whether the commit message matches the staged diff, flags debug leftovers and unmentioned work, and blocks only when it detects a…",
+    "emoji": "✅"
+  },
+  {
+    "name": "jev-belay",
+    "description": "Tools & apps. Claude Code Stop hook that checks the transcript for evidence before trusting a \"done\" claim, spending one four-question Jev call only when files changed with no passing check…",
+    "emoji": "🧗"
+  },
+  {
+    "name": "jev-agent-skill",
+    "description": "Tools & apps. Claude Code/ZCode skill that offloads classify, screen, score, and compliance-check judgments to Jev via OpenCode Zen's free tier; ships a retry-hardened zero-dependency caller…",
+    "emoji": "🎓"
+  },
+  {
+    "name": "jev-acp",
+    "description": "Tools & apps. Standalone ACP agent exposing Jev Choice, Score, and Noul decisions through guided input and reusable templates, with typed results and probabilities.",
+    "emoji": "🔌"
+  },
+  {
+    "name": "Jev Wrapped",
+    "description": "Tools & apps. Telegram channel X-ray: for each public post of the last twelve months Jev answers a Choice over ten kinds of post and three yes/no questions (paid ad, clickbait, emotional…",
+    "emoji": "🎁"
+  },
+  {
+    "name": "Jev Studio",
+    "description": "Tools & apps. One pip install for experimenting: MCP tools for Choice, Noul and Score, prompt libraries and a slash command per cookbook recipe.",
+    "emoji": "🎛️"
+  },
+  {
+    "name": "Jev Reranker (Rust CLI)",
+    "description": "Tools & apps. Rust JSON-in/JSON-out CLI that asks Jev about relevance, usable evidence, or which source text to retain, then applies the resulting order and thresholds in code.",
+    "emoji": "🦀"
+  },
+  {
+    "name": "invalidate",
+    "description": "Tools & apps. Gives every remembered fact a lease and asks Jev whether new evidence ends it, so an agent's memory can be made to go stale on purpose.",
+    "emoji": "⏳"
+  },
+  {
+    "name": "hono-jev-router",
+    "description": "Tools & apps. Routes Hono HTTP requests by meaning.",
+    "emoji": "🚦"
+  },
+  {
+    "name": "hermes-jev-approvals",
+    "description": "Tools & apps. Approvals provider for Hermes Agent: it judges shell commands and refuses every other task, registering no hooks.",
+    "emoji": "🛂"
+  },
+  {
+    "name": "HA-Jev",
+    "description": "Tools & apps. Home Assistant integration exposing typed answers as sensors, automation actions, and an Assist conversation agent.",
+    "emoji": "🏠"
+  },
+  {
+    "name": "foreman",
+    "description": "Tools & apps. Software-factory supervisor that uses Jev to keep coding agents on task.",
+    "emoji": "👷"
+  },
+  {
+    "name": "fast-jev-compaction",
+    "description": "Tools & apps. Claude Code plugin and library that score tool-call/result pairs for deletion or truncation while retaining selected text verbatim.",
+    "emoji": "🗜️"
+  },
+  {
+    "name": "Effect",
+    "description": "Tools & apps. `@effect/ai-typesafe` decision model mapping Effect's classify, probability, and rating operations to Jev Choice, Noul, and Score questions.",
+    "emoji": "⚡"
+  },
+  {
+    "name": "doc-router",
+    "description": "Tools & apps. Rust tool that asks Jev which PDF pages actually need OCR, extracting text pages locally and sending only the rest to your OCR provider.",
+    "emoji": "📄"
+  },
+  {
+    "name": "Composio",
+    "description": "Tools & apps. TypeSafe provider that shortlists tools, selects one from a bounded set, maps closed-set arguments, and exposes confidence and destructive-action gates.",
+    "emoji": "🧩"
+  },
+  {
+    "name": "commit-miner",
+    "description": "Tools & apps. Classifies Git diffs and commit messages into change types and candidate security-fix/CWE labels for inspection.",
+    "emoji": "⛏️"
+  },
+  {
+    "name": "Canny",
+    "description": "Tools & apps. Evidence ledger that challenges unsupported \"done\" claims from coding agents.",
+    "emoji": "🔍"
+  },
+  {
+    "name": "blink",
+    "description": "Tools & apps. Navigates file and directory names with Jev-guided walkers to find codebase paths for a natural-language query.",
+    "emoji": "👁️"
+  },
+  {
+    "name": "BAML",
+    "description": "Tools & apps. The v1 nightly integration maps typed function return values to Jev questions; it is not part of the stable release line yet.",
+    "emoji": "🌙"
+  },
+  {
+    "name": "Ax (ax-llm)",
+    "description": "Tools & apps. Native TypeSafe client and Ax provider for Boolean, Choice, Score, and raw Jev questions, with answer validation and examples.",
+    "emoji": "🪓"
+  },
+  {
+    "name": "Awesome Jev Skills",
+    "description": "Tools & apps. Nine installable agent skills - triage, routing, code review, document and UI work - with a catalogue of scenarios to copy.",
+    "emoji": "🧰"
+  },
+  {
+    "name": "agent-dispatcher",
+    "description": "Tools & apps. Routes a Claude Code or Codex task to one of 27 specialist roles and defines what evidence will count as done.",
+    "emoji": "🧭"
+  },
+  {
+    "name": "Abide",
+    "description": "Tools & apps. Hooks into Claude Code, Codex, and OpenCode, and asks Jev one question per rule whether each edit breaks your AGENTS.md or CLAUDE.md rules.",
+    "emoji": "📏"
+  },
+  {
+    "name": "x-scanner",
+    "description": "Agents & browsers. Chrome extension that labels every post you scroll past on X with six typed questions per post, and counts what it costs in the corner.",
+    "emoji": "🔍"
+  },
+  {
+    "name": "Vibe Check for X",
+    "description": "Agents & browsers. Chrome extension that scores draft posts and reply context before posting; optional media descriptions come from a separate vision model.",
+    "emoji": "✅"
+  },
+  {
+    "name": "TypeSafe AdBlock",
+    "description": "Agents & browsers. Chrome extension that asks Jev whether each DOM element is an ad and removes the ones that are.",
+    "emoji": "🚫"
+  },
+  {
+    "name": "Sharp",
+    "description": "Agents & browsers. Browser extension that filters your X timeline by plain-language rules, with Jev as the default classifier.",
+    "emoji": "🗂️"
+  },
+  {
+    "name": "RefGarden",
+    "description": "Agents & browsers. A three-dimensional reference gallery over The Met, NASA, Cosmos, and the Prelinger Archives, with Jev choosing the search phrases.",
+    "emoji": "🌌"
+  },
+  {
+    "name": "macbrow",
+    "description": "Agents & browsers. Say a command and it runs as AppleScript, or say a web task and it drives Chrome.",
+    "emoji": "🖥️"
+  },
+  {
+    "name": "JevScout",
+    "description": "Agents & browsers. Coding-agent skill that drives Chrome over CDP to look for jobs on company sites, with Jev scoring pages and links.",
+    "emoji": "💼"
+  },
+  {
+    "name": "Jevbridge",
+    "description": "Agents & browsers. ACP and MCP adapter that pairs Jev with any LLM agent, including Codex, Claude, Grok, and OpenCode, for typed decisions and computer use.",
+    "emoji": "🌉"
+  },
+  {
+    "name": "jev-social",
+    "description": "Agents & browsers. Local Instagram and TikTok research app where Jev selects a platform and bounded socai operation from observed state, while code enforces confidence and the socai CLI executes…",
+    "emoji": "📱"
+  },
+  {
+    "name": "jev-skip",
+    "description": "Agents & browsers. Browser extension that reads the YouTube caption track and paints a per-segment sponsor probability on the seek bar before the intro ends, with no crowd database; reports…",
+    "emoji": "⏭️"
+  },
+  {
+    "name": "jev-mail-classifier",
+    "description": "Agents & browsers. Config-driven inbox classifier that tags, moves, flags and notifies from typed answers.",
+    "emoji": "📧"
+  },
+  {
+    "name": "Jev-cu",
+    "description": "Agents & browsers. Codex computer-use skill where Jev picks the next element and action from on-screen text, with a local policy gate for sensitive steps.",
+    "emoji": "🖱️"
+  },
+  {
+    "name": "Jev Voice",
+    "description": "Agents & browsers. Local whisper.cpp for the transcript, then one Jev request picks the action and its typed arguments; code owns execution.",
+    "emoji": "🎙️"
+  },
+  {
+    "name": "Jev Paint",
+    "description": "Agents & browsers. Local browser app that turns batched per-pixel Jev distributions into paintings; prompts describe pixels and regions rather than sending raw images.",
+    "emoji": "🎨"
+  },
+  {
+    "name": "Jev macOS Loop",
+    "description": "Agents & browsers. Native macOS GUI automation on Apple silicon: OmniParser CoreML and Apple Vision OCR identify controls locally, Jev selects the action.",
+    "emoji": "🍎"
+  },
+  {
+    "name": "Jev for Chrome",
+    "description": "Agents & browsers. Unofficial Chrome extension (Manifest V3) port of Jev Ultrafast: Jev picks the operation and DOM element in one request, a small text model writes typed values, and it runs in…",
+    "emoji": "🌐"
+  },
+  {
+    "name": "Jev Explained",
+    "description": "Agents & browsers. Interactive playground that walks through a typed request and its probabilities, with your own key.",
+    "emoji": "📊"
+  },
+  {
+    "name": "Jev Chat",
+    "description": "Agents & browsers. Chat-style command bar where Jev picks the tool, arguments, and reply type, and code builds every reply from tool data.",
+    "emoji": "💬"
+  },
+  {
+    "name": "Hermes Jev Skills",
+    "description": "Agents & browsers. Bundle of skills that hand an agent's small decisions to Jev: model routing, skill selection, retrieval filtering, compaction, and computer use, with a routing dashboard.",
+    "emoji": "📦"
+  },
+  {
+    "name": "Grok Bot Jev Router",
+    "description": "Agents & browsers. Classifies a Grok Bot request before expensive research, browser, retry, or subagent work, so it can reuse a fresh artifact or stop a failing retry.",
+    "emoji": "🤖"
+  },
+  {
+    "name": "Cheshi",
+    "description": "Agents & browsers. macOS workspace for Codex where Jev finds past sessions and the decisions made in them.",
+    "emoji": "🗃️"
+  },
+  {
+    "name": "BrowserClaw",
+    "description": "Agents & browsers. Zero-lock, session-preserving Chrome MCP server that couples a local Jev System One semantic micro-loop (`chrome_act_toward_goal`) with an 85%+ pruned DOM tree (Shadow DOM &…",
+    "emoji": "🦞"
+  },
+  {
+    "name": "agent-desktop",
+    "description": "Agents & browsers. macOS desktop automation over accessibility trees.",
+    "emoji": "🖥️"
+  },
+  {
+    "name": "AI slop detector",
+    "description": "Content & growth. Paste any URL and Jev checks the page for 35 tells of AI slop.",
+    "emoji": "🔍"
+  },
+  {
+    "name": "Hide posts on X in plain language",
+    "description": "Tools & apps. I built a browser extension with Jev @typesafeai that can hide/collapse posts on X based on natural language. It's so fast that it's not noticeable and insanely cheap...this must be the future of \"ad blockers\" and content firewalls.",
+    "emoji": "🚫"
+  },
+  {
+    "name": "Jev on the WebMCP benchmark",
+    "description": "Agents & browsers. We just ran Jev on our WebMCP benchmark. The result: basically broke the benchmark. Jev + Mercury 2.5 (a fast, low-cost LLM) using WebMCP solved 100% of the tasks at roughly 112× lower model cost than GPT-6 Astra using computer use with code execution. Compared",
+    "emoji": "🏁"
+  },
+  {
+    "name": "1kpapers",
+    "description": "Research & data. 1,018 AI papers sorted by topic for $0.08 and published as a site.",
+    "emoji": "📄"
+  },
+  {
+    "name": "YouTube sponsor skipper",
+    "description": "Tools & apps. A Chrome extension that detects sponsor segments and skips them.",
+    "emoji": "⏭️"
+  },
+  {
+    "name": "Live viral post analyzer",
+    "description": "Content & growth. Just created this with Jev by @typesafeai. A live viral post analyzer. As soon as you stop typing for .5 seconds it analyzes the viral potential. Going to try and actually make this good, will need to scrape a lot of twitter data... Notice how it also categorize",
+    "emoji": "📈"
+  },
+  {
+    "name": "Jev plays Doom",
+    "description": "Games & real time. We love how this doomo doomonstrates real-time intelligence and what can be doone with code + AI! ~10 calls/sec = ~$7/hour",
+    "emoji": "🔫"
+  },
+  {
+    "name": "Wikiracing",
+    "description": "Games & real time. Get from one Wikipedia page to another by picking links.",
+    "emoji": "🧭"
+  },
+  {
+    "name": "jev-ultrafast",
+    "description": "Agents & browsers. Browser Use’s browser agent, with Jev choosing each next step.",
+    "emoji": "⚡"
+  },
+  {
+    "name": "Stagehand on a remote browser",
+    "description": "Agents & browsers. we built blazing fast computer/browser use with Jev + @Stagehanddev. this task cost $0.001 and executed at near instant speed (in a remote browser btw) the loop: observe the page, send a11y tree as state + actions as questions, Jev decides the next action, then",
+    "emoji": "🎭"
+  },
+  {
+    "name": "typesafe-computer-use",
+    "description": "Agents & browsers. Computer use on macOS, with one Jev decision per step.",
+    "emoji": "🍎"
+  },
+  {
+    "name": "jev-trader",
+    "description": "Trading & markets. A trading bot that places an order in every 300 ms block.",
+    "emoji": "📊"
+  },
+  {
+    "name": "jev-drone",
+    "description": "Robotics & devices. A simulated drone that asks Jev for a judgment 2.5 times a second.",
+    "emoji": "🛸"
+  },
+  {
+    "name": "Triage across 1,500 emails",
+    "description": "Triage & routing. this model is actually insane at email classification i tested it on 1500 of my own emails to see how well it works and I am blown away",
+    "emoji": "📧"
+  },
+  {
+    "name": "Every’s editorial vibe check",
+    "description": "Content & growth. 37 documents, 21 questions each, 1,709 judgments for under a cent.",
+    "emoji": "🎨"
+  },
+  {
+    "name": "Fraud detection with Jev and Kimi K3",
+    "description": "Triage & routing. Jev + Kimi K3 for fraud detection! TLDR: Jev classified 100 emails in 1.42 seconds, then I routed the uncertain cases to Kimi K3. The full pipeline got 96/100 correct for only ~$0.07. Video is not sped up, check out the live run! Here was my process: I gave Jev ",
+    "emoji": "🕵️"
+  },
+  {
+    "name": "Jev plays Slay the Spire 2",
+    "description": "Games & real time. 昨天出的 https://t.co/6eiMFaJTrj Jev 模型 适合高频决策，那岂不又是适合打游戏？ 之前用 GPT-6 Astra 代打杀戮尖塔2 能力强但速度慢。 我刚实测用 Jev 打，行动思考只需 0.7秒， 画面我都没看清它就操作完了。 这超人类游戏速度， 着实又让我震惊瘫坐了😅 语言很难描述这感觉，看视频⬇️",
+    "emoji": "🃏"
+  },
+  {
+    "name": "Search and tagging on keep.md",
+    "description": "Research & data. Cloudflare Workers has Jev now so I'm putting it to the test on https://t.co/1fK8HbSmPm - 7x faster search rerank compared to the current hybrid - 50x faster tagging of content vs GLM 4.7 Flash with no failures",
+    "emoji": "🏷️"
+  },
+  {
+    "name": "A chief of staff for bots",
+    "description": "Agents & browsers. got @typesafeai's new model Jev as a chief of staff for bots Jev reads the task, wakes the right teammates off the bench and gives each one the right model It is possible on OpenMausBot as it supports all the LLMs from your existing subscriptions Jev as a decis",
+    "emoji": "🧑‍💼"
+  },
+  {
+    "name": "Headless Chromium agent",
+    "description": "Agents & browsers. Acabo de terminar la implementación de @typesafeai + Chromium Headless para que mis agentes puedan navegar por internet a una buena velocidad! En este ejemplo le pido al agente que entre a la página del término \"Café\" en Wikipedia y navegue por los hipervínculo",
+    "emoji": "🌐"
+  },
+  {
+    "name": "jev-voice-browser",
+    "description": "Agents & browsers. A browser you control by voice, from Moritz Kremb’s Jev tutorial.",
+    "emoji": "🎙️"
+  },
+  {
+    "name": "Keystroke oracle",
+    "description": "Tools & apps. Also have been playing with @typesafeai Jev, insane! So many immediate use cases and new apps are possible. What a time to be a builder! Sharing some experiments here starting with: Keystroke oracle / predictive launcher: Your launcher ranks by aliases, fuzzy match,",
+    "emoji": "⌨️"
+  },
+  {
+    "name": "Jev Calc",
+    "description": "Tools & apps. i made a smart calculator notebook using jev it can calculate ANYTHING!! 😅",
+    "emoji": "🧮"
+  },
+  {
+    "name": "A canvas you control by pointing and speaking",
+    "description": "Tools & apps. Jev is the future",
+    "emoji": "👆"
+  },
+  {
+    "name": "Hard-coded rules moved to Jev",
+    "description": "Tools & apps. Now using @typesafeai Jev in https://t.co/c8wAW9titP, https://t.co/bt2EomCJNV, https://t.co/Naf5ujgWB4, etc AI ends up vibe coding so much AI regex slop if you don't read the code, so I can finally move all this hard-coding to Jev and it's insanely fast! Also for re",
+    "color": "#008000"
+  },
+  {
+    "name": "A second-hand shopping agent",
+    "description": "Agents & browsers. Claude me integró Jev con Playwright para buscar usados. Lee unos 26 artículos por minuto y decide qué hacer con cada uno en 406 milisegundos Descartó los que no encajaban con lo que busco, ofertó por los que sí y hasta les mandó un mensaje a los vendedores cua",
+    "color": "#008000"
+  },
+  {
+    "name": "A chat bot with no LLM",
+    "description": "Agents & browsers. I built a chat bot with jev, no LLM at all! Responses are instant, no hallucinations. I hooked it up to web search, wikipedia, weather, todoist and home assistant. Jev decides what tool to call and what args to use based on the prompt. Instant answers cite sour",
+    "color": "#0000ff"
+  },
+  {
+    "name": "Jev plays Subway Surfers",
+    "description": "Games & real time. jev is insane 🤯 Here is Jev playing subway surfers at super human speed, and also playing 50 games at once. cost less than a cent to do this run. Jev does not replace llms like astra or fable, but opens up an entirely new world of capabilities.",
+    "color": "#0000ff"
+  },
+  {
+    "name": "Jev plays Smash Bros. against itself",
+    "description": "Games & real time. jev is insane 🤯 here is jev playing smash bros against itself he is controlling all 4 different characters. and literally deciding whats the best move to play against itself all within a fraction of a second i used over 22 million tokens to play this match and ",
+    "color": "#0000ff"
+  },
+  {
+    "name": "Predictive spreadsheets",
+    "description": "Tools & apps. Another crazy @typesafeai Jev example: Predictive spreadsheets Spreadsheets recalculate numbers, not meaning. Jev reads intent. Type \"Urgency\" at the top of a column and, as you type, it figures out you want each row rated from \"no follow-up needed\" to \"urgent\" in ~",
+    "color": "#008000"
+  },
+  {
+    "name": "One-click invoice finder",
+    "description": "Tools & apps. Jev is fun! One-click invoice finder for any website 🧾 - Automatically finds billing pages using @typesafeai's Jev - List/download all invoices with 1 click - Works with Stripe billing portals too - Remembers where invoices live for next time Should I open-source it",
+    "color": "#0000ff"
+  },
+  {
+    "name": "Agentic browsing in Chrome",
+    "description": "Agents & browsers. I built a Chrome extension for agentic browsing using Jev by @typesafeai, https://t.co/Xa9toMieqT including AI Gateway by @vercel. Now agents can browse, click, and interact with websites directly in your browser. Cost effective and fassst. Decision-making by J",
+    "color": "#0000ff"
+  },
+  {
+    "name": "Jev Detector",
+    "description": "Content & growth. Announcing Jev Detector The world's fastest AI slop detector, built on jev from @typesafeai ~10,000 words scanned for slop in ~2 seconds Best part, its free, no sign up required, enjoy! https://t.co/8mlq6QpFrR",
+    "color": "#008000"
+  },
+  {
+    "name": "400 companies matched to one candidate",
+    "description": "Triage & routing. JEV is INSANE. We gave it 400 companies and one candidate profile. In 12 seconds, it predicted which jobs the candidate had the highest chance of getting, assigned a confidence score and detected job-candidate mismatches. All for just $0.0005 It can also score",
+    "color": "#0000ff"
+  },
+  {
+    "name": "A Downloads folder that sorts itself",
+    "description": "Tools & apps. Jev unlocks SO many awesome new ideas. I built a macOS app that monitors my Downloads folder along with a customisable set of rules. Is the downloaded file an invoice? Move it to a special folder with the correct filename. No other LLM calls involved - just Jev!",
+    "color": "#008000"
+  },
+  {
+    "name": "Jev plays Tetris",
+    "description": "Games & real time. Puse a Jev, la nueva IA de @typesafeai, a jugar al Tetris en modo súper difícil. Decidió cada jugada en unos 0,3 segundos. Acomodó 357 piezas e hizo 134 líneas en solo 2 minutos. Increíble.",
+    "color": "#0000ff"
+  },
+  {
+    "name": "Game levels generated in real time",
+    "description": "Games & real time. Jev can generate game levels in real time. Faster and cheaper structured output could be a big deal for game dev!",
+    "color": "#008000"
+  },
+  {
+    "name": "Real-time Clippy",
+    "description": "Tools & apps. I built real-time Clippy with Jev. It quietly watches how you use the product and only wakes up when it thinks you’re struggling. Hesitating? Confused? Stuck? Clippy knows. Even its reactions are controlled by Jev. 👀",
+    "color": "#ffff00"
+  },
+  {
+    "name": "DiffJury",
+    "description": "Triage & routing. Paste a public PR link; Jev says if it is safe to merge or needs review.",
+    "color": "#008000"
+  },
+  {
+    "name": "A Slack agent, twice as fast",
+    "description": "Agents & browsers. Jev made our Slack agent 2x faster ⚡️ Our agent can be quite slow because it needs to read skills and figure out which tools to call. We used @typesafeai's new model to speed this up by first passing it the prompt and classifying the best skill, tool and params",
+    "color": "#0000ff"
+  },
+  {
+    "name": "Voice-controlled computer use on a Mac",
+    "description": "Agents & browsers. I built a voice controlled computer-use for my mac using @typesafeai's Jev and it's INSANE how fast it is! I can dictate \"open the notes app and create...\" and the app opens before I even finish my sentence.",
+    "color": "#0000ff"
+  },
+  {
+    "name": "An always-on assistant with no wake word",
+    "description": "Tools & apps. Ai is evolving. Jev can be armed at all times. I can speak freely and it knows ( from probabilities ) if im asking my computer to do something or blaberring away at something else. no wake word. speed + affordability + intelligence is getting to the point where an a",
+    "color": "#0000ff"
+  },
+  {
+    "name": "Intent-based search in Gmail",
+    "description": "Triage & routing. Jev is really good at intent-based search! How it looks in Gmail: (for a huge inbox you'd prob let semantic search / embeddings pull first but still much better experience)",
+    "color": "#0000ff"
+  },
+  {
+    "name": "Company invoices, classified for the books",
+    "description": "Triage & routing. Caso de uso de @typesafeai: Revisar todas las facturas de la empresa y clasificarlas contablemente en segundos 🫠",
+    "color": "#808080"
+  },
+  {
+    "name": "End-to-end tests run by agents",
+    "description": "Agents & browsers. e2e + jev from @typesafeai ⚡ I'm building an open-source framework for running e2e tests with agents. supports web, mobile (and more!) available soon: https://t.co/G3XB2L8tiC",
+    "color": "#008000"
+  },
+  {
+    "name": "A computer assistant that listens",
+    "description": "Agents & browsers. building a computer assistant with Jev local whisper listens to everything I say which then gets classified by Jev to determine what actions to take it uses a small Swift app to provide the full accessibility tree to Jev (i.e. tell its what's on my screen, what",
+    "color": "#0000ff"
+  },
+  {
+    "name": "askjev.ai",
+    "description": "Tools & apps. Ask Jev anything. It won’t answer, it will judge.",
+    "color": "#0000ff"
+  },
+  {
+    "name": "A model router on Jev",
+    "description": "Triage & routing. Built a model router with Jev by @typesafeai. Jev decides what model fits your request best and the request is sent to that model.",
+    "color": "#0000ff"
+  },
+  {
+    "name": "Support answers in a Mac app",
+    "description": "Triage & routing. First @typesafeai use case, live in our Mac app: setup and troubleshooting help when no model is loaded. Model downloading, load failed, API returning 503, phone won't pair: the user asks, Jev reads the question with the whole built-in manual as state and decide",
+    "color": "#c0c0c0"
+  },
+  {
+    "name": "Jev as an agent safety monitor",
+    "description": "Agents & browsers. Tested TypeSafe’s Jev (no-text, probability-only model) as an AI agent safety monitor. Checking each action first worked well caught most attacks with almost no false blocks, and much faster than Gemini.",
+    "emoji": "🛡️"
+  },
+  {
+    "name": "jev-router",
+    "description": "Triage & routing. Routes each Claude Code task to the cheapest model that can do it.",
+    "emoji": "🔀"
+  },
+  {
+    "name": "jev-mcp",
+    "description": "Tools & apps. An MCP server with claim checks, screening and ranking built on Jev.",
+    "emoji": "🔌"
+  },
+  {
+    "name": "unclutter",
+    "description": "Tools & apps. A browser extension where Jev decides which parts of a page are clutter.",
+    "emoji": "🧹"
+  },
+  {
+    "name": "Jev Moderation Bot",
+    "description": "Content & growth. A Discord moderation bot with Jev making the calls.",
+    "emoji": "🤖"
+  },
+  {
+    "name": "jevmod",
+    "description": "Content & growth. Moderation with a probability per category and thresholds you set.",
+    "emoji": "⚖️"
+  },
+  {
+    "name": "Notra",
+    "description": "Content & growth. Turns your work into content, with Jev classifiers for GEO.",
+    "emoji": "📝"
+  },
+  {
+    "name": "jev-seo",
+    "description": "Content & growth. An agent-first SEO and GEO CLI in Rust, with DuckDuckGo and Jev.",
+    "emoji": "🔍"
+  },
+  {
+    "name": "daf-jev",
+    "description": "Tools & apps. A Python toolkit: question builders, confidence gates and calibration.",
+    "emoji": "🧰"
+  },
+  {
+    "name": "TypeSafe AI playground",
+    "description": "Tools & apps. 110 use cases, games and dilemmas, with editable prompts and A/B tests.",
+    "emoji": "🎮"
+  },
+  {
+    "name": "fastbrowse",
+    "description": "Agents & browsers. Jev picks each action; an LLM plans; every claim cites the page.",
+    "emoji": "🌐"
+  },
+  {
+    "name": "jev-ra",
+    "description": "Agents & browsers. Browser use for coding agents, with Jev deciding each step in ~300 ms.",
+    "emoji": "🖱️"
+  },
+  {
+    "name": "jev-reflex",
+    "description": "Agents & browsers. Claude thinks, Jev reacts: browser tasks at about 100 ms a decision.",
+    "emoji": "⚡"
+  },
+  {
+    "name": "solari-reflex",
+    "description": "Agents & browsers. A speed layer for computer use: one Jev decision per step.",
+    "emoji": "🏎️"
+  },
+  {
+    "name": "jev-mobile",
+    "description": "Agents & browsers. Android control loops with Jev and Mobile MCP.",
+    "emoji": "📱"
+  },
+  {
+    "name": "super-jev",
+    "description": "Agents & browsers. A small decision-to-action harness for Jev.",
+    "emoji": "🦸"
+  },
+  {
+    "name": "jev-tool-runner",
+    "description": "Agents & browsers. Jev selects the developer tools; Codex writes the code.",
+    "emoji": "🛠️"
+  },
+  {
+    "name": "jev-flash-router",
+    "description": "Agents & browsers. An MCP server so coding agents stop spending tokens on small choices.",
+    "emoji": "⚡"
+  },
+  {
+    "name": "jev-mcp for coding loops",
+    "description": "Agents & browsers. An MCP server that puts Jev on the coding loop in Cursor and Codex.",
+    "emoji": "🔄"
+  },
+  {
+    "name": "jev-mcp-dispatcher",
+    "description": "Agents & browsers. Plain-language MCP tool calls with no LLM at all, only Jev.",
+    "emoji": "📞"
+  },
+  {
+    "name": "maza",
+    "description": "Tools & apps. A local MCP gateway with Jev tool discovery and a dashboard.",
+    "emoji": "🚪"
+  },
+  {
+    "name": "jev-review-action",
+    "description": "Triage & routing. A GitHub Action that reviews and classifies PRs with Jev alone.",
+    "emoji": "✅"
+  },
+  {
+    "name": "patdown",
+    "description": "Tools & apps. A fuzzy linter: Jev gives your code an ocular patdown.",
+    "emoji": "🔎"
+  },
+  {
+    "name": "is-malicious",
+    "description": "Tools & apps. A codebase scanner that helps you not run malicious code.",
+    "emoji": "☣️"
+  },
+  {
+    "name": "guesswork",
+    "description": "Tools & apps. Fish-style zsh autosuggestions, ranked by Jev instead of by prefix.",
+    "emoji": "💡"
+  },
+  {
+    "name": "capture",
+    "description": "Tools & apps. A private Mac voice diary: local transcription, Jev sorting, Notion library.",
+    "emoji": "🎙️"
+  },
+  {
+    "name": "jev-search",
+    "description": "Research & data. Offline Obsidian search, with an optional Jev rerank you approve first.",
+    "emoji": "🔍"
+  },
+  {
+    "name": "jev-reviewer",
+    "description": "Research & data. Systematic-review data from trial reports, every answer a verbatim quote.",
+    "emoji": "📚"
+  },
+  {
+    "name": "jevocks",
+    "description": "Trading & markets. A stock terminal: Valyu brings the evidence, Jev gives the status.",
+    "emoji": "📈"
+  },
+  {
+    "name": "Beat Jev",
+    "description": "Games & real time. A penalty shootout against Jev, on Render Workflows and Postgres.",
+    "emoji": "⚽"
+  },
+  {
+    "name": "Jev runs a city’s traffic",
+    "description": "Games & real time. A traffic simulation where Jev controls a whole city.",
+    "emoji": "🚦"
+  },
+  {
+    "name": "jev-piano",
+    "description": "Games & real time. Jev can’t write a note, but with the right questions it improvises piano.",
+    "emoji": "🎹"
+  },
+  {
+    "name": "Can Jev steer music?",
+    "description": "Games & real time. Jev picks the plan; code renders the sheet music, audio and MIDI.",
+    "emoji": "🎼"
+  },
+  {
+    "name": "Guess the age from a Korean name",
+    "description": "Tools & apps. A small React app where Jev guesses an age band from a name.",
+    "emoji": "🇰🇷"
+  },
+  {
+    "name": "eve",
+    "description": "Agents & browsers. Vercel’s open agent framework, with Jev as its default evaluate model.",
+    "emoji": "🤖"
+  },
+  {
+    "name": "TypeSafe agent skills",
+    "description": "Tools & apps. The official skill for building with Jev, installable with one command.",
+    "emoji": "🛠️"
+  },
+  {
+    "name": "skillbox",
+    "description": "Tools & apps. A self-hosted skills library, with optional Jev recommendations.",
+    "emoji": "📦"
+  },
+  {
+    "name": "skillranker",
+    "description": "Tools & apps. A Rust CLI where Jev ranks agent skills for the next step.",
+    "emoji": "🦀"
+  },
+  {
+    "name": "jev-agent-skill-router",
+    "description": "Tools & apps. Routes which agent skill runs, with typed Jev decisions and confidence.",
+    "emoji": "🧭"
+  },
+  {
+    "name": "jev-judgment",
+    "description": "Tools & apps. An agent skill that sends a coding agent’s closed judgments to Jev.",
+    "emoji": "⚖️"
+  },
+  {
+    "name": "tenbin",
+    "description": "Tools & apps. Split a judgment into Choice, Score and Noul, lint it, then measure it.",
+    "emoji": "🪙"
+  },
+  {
+    "name": "Augustus",
+    "description": "Tools & apps. An agent skill for designing systems around Jev’s judgments.",
+    "emoji": "🏛️"
+  },
+  {
+    "name": "jev-superpowers",
+    "description": "Tools & apps. A skills framework for coding agents, with Jev gates and vetting.",
+    "emoji": "🦸"
+  },
+  {
+    "name": "Building with Jev",
+    "description": "Tools & apps. A skill for writing and fixing programs that call Jev.",
+    "emoji": "🏗️"
+  },
+  {
+    "name": "jev-rules",
+    "description": "Tools & apps. Jev picks which of your rules apply, so Claude only sees those.",
+    "emoji": "📏"
+  },
+  {
+    "name": "900 images in 40 seconds",
+    "description": "Triage & routing. Made myself a little image classifier with OCR + Jev It was able to categorise ~900 images in 40 seconds Pretty cool",
+    "emoji": "🖼️"
+  },
+  {
+    "name": "Website to App",
+    "description": "Tools & apps. Introducing Jev for 'Website to App' Turn any website into a native mobile app. Just paste a URL. jev-1.13.0 decides how to build the original website as a *native* mobile app, then shipper submits to the app stores for you. We’ve been using this internally a ton fo",
+    "emoji": "📱"
+  },
+  {
+    "name": "A prompt box that fills itself in",
+    "description": "Triage & routing. thanks to @typesafeai jev I no longer have fill out all of those fields on prompt boxes. It picks the agent / model / computer / folder for me. - For a major rewrite it uses Fable + Claude Code. - Changes to an ios app run on one of my macs",
+    "emoji": "✍️"
+  },
+  {
+    "name": "Classify rows in DuckDB",
+    "description": "Research & data. I made a DuckDB extension where you can use @typesafeai 's Jev to do quick classification of rows in any csv/parquet file or duckdb table about 10sec for 1k rows ~ better than using an LLM, way more ergonomic than a classifier game-changing for data analysis!",
+    "emoji": "🦆"
+  },
+  {
+    "name": "TypeSafe Typewriter",
+    "description": "Content & growth. Sixteen judgments about your text, asked again on every keystroke.",
+    "emoji": "⌨️"
+  },
+  {
+    "name": "Mobile Jev",
+    "description": "Agents & browsers. A mobile agent on a real Android phone, with Jev making each decision.",
+    "emoji": "📱"
+  },
+  {
+    "name": "Jev Recruiter",
+    "description": "Agents & browsers. A LinkedIn recruiting agent that browses profiles and saves the evidence.",
+    "emoji": "💼"
+  },
+  {
+    "name": "Bouncer",
+    "description": "Agents & browsers. A judgment layer that checks every Claude Code tool call against your policy.",
+    "emoji": "🚪"
+  },
+  {
+    "name": "Interlock",
+    "description": "Agents & browsers. A gate on every agent tool call, with Jev as one of its sensors.",
+    "emoji": "🔒"
+  },
+  {
+    "name": "Jev Pong",
+    "description": "Games & real time. Pong where the ball moves one step per model decision. Jev against the LLMs.",
+    "emoji": "🏓"
+  },
+  {
+    "name": "Kiru Hai Coach",
+    "description": "Games & real time. A solo mahjong coach: Jev picks the tile to discard. In Japanese.",
+    "emoji": "🀄"
+  },
+  {
+    "name": "Jevinci",
+    "description": "Tools & apps. Paintings made from Jev’s pixel probabilities.",
+    "emoji": "🎨"
+  },
+  {
+    "name": "Jev Review",
+    "description": "Tools & apps. A staged code-review workflow with a local dashboard.",
+    "emoji": "📝"
+  },
+  {
+    "name": "Jev PR Labeler",
+    "description": "Triage & routing. GitHub PR labels chosen by Jev, with size measured as scope, not lines.",
+    "emoji": "🏷️"
+  },
+  {
+    "name": "jev-oxlint",
+    "description": "Tools & apps. Turn an agent skill into an Oxlint plugin that asks Jev.",
+    "emoji": "🧹"
+  },
+  {
+    "name": "jevcumber",
+    "description": "Tools & apps. Cucumber tests from the .feature file alone. No step definitions.",
+    "emoji": "🥒"
+  },
+  {
+    "name": "pi-jev",
+    "description": "Tools & apps. A Pi extension: Jev picks the file excerpts, a local model writes the code.",
+    "emoji": "🥧"
+  },
+  {
+    "name": "Sniff Test",
+    "description": "Content & growth. A prose linter for AI writing tells: regex rules plus Jev for judgment.",
+    "emoji": "👃"
+  },
+  {
+    "name": "Clarity Judge",
+    "description": "Content & growth. Writing checked on separate named axes, each with its own verdict.",
+    "emoji": "⚖️"
+  },
+  {
+    "name": "LinkedIn NoSlop",
+    "description": "Content & growth. A Chrome extension that blurs low-value LinkedIn posts.",
+    "emoji": "🚫"
+  },
+  {
+    "name": "firehose-judge",
+    "description": "Triage & routing. The live Bluesky firehose, judged post by post, with a lane for humans.",
+    "emoji": "🔥"
+  },
+  {
+    "name": "Jev Anti-Spam Bot",
+    "description": "Triage & routing. A Telegram bot that deletes only the spam Jev is sure about.",
+    "emoji": "🤖"
+  },
+  {
+    "name": "mastra-jev-moderation",
+    "description": "Triage & routing. Input moderation for Mastra agents in one file.",
+    "emoji": "🛡️"
+  },
+  {
+    "name": "Hawk or dove?",
+    "description": "Trading & markets. Fed press conferences scored word by word, Jev against chat models.",
+    "emoji": "🦅"
+  },
+  {
+    "name": "duckdb-jev",
+    "description": "Research & data. Ask a question about every row in SQL, and get a real SQL type back.",
+    "emoji": "🦆"
+  },
+  {
+    "name": "Jev Capability Atlas",
+    "description": "Research & data. Where Jev holds up and where it breaks, with real API receipts.",
+    "emoji": "🗺️"
+  },
+  {
+    "name": "Semantic Bookmark",
+    "description": "Tools & apps. A Chrome extension that files bookmarks by rules you write.",
+    "emoji": "🔖"
+  },
+  {
+    "name": "Port Cleanup",
+    "description": "Tools & apps. A macOS utility that tells you which listening ports are safe to stop.",
+    "emoji": "🔌"
+  },
+  {
+    "name": "Laravel TypeSafe Jev",
+    "description": "Tools & apps. An unofficial Laravel package for Jev, with typed responses and test fakes.",
+    "emoji": "🐘"
+  },
+  {
+    "name": "Lurk",
+    "description": "Content & growth. everyone's making demos with Jev but nobody is making real products introducing https://t.co/fClaUNrMAn find and monitor reddit threads to get cited by AI > FREE > 4000 reddit threads scanned > email, discord, slack only possible to give for free bc of Jev & @ge",
+    "emoji": "👀"
+  },
+  {
+    "name": "X timeline labeler",
+    "description": "Content & growth. I made a chrome extension to label all the X posts on my timeline. It tells me if each post is clean, engagement bait, promo, secondhand or filler. $0.03 for 1000 posts. Open sourced if you want to try it out.",
+    "emoji": "🏷️"
+  },
+  {
+    "name": "Ad creatives from filtered assets",
+    "description": "Content & growth. Jev is really good at content filtering and asset selection. DeepSeek + Higgsfield turn the selected assets into ad creatives.",
+    "emoji": "🎨"
+  },
+  {
+    "name": "SEO and GEO fixes, 90% cheaper",
+    "description": "Content & growth. Jev dropped the price of SEO/GEO fixes by 90% Agents that audit and fix a client's SEO/GEO used to cost us ~$250 Here's where the savings come from: 1/ 30x faster reads of Search Console and PostHog/Mixpanel data 2/ 30x faster checks of what ChatGPT searches on ",
+    "emoji": "🔍"
+  },
+  {
+    "name": "Doomscroll Filter",
+    "description": "Content & growth. Pick a niche, and Jev sorts fresh X posts into Read, Skim or Pass.",
+    "emoji": "📜"
+  },
+  {
+    "name": "Which outreach signals book demos",
+    "description": "Research & data. JEV is insanely fast. We gave it a massive dataset based on thousands of outreach messages and asked: Which intent signals generated the most booked demos? 40 seconds later, we had the answer. Cost: less than $0.20. JEV can also rank leads, measure prospect-messa",
+    "emoji": "📊"
+  },
+  {
+    "name": "Seven more SEO and GEO workflows",
+    "description": "Content & growth. Jev killed 7 more SEO/GEO workflows 👇 1/ Assess which competitor pages to copy -> It scores every competitor page on answer, depth, proof and freshness, then checks its rank in Google and ChatGPT to show which ones are worth copying 2/ Identify which page elemen",
+    "emoji": "⚙️"
+  },
+  {
+    "name": "Filtering WIP todos by meaning",
+    "description": "Research & data. Using Jev to filter through my @wip todos It allows me to super quickly find all the instances where I increased revenue, got stuck, switched to a different SaaS provider, etc Things a regular keyword search would never catch",
+    "emoji": "✅"
+  },
+  {
+    "name": "Natural-language search over Zillow",
+    "description": "Research & data. Jev can serve as better natural language search on websites. It can scan thousands of Zillow listings and classify properties by things you can't normally filter for - e.g. architecture, renovation status, proximity to freeways. This was done in <20 sec and costs",
+    "emoji": "🏠"
+  },
+  {
+    "name": "Jev for content marketing",
+    "description": "Content & growth. today i'm releasing Jev for content marketing. still doomscrolling to figure out what to post on social media? that's over now... Jev watches EVERY video in your niche and judges it before it ever reaches you: 1. research: pulls every video in your niche from a ",
+    "emoji": "📣"
+  },
+  {
+    "name": "Breaking, golden nugget, or slop",
+    "description": "Content & growth. Jev is tagging X posts in real time for me. Breaking, golden nugget, or slop.",
+    "emoji": "🧠"
+  },
+  {
+    "name": "100,000 viral posts in 20.4 seconds",
+    "description": "Content & growth. I just built a Jev X Viral Post Analyser. 100,000 viral X posts. 20.4 seconds. $0.67. Claude Opus 5, same corpus, same clock, got through 214 posts and spent $0.98. per post that is ~680x cheaper the full Opus pass would have run $458. viral analysis is the perf",
+    "emoji": "🚀"
+  },
+  {
+    "name": "Launching agents on a canvas",
+    "description": "Agents & browsers. Jev brought us closer to JARVIS it instantly does things like launch agents on a canvas - without awkawardly waiting for slowGPT LLM loop @clonkapp is now the fastest agent orchestrator on the planet",
+    "emoji": "🤖"
+  },
+  {
+    "name": "Which exam questions come back",
+    "description": "Research & data. JEV IS INSANE. I gave it 80 real exam questions and 297 practice ones. In 80 seconds, it told me which ones are most likely to appear on the real exam and which ones aren’t. All for $0.0256. Can't stop playing with @typesafeai 😁",
+    "emoji": "📝"
+  },
+  {
+    "name": "1,315 posts across eight dimensions",
+    "description": "Content & growth. Jev classified 1,315 X posts for about $0.086 in estimated model cost 😂 seeing everyone's Jev demos made me want to build something for my own content research. i'd collected a lot of posts, but figuring out what they had in common still meant opening them one b",
+    "emoji": "🗂️"
+  },
+  {
+    "name": "A shortlist from a competitor swipe file",
+    "description": "Content & growth. JEV makes competitor research feel like a cheat code. Give it your competitors’ ads. Break them down by hook, angle, offer and format. Then turn recurring combinations into a shortlist for your next creative test. From an endless swipe file to “here’s what we sh",
+    "emoji": "🗃️"
+  },
+  {
+    "name": "Watching 25 customer groups on WhatsApp",
+    "description": "Triage & routing. Un JEV me está monitoreando más de 25 grupos de whatsapp con clientes en tiempo real y evaluando si tengo que saber algo por urgencia problemas, pedidos irresueltos etc. Si tengo algo que saber, le avisa a una LLM que me escriba. 🔥",
+    "emoji": "📱"
+  },
+  {
+    "name": "1,891 ads in 19 seconds",
+    "description": "Content & growth. ESTA HERRAMIENTA ACABA DE ROMPER TODO EL MERCADO DEL AD SPY Maxfusion ha cogido JEV, el modelo nuevo de TypeSafe, y le ha metido la ad library entera de una marca → 1.891 anuncios clasificados → 19 segundos → 0,12 $ Y no es un resumen: cada anuncio etiquetado po",
+    "emoji": "⚡"
+  },
+  {
+    "name": "Jev plays Puyo Puyo",
+    "description": "Games & real time. Jev にぷよぷよをさせてみた。 - 実行エンジンは https://t.co/Gj4dRDLtMS 。ゲームはリアルタイムで進行 - 盤面とそれぞれのポジションにおいたあとの結果を与え、①今どのフェーズか ②フェーズごとに、戦略からどの結果がベストか の1+3つの質問をして、選択肢を選ぶ 画像は Random",
+    "emoji": "🧩"
+  },
+  {
+    "name": "Magic Jev Ball for code review",
+    "description": "Tools & apps. I made a Magic Jev Ball for code reviews 🎱 Click it on any GitHub PR and ask: \"should I approve this?\" It checks CI, diff size, and reviews, then lets @typesafeai Jev decide your fate in ~200 ms No more thinking. Just shaking.",
+    "emoji": "🎱"
+  },
+  {
+    "name": "jev-skill-router",
+    "description": "Tools & apps. Skill routing for an agent, decided by Jev.",
+    "emoji": "🧭"
+  },
+  {
+    "name": "Jev driving real Chrome from Grok Bot",
+    "description": "Agents & browsers. Took Gregor’s Ultrafast idea and wired it into Grok Bot. @bot @OpenRouter @typesafeai @gregpr07 Your bots can now use Jev to drive the real Chrome on the machine instead of slow look-and-click. Drop in the API key you already have (OpenRouter or TypeSafe), and ",
+    "emoji": "🌐"
+  },
+  {
+    "name": "A 26-sheet plan set in 2.9 seconds",
+    "description": "Research & data. Built a construction plan-set classifier with Jev. Proq turns civil and building plan sets into bills of materials using an LLM pipeline we built on GPT-4.1. Jev classified an entire 26-sheet plan set in 2.9 seconds for $0.0052. It matched GPT-4.1 and GPT-6 Astra",
+    "emoji": "📐"
+  },
+  {
+    "name": "An A/B test against 4,000 personas",
+    "description": "Content & growth. Jev is WILD I gave it two launch tweets and fed it over 4000 demographic profiles of real survey participants Twelve seconds later, a simulated A/B test tied to actual personas voting on the best tweet you can just do things i made it 100% free (link below)",
+    "emoji": "🧪"
+  },
+  {
+    "name": "Jev plays Pokémon Showdown",
+    "description": "Games & real time. 1/8 Saw Jev from @typesafeai on my feed, so I made it play Pokemon Showdown. Codex built the harness. It was damn fast. Its choices were a mixed bag. Full match, video 1/2. This is a saved replay with decision data, latency and added reading pauses.",
+    "emoji": "🎮"
+  },
+  {
+    "name": "A syntax highlighter on Jev",
+    "description": "Tools & apps. Jev names the language, colours every word and fires nine lint rules.",
+    "emoji": "🖍️"
+  },
+  {
+    "name": "Mario Never Dies",
+    "description": "Games & real time. okay Jev is an INSANE unlock, I just gave Mario a multiverse. built \"Mario Never Dies\" with @typesafeai's Jev + microsandbox Jev picks every move and every time Mario dies, we fork the entire VM into 4 timelines and try again. whichever Mario survives becomes c",
+    "emoji": "🍄"
+  },
+  {
+    "name": "A dual-arm robot with Jev in the middle layer",
+    "description": "Robotics & devices. 型付き意思決定AIモデル「Jev」で双腕ロボを動かした結果まとめてみた🦾 3層制御のうち意思決定（2層）をJevに任せ、IKや物理計算はコード側に分離する構造を作りました。500msの応答と0.5円/試行で早くて激安。",
+    "emoji": "🦾"
+  },
+  {
+    "name": "AskJev",
+    "description": "Agents & browsers. Talk to Claude, and Jev moves your real browser on any site.",
+    "emoji": "🌐"
+  },
+  {
+    "name": "JevForm",
+    "description": "Tools & apps. A form that branches by meaning instead of if-then rules.",
+    "emoji": "📝"
+  },
+  {
+    "name": "talkr",
+    "description": "Tools & apps. today i built talkr, a speech analyzer using @typesafeai > talkr gives you a topic > you talk about it for 30s > jev analyzes your speech: pauses, filler words, repetitions, confidence, clarity > you get a score and feedback to improve can’t wait to 10x my speaking ",
+    "emoji": "🗣️"
+  },
+  {
+    "name": "jev-e2e",
+    "description": "Tools & apps. The same eBay test flow: 47 s on Jev, 79 s on Claude Sonnet 5.",
+    "emoji": "🧪"
+  },
+  {
+    "name": "Both hands on a piano, in real time",
+    "description": "Games & real time. @typesafeai's Jev controls the 2 hands and each finger to play the piano in real-time. Jev only \"sees\" what we see and plays this from the \"note waterfall\". It uses @browser_use's jev-ultrafast and some decision scheduling to make this happen in real-time. Soun",
+    "emoji": "🎹"
+  },
+  {
+    "name": "Tocsin",
+    "description": "Research & data. 22.8M log lines grouped into patterns, then one question each.",
+    "emoji": "🔔"
+  },
+  {
+    "name": "App Store keywords from the real competition",
+    "description": "Content & growth. I built a tool that finds App Store keywords by reading the competition, and uses Jev to judge them. What it actually does: 1. Turns the app's own listing into a handful of search queries, with Jev filtering out the ones nobody would type. 2. Runs those searches",
+    "emoji": "🔍"
+  },
+  {
+    "name": "jev-browser in Cline",
+    "description": "Agents & browsers. We built a plugin that gives Jev a browser in Cline, and have been blown away by the results. 1. Install it in our new desktop app: Customize > Marketplace > Plugins > search 'jev-browser' 2. Create a Vercel AI Gateway API key, then save it to",
+    "emoji": "🧩"
+  },
+  {
+    "name": "Voice control over Fusion 360",
+    "description": "Robotics & devices. I made this for fun. Wired a mic over Fusion 360: click, speak, Fusion runs the feature. @typesafeai ‘s Jev only decides if the utterance is a command.",
+    "emoji": "🎙️"
+  },
+  {
+    "name": "compact-adviser",
+    "description": "Tools & apps. Tells you when your session is at a safe point to compact.",
+    "emoji": "🗜️"
+  },
+  {
+    "name": "jev-align",
+    "description": "Research & data. Turns human labels into calibrated Jev classifiers with GEPA.",
+    "emoji": "🎯"
+  },
+  {
+    "name": "jev-semgrep",
+    "description": "Tools & apps. grep by meaning, and across languages.",
+    "emoji": "🔎"
+  },
+  {
+    "name": "jev-use",
+    "description": "Agents & browsers. Say it, and your Mac does it, with no vision model.",
+    "emoji": "💻"
+  },
+  {
+    "name": "live-jev",
+    "description": "Tools & apps. Control Ableton Live with one short sentence.",
+    "emoji": "🎛️"
+  },
+  {
+    "name": "jevs-fly",
+    "description": "Games & real time. A Three.js first-person flight, steered by Jev.",
+    "emoji": "✈️"
+  },
+  {
+    "name": "jev-desktop",
+    "description": "Agents & browsers. Jev picks the action inside Codex Computer Use.",
+    "emoji": "🖱️"
+  },
+  {
+    "name": "jev-evaluation",
+    "description": "Research & data. Nine experiments and 28 predictions, all fixed before any data.",
+    "emoji": "📊"
+  },
+  {
+    "name": "jev-crawlers",
+    "description": "Tools & apps. Bug-hunting crawlers built from five Unix-style primitives.",
+    "emoji": "🐛"
+  },
+  {
+    "name": "jev-oas-sentinel",
+    "description": "Tools & apps. OpenAPI compatibility checks, structural and semantic.",
+    "emoji": "🛡️"
+  },
+  {
+    "name": "browser-ai",
+    "description": "Agents & browsers. A Jev browser agent in pure Go, attached to a real Chrome.",
+    "emoji": "🕸️"
+  },
+  {
+    "name": "minecraft-agent",
+    "description": "Games & real time. An Astra planner with Jev as the controller, playing Minecraft.",
+    "emoji": "⛏️"
+  },
+  {
+    "name": "TipTour",
+    "description": "Agents & browsers. A pointer companion for the Mac, with Jev driving the cursor.",
+    "emoji": "👉"
+  },
+  {
+    "name": "EmbodiedJev",
+    "description": "Robotics & devices. A MuJoCo workbench for robot decisions, with Jev in the loop.",
+    "emoji": "🤖"
+  },
+  {
+    "name": "LLM Chess: jev-latest",
+    "description": "Games & real time. Jev played 80 games in a chess benchmark and made no illegal move.",
+    "emoji": "♟️"
+  },
+  {
+    "name": "大声读 (dasheng)",
+    "description": "Tools & apps. Streaming speech recognition listens, and Jev marks each word.",
+    "emoji": "🗣️"
+  },
+  {
+    "name": "crush-monitor",
+    "description": "Content & growth. Reads a WeChat thread and scores emotion, intent and reply quality.",
+    "emoji": "💬"
+  },
+  {
+    "name": "jev-dsh-decision",
+    "description": "Tools & apps. A structured decision plugin for agent harnesses, built on Jev.",
+    "emoji": "🧩"
+  },
+  {
+    "name": "jevchat",
+    "description": "Research & data. A chatbot built out of a model that only answers typed questions.",
+    "emoji": "🤖"
+  },
+  {
+    "name": "pi-jev-router",
+    "description": "Tools & apps. A Pareto-optimal OpenRouter router for Pi, decided by Jev.",
+    "emoji": "🔀"
+  },
+  {
+    "name": "call-coach-ai",
+    "description": "Content & growth. A sales-call coach where Jev scores what was said.",
+    "emoji": "📞"
+  },
+  {
+    "name": "jev-spring-boot-starter",
+    "description": "Tools & apps. Jev as a Spring Boot 4 starter, over Spring MVC and RestClient.",
+    "emoji": "🌱"
+  },
+  {
+    "name": "jcr",
+    "description": "Agents & browsers. Turns a vague agent request into a deterministic command.",
+    "emoji": "⌨️"
+  },
+  {
+    "name": "RoboJEV",
+    "description": "Robotics & devices. Two-stage Jev control of a Franka Panda arm in MuJoCo.",
+    "emoji": "🦾"
+  },
+  {
+    "name": "ST-jeved",
+    "description": "Content & growth. A SillyTavern extension that measures each reply before it lands.",
+    "emoji": "📝"
+  },
+  {
+    "name": "J++",
+    "description": "Tools & apps. An experimental language for composing Jev questions.",
+    "emoji": "➕"
+  },
+  {
+    "name": "ChatJev",
+    "description": "Research & data. Driving the classifier as a next-token predictor, one token at a time.",
+    "emoji": "💭"
+  },
+  {
+    "name": "jev-auto-approve",
+    "description": "Tools & apps. A pull request approver that asks Jev before it approves.",
+    "emoji": "✅"
+  },
+  {
+    "name": "pi-jev-skill-picker",
+    "description": "Tools & apps. Ranks the Pi agent’s skills for the task in front of it.",
+    "emoji": "🎯"
+  },
+  {
+    "name": "jeval",
+    "description": "Research & data. Works out what a Jev confidence score is actually worth.",
+    "emoji": "📊"
+  },
+  {
+    "name": "jev-architect",
+    "description": "Tools & apps. Helps you find, design and evaluate a Jev decision loop.",
+    "emoji": "📐"
+  },
+  {
+    "name": "JevPR",
+    "description": "Tools & apps. Risk review of a pull request, decided rather than written.",
+    "emoji": "🔍"
+  },
+  {
+    "name": "jev-harness",
+    "description": "Agents & browsers. Every tool result is filtered by Jev before the model reads it.",
+    "emoji": "🧰"
+  },
+  {
+    "name": "jev-spec",
+    "description": "Tools & apps. Checks generated code against the specification that asked for it.",
+    "emoji": "📋"
+  },
+  {
+    "name": "jev-tool-router",
+    "description": "Agents & browsers. Picks the MCP tool for Codex, instead of listing them all.",
+    "emoji": "🛠️"
+  },
+  {
+    "name": "taste-lint",
+    "description": "Content & growth. Catches AI slop in a diff before it ships.",
+    "emoji": "🧹"
+  },
+  {
+    "name": "playjev",
+    "description": "Agents & browsers. Typed browser automation: Playwright acts, Jev decides.",
+    "emoji": "🎭"
+  },
+  {
+    "name": "jev-design",
+    "description": "Tools & apps. A console whose design system is chosen by Jev at runtime.",
+    "emoji": "🎨"
+  },
+  {
+    "name": "JevMinesweeper",
+    "description": "Games & real time. Jev plays Minesweeper, one square at a time.",
+    "emoji": "💣"
+  },
+  {
+    "name": "Jcyber",
+    "description": "Tools & apps. A bug-bounty chain where Jev gates every step.",
+    "color": "#0000ff"
+  },
+  {
+    "name": "jev-search-mcp",
+    "description": "Tools & apps. Plain-language web search where Jev picks the sources.",
+    "color": "#0000ff"
+  },
+  {
+    "name": "perfectrecall",
+    "description": "Tools & apps. Agent memory where Jev decides what is worth recalling.",
+    "color": "#0000ff"
+  },
+  {
+    "name": "JevGuard",
+    "description": "Tools & apps. A decision runtime with zero-token caching and a calibrator.",
+    "color": "#008000"
+  },
+  {
+    "name": "jev-cua",
+    "description": "Agents & browsers. A local computer-use fast path for Codex and Waku.",
+    "color": "#0000ff"
+  },
+  {
+    "name": "dsh-jev-tools",
+    "description": "Agents & browsers. Judgment, not generation, inside DeepSeek Harness.",
+    "color": "#808080"
+  },
+  {
+    "name": "The Jev-enator",
+    "description": "Tools & apps. Three Claude Code hooks that each ask Jev a question.",
+    "color": "#008000"
+  },
+  {
+    "name": "jev-turn-analysis",
+    "description": "Tools & apps. Reads a finished coding session and judges each turn.",
+    "color": "#0000ff"
+  },
+  {
+    "name": "UXRay",
+    "description": "Tools & apps. A screen overlay that flags manipulative interface patterns.",
+    "color": "#0000ff"
+  },
+  {
+    "name": "typesafe-jev-dojo",
+    "description": "Games & real time. A graphical dojo: routing, Tetris, swarms and a gauntlet.",
+    "color": "#0000ff"
+  },
+  {
+    "name": "clay-jev-people-ranker",
+    "description": "Content & growth. Lead scoring in Clay, ranked by Jev instead of a prompt.",
+    "color": "#a52a2a"
+  },
+  {
+    "name": "fedjev-bench",
+    "description": "Trading & markets. Does Jev hear a rate rise coming in an FOMC statement?",
+    "color": "#008000"
+  },
+  {
+    "name": "jev-acento",
+    "description": "Research & data. A pre-registered audit of how Jev handles Spanish.",
+    "color": "#ffff00"
+  },
+  {
+    "name": "A leveling agent that gets cheaper as it runs",
+    "description": "Games & real time. A guide-directed WoW agent designed to spend less the longer it plays.",
+    "color": "#008000"
+  },
+  {
+    "name": "723 ads, 30 personas, 22 cents",
+    "description": "Content & growth. jev KILLED the focus group. it scrolled 723 ads as 30 buyer personalities 21,690 stop or scroll decisions. 22 cents. (will be avail in @StealAds + mcp)",
+    "color": "#008000"
+  },
+  {
+    "name": "24,000 Hacker News posts in two minutes",
+    "description": "Research & data. Jev is now live on the Venice API. Watch it classify 24,000 Hacker News posts into 12 categories in about 2 minutes",
+    "color": "#ffa500"
+  },
+  {
+    "name": "OpenRouter’s Ori Eval",
+    "description": "Research & data. 1/ Jev, a decision model by @typesafeai, sparked a burst of projects and discussion. We tested it using Ori Eval against popular LLMs on OpenRouter at judging. Jev was >5x faster than the next fastest model, and even its slowest requests beat every other model's ",
+    "color": "#0000ff"
+  },
+  {
+    "name": "Copy and paste, with a decision in between",
+    "description": "Tools & apps. what if copy/paste was smart? powered by @typesafeai jev it feels like every computer interaction will get rewritten",
+    "color": "#008000"
+  }
+]
