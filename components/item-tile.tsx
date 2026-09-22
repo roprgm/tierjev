@@ -35,9 +35,29 @@ export function ItemIcon({ item, size = 'md', className, ...props }: IconProps) 
   )
 }
 
-type Props = ComponentProps<'div'> & { item: Item; onIcon?: (look: Pick<Item, 'emoji' | 'color'>) => void }
+type Props = ComponentProps<'div'> & {
+  item: Item
+  compact?: boolean
+  onIcon?: (look: Pick<Item, 'emoji' | 'color'>) => void
+}
 
-export function ItemTile({ item, onIcon, className, ...props }: Props) {
+export function ItemTile({ item, compact, onIcon, className, ...props }: Props) {
+  // Hundreds of items never fit as 80px tiles, so a long list falls back to text-only chips.
+  if (compact) {
+    return (
+      <div
+        {...props}
+        data-flip={item.name}
+        className={cn(
+          'flex h-7 max-w-56 shrink-0 items-center rounded-md border bg-background px-2.5 text-xs font-medium',
+          'hover:border-foreground/40',
+          className,
+        )}
+      >
+        <span className="truncate">{item.name}</span>
+      </div>
+    )
+  }
   const icon = <ItemIcon item={item} />
   return (
     <div

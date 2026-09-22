@@ -4,10 +4,10 @@
 import { existsSync, readFileSync, writeFileSync } from 'node:fs'
 import { generateText, Output } from 'ai'
 import { z } from 'zod'
-import { pickColors, rankItems } from '@/lib/jev'
+import { pickColors, type Scored, scoreItems, toTiers } from '@/lib/jev'
 import { truncate } from '@/lib/parse'
 import { redis } from '@/lib/server'
-import type { Item, Placement, Share } from '@/lib/types'
+import type { Item, Share } from '@/lib/types'
 
 const arg = (name: string, fallback: string) => {
   const i = process.argv.indexOf(`--${name}`)
@@ -53,22 +53,22 @@ async function addEmoji(items: Item[]): Promise<Item[]> {
 }
 
 // Ranks a batch, halving it when the provider keeps refusing, so one bad batch cannot end the run.
-async function rankResilient(items: Item[], context: Item[]): Promise<Placement[]> {
+async function scoreResilient(items: Item[], context: Item[]): Promise<Scored[]> {
   try {
-    const placements = await rankItems(CRITERION, items, context)
+    const scored = await scoreItems(CRITERION, items, context)
     await wait(PAUSE)
-    return placements
+    return scored
   } catch (err) {
     if (items.length <= 5) {
       console.warn(`  giving up on ${items.length}: ${err instanceof Error ? err.message.slice(0, 60) : err}`)
-      return items.map((it) => ({ name: it.name, tier: 'C' as const }))
+      return items.map((it) => ({ name: it.name, score: 0, confidence: 0 }))
     }
     console.warn(`  batch of ${items.length} refused, splitting`)
     await wait(PAUSE * 2)
     const half = Math.ceil(items.length / 2)
     return [
-      ...(await rankResilient(items.slice(0, half), context)),
-      ...(await rankResilient(items.slice(half), context)),
+      ...(await scoreResilient(items.slice(0, half), context)),
+      ...(await scoreResilient(items.slice(half), context)),
     ]
   }
 }
@@ -106,18 +106,19 @@ items ??= await (async () => {
   return withEmoji
 })()
 
-// Every batch sees the whole list as context, so tiers stay comparable across calls.
-const placements: Placement[] = []
+// Every batch sees the whole list as context, then the curve runs once over every score.
+const scored: Scored[] = []
 for (let start = 0; start < items.length; start += BATCH) {
-  placements.push(...(await rankResilient(items.slice(start, start + BATCH), items)))
-  console.log(`  ranked ${placements.length}/${items.length}`)
+  scored.push(...(await scoreResilient(items.slice(start, start + BATCH), items)))
+  console.log(`  scored ${scored.length}/${items.length}`)
 }
+const placements = toTiers(scored)
 
 const share: Share = {
   title: TITLE,
   criterion: CRITERION,
   items,
-  placements: placements.sort((a, b) => (b.score ?? 0) - (a.score ?? 0)),
+  placements,
   jev: true,
 }
 const id = Array.from(crypto.getRandomValues(new Uint8Array(8)), (b) => ALPHABET[b % ALPHABET.length]).join(

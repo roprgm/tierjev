@@ -1,5 +1,5 @@
 import { PALETTE } from '@/lib/palette'
-import { type Item, type Placement, TIERS } from '@/lib/types'
+import type { Item, Placement, Tier } from '@/lib/types'
 
 const MODEL = 'typesafe-ai/jev'
 const RETRIES = 4
@@ -33,23 +33,24 @@ export async function evaluate(state: unknown, questions: Record<string, Questio
 
 // Ordered low to high, the shape Jev's score questions expect.
 const RUBRIC = [
-  'F: terrible, the worst of the list',
-  'D: bad, clearly below the rest',
-  'C: middling, unremarkable',
-  'B: good, above most of the list',
-  'A: excellent, among the very best',
-  'S: exceptional, the single best pick',
+  "F: a dud, there is nothing here worth anyone's time",
+  'D: weak, a toy or a worse version of something that already exists',
+  'C: fine, competent but one of many like it',
+  'B: good, a clear step above the usual',
+  'A: excellent, people bookmark this one and tell a friend about it',
+  'S: outstanding, belongs in the best handful in the whole list',
 ]
 
-// Tiers every item for the criterion. The tier is the most likely rung; the probability-weighted
-// rung index orders items inside a tier. `context` is the full list a batch belongs to, so tiers stay
-// comparable when a long list is ranked in several calls; descriptions ride along with each question,
+export type Scored = { name: string; score: number; confidence: number }
+
+// Scores every item against the criterion. `context` is the full list a batch belongs to, so scores stay
+// comparable when a long list is scored in several calls; descriptions ride along with each question,
 // which keeps the shared state small.
-export async function rankItems(
+export async function scoreItems(
   criterion: string,
   items: Item[],
   context: Item[] = items,
-): Promise<Placement[]> {
+): Promise<Scored[]> {
   const answers = await evaluate(
     { criterion, items: context.map((it) => it.name) },
     Object.fromEntries(
@@ -57,7 +58,7 @@ export async function rankItems(
         `i${i}`,
         {
           type: 'score',
-          instructions: `Rate ${it.description ? `"${it.name}" (${it.description})` : `"${it.name}"`} on: ${criterion}. Judge it against the other items in the list and use the whole scale.`,
+          instructions: `Rate ${it.description ? `"${it.name}" (${it.description})` : `"${it.name}"`} on: ${criterion}. Judge it against the other items in the list. Be decisive and use the whole scale: most things are ordinary, a few are genuinely great, and some are duds.`,
           criteria: RUBRIC,
         },
       ]),
@@ -65,9 +66,40 @@ export async function rankItems(
   )
   return items.map((it, i) => {
     const { score = 0, probabilities } = answers[`i${i}`]
-    const [rung, confidence] = Object.entries(probabilities).sort((a, b) => b[1] - a[1])[0] ?? ['0', 0]
-    return { name: it.name, tier: TIERS[TIERS.length - 1 - Number(rung)], score, confidence }
+    return { name: it.name, score, confidence: Object.values(probabilities).sort((a, b) => b - a)[0] ?? 0 }
   })
+}
+
+// Jev's own tier vote is almost always the same middle rung, because its probability mass sits there:
+// even its favourites peak on A with S trailing. Taking the argmax would leave S and F permanently empty,
+// so tiers come from each item's rank by score, which is what makes a tier list worth looking at.
+// Score every batch of a long list first, then curve once over all of them.
+const SHAPE: [Tier, number][] = [
+  ['S', 0.05],
+  ['A', 0.2],
+  ['B', 0.5],
+  ['C', 0.8],
+  ['D', 0.95],
+  ['F', 1],
+]
+
+export function toTiers(scored: Scored[]): Placement[] {
+  const ordered = [...scored].sort((a, b) => b.score - a.score)
+  const placements = ordered.map((item, i) => ({
+    ...item,
+    tier: SHAPE.find(([, upTo]) => (i + 0.5) / ordered.length <= upTo)?.[0] ?? 'F',
+  }))
+  // A list short enough to miss the top band still has a winner, and a tier list should crown it.
+  if (placements.length >= 4 && placements[0].tier !== 'S') placements[0].tier = 'S'
+  return placements
+}
+
+export async function rankItems(
+  criterion: string,
+  items: Item[],
+  context: Item[] = items,
+): Promise<Placement[]> {
+  return toTiers(await scoreItems(criterion, items, context))
 }
 
 const CRITERIA = Object.fromEntries(Object.entries(PALETTE).map(([name, { label }]) => [name, label]))

@@ -164,6 +164,8 @@ export function TierBoard({ items, placements, loading = false, hint, onChange, 
   )
   const interactive = Boolean(onChange)
   const byName = new Map(items.map((it) => [it.name, it]))
+  // Only a script-built list gets this big; pasted and generated sets cap out well below.
+  const compact = items.length > 60
   const confidence = new Map(placements.map((p) => [p.name, p.confidence]))
   const layout = toLayout(items, placements)
 
@@ -206,20 +208,23 @@ export function TierBoard({ items, placements, loading = false, hint, onChange, 
     if (from !== to && to !== -1) emit({ ...layout, [container]: arrayMove(list, from, to) })
   }
 
-  const tile = (name: string) => (
-    <Tile
-      key={name}
-      item={byName.get(name) ?? { name }}
-      tooltip={
-        confidence.get(name) == null
-          ? undefined
-          : `${Math.round((confidence.get(name) ?? 0) * 100)}% confident`
-      }
-      draggable={interactive}
-      className={loading ? 'animate-pulse' : undefined}
-      onIcon={onIcon && ((look) => onIcon(name, look))}
-    />
-  )
+  const tile = (name: string) => {
+    const item = byName.get(name) ?? { name }
+    const percent = confidence.get(name)
+    return (
+      <Tile
+        key={name}
+        item={item}
+        compact={compact}
+        tooltip={
+          item.description ?? (percent == null ? undefined : `${Math.round(percent * 100)}% confident`)
+        }
+        draggable={interactive}
+        className={loading ? 'animate-pulse' : undefined}
+        onIcon={onIcon && ((look) => onIcon(name, look))}
+      />
+    )
+  }
 
   return (
     <DndContext
