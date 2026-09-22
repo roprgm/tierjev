@@ -1,6 +1,8 @@
 import { PALETTE } from '@/lib/palette'
+import { type Item, type Placement, TIERS } from '@/lib/types'
 
 const MODEL = 'typesafe-ai/jev'
+const RETRIES = 4
 
 export type Question =
   | { type: 'choice'; instructions: string; criteria: Record<string, string> }
@@ -19,14 +21,53 @@ export async function evaluate(state: unknown, questions: Record<string, Questio
     },
     body: JSON.stringify({ model: MODEL, state, questions }),
   })
-  // TypeSafe answers 503 in short bursts; one retry clears most of them.
-  if (res.status === 503 && attempt < 1) {
-    await new Promise((r) => setTimeout(r, 400))
+  // TypeSafe answers 503 in bursts under load; back off and retry before giving up.
+  if (res.status === 503 && attempt < RETRIES) {
+    await new Promise((r) => setTimeout(r, 500 * 2 ** attempt))
     return evaluate(state, questions, attempt + 1)
   }
   if (!res.ok) throw new Error(`Jev ${res.status}: ${await res.text()}`)
   const { answers } = (await res.json()) as { answers: Record<string, Answer> }
   return answers
+}
+
+// Ordered low to high, the shape Jev's score questions expect.
+const RUBRIC = [
+  'F: terrible, the worst of the list',
+  'D: bad, clearly below the rest',
+  'C: middling, unremarkable',
+  'B: good, above most of the list',
+  'A: excellent, among the very best',
+  'S: exceptional, the single best pick',
+]
+
+// Tiers every item for the criterion. The tier is the most likely rung; the probability-weighted
+// rung index orders items inside a tier. `context` is the full list a batch belongs to, so tiers stay
+// comparable when a long list is ranked in several calls; descriptions ride along with each question,
+// which keeps the shared state small.
+export async function rankItems(
+  criterion: string,
+  items: Item[],
+  context: Item[] = items,
+): Promise<Placement[]> {
+  const answers = await evaluate(
+    { criterion, items: context.map((it) => it.name) },
+    Object.fromEntries(
+      items.map((it, i) => [
+        `i${i}`,
+        {
+          type: 'score',
+          instructions: `Rate ${it.description ? `"${it.name}" (${it.description})` : `"${it.name}"`} on: ${criterion}. Judge it against the other items in the list and use the whole scale.`,
+          criteria: RUBRIC,
+        },
+      ]),
+    ),
+  )
+  return items.map((it, i) => {
+    const { score = 0, probabilities } = answers[`i${i}`]
+    const [rung, confidence] = Object.entries(probabilities).sort((a, b) => b[1] - a[1])[0] ?? ['0', 0]
+    return { name: it.name, tier: TIERS[TIERS.length - 1 - Number(rung)], score, confidence }
+  })
 }
 
 const CRITERIA = Object.fromEntries(Object.entries(PALETTE).map(([name, { label }]) => [name, label]))

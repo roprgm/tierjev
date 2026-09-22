@@ -1,0 +1,3546 @@
+[
+  {
+    "name": "Flight search with Browser Use",
+    "slug": "browser-use-flights",
+    "kind": "X post",
+    "category": "Agents & browsers",
+    "author": "@gregpr07",
+    "description": "Breaking: Browser Use + Jev = Ultrafast ⚡ Findings flights took 7s and cost only $0.0039 🤯 > new action space every step > DOM state space > small LLM fallback to type (this video is at 1x speed btw) Built a tiny open source browser agent. try it below ↓"
+  },
+  {
+    "name": "X research relevance extension",
+    "slug": "x-research-relevance-extension",
+    "kind": "X post",
+    "category": "Content & growth",
+    "author": "@yibaili530",
+    "description": "Added a Chrome extension to my X research tool! You can now save posts straight from X into the workspace and see the relevance score. Really useful little upgrade!"
+  },
+  {
+    "name": "iMessage Elo game",
+    "slug": "imessage-elo-game",
+    "kind": "X post",
+    "category": "Games & real time",
+    "author": "@_RobinRoy",
+    "description": "what if your imessage had an elo bar? powered by @typesafeai jev astra makes the choices, jev scores them. repo below."
+  },
+  {
+    "name": "Jev plays Flappy Bird",
+    "slug": "jev-flappy-bird",
+    "kind": "X post",
+    "category": "Games & real time",
+    "author": "@rishi_raj_jain_",
+    "description": "I turned Jev into a Flappy Bird player and I won against it (sorraay @typesafeai). Can you beat it? Let's see your score: https://t.co/ktQrUYvPHb Tech: - Results stored in @neondatabase Postgres - @nextjs App Router 16 with @DrizzleORM, @shadcn and @tailwindcss - pdx1 region"
+  },
+  {
+    "name": "Jev dating chat evaluator",
+    "slug": "jev-dating-chat-evaluator",
+    "kind": "X post",
+    "category": "Tools & apps",
+    "author": "@rishi_raj_jain_",
+    "description": "Jev at dating: https://t.co/1JfzVmD4Ak 💔 Anonymously paste your chat / screenshot and save yourself!? 💀 - Judged by Jev (by @typesafeai) - Securely stored in @neondatabase - OCR with Tesseract.js - Built with @claudeai - Deployed to @vercel"
+  },
+  {
+    "name": "Hacker News comment verdicts",
+    "slug": "hacker-news-comment-verdicts",
+    "kind": "X post",
+    "category": "Content & growth",
+    "author": "@rishi_raj_jain_",
+    "description": "Had Jev (@typesafeai) read every comment on the most-discussed threads on Hacker News (@hackernews) and give a verdict ⚖️ → https://t.co/WzAWif9Ekj • Every comment judged by Jev: stance (support / critical / neutral), a substance score, a 0..1 quotability, and whether it"
+  },
+  {
+    "name": "Content-aware PII redaction",
+    "slug": "content-aware-pii-redaction",
+    "kind": "X post",
+    "category": "Triage & routing",
+    "author": "@rishi_raj_jain_",
+    "description": "Built content-aware PII redaction in Postgres with @neondatabase and @typesafeai's Jev where redaction on support messages is not on entire column bluntly, but only on meaningful bits: https://t.co/sOSG4tXCot 🎉 • Jev reads each message and tags the personal bits: names,"
+  },
+  {
+    "name": "FyleContext",
+    "slug": "fylecontext",
+    "kind": "X post",
+    "category": "Tools & apps",
+    "author": "@saifcodes_exe",
+    "description": "Launching FyleContext. 1/5 Upload PDFs, docs and URLs once. Claude (or any MCP client) searches them and cites the exact page. TypeSafe Jev scores every passage before it reaches your model. Nothing relevant? It says so instead of guessing. Link in comments."
+  },
+  {
+    "name": "Personalized Hacker News",
+    "slug": "personalized-hacker-news",
+    "kind": "X post",
+    "category": "Content & growth",
+    "author": "@VisheshBaghell",
+    "description": "I recently got access to jev from and built this, because I hated the hacker news front page. everyone gets the same stories in the same order. someone else already decided what matters, and it is never quite what matters to me so: six sliders. technical depth, drama, practical"
+  },
+  {
+    "name": "AI Scene Director",
+    "slug": "ai-scene-director",
+    "kind": "X post",
+    "category": "Games & real time",
+    "author": "@Bk23544",
+    "description": "JEV is crazy!!! I got access, so naturally I had to try it with the Three.js Grassworks demo. I built an AI Scene Director that takes a simple prompt and changes a whole set of scene and grass parameters to customize the environment based on your instructions. And it’s FAST."
+  },
+  {
+    "name": "Jev plays Ms. Pac-Man",
+    "slug": "jev-plays-ms-pac-man",
+    "kind": "X post",
+    "category": "Games & real time",
+    "author": "@davidmadurzak",
+    "description": "Can you play mspacman with @typesafeai Well kind of. You need about 70ms of latency to play properly, in the video I had an average of ~650ms. The game was paused waiting for a response and then the footage you see is with the pauses removed. I also had to give some hints on"
+  },
+  {
+    "name": "s1m",
+    "slug": "s1m",
+    "kind": "X post",
+    "category": "Agents & browsers",
+    "author": "@NicerInPerson",
+    "description": "Turns out Jev is very good at quickly crawling through an LLM wiki to find relevant content. 10x cheaper and 40x faster than a frontier worker model like Sonnet. So I built a cli tool your agents can use: s1m - High efficiency knowledge recall from an LLM wiki, powered by Jev"
+  },
+  {
+    "name": "Alan AI application review console",
+    "slug": "alan-ai-application-review-console",
+    "kind": "X post",
+    "category": "Triage & routing",
+    "author": "@idleshubh",
+    "description": "JEV is INSANE. 4,000+ people applied for internship at @tryAlanAI. So we built an in house review console to find evidence of real work at scale. Every square is a real SDE intern application > 3,518 applications checked in 4:54 > 20 surfaced for human review > Estimated Jev"
+  },
+  {
+    "name": "🧵 I wanted to understand what makes Jev different from a normal LLM",
+    "slug": "i-wanted-to-understand-what-makes-jev-different-from-a-norma",
+    "kind": "X post",
+    "category": "Games & real time",
+    "author": "@abolbuild",
+    "description": "🧵 I wanted to understand what makes Jev different from a normal LLM. So I built a tiny real-time game with it. The AI controls the player and has one goal: Don't get hit."
+  },
+  {
+    "name": "Jev opens up so many possibilities for gaming 🤯",
+    "slug": "jev-opens-up-so-many-possibilities-for-gaming",
+    "kind": "X post",
+    "category": "Games & real time",
+    "author": "@marcelpociot",
+    "description": "Jev opens up so many possibilities for gaming 🤯 🏁 I built Wordshift - the first semantic typing racer game built with Jev from @typesafeai Slower than a jet, bigger than an elephant, faster than a cheetah. The bigger the difference, the farther your car moves."
+  },
+  {
+    "name": "I built a trading agent with the all new @typesafeai Jev",
+    "slug": "i-built-a-trading-agent-with-the-all-new-typesafeai-jev",
+    "kind": "X post",
+    "category": "Tools & apps",
+    "author": "@zadescoxp",
+    "description": "I built a trading agent with the all new @typesafeai Jev. You can try it here : https://t.co/im4bydkUTh. Just put your own API key and start playing or clone it from https://t.co/wIYgpRWv0w and test it locally. To my surprise the agent was able to take a trade of 2.405 $ETH and"
+  },
+  {
+    "name": "724 competitor ads, broken down",
+    "slug": "competitor-ad-teardown",
+    "kind": "X post",
+    "category": "Content & growth",
+    "author": "@TheMattBerman",
+    "description": "jev is INSANE. in 40 seconds it broke down 724 live ads from 37 brands. every hook. every format. offer. cta. awareness stage. landing page mismatch. used 9 cents of tokens. (will be avail in @stealads + mcp)"
+  },
+  {
+    "name": "Post scoring with SuperX",
+    "slug": "superx-post-scoring",
+    "kind": "X post",
+    "category": "Content & growth",
+    "author": "@robj3d3",
+    "description": "Jev + SuperX = virality solved ✅ Every post gets 61 questions in ~1s for $0.0004 🤯 > fitted on 9,481 real posts from 207 creators > picks the viral post 2 in 3 times > never rewards reply bait So: write, score, rewrite, stop when it peaks. Free, no signup. try it below ↓"
+  },
+  {
+    "name": "700 leads scored in 40 seconds",
+    "slug": "lead-outreach-scoring",
+    "kind": "X post",
+    "category": "Content & growth",
+    "author": "@romanbuildsaas",
+    "description": "JEV is INSANE. We gave it 700 high-intent leads and personalised outreach messages. In 40 seconds, it predicted how each message would perform, assigned a confidence score and detected lead-message mismatches. All for just $0.09. JEV can also score leads, analyse buying"
+  },
+  {
+    "name": "3,282 posts, eight questions each",
+    "slug": "x-post-analysis",
+    "kind": "X post",
+    "category": "Content & growth",
+    "author": "@iannuttall",
+    "description": "I gave Jev 3,282 of my X posts across 100M views and asked it to find what actually works for growth. 4,252,330 tokens $0.1282 for the full 8m 34s run! Each post got 8 questions about the topic, hook, tone, whether it teaches something, etc. How-to posts got 150 median likes"
+  },
+  {
+    "name": "500 emails for 3.5 cents",
+    "slug": "500-emails-3-cents",
+    "kind": "X post",
+    "category": "Triage & routing",
+    "author": "@rileybrown",
+    "description": "Yeah Jev by @typesafeai is very cool. It classified 500 emails in seconds. And it costed 3.5 cents."
+  },
+  {
+    "name": "$10,000 in Jev’s hands",
+    "slug": "10k-trading",
+    "kind": "X post",
+    "category": "Trading & markets",
+    "author": "@abolbuild",
+    "description": "I gave Jev $10,000 and let it trade"
+  },
+  {
+    "name": "The X algorithm, rebuilt with Jev",
+    "slug": "x-algorithm-simulator",
+    "kind": "X post",
+    "category": "Content & growth",
+    "author": "@leojrr",
+    "description": "rebuilt the X algorithm with Jev - uses real weights - simulates virality of your post - has a global feed (you see everyone) it's insanely accurate"
+  },
+  {
+    "name": "A filter for reply-guy comments",
+    "slug": "reply-guy-filter",
+    "kind": "X post",
+    "category": "Content & growth",
+    "author": "@iannuttall",
+    "description": "Pro tip: You can use Jev to remove annoying reply guy comments that X seems to always miss. Takes 5 minutes in Astra with the docs and an API key."
+  },
+  {
+    "name": "LinkedIn Post Copilot",
+    "slug": "linkedin-post-copilot",
+    "kind": "X post",
+    "category": "Content & growth",
+    "author": "@DebarpanJha",
+    "description": "Jev is INSANE. I built a LinkedIn Post Copilot to score posts, explain the results, and suggest improvements using structured analysis. No API key? It scores offline using a deterministic local heuristic. https://t.co/ys32qPwDaZ #Jev #AI #Buildinpublic @typesafeai"
+  },
+  {
+    "name": "Ad-tag domain enforcement",
+    "slug": "ad-tag-domain-enforcement",
+    "kind": "X post",
+    "category": "Content & growth",
+    "author": "@pranavbarthwal_",
+    "description": "unlocked a new jev usecase today a publisher, secretly, ran our ad tag on their 🌽 sites none mapped on our dashboard now jev will check at runtime > tag loaded on a related domain / subdomain / mapped domain? allow. > phishy corn site? blocked."
+  },
+  {
+    "name": "Jev X relevance panel",
+    "slug": "jev-x-relevance-panel",
+    "kind": "X post",
+    "category": "Content & growth",
+    "author": "@luongnv89",
+    "description": "So instead of chasing which posts I should pay attention to, I am using Jev (combine with my original Algo) to have this floating panel Now I can quickly find which posts are most relate to my interest, and probably save ton of time because of dump scrolling, but hey, dump"
+  },
+  {
+    "name": "Is This Startup Stupid?",
+    "slug": "is-this-startup-stupid",
+    "kind": "X post",
+    "category": "Tools & apps",
+    "author": "@gajananrx",
+    "description": "@icantcodefyi Check this out I built this using JEV it rates how stupid your startup idea is"
+  },
+  {
+    "name": "Kueon conversation relevance",
+    "slug": "kueon-conversation-relevance",
+    "kind": "X post",
+    "category": "Content & growth",
+    "author": "@anishghimire862",
+    "description": "Kueon allows you to set your goals for conversation mentions and then shows you only the conversations relevant to your product and the ones that match your goals. A step ahead in reducing the noise. Join Kueon today 👉 https://t.co/Ect4IcbyxS"
+  },
+  {
+    "name": "Using TypeSafe's Jev for evals",
+    "slug": "using-typesafe-s-jev-for-evals",
+    "kind": "Resource",
+    "category": "Research & data",
+    "author": "langfuse.com",
+    "description": "TypeSafe launched Jev mid-September 2026. It makes decisions, cannot write a single sentence, and is 20 to 200x faster and 40 to 400x cheaper than frontier models according to…"
+  },
+  {
+    "name": "pi-typesafe",
+    "slug": "pi-typesafe",
+    "kind": "Resource",
+    "category": "Research & data",
+    "author": "pi.dev",
+    "description": "TypeSafe AI (Jev) decisions for Pi: batched Choice/Score/Noul evaluation tool, terminal playground, and a typed API other extensions build on. ... Install `pi-typesafe` from npm…"
+  },
+  {
+    "name": "LLMs Are Built to Write. Jev Is Built to Decide.",
+    "slug": "llms-are-built-to-write-jev-is-built-to-decide",
+    "kind": "Resource",
+    "category": "Research & data",
+    "author": "medium.com",
+    "description": "LLMs Are Built to Write. Jev Is Built to Decide. | by Dr. Fadi Shaar | AI Mindset | Sep, 2026 | Medium ... # LLMs Are Built to Write. Jev Is Built to Decide. ... Inside Jev,…"
+  },
+  {
+    "name": "jevlang v0.1.0",
+    "slug": "jevlang-v0-1-0",
+    "kind": "Resource",
+    "category": "Research & data",
+    "author": "pypi.org",
+    "description": "The simplest way to write decision workflows in Python, backed by TypeSafe's Jev model ... classifier, decision, jev, routing, transpiler, triage, typesafe ... ## Description…"
+  },
+  {
+    "name": "Jev: a decision-model experiment (TH)",
+    "slug": "jev-a-decision-model-experiment-th",
+    "kind": "Resource",
+    "category": "Research & data",
+    "author": "marketdx.hashnode.dev",
+    "description": "Jev: a decision-model experiment (TH) ... # Jev: a decision-model experiment (TH) ... 1. ### Jev ฉลาดพอไหม? - บททดสอบความสามารถของโมเดล \"ตัดสินใจ\" (ตอนที่ 1) ... Jev คืออะไร?…"
+  },
+  {
+    "name": "Jev vs Claude: Who Wins?",
+    "slug": "jev-vs-claude-who-wins",
+    "kind": "Resource",
+    "category": "Research & data",
+    "author": "dev.to",
+    "description": "That is almost exactly the territory TypeSafe claims Jev is built for. ... The narrowness of the test is important here because it relates exactly to what TypeSafe claims Jev is…"
+  },
+  {
+    "name": "Jev by TypeSafe AI: 6 Product Ideas People Are Already Building With It",
+    "slug": "jev-by-typesafe-ai-6-product-ideas-people-are-already-buildi",
+    "kind": "Resource",
+    "category": "Research & data",
+    "author": "medium.com",
+    "description": "That question is already being answered for Jev, the first public System One Model from TypeSafe AI. ... ## What is Jev by Typesafe AI? ... TypeSafe AI describes Jev as AI built…"
+  },
+  {
+    "name": "JEV assisted LLM Trading",
+    "slug": "jev-assisted-llm-trading",
+    "kind": "Resource",
+    "category": "Research & data",
+    "author": "dev.to",
+    "description": "JEV is TypeSafe's System-One model (`jev-latest`), served at `api.typesafe.ai/v1/systemone`. It's text-only. No vision, no market opinions. You POST it a \"state\" string plus a…"
+  },
+  {
+    "name": "Jev and LLMs: who does what? - by Bilgin Ibryam",
+    "slug": "jev-and-llms-who-does-what-by-bilgin-ibryam",
+    "kind": "Resource",
+    "category": "Research & data",
+    "author": "generativeprogrammer.com",
+    "description": "After two years in stealth, Diogo Almeida, one of the researchers behind ChatGPT, launched Jev at TypeSafe AI. The company advertises roughly 200 times faster and 400 times…"
+  },
+  {
+    "name": "Jev AI Is 200x Faster Than ChatGPT.",
+    "slug": "jev-ai-is-200x-faster-than-chatgpt",
+    "kind": "Resource",
+    "category": "Research & data",
+    "author": "medium.com",
+    "description": "That gap is exactly what Jev AI is built for. Jev is a System One model from TypeSafe AI that returns typed decisions with probabilities instead of generated text. You send it…"
+  },
+  {
+    "name": "I Used AI to Audit AI Bias - The Results Exposed a Systematic Pro-American Agenda in LLM…",
+    "slug": "i-used-ai-to-audit-ai-bias-the-results-exposed-a-systematic",
+    "kind": "Resource",
+    "category": "Research & data",
+    "author": "dev.to",
+    "description": "> TL;DR: I ran 4 experiments using TypeSafe's Jev model to quantitatively measure geopolitical bias in AI recommendations. The results? 91.5% of the time, US models are placed…"
+  },
+  {
+    "name": "I Tested TypeSafe’s Jev, a 478× Cheaper Decision Model, Against Claude, GPT-6, Kimi,…",
+    "slug": "i-tested-typesafe-s-jev-a-478-cheaper-decision-model-against",
+    "kind": "Resource",
+    "category": "Research & data",
+    "author": "medium.com",
+    "description": "I Tested TypeSafe’s Jev, a 478× Cheaper Decision Model, Against Claude, GPT-6, Kimi, MiniMax and DeepSeek. Only Two Beat It. | by Manjunath Janardhan | Sep, 2026 | Medium ... # I…"
+  },
+  {
+    "name": "I Built Non-Autoregressive Decision Models a Year Ago. Then a Frontier Lab Called It a…",
+    "slug": "i-built-non-autoregressive-decision-models-a-year-ago-then-a",
+    "kind": "Resource",
+    "category": "Research & data",
+    "author": "dev.to",
+    "description": "And then in September 2026, a well-funded frontier lab called TypeSafe AI (founded by Diogo Almeida, a co-inventor of ChatGPT at OpenAI) launched Jev. They proposed the exact…"
+  },
+  {
+    "name": "How to Use Jev by TypeSafe AI: A Practical Guide to Building AI Decisions",
+    "slug": "how-to-use-jev-by-typesafe-ai-a-practical-guide-to-building",
+    "kind": "Resource",
+    "category": "Research & data",
+    "author": "medium.com",
+    "description": "TypeSafe describes Jev as a model that takes structured or unstructured state and returns typed, probabilistic decisions that software can use directly. ... ## Step 2: Understand…"
+  },
+  {
+    "name": "How to classify, route, and score with Jev and AI SDK",
+    "slug": "how-to-classify-route-and-score-with-jev-and-ai-sdk",
+    "kind": "Resource",
+    "category": "Research & data",
+    "author": "vercel.com",
+    "description": "Jev, a System One model from TypeSafe AI, evaluates supplied state against typed questions and returns choices, scores, and boolean probabilities without generating prose. The AI…"
+  },
+  {
+    "name": "Five Things Developers Are Actually Building With JEV (And Why It Matters)",
+    "slug": "five-things-developers-are-actually-building-with-jev-and-wh",
+    "kind": "Resource",
+    "category": "Research & data",
+    "author": "dev.to",
+    "description": "Actually Building With ... When TypeSafe AI came out of stealth in September 2026 with founder Diogo Almeida, a name attached to both ChatGPT and RLHF, the framing was almost…"
+  },
+  {
+    "name": "Early experimentation using Jev to rethink harness UX - elvex",
+    "slug": "early-experimentation-using-jev-to-rethink-harness-ux-elvex",
+    "kind": "Resource",
+    "category": "Research & data",
+    "author": "elvex.com",
+    "description": "Jev is the first public model from TypeSafe AI, released in early access on Sep 15, 2026. The announcement post is here. ... TypeSafe frames Jev as a new class of frontier model:…"
+  },
+  {
+    "name": "Designing Production AI Systems with Jev | ArchCrux",
+    "slug": "designing-production-ai-systems-with-jev-archcrux",
+    "kind": "Resource",
+    "category": "Research & data",
+    "author": "archcrux.com",
+    "description": "TypeSafe released Jev on September 15 as its first System One model. The interface is built around typed questions over some application state. Instead of generating text token…"
+  },
+  {
+    "name": "AI Brief: Claude's Riemann Leap, Jev, Vercel's deepsec",
+    "slug": "ai-brief-claude-s-riemann-leap-jev-vercel-s-deepsec",
+    "kind": "Resource",
+    "category": "Research & data",
+    "author": "dev.to",
+    "description": "▸ TypeSafe's Jev outputs decisions, not text (source: @aigc1024, @https1024). The model does only three things: boolean judgments (\"search or not\"), enum choices (\"fast vs plan,…"
+  },
+  {
+    "name": "200x Faster, 400x Cheaper, Zero Words: Inside Jev",
+    "slug": "200x-faster-400x-cheaper-zero-words-inside-jev",
+    "kind": "Resource",
+    "category": "Research & data",
+    "author": "medium.com",
+    "description": "typesafe.ai built Jev to answer yes/no and multiple-choice questions in under 500ms, not to write text. Here’s the architecture behind a model that gives up string generation to…"
+  },
+  {
+    "name": "What Jev Probably Is, And Why You Already Have One",
+    "slug": "what-jev-probably-is-and-why-you-already-have-one",
+    "kind": "Resource",
+    "category": "Games & real time",
+    "author": "medium.com",
+    "description": "A company called TypeSafe AI launched a model this week called Jev. They told us how fast it is. They told us what it costs. They told us it plays Doom in a tenth of a second.…"
+  },
+  {
+    "name": "TypeSafe’s Jev Makes AI Decisions Fast Enough to Play Doom",
+    "slug": "typesafe-s-jev-makes-ai-decisions-fast-enough-to-play-doom",
+    "kind": "Resource",
+    "category": "Games & real time",
+    "author": "medium.com",
+    "description": "TypeSafe’s Jev Makes ... Decisions Fast Enough to Play Doom | by Kristopher Dunham | Sep, 2026 | Medium ... # TypeSafe’s Jev Makes AI Decisions Fast Enough to Play Doom ... A…"
+  },
+  {
+    "name": "Searching for Better Game Recommendations with Jev",
+    "slug": "searching-for-better-game-recommendations-with-jev",
+    "kind": "Resource",
+    "category": "Games & real time",
+    "author": "dev.to",
+    "description": "To pick that list better, I tried Jev, a decision model from TypeSafe. I did not have Jev write recommendations. I asked it to rate candidate games, then handed the model that…"
+  },
+  {
+    "name": "I used Jev to control a swarm of 15 simulated drones in real time - Web Pulse",
+    "slug": "i-used-jev-to-control-a-swarm-of-15-simulated-drones-in-real",
+    "kind": "Resource",
+    "category": "Games & real time",
+    "author": "wpnews.pro",
+    "description": "I used Jev to control a swarm of 15 simulated drones in real time - Web Pulse ... # I used Jev to control a swarm of 15 simulated drones in real time ... TypeSafe released an…"
+  },
+  {
+    "name": "I Ran 300 Real Jev Calls on a Simulated Robot Fleet. The Bill Was $0.00737.",
+    "slug": "i-ran-300-real-jev-calls-on-a-simulated-robot-fleet-the-bill",
+    "kind": "Resource",
+    "category": "Games & real time",
+    "author": "dev.to",
+    "description": "TypeSafe's Jev came out of stealth this month and every demo I see is the same: browsers, games, toy agents. Jev doesn't chat - it takes structured state and returns typed…"
+  },
+  {
+    "name": "Testing Jev on public and private data: classifier or filter? | Blog | Aman Kumar",
+    "slug": "testing-jev-on-public-and-private-data-classifier-or-filter",
+    "kind": "Resource",
+    "category": "Triage & routing",
+    "author": "amankumar.ai",
+    "description": "### Jev only answers yes/no or pick-one. 16,000 calls: against gpt-5.4-mini and gpt-5.6-luna on four public datasets, then on a few thousand real pipeline decisions. Where it…"
+  },
+  {
+    "name": "Jev was the tipping point - I built the last MySQL search statement - WPS",
+    "slug": "jev-was-the-tipping-point-i-built-the-last-mysql-search-stat",
+    "kind": "Resource",
+    "category": "Triage & routing",
+    "author": "worldprogramming.org",
+    "description": "Jev was the tipping point - I built the last MySQL search statement - WPS ... # Jev was the tipping point - I built the last MySQL search statement ... So I built AILIKE. It lets…"
+  },
+  {
+    "name": "Building an Evidence-Based Resume Analyzer: Why Understanding Beats Guessing",
+    "slug": "building-an-evidence-based-resume-analyzer-why-understanding",
+    "kind": "Resource",
+    "category": "Triage & routing",
+    "author": "dev.to",
+    "description": "What we're really tackling is this: How can AI truly assess a resume without falling into the trap of just echoing buzzwords? How do we know the candidate isn't just sprinkling…"
+  },
+  {
+    "name": "Valid Schema, Wrong Content: Using Jev to Guard a Google ADK Agent",
+    "slug": "valid-schema-wrong-content-using-jev-to-guard-a-google-adk-a",
+    "kind": "Resource",
+    "category": "Tools & apps",
+    "author": "dev.to",
+    "description": "for a short video, four segments, each tagged with type, duration, and text. The `noul` confidence scores are real Jev API results for the original Traditional Chinese text (an…"
+  },
+  {
+    "name": "TypeSafe Jev vs Claude Code: 4 Models, 2 Real Jobs",
+    "slug": "typesafe-jev-vs-claude-code-4-models-2-real-jobs",
+    "kind": "Resource",
+    "category": "Tools & apps",
+    "author": "primeline.cc",
+    "description": "Jev is a model that answers typed questions instead of generating text: yes/no, pick-one, or a score on a scale, each returned as a calibrated probability. You can get the same…"
+  },
+  {
+    "name": "i built a 24/7 HFT trading bot with Jev",
+    "slug": "i-built-a-24-7-hft-trading-bot-with-jev",
+    "kind": "X post",
+    "category": "Tools & apps",
+    "author": "@RohOnChain",
+    "description": "i built a 24/7 HFT trading bot with Jev and wrote an 8-page research paper on EXACTLY how to build a millisecond speed high-frequency trading system with Jev, along with COMPLETE CODEBASE here is how you set it up: 1. split your system in two, deterministic code owns the math"
+  },
+  {
+    "name": "Semantic code search without a vector index",
+    "slug": "semantic-code-search-without-a-vector-index",
+    "kind": "Resource",
+    "category": "Tools & apps",
+    "author": "dev.to",
+    "description": "Pass two hands that shortlist to Jev, TypeSafe's decision model, in a single batched call. Jev isn't a chat model, it's what they call a System One model: it doesn't generate…"
+  },
+  {
+    "name": "Semantic code linting with System One models",
+    "slug": "semantic-code-linting-with-system-one-models",
+    "kind": "Resource",
+    "category": "Tools & apps",
+    "author": "systemonemodels.org",
+    "description": "A semantic lint is a rule you can state in a sentence but cannot express in a regular linter. Jev turns each rule into a yes/no question over one diff hunk and returns a…"
+  },
+  {
+    "name": "Jev: Typed decisions for enterprise AI - Michał Chromiak's blog",
+    "slug": "jev-typed-decisions-for-enterprise-ai-micha-chromiak-s-blog",
+    "kind": "Resource",
+    "category": "Tools & apps",
+    "author": "mchromiak.github.io",
+    "description": "Jev is TypeSafe AI's model for that narrower job. You give it the relevant text and define the possible kinds of answer. It returns typed values and probability distributions…"
+  },
+  {
+    "name": "Jev in SuperQode: a harness for your code and workflows with Jev agent",
+    "slug": "jev-in-superqode-a-harness-for-your-code-and-workflows-with",
+    "kind": "Resource",
+    "category": "Tools & apps",
+    "author": "medium.com",
+    "description": "SuperQode is our terminal-first harness for coding agents. You bring a model or an agent. SuperQode owns the loop: tools, permissions, YAML exec-policy, Git Guard, session…"
+  },
+  {
+    "name": "Jev is the \"Internet\" moment for the AI industry",
+    "slug": "jev-is-the-internet-moment-for-the-ai-industry",
+    "kind": "X post",
+    "category": "Tools & apps",
+    "author": "@0xCodila",
+    "description": "Jev is the \"Internet\" moment for the AI industry It tells your agents and LLMs what to do next, in milliseconds and at almost zero cost If you set it up correctly, you will have the AI engineer’s stack for 2028 In this article, I show you how"
+  },
+  {
+    "name": "Jev Beat GPT Luna by 1 Point. GPT-6 and Claude Wrote the Answer ...",
+    "slug": "jev-beat-gpt-luna-by-1-point-gpt-6-and-claude-wrote-the-answ",
+    "kind": "Resource",
+    "category": "Tools & apps",
+    "author": "dev.to",
+    "description": "Two public sources now say Jev beats GPT-5.6 Luna. Vercel's CEO says so for the safety reviewer in fx, a Vercel tool whose default auto mode runs that reviewer on every command.…"
+  },
+  {
+    "name": "Jev + Pi: a probability gate for my coding agent's shell commands",
+    "slug": "jev-pi-a-probability-gate-for-my-coding-agent-s-shell-comman",
+    "kind": "Resource",
+    "category": "Tools & apps",
+    "author": "dev.to",
+    "description": "TypeSafe released Jev on 2026-09-15. It is a decision-only model: you give it yes/no propositions and it returns a probability instead of text. I put it in front of Pi's `bash`,…"
+  },
+  {
+    "name": "Exploring Jev for AI-Driven QA with agent-device",
+    "slug": "exploring-jev-for-ai-driven-qa-with-agent-device",
+    "kind": "Resource",
+    "category": "Tools & apps",
+    "author": "callstack.com",
+    "description": "# Exploring Jev for AI-Driven QA with agent-device ... TypeSafe recently released Jev, a model for making fast, structured decisions. The company reports response times of 70 to…"
+  },
+  {
+    "name": "Eval agent responses with Jev - Blog - Braintrust",
+    "slug": "eval-agent-responses-with-jev-blog-braintrust",
+    "kind": "Resource",
+    "category": "Tools & apps",
+    "author": "braintrust.dev",
+    "description": "Jev handles narrow, typed decisions over unstructured data through TypeSafe's System One API. Your code supplies the relevant state and one or more questions with constrained…"
+  },
+  {
+    "name": "Cutting MCP Round-Trips with Jev (Part 3)",
+    "slug": "cutting-mcp-round-trips-with-jev-part-3",
+    "kind": "Resource",
+    "category": "Tools & apps",
+    "author": "marketdx.hashnode.dev",
+    "description": "That's where Jev comes in. From Parts 1-2 we know it's a fast, cheap \"decision model\": give it options and a question, and it returns one answer plus a confidence score - no long…"
+  },
+  {
+    "name": "Code Enumerates, Jev Judges: Building slopcheck on a Model That Never Writes a Word |…",
+    "slug": "code-enumerates-jev-judges-building-slopcheck-on-a-model-tha",
+    "kind": "Resource",
+    "category": "Tools & apps",
+    "author": "tjklug.com",
+    "description": "I built a CI tool this week that reads every pull request and says whether it is AI slop. It flags speculative abstractions, tests that only assert on mocks, swallowed errors,…"
+  },
+  {
+    "name": "Can Jev Be a Better Agent Evaluator?",
+    "slug": "can-jev-be-a-better-agent-evaluator",
+    "kind": "Resource",
+    "category": "Tools & apps",
+    "author": "langchain.com",
+    "description": "- Jev is a fundamentally different kind of evaluator. It returns typed answers directly instead of generating text like an LLM judge. - Jev was dramatically more consistent on…"
+  },
+  {
+    "name": "Building a Prompt Oscilloscope. AI coding agents can inspect…",
+    "slug": "building-a-prompt-oscilloscope-ai-coding-agents-can-inspect",
+    "kind": "Resource",
+    "category": "Tools & apps",
+    "author": "medium.com",
+    "description": "The project combines TypeSafe Jev, GitHub Copilot CLI over the Agent Client Protocol (ACP), and a native VS Code chat participant. Together, they create a diagnostic layer for…"
+  },
+  {
+    "name": "Agents Make Three Decisions All Day: 18 JEV Use Cases and When Not to Use It",
+    "slug": "agents-make-three-decisions-all-day-18-jev-use-cases-and-whe",
+    "kind": "Resource",
+    "category": "Tools & apps",
+    "author": "dev.to",
+    "description": "Eric Kang Posted on Sep 20 # Agents Make Three Decisions All Day: 18 JEV Use Cases and When Not to Use It A production agent makes the same three kinds of calls all day: pick one…"
+  },
+  {
+    "name": "Jev: AI Decisions as a Typed Function Call | StackToHeap",
+    "slug": "jev-ai-decisions-as-a-typed-function-call-stacktoheap",
+    "kind": "Resource",
+    "category": "Agents & browsers",
+    "author": "stacktoheap.com",
+    "description": "# Jev: AI Decisions as a Typed Function Call What I learned using TypeSafe's Jev for code review, and why its more surprising uses are browser control and generative UI.…"
+  },
+  {
+    "name": "jev_stock",
+    "slug": "jev-stock",
+    "kind": "GitHub",
+    "category": "Trading & markets",
+    "author": "github.com",
+    "description": "Experiment in forecasting Hong Kong stock direction: it builds a past-only state from market data, asks for an up, flat or down call, and renders a standalone report."
+  },
+  {
+    "name": "Jev X Sentiment Analysis",
+    "slug": "jev-x-sentiment-analysis",
+    "kind": "GitHub",
+    "category": "Trading & markets",
+    "author": "github.com",
+    "description": "Crypto terminal that reads up to 1,000 posts about a ticker alongside market and funding data and turns them into a buy, sell, hold, or take-profit call."
+  },
+  {
+    "name": "zod-jev",
+    "slug": "zod-jev",
+    "kind": "GitHub",
+    "category": "Tools & apps",
+    "author": "github.com",
+    "description": "Pairs local Zod shape validation with Jev semantic validation."
+  },
+  {
+    "name": "typesafeai-dotnet-sdk",
+    "slug": "typesafeai-dotnet-sdk",
+    "kind": "GitHub",
+    "category": "Tools & apps",
+    "author": "github.com",
+    "description": ".NET SDK for Jev."
+  },
+  {
+    "name": "typesafe-go",
+    "slug": "typesafe-go",
+    "kind": "GitHub",
+    "category": "Tools & apps",
+    "author": "github.com",
+    "description": "Idiomatic Go SDK for the TypeSafe API."
+  },
+  {
+    "name": "TypeSafe Swift SDK",
+    "slug": "typesafe",
+    "kind": "GitHub",
+    "category": "Tools & apps",
+    "author": "github.com",
+    "description": "SwiftPM client whose behaviour follows the official JavaScript SDK."
+  },
+  {
+    "name": "triagedy",
+    "slug": "triagedy",
+    "kind": "GitHub",
+    "category": "Tools & apps",
+    "author": "github.com",
+    "description": "Security alert triage as a Unix filter: JSONL alerts in, typed decisions out."
+  },
+  {
+    "name": "semdecide",
+    "slug": "semdecide",
+    "kind": "GitHub",
+    "category": "Tools & apps",
+    "author": "github.com",
+    "description": "Typed semantic decisions for Unix pipelines and CI."
+  },
+  {
+    "name": "kunobi-jev",
+    "slug": "kunobi-jev",
+    "kind": "GitHub",
+    "category": "Tools & apps",
+    "author": "github.com",
+    "description": "Rust client, published on crates.io."
+  },
+  {
+    "name": "jevclient",
+    "slug": "jevclient",
+    "kind": "GitHub",
+    "category": "Tools & apps",
+    "author": "github.com",
+    "description": "Async Python client for typed Jev questions and probabilities."
+  },
+  {
+    "name": "jev.nvim",
+    "slug": "jev-nvim",
+    "kind": "GitHub",
+    "category": "Tools & apps",
+    "author": "github.com",
+    "description": "Neovim plugin that splits the buffer into functions with Treesitter, scores each against a plain-language question with Jev, and ranks answers by probability in the quickfix…"
+  },
+  {
+    "name": "jev-shell-history",
+    "slug": "jev-shell-history",
+    "kind": "GitHub",
+    "category": "Tools & apps",
+    "author": "github.com",
+    "description": "Ranks existing zsh history entries for inline completion; accepting a suggestion does not execute it."
+  },
+  {
+    "name": "jev",
+    "slug": "jev",
+    "kind": "GitHub",
+    "category": "Tools & apps",
+    "author": "github.com",
+    "description": "Elixir/OTP client designed around GenServer replies and pattern matching."
+  },
+  {
+    "name": "jeff (Alurith)",
+    "slug": "jeff-2",
+    "kind": "GitHub",
+    "category": "Tools & apps",
+    "author": "github.com",
+    "description": "Read-only Go CLI that checks files against rules such as unclear responsibility or weak error handling with Jev, locally or in CI."
+  },
+  {
+    "name": "advocaat",
+    "slug": "advocaat",
+    "kind": "GitHub",
+    "category": "Tools & apps",
+    "author": "github.com",
+    "description": "Small type-safe client for asking Jev questions about datasets."
+  },
+  {
+    "name": "safer-with-jev",
+    "slug": "safer-with-jev",
+    "kind": "GitHub",
+    "category": "Research & data",
+    "author": "github.com",
+    "description": "Neon Function proxy for the Neon AI Gateway."
+  },
+  {
+    "name": "jevcal",
+    "slug": "jevcal",
+    "kind": "GitHub",
+    "category": "Research & data",
+    "author": "github.com",
+    "description": "Fits and drift-checks confidence thresholds against labeled data."
+  },
+  {
+    "name": "jevcache",
+    "slug": "jevcache",
+    "kind": "GitHub",
+    "category": "Research & data",
+    "author": "github.com",
+    "description": "Local decision cache keyed on (model, schema, state), with redaction and canonicalisation before hashing, for cheaper repeats and deterministic replay in CI."
+  },
+  {
+    "name": "jev-search-rerank-eval",
+    "slug": "jev-search-rerank-eval",
+    "kind": "GitHub",
+    "category": "Research & data",
+    "author": "github.com",
+    "description": "Chinese/English retrieval evaluation comparing Jev reranking with lexical, embedding, and fusion baselines, including judge-circularity analysis."
+  },
+  {
+    "name": "jev-reranker",
+    "slug": "jev-reranker-2",
+    "kind": "GitHub",
+    "category": "Research & data",
+    "author": "github.com",
+    "description": "Retrieval and RAG: uses Jev Noul judgments to assess retrieved documents for relevance and usefulness as answer evidence, then sorts results and optionally filters them using a…"
+  },
+  {
+    "name": "jev-rerank-bench",
+    "slug": "jev-rerank-bench",
+    "kind": "GitHub",
+    "category": "Research & data",
+    "author": "github.com",
+    "description": "Fourteen-dataset reranking study with saved raw responses, paired bootstrap intervals, order-sensitivity checks, and no-relevant-document tests; comparisons remain study-specific."
+  },
+  {
+    "name": "jev-rag-benchmark",
+    "slug": "jev-rag-benchmark",
+    "kind": "GitHub",
+    "category": "Research & data",
+    "author": "github.com",
+    "description": "Reproducible experiments on whether reranking with Jev improves a small RAG system, on a locked Turkish dataset, with quality, latency and cost reported together."
+  },
+  {
+    "name": "jev-orderby-bench",
+    "slug": "jev-orderby-bench",
+    "kind": "GitHub",
+    "category": "Research & data",
+    "author": "github.com",
+    "description": "Measures whether ORDER BY over a Jev probability is defensible (inversion rate, Score ordinality against a human grade, calibration, wording invariants, sort-key ties) under a…"
+  },
+  {
+    "name": "jev-korean-benchmark",
+    "slug": "jev-korean-benchmark",
+    "kind": "GitHub",
+    "category": "Research & data",
+    "author": "github.com",
+    "description": "Small Korean/English sample study with recorded responses, including medical-text questions; not a clinical validation."
+  },
+  {
+    "name": "jev-eval",
+    "slug": "jev-eval",
+    "kind": "GitHub",
+    "category": "Research & data",
+    "author": "github.com",
+    "description": "Independent Jev versus GPT-5.6 Terra comparison on three labeled classification tasks, reporting accuracy, calibration, latency, and cost."
+  },
+  {
+    "name": "jev-benchmarks",
+    "slug": "jev-benchmarks",
+    "kind": "GitHub",
+    "category": "Research & data",
+    "author": "github.com",
+    "description": "Reproducible evaluation for calibration, selective risk, and latency."
+  },
+  {
+    "name": "jev-behavior-study",
+    "slug": "jev-behavior-study",
+    "kind": "GitHub",
+    "category": "Research & data",
+    "author": "github.com",
+    "description": "Independent synthetic-task study of Jev 1.13.0 framing sensitivity and failures, with raw responses and offline report checks."
+  },
+  {
+    "name": "Jev vs. ML",
+    "slug": "jev-vs-ml",
+    "kind": "GitHub",
+    "category": "Research & data",
+    "author": "github.com",
+    "description": "Compares a typed decision model with classical classification pipelines across eight datasets, with a published protocol and an interactive report."
+  },
+  {
+    "name": "feelings",
+    "slug": "feelings",
+    "kind": "GitHub",
+    "category": "Research & data",
+    "author": "github.com",
+    "description": "BAML language support for an AI if-statement: `.feels()` as a real, typed method backed by a decision model."
+  },
+  {
+    "name": "typesafe-snake",
+    "slug": "typesafe-snake",
+    "kind": "GitHub",
+    "category": "Games & real time",
+    "author": "github.com",
+    "description": "Snake autoplayer with one typed decision per tick and code-generated legal moves."
+  },
+  {
+    "name": "typesafe-mario",
+    "slug": "typesafe-mario",
+    "kind": "GitHub",
+    "category": "Games & real time",
+    "author": "github.com",
+    "description": "Super Mario Bros."
+  },
+  {
+    "name": "tsai-sc",
+    "slug": "tsai-sc",
+    "kind": "GitHub",
+    "category": "Games & real time",
+    "author": "github.com",
+    "description": "Original StarCraft shareware controlled with recorded Jev action probabilities."
+  },
+  {
+    "name": "Soupbase",
+    "slug": "soupbase",
+    "kind": "GitHub",
+    "category": "Games & real time",
+    "author": "github.com",
+    "description": "Jev `Choice` judgments answer lateral-thinking puzzle questions and assess proposed solutions, while application code requires supported facts, a coherent explanation, and…"
+  },
+  {
+    "name": "killmyidea",
+    "slug": "killmyidea",
+    "kind": "GitHub",
+    "category": "Games & real time",
+    "author": "github.com",
+    "description": "Startup-idea evaluator that chooses kill, fix, or ship."
+  },
+  {
+    "name": "Jevtown",
+    "slug": "jevtown",
+    "kind": "GitHub",
+    "category": "Games & real time",
+    "author": "github.com",
+    "description": "Town of 10,000 computed personas where Jev scores a post, listing, product, or headline against about 60 audience attributes to plan who sees it, then answers one batched Choice…"
+  },
+  {
+    "name": "JevScape",
+    "slug": "jevscape",
+    "kind": "GitHub",
+    "category": "Games & real time",
+    "author": "github.com",
+    "description": "RuneBench-based RuneScape harness that maps Jev choices to a bounded game-action catalog and records tick-level results."
+  },
+  {
+    "name": "JevPilot",
+    "slug": "jevpilot",
+    "kind": "GitHub",
+    "category": "Games & real time",
+    "author": "github.com",
+    "description": "Three.js driving simulation where Jev chooses among candidate paths and speeds while local code handles vehicle dynamics and geometry."
+  },
+  {
+    "name": "jev-plays-pokemon-red",
+    "slug": "jev-plays-pokemon-red",
+    "kind": "GitHub",
+    "category": "Games & real time",
+    "author": "github.com",
+    "description": "Pokemon Red on PyBoy where deterministic code owns the route and arithmetic and Jev picks only at branches, with every battle turn's faint prediction scored by Brier against the…"
+  },
+  {
+    "name": "jev-palette",
+    "slug": "jev-palette",
+    "kind": "GitHub",
+    "category": "Games & real time",
+    "author": "github.com",
+    "description": "Command-palette demo where a single Choice question over a 77-command catalog turns the returned probability distribution into the per-keystroke ranking for Portuguese or English…"
+  },
+  {
+    "name": "jev-libero",
+    "slug": "jev-libero",
+    "kind": "GitHub",
+    "category": "Games & real time",
+    "author": "github.com",
+    "description": "Fine-grained robot control on LIBERO tasks with physics previews and configurable task definitions."
+  },
+  {
+    "name": "jev-canvas",
+    "slug": "jev-canvas",
+    "kind": "GitHub",
+    "category": "Games & real time",
+    "author": "github.com",
+    "description": "Voice and finger-pointing control of a tldraw canvas: Jev picks the action, target shape and place from each partial transcript plus the fingertip position; deterministic code…"
+  },
+  {
+    "name": "Jev Self-Driving Sim",
+    "slug": "live-jev-2",
+    "kind": "GitHub",
+    "category": "Games & real time",
+    "author": "github.com",
+    "description": "A 2D top-down car in the browser that turns its sensors into a JSON state every 200 ms and executes four typed answers."
+  },
+  {
+    "name": "Jev Reflex Autonomy Lab",
+    "slug": "jev-reflex-autonomy-lab",
+    "kind": "GitHub",
+    "category": "Games & real time",
+    "author": "github.com",
+    "description": "Multi-drone simulation where typed reflexes fly the fleet and an optional slower planner may advise but never takes control."
+  },
+  {
+    "name": "Jev Chess Lab",
+    "slug": "jev-chess-lab",
+    "kind": "GitHub",
+    "category": "Games & real time",
+    "author": "github.com",
+    "description": "Recorded chess experiments with a candid result: Jev on its own still blunders pieces."
+  },
+  {
+    "name": "heist-one",
+    "slug": "heist-one",
+    "kind": "GitHub",
+    "category": "Games & real time",
+    "author": "github.com",
+    "description": "Browser stealth game where Jev judges guards while deterministic code owns the world."
+  },
+  {
+    "name": "1v1 Jev",
+    "slug": "onevonejev",
+    "kind": "GitHub",
+    "category": "Games & real time",
+    "author": "github.com",
+    "description": "Three.js quickscope arena where Jev decides movement, aiming, ADS, firing, and jumping at roughly 9 Hz."
+  },
+  {
+    "name": "World Monitor",
+    "slug": "worldmonitor",
+    "kind": "GitHub",
+    "category": "Triage & routing",
+    "author": "github.com",
+    "description": "Geopolitical dashboard that batches Jev 1.13.0 headline-severity and topic classifications, validates the answers, and falls back when classification fails."
+  },
+  {
+    "name": "typesafe-jev-workflow",
+    "slug": "typesafe-jev-workflow",
+    "kind": "GitHub",
+    "category": "Triage & routing",
+    "author": "github.com",
+    "description": "LangGraph email-intent workflow using a typed Jev choice."
+  },
+  {
+    "name": "tax-doc-classifier",
+    "slug": "tax-doc-classifier",
+    "kind": "GitHub",
+    "category": "Triage & routing",
+    "author": "github.com",
+    "description": "Classifies text-bearing PDF pages into IRS form and page-kind candidates with a confidence gate; document triage, not tax advice, and scanned pages need OCR."
+  },
+  {
+    "name": "pg-jev",
+    "slug": "pg-jev",
+    "kind": "GitHub",
+    "category": "Triage & routing",
+    "author": "github.com",
+    "description": "PostgreSQL extension for semantic questions over table rows."
+  },
+  {
+    "name": "neo4jev",
+    "slug": "neo4jev",
+    "kind": "GitHub",
+    "category": "Triage & routing",
+    "author": "github.com",
+    "description": "Navigates a Neo4j graph by having Jev score neighbouring relationships, then beam-searching for the most probable path."
+  },
+  {
+    "name": "n8n-nodes-typesafe-jev",
+    "slug": "n8n-nodes-typesafe-jev",
+    "kind": "GitHub",
+    "category": "Triage & routing",
+    "author": "github.com",
+    "description": "Community n8n node for asking multiple typed questions over workflow state."
+  },
+  {
+    "name": "llama-index-jev",
+    "slug": "llama-index-jev",
+    "kind": "GitHub",
+    "category": "Triage & routing",
+    "author": "github.com",
+    "description": "LlamaIndex reranker and selector using Jev Score and Choice answers, with configurable confidence handling."
+  },
+  {
+    "name": "jevsql",
+    "slug": "jevsql",
+    "kind": "GitHub",
+    "category": "Triage & routing",
+    "author": "github.com",
+    "description": "SQL-like filtering, ranking, classification, and scoring with natural-language predicates."
+  },
+  {
+    "name": "JevMail",
+    "slug": "jevmail",
+    "kind": "GitHub",
+    "category": "Triage & routing",
+    "author": "github.com",
+    "description": "Read-only Gmail triage that stores messages locally and asks Jev for bounded category, urgency, and human-sender probabilities."
+  },
+  {
+    "name": "jevlogs",
+    "slug": "jevlogs",
+    "kind": "GitHub",
+    "category": "Triage & routing",
+    "author": "github.com",
+    "description": "OpenTelemetry log triage before more expensive analysis."
+  },
+  {
+    "name": "jev-tree",
+    "slug": "jev-tree",
+    "kind": "GitHub",
+    "category": "Triage & routing",
+    "author": "github.com",
+    "description": "Recursive choice over taxonomies larger than Jev's direct option limit."
+  },
+  {
+    "name": "jev-curate",
+    "slug": "jev-curate",
+    "kind": "GitHub",
+    "category": "Triage & routing",
+    "author": "github.com",
+    "description": "Streaming filter and scorer for Parquet and JSONL datasets."
+  },
+  {
+    "name": "Jev Web Analyzer",
+    "slug": "jev-web-analyzer",
+    "kind": "GitHub",
+    "category": "Triage & routing",
+    "author": "github.com",
+    "description": "Fetches a public SaaS page as Markdown, then asks Jev ten bounded questions about likely first-visit comprehension; URL validation, caching, sanitization, and presentation remain…"
+  },
+  {
+    "name": "Inbox Zero",
+    "slug": "inbox-zero",
+    "kind": "GitHub",
+    "category": "Triage & routing",
+    "author": "github.com",
+    "description": "Email assistant where Jev is an optional classifier backend returning bounded categories and yes/no probabilities."
+  },
+  {
+    "name": "SlidePilot",
+    "slug": "slidepilot",
+    "kind": "GitHub",
+    "category": "Content & growth",
+    "author": "github.com",
+    "description": "Experimental Slidev controller that judges speech transcripts for slide completion, with deterministic checks and manual navigation."
+  },
+  {
+    "name": "jevmeter",
+    "slug": "jevmeter",
+    "kind": "GitHub",
+    "category": "Content & growth",
+    "author": "github.com",
+    "description": "Scores every sentence in a video and renders the result as an overlay."
+  },
+  {
+    "name": "wakegate",
+    "slug": "wakegate",
+    "kind": "GitHub",
+    "category": "Tools & apps",
+    "author": "github.com",
+    "description": "Experimental gate where Jev decides whether a timer or incoming event is worth resuming a sleeping agent's LLM; code skips only when Jev is confident and always wakes on user…"
+  },
+  {
+    "name": "tripwire",
+    "slug": "tripwire",
+    "kind": "GitHub",
+    "category": "Tools & apps",
+    "author": "github.com",
+    "description": "Runs seven checks on every LLM response in one Jev call, as AI SDK middleware or an OpenAI-compatible proxy."
+  },
+  {
+    "name": "TanStack AI",
+    "slug": "ai",
+    "kind": "GitHub",
+    "category": "Tools & apps",
+    "author": "github.com",
+    "description": "`@tanstack/ai-typesafe` adapter exposing typed Boolean, Choice, and Score decisions through TanStack AI's `decide()` API."
+  },
+  {
+    "name": "System One Harness",
+    "slug": "systemoneharness",
+    "kind": "GitHub",
+    "category": "Tools & apps",
+    "author": "github.com",
+    "description": "Turns a decision model into an agent loop: it compiles the environment's finite action space into typed questions, gates each step by confidence, and records the trace."
+  },
+  {
+    "name": "supercov",
+    "slug": "supercov",
+    "kind": "GitHub",
+    "category": "Tools & apps",
+    "author": "github.com",
+    "description": "Scores source files so coding agents can prioritize code-quality work."
+  },
+  {
+    "name": "Stanley Code",
+    "slug": "stanley-code",
+    "kind": "GitHub",
+    "category": "Tools & apps",
+    "author": "github.com",
+    "description": "Bounded Jev workflows for coding agents (formerly jev-code)."
+  },
+  {
+    "name": "slop-grader",
+    "slug": "slop-grader",
+    "kind": "GitHub",
+    "category": "Tools & apps",
+    "author": "github.com",
+    "description": "Rule-based text grader that uses Jev scores and line-by-line flags to audit documents against custom rulesets and guide an AI agent to auto-fix violations."
+  },
+  {
+    "name": "ruby_decision_model",
+    "slug": "ruby-decision-model",
+    "kind": "GitHub",
+    "category": "Tools & apps",
+    "author": "github.com",
+    "description": "Ruby client with standard-library transport for TypeSafe and OpenRouter decision endpoints."
+  },
+  {
+    "name": "Rig",
+    "slug": "rig",
+    "kind": "GitHub",
+    "category": "Tools & apps",
+    "author": "github.com",
+    "description": "Rust `rig-typesafeai` crate with typed Choice, Score, and Noul queries, response validation, examples, and fixtures."
+  },
+  {
+    "name": "Pydantic AI",
+    "slug": "pydantic-ai",
+    "kind": "GitHub",
+    "category": "Tools & apps",
+    "author": "github.com",
+    "description": "TypeSafe model provider that derives Jev questions from Pydantic output types and supports typed routing and fallback workflows."
+  },
+  {
+    "name": "Prism",
+    "slug": "prism-liquidity-agent",
+    "kind": "GitHub",
+    "category": "Tools & apps",
+    "author": "github.com",
+    "description": "Liquidity-provision agent for Meteora DLMM."
+  },
+  {
+    "name": "pi-warden",
+    "slug": "pi-warden",
+    "kind": "GitHub",
+    "category": "Tools & apps",
+    "author": "github.com",
+    "description": "Pi extension that judges rule compliance, risky actions, stuck loops, and completion claims; enforcement depends on the hook and policy."
+  },
+  {
+    "name": "pi-fast-jev-compaction",
+    "slug": "pi-fast-jev-compaction",
+    "kind": "GitHub",
+    "category": "Tools & apps",
+    "author": "github.com",
+    "description": "Pi extension that prunes stale tool history and leaves summary compaction to Pi when pruning is insufficient."
+  },
+  {
+    "name": "perch",
+    "slug": "perch",
+    "kind": "GitHub",
+    "category": "Tools & apps",
+    "author": "github.com",
+    "description": "Semantic code linter that evaluates code units against configurable Jev questions."
+  },
+  {
+    "name": "oxlint-plugin-jev",
+    "slug": "oxlint-plugin-jev",
+    "kind": "GitHub",
+    "category": "Tools & apps",
+    "author": "github.com",
+    "description": "Oxlint rules written as plain-English questions about a function, call, JSX element or file, reported when the yes-probability clears your cutoff."
+  },
+  {
+    "name": "opencode-jev-orchestrator",
+    "slug": "opencode-jev-orchestrator",
+    "kind": "GitHub",
+    "category": "Tools & apps",
+    "author": "github.com",
+    "description": "Keeps an OpenCode parent model fixed and uses Jev difficulty judgments to delegate harder turns to temporary subagents."
+  },
+  {
+    "name": "lorenzini",
+    "slug": "lorenzini",
+    "kind": "GitHub",
+    "category": "Tools & apps",
+    "author": "github.com",
+    "description": "Claude Code skills that wait for CodeRabbit, Copilot or Codex to finish reviewing a pull request, then judge whether the verdict actually permits a merge."
+  },
+  {
+    "name": "LiteLLM",
+    "slug": "litellm",
+    "kind": "GitHub",
+    "category": "Tools & apps",
+    "author": "github.com",
+    "description": "Jev-backed complexity routing and an optional relevance guardrail for compacting tool results before they return to an agent."
+  },
+  {
+    "name": "LangChain.js",
+    "slug": "langchainjs",
+    "kind": "GitHub",
+    "category": "Tools & apps",
+    "author": "github.com",
+    "description": "JavaScript/TypeScript classifier Runnable and middleware for bounded routing and tool-call checks."
+  },
+  {
+    "name": "LangChain",
+    "slug": "langchain",
+    "kind": "GitHub",
+    "category": "Tools & apps",
+    "author": "github.com",
+    "description": "Python `TypeSafeClassifier` Runnable with batched typed questions plus model-routing and risky-tool middleware."
+  },
+  {
+    "name": "Jot",
+    "slug": "jot",
+    "kind": "GitHub",
+    "category": "Tools & apps",
+    "author": "github.com",
+    "description": "A general-purpose agent loop where Jev picks the next move and Jot runs it."
+  },
+  {
+    "name": "jevvy",
+    "slug": "jevvy",
+    "kind": "GitHub",
+    "category": "Tools & apps",
+    "author": "github.com",
+    "description": "Plugins for coding agents, starting with one that auto-approves shell permission requests it judges harmless and passes everything uncertain to the normal flow."
+  },
+  {
+    "name": "Jevthoven",
+    "slug": "jevthoven",
+    "kind": "GitHub",
+    "category": "Tools & apps",
+    "author": "github.com",
+    "description": "Symbolic-music studio where Jev chooses plans, instruments, and bar patterns, and code renders editable music and MIDI."
+  },
+  {
+    "name": "jevr",
+    "slug": "jevr",
+    "kind": "GitHub",
+    "category": "Tools & apps",
+    "author": "github.com",
+    "description": "Native R client for typed questions and provider-independent answers through TypeSafe or OpenRouter."
+  },
+  {
+    "name": "JevLint",
+    "slug": "jevlint",
+    "kind": "GitHub",
+    "category": "Tools & apps",
+    "author": "github.com",
+    "description": "Checks code against conventions written in plain English, in a write-check-fix loop with your coding agent."
+  },
+  {
+    "name": "Jevify",
+    "slug": "jevify",
+    "kind": "GitHub",
+    "category": "Tools & apps",
+    "author": "github.com",
+    "description": "Agent skill for finding where Jev fits in an existing codebase, designing the typed questions, and measuring whether it helped."
+  },
+  {
+    "name": "Jevbridge",
+    "slug": "jevbridge-2",
+    "kind": "GitHub",
+    "category": "Tools & apps",
+    "author": "github.com",
+    "description": "ACP/MCP adapter for using Jev alongside coding and chat models."
+  },
+  {
+    "name": "JevBench",
+    "slug": "jevbench",
+    "kind": "GitHub",
+    "category": "Tools & apps",
+    "author": "github.com",
+    "description": "Benchmark for typed decision models across several suites, with confidence cascades and committees reported separately."
+  },
+  {
+    "name": "jev-trade",
+    "slug": "jev-trade",
+    "kind": "GitHub",
+    "category": "Tools & apps",
+    "author": "github.com",
+    "description": "Hyperliquid trading desk where Jev answers Choice questions for long/short, open/close/hold, and leverage; application code quotes or sends no order."
+  },
+  {
+    "name": "jev-scout",
+    "slug": "jev-scout",
+    "kind": "GitHub",
+    "category": "Tools & apps",
+    "author": "github.com",
+    "description": "MCP server that scores an agent's every search query, result, and fetched page for relevance and credibility, with session budgets, SSRF-guarded fetching, and a live decision…"
+  },
+  {
+    "name": "jev-review MCP plugin",
+    "slug": "jev-review-2",
+    "kind": "GitHub",
+    "category": "Tools & apps",
+    "author": "github.com",
+    "description": "Local-first continuous software-quality review for coding agents."
+  },
+  {
+    "name": "jev-repl",
+    "slug": "jev-ts-repl",
+    "kind": "GitHub",
+    "category": "Tools & apps",
+    "author": "github.com",
+    "description": "Terminal REPL for shaping System One requests before writing code."
+  },
+  {
+    "name": "jev-pref",
+    "slug": "jev-pref",
+    "kind": "GitHub",
+    "category": "Tools & apps",
+    "author": "github.com",
+    "description": "Linter that has Jev check code changes against project preferences from `jev-pref.json` and feeds findings back to coding agents."
+  },
+  {
+    "name": "jev-logtriage",
+    "slug": "jev-logtriage",
+    "kind": "GitHub",
+    "category": "Tools & apps",
+    "author": "github.com",
+    "description": "Jev scores collapsed log batches for noise, severity, and whether an operator should act."
+  },
+  {
+    "name": "jev-lint (mizchi)",
+    "slug": "jev-lint",
+    "kind": "GitHub",
+    "category": "Tools & apps",
+    "author": "github.com",
+    "description": "Checks whether a function does what its name says, whether a comment is still true, and whether a test verifies what it claims, with a cutoff per rule."
+  },
+  {
+    "name": "jev-guard",
+    "slug": "jev-guard",
+    "kind": "GitHub",
+    "category": "Tools & apps",
+    "author": "github.com",
+    "description": "Cross-agent tool-call risk scoring with allow, ask, and deny outcomes."
+  },
+  {
+    "name": "jev-gateway",
+    "slug": "jev-gateway",
+    "kind": "GitHub",
+    "category": "Tools & apps",
+    "author": "github.com",
+    "description": "Local gateway for Codex and Claude Code that asks Jev which tool to call next and passes everything else to your usual model."
+  },
+  {
+    "name": "jev-gates",
+    "slug": "jev-gates",
+    "kind": "GitHub",
+    "category": "Tools & apps",
+    "author": "github.com",
+    "description": "Seven calibrated gates for Claude Code (rules, scope, intent, done, claims, proof, and commit honesty) that escalate but never approve."
+  },
+  {
+    "name": "jev-eval-agent",
+    "slug": "jev-eval-agent",
+    "kind": "GitHub",
+    "category": "Tools & apps",
+    "author": "github.com",
+    "description": "Compares LLM tool selection with Jev routing in a personal-assistant harness containing 100 mocked tools."
+  },
+  {
+    "name": "jev-engineering",
+    "slug": "jev-engineering",
+    "kind": "GitHub",
+    "category": "Tools & apps",
+    "author": "github.com",
+    "description": "Decision layer for coding agents: deterministic hard rules, then a Jev call, exposed as a Claude Code PreToolUse hook, an MCP server, a loopback service and a shared team policy."
+  },
+  {
+    "name": "jev-dsl",
+    "slug": "jev-dsl",
+    "kind": "GitHub",
+    "category": "Tools & apps",
+    "author": "github.com",
+    "description": "Early-alpha Haskell DSL that encodes typed question packets and decodes answers; HTTP transport is left to the caller."
+  },
+  {
+    "name": "jev-decision-benchmarks",
+    "slug": "jev-decision-benchmarks",
+    "kind": "GitHub",
+    "category": "Tools & apps",
+    "author": "github.com",
+    "description": "Independent evaluation of Jev on MetaTool, When2Call, and BFCL V4 agent decision tasks, focusing on tool selection, abstention, and tool-use decisions."
+  },
+  {
+    "name": "jev-commit",
+    "slug": "jev-commit",
+    "kind": "GitHub",
+    "category": "Tools & apps",
+    "author": "github.com",
+    "description": "Pre-commit hook where one Jev call judges whether the commit message matches the staged diff, flags debug leftovers and unmentioned work, and blocks only when it detects a…"
+  },
+  {
+    "name": "jev-belay",
+    "slug": "jev-belay",
+    "kind": "GitHub",
+    "category": "Tools & apps",
+    "author": "github.com",
+    "description": "Claude Code Stop hook that checks the transcript for evidence before trusting a \"done\" claim, spending one four-question Jev call only when files changed with no passing check…"
+  },
+  {
+    "name": "jev-agent-skill",
+    "slug": "jev-agent-skill",
+    "kind": "GitHub",
+    "category": "Tools & apps",
+    "author": "github.com",
+    "description": "Claude Code/ZCode skill that offloads classify, screen, score, and compliance-check judgments to Jev via OpenCode Zen's free tier; ships a retry-hardened zero-dependency caller…"
+  },
+  {
+    "name": "jev-acp",
+    "slug": "jev-acp",
+    "kind": "GitHub",
+    "category": "Tools & apps",
+    "author": "github.com",
+    "description": "Standalone ACP agent exposing Jev Choice, Score, and Noul decisions through guided input and reusable templates, with typed results and probabilities."
+  },
+  {
+    "name": "Jev Wrapped",
+    "slug": "jev-wrapped",
+    "kind": "GitHub",
+    "category": "Tools & apps",
+    "author": "github.com",
+    "description": "Telegram channel X-ray: for each public post of the last twelve months Jev answers a Choice over ten kinds of post and three yes/no questions (paid ad, clickbait, emotional…"
+  },
+  {
+    "name": "Jev Studio",
+    "slug": "jev-studio",
+    "kind": "GitHub",
+    "category": "Tools & apps",
+    "author": "github.com",
+    "description": "One pip install for experimenting: MCP tools for Choice, Noul and Score, prompt libraries and a slash command per cookbook recipe."
+  },
+  {
+    "name": "Jev Reranker (Rust CLI)",
+    "slug": "jev-reranker",
+    "kind": "GitHub",
+    "category": "Tools & apps",
+    "author": "github.com",
+    "description": "Rust JSON-in/JSON-out CLI that asks Jev about relevance, usable evidence, or which source text to retain, then applies the resulting order and thresholds in code."
+  },
+  {
+    "name": "invalidate",
+    "slug": "invalidate",
+    "kind": "GitHub",
+    "category": "Tools & apps",
+    "author": "github.com",
+    "description": "Gives every remembered fact a lease and asks Jev whether new evidence ends it, so an agent's memory can be made to go stale on purpose."
+  },
+  {
+    "name": "hono-jev-router",
+    "slug": "hono-jev-router",
+    "kind": "GitHub",
+    "category": "Tools & apps",
+    "author": "github.com",
+    "description": "Routes Hono HTTP requests by meaning."
+  },
+  {
+    "name": "hermes-jev-approvals",
+    "slug": "hermes-jev-approvals",
+    "kind": "GitHub",
+    "category": "Tools & apps",
+    "author": "github.com",
+    "description": "Approvals provider for Hermes Agent: it judges shell commands and refuses every other task, registering no hooks."
+  },
+  {
+    "name": "HA-Jev",
+    "slug": "ha-jev",
+    "kind": "GitHub",
+    "category": "Tools & apps",
+    "author": "github.com",
+    "description": "Home Assistant integration exposing typed answers as sensors, automation actions, and an Assist conversation agent."
+  },
+  {
+    "name": "foreman",
+    "slug": "foreman",
+    "kind": "GitHub",
+    "category": "Tools & apps",
+    "author": "github.com",
+    "description": "Software-factory supervisor that uses Jev to keep coding agents on task."
+  },
+  {
+    "name": "fast-jev-compaction",
+    "slug": "fast-jev-compaction",
+    "kind": "GitHub",
+    "category": "Tools & apps",
+    "author": "github.com",
+    "description": "Claude Code plugin and library that score tool-call/result pairs for deletion or truncation while retaining selected text verbatim."
+  },
+  {
+    "name": "Effect",
+    "slug": "effect",
+    "kind": "GitHub",
+    "category": "Tools & apps",
+    "author": "github.com",
+    "description": "`@effect/ai-typesafe` decision model mapping Effect's classify, probability, and rating operations to Jev Choice, Noul, and Score questions."
+  },
+  {
+    "name": "doc-router",
+    "slug": "doc-router",
+    "kind": "GitHub",
+    "category": "Tools & apps",
+    "author": "github.com",
+    "description": "Rust tool that asks Jev which PDF pages actually need OCR, extracting text pages locally and sending only the rest to your OCR provider."
+  },
+  {
+    "name": "Composio",
+    "slug": "composio",
+    "kind": "GitHub",
+    "category": "Tools & apps",
+    "author": "github.com",
+    "description": "TypeSafe provider that shortlists tools, selects one from a bounded set, maps closed-set arguments, and exposes confidence and destructive-action gates."
+  },
+  {
+    "name": "commit-miner",
+    "slug": "commit-miner",
+    "kind": "GitHub",
+    "category": "Tools & apps",
+    "author": "github.com",
+    "description": "Classifies Git diffs and commit messages into change types and candidate security-fix/CWE labels for inspection."
+  },
+  {
+    "name": "Canny",
+    "slug": "canny",
+    "kind": "GitHub",
+    "category": "Tools & apps",
+    "author": "github.com",
+    "description": "Evidence ledger that challenges unsupported \"done\" claims from coding agents."
+  },
+  {
+    "name": "blink",
+    "slug": "blink",
+    "kind": "GitHub",
+    "category": "Tools & apps",
+    "author": "github.com",
+    "description": "Navigates file and directory names with Jev-guided walkers to find codebase paths for a natural-language query."
+  },
+  {
+    "name": "BAML",
+    "slug": "baml",
+    "kind": "GitHub",
+    "category": "Tools & apps",
+    "author": "github.com",
+    "description": "The v1 nightly integration maps typed function return values to Jev questions; it is not part of the stable release line yet."
+  },
+  {
+    "name": "Ax (ax-llm)",
+    "slug": "ax",
+    "kind": "GitHub",
+    "category": "Tools & apps",
+    "author": "github.com",
+    "description": "Native TypeSafe client and Ax provider for Boolean, Choice, Score, and raw Jev questions, with answer validation and examples."
+  },
+  {
+    "name": "Awesome Jev Skills",
+    "slug": "jev-skill",
+    "kind": "GitHub",
+    "category": "Tools & apps",
+    "author": "github.com",
+    "description": "Nine installable agent skills - triage, routing, code review, document and UI work - with a catalogue of scenarios to copy."
+  },
+  {
+    "name": "agent-dispatcher",
+    "slug": "agent-dispatcher",
+    "kind": "GitHub",
+    "category": "Tools & apps",
+    "author": "github.com",
+    "description": "Routes a Claude Code or Codex task to one of 27 specialist roles and defines what evidence will count as done."
+  },
+  {
+    "name": "Abide",
+    "slug": "abide",
+    "kind": "GitHub",
+    "category": "Tools & apps",
+    "author": "github.com",
+    "description": "Hooks into Claude Code, Codex, and OpenCode, and asks Jev one question per rule whether each edit breaks your AGENTS.md or CLAUDE.md rules."
+  },
+  {
+    "name": "x-scanner",
+    "slug": "x-scanner",
+    "kind": "GitHub",
+    "category": "Agents & browsers",
+    "author": "github.com",
+    "description": "Chrome extension that labels every post you scroll past on X with six typed questions per post, and counts what it costs in the corner."
+  },
+  {
+    "name": "Vibe Check for X",
+    "slug": "vibecheck",
+    "kind": "GitHub",
+    "category": "Agents & browsers",
+    "author": "github.com",
+    "description": "Chrome extension that scores draft posts and reply context before posting; optional media descriptions come from a separate vision model."
+  },
+  {
+    "name": "TypeSafe AdBlock",
+    "slug": "typesafe-adblock",
+    "kind": "GitHub",
+    "category": "Agents & browsers",
+    "author": "github.com",
+    "description": "Chrome extension that asks Jev whether each DOM element is an ad and removes the ones that are."
+  },
+  {
+    "name": "Sharp",
+    "slug": "sharp",
+    "kind": "GitHub",
+    "category": "Agents & browsers",
+    "author": "github.com",
+    "description": "Browser extension that filters your X timeline by plain-language rules, with Jev as the default classifier."
+  },
+  {
+    "name": "RefGarden",
+    "slug": "refgarden",
+    "kind": "GitHub",
+    "category": "Agents & browsers",
+    "author": "github.com",
+    "description": "A three-dimensional reference gallery over The Met, NASA, Cosmos, and the Prelinger Archives, with Jev choosing the search phrases."
+  },
+  {
+    "name": "macbrow",
+    "slug": "macbrow",
+    "kind": "GitHub",
+    "category": "Agents & browsers",
+    "author": "github.com",
+    "description": "Say a command and it runs as AppleScript, or say a web task and it drives Chrome."
+  },
+  {
+    "name": "JevScout",
+    "slug": "jevscout",
+    "kind": "GitHub",
+    "category": "Agents & browsers",
+    "author": "github.com",
+    "description": "Coding-agent skill that drives Chrome over CDP to look for jobs on company sites, with Jev scoring pages and links."
+  },
+  {
+    "name": "Jevbridge",
+    "slug": "jevbridge",
+    "kind": "GitHub",
+    "category": "Agents & browsers",
+    "author": "github.com",
+    "description": "ACP and MCP adapter that pairs Jev with any LLM agent, including Codex, Claude, Grok, and OpenCode, for typed decisions and computer use."
+  },
+  {
+    "name": "jev-social",
+    "slug": "jev-social",
+    "kind": "GitHub",
+    "category": "Agents & browsers",
+    "author": "github.com",
+    "description": "Local Instagram and TikTok research app where Jev selects a platform and bounded socai operation from observed state, while code enforces confidence and the socai CLI executes…"
+  },
+  {
+    "name": "jev-skip",
+    "slug": "jev-skip",
+    "kind": "GitHub",
+    "category": "Agents & browsers",
+    "author": "github.com",
+    "description": "Browser extension that reads the YouTube caption track and paints a per-segment sponsor probability on the seek bar before the intro ends, with no crowd database; reports…"
+  },
+  {
+    "name": "jev-mail-classifier",
+    "slug": "jev-mail-classifier",
+    "kind": "GitHub",
+    "category": "Agents & browsers",
+    "author": "github.com",
+    "description": "Config-driven inbox classifier that tags, moves, flags and notifies from typed answers."
+  },
+  {
+    "name": "Jev-cu",
+    "slug": "jev-cu",
+    "kind": "GitHub",
+    "category": "Agents & browsers",
+    "author": "github.com",
+    "description": "Codex computer-use skill where Jev picks the next element and action from on-screen text, with a local policy gate for sensitive steps."
+  },
+  {
+    "name": "Jev Voice",
+    "slug": "jev-voice",
+    "kind": "GitHub",
+    "category": "Agents & browsers",
+    "author": "github.com",
+    "description": "Local whisper.cpp for the transcript, then one Jev request picks the action and its typed arguments; code owns execution."
+  },
+  {
+    "name": "Jev Paint",
+    "slug": "jev-paint",
+    "kind": "GitHub",
+    "category": "Agents & browsers",
+    "author": "github.com",
+    "description": "Local browser app that turns batched per-pixel Jev distributions into paintings; prompts describe pixels and regions rather than sending raw images."
+  },
+  {
+    "name": "Jev macOS Loop",
+    "slug": "jev-macos-loop",
+    "kind": "GitHub",
+    "category": "Agents & browsers",
+    "author": "github.com",
+    "description": "Native macOS GUI automation on Apple silicon: OmniParser CoreML and Apple Vision OCR identify controls locally, Jev selects the action."
+  },
+  {
+    "name": "Jev for Chrome",
+    "slug": "jev-for-chrome",
+    "kind": "GitHub",
+    "category": "Agents & browsers",
+    "author": "github.com",
+    "description": "Unofficial Chrome extension (Manifest V3) port of Jev Ultrafast: Jev picks the operation and DOM element in one request, a small text model writes typed values, and it runs in…"
+  },
+  {
+    "name": "Jev Explained",
+    "slug": "jev-explained",
+    "kind": "GitHub",
+    "category": "Agents & browsers",
+    "author": "github.com",
+    "description": "Interactive playground that walks through a typed request and its probabilities, with your own key."
+  },
+  {
+    "name": "Jev Chat",
+    "slug": "jev-chat",
+    "kind": "GitHub",
+    "category": "Agents & browsers",
+    "author": "github.com",
+    "description": "Chat-style command bar where Jev picks the tool, arguments, and reply type, and code builds every reply from tool data."
+  },
+  {
+    "name": "Hermes Jev Skills",
+    "slug": "hermes-jev-skills",
+    "kind": "GitHub",
+    "category": "Agents & browsers",
+    "author": "github.com",
+    "description": "Bundle of skills that hand an agent's small decisions to Jev: model routing, skill selection, retrieval filtering, compaction, and computer use, with a routing dashboard."
+  },
+  {
+    "name": "Grok Bot Jev Router",
+    "slug": "grok-bot-jev",
+    "kind": "GitHub",
+    "category": "Agents & browsers",
+    "author": "github.com",
+    "description": "Classifies a Grok Bot request before expensive research, browser, retry, or subagent work, so it can reuse a fresh artifact or stop a failing retry."
+  },
+  {
+    "name": "Cheshi",
+    "slug": "cheshi",
+    "kind": "GitHub",
+    "category": "Agents & browsers",
+    "author": "github.com",
+    "description": "macOS workspace for Codex where Jev finds past sessions and the decisions made in them."
+  },
+  {
+    "name": "BrowserClaw",
+    "slug": "browserclaw",
+    "kind": "GitHub",
+    "category": "Agents & browsers",
+    "author": "github.com",
+    "description": "Zero-lock, session-preserving Chrome MCP server that couples a local Jev System One semantic micro-loop (`chrome_act_toward_goal`) with an 85%+ pruned DOM tree (Shadow DOM &…"
+  },
+  {
+    "name": "agent-desktop",
+    "slug": "agent-desktop",
+    "kind": "GitHub",
+    "category": "Agents & browsers",
+    "author": "github.com",
+    "description": "macOS desktop automation over accessibility trees."
+  },
+  {
+    "name": "AI slop detector",
+    "slug": "ai-slop-detector",
+    "kind": "Site",
+    "category": "Content & growth",
+    "author": "@kraayenJon",
+    "description": "Paste any URL and Jev checks the page for 35 tells of AI slop."
+  },
+  {
+    "name": "Hide posts on X in plain language",
+    "slug": "x-post-firewall",
+    "kind": "X post",
+    "category": "Tools & apps",
+    "author": "@marcelpociot",
+    "description": "I built a browser extension with Jev @typesafeai that can hide/collapse posts on X based on natural language. It's so fast that it's not noticeable and insanely cheap...this must be the future of \"ad blockers\" and content firewalls."
+  },
+  {
+    "name": "Jev on the WebMCP benchmark",
+    "slug": "webmcp-benchmark",
+    "kind": "X post",
+    "category": "Agents & browsers",
+    "author": "@0xidanlevin",
+    "description": "We just ran Jev on our WebMCP benchmark. The result: basically broke the benchmark. Jev + Mercury 2.5 (a fast, low-cost LLM) using WebMCP solved 100% of the tasks at roughly 112× lower model cost than GPT-6 Astra using computer use with code execution. Compared to Astra using"
+  },
+  {
+    "name": "1kpapers",
+    "slug": "1kpapers",
+    "kind": "Site",
+    "category": "Research & data",
+    "author": "@nutlope",
+    "description": "1,018 AI papers sorted by topic for $0.08 and published as a site."
+  },
+  {
+    "name": "YouTube sponsor skipper",
+    "slug": "youtube-sponsor-skipper",
+    "kind": "GitHub",
+    "category": "Tools & apps",
+    "author": "@tdinh_me",
+    "description": "A Chrome extension that detects sponsor segments and skips them."
+  },
+  {
+    "name": "Live viral post analyzer",
+    "slug": "live-viral-post-analyzer",
+    "kind": "X post",
+    "category": "Content & growth",
+    "author": "@rileybrown",
+    "description": "Just created this with Jev by @typesafeai. A live viral post analyzer. As soon as you stop typing for .5 seconds it analyzes the viral potential. Going to try and actually make this good, will need to scrape a lot of twitter data... Notice how it also categorizes the tweet"
+  },
+  {
+    "name": "Jev plays Doom",
+    "slug": "jev-plays-doom",
+    "kind": "X post",
+    "category": "Games & real time",
+    "author": "@CompleteSkeptic",
+    "description": "We love how this doomo doomonstrates real-time intelligence and what can be doone with code + AI! ~10 calls/sec = ~$7/hour"
+  },
+  {
+    "name": "Wikiracing",
+    "slug": "wikiracing",
+    "kind": "Resource",
+    "category": "Games & real time",
+    "author": "typesafe.ai",
+    "description": "Get from one Wikipedia page to another by picking links."
+  },
+  {
+    "name": "jev-ultrafast",
+    "slug": "jev-ultrafast",
+    "kind": "GitHub",
+    "category": "Agents & browsers",
+    "author": "@gregpr07",
+    "description": "Browser Use’s browser agent, with Jev choosing each next step."
+  },
+  {
+    "name": "Stagehand on a remote browser",
+    "slug": "stagehand-remote-browser",
+    "kind": "X post",
+    "category": "Agents & browsers",
+    "author": "@kylejeong",
+    "description": "we built blazing fast computer/browser use with Jev + @Stagehanddev. this task cost $0.001 and executed at near instant speed (in a remote browser btw) the loop: observe the page, send a11y tree as state + actions as questions, Jev decides the next action, then Stagehand"
+  },
+  {
+    "name": "typesafe-computer-use",
+    "slug": "typesafe-computer-use",
+    "kind": "GitHub",
+    "category": "Agents & browsers",
+    "author": "github.com",
+    "description": "Computer use on macOS, with one Jev decision per step."
+  },
+  {
+    "name": "jev-trader",
+    "slug": "jev-trader",
+    "kind": "GitHub",
+    "category": "Trading & markets",
+    "author": "@jarrodwatts",
+    "description": "A trading bot that places an order in every 300 ms block."
+  },
+  {
+    "name": "jev-drone",
+    "slug": "jev-drone",
+    "kind": "GitHub",
+    "category": "Robotics & devices",
+    "author": "github.com",
+    "description": "A simulated drone that asks Jev for a judgment 2.5 times a second."
+  },
+  {
+    "name": "Triage across 1,500 emails",
+    "slug": "inbox-triage-1500-emails",
+    "kind": "X post",
+    "category": "Triage & routing",
+    "author": "@ryanvogel",
+    "description": "this model is actually insane at email classification i tested it on 1500 of my own emails to see how well it works and I am blown away"
+  },
+  {
+    "name": "Every’s editorial vibe check",
+    "slug": "every-editorial-judgments",
+    "kind": "Resource",
+    "category": "Content & growth",
+    "author": "@danshipper",
+    "description": "37 documents, 21 questions each, 1,709 judgments for under a cent."
+  },
+  {
+    "name": "Fraud detection with Jev and Kimi K3",
+    "slug": "fraud-detection-jev-kimi",
+    "kind": "X post",
+    "category": "Triage & routing",
+    "author": "@nutlope",
+    "description": "Jev + Kimi K3 for fraud detection! TLDR: Jev classified 100 emails in 1.42 seconds, then I routed the uncertain cases to Kimi K3. The full pipeline got 96/100 correct for only ~$0.07. Video is not sped up, check out the live run! Here was my process: I gave Jev 100 emails to"
+  },
+  {
+    "name": "Jev plays Slay the Spire 2",
+    "slug": "slay-the-spire-2",
+    "kind": "X post",
+    "category": "Games & real time",
+    "author": "@coolish",
+    "description": "昨天出的 https://t.co/6eiMFaJTrj Jev 模型 适合高频决策，那岂不又是适合打游戏？ 之前用 GPT-6 Astra 代打杀戮尖塔2 能力强但速度慢。 我刚实测用 Jev 打，行动思考只需 0.7秒， 画面我都没看清它就操作完了。 这超人类游戏速度， 着实又让我震惊瘫坐了😅 语言很难描述这感觉，看视频⬇️"
+  },
+  {
+    "name": "Search and tagging on keep.md",
+    "slug": "keep-md-search",
+    "kind": "X post",
+    "category": "Research & data",
+    "author": "@iannuttall",
+    "description": "Cloudflare Workers has Jev now so I'm putting it to the test on https://t.co/1fK8HbSmPm - 7x faster search rerank compared to the current hybrid - 50x faster tagging of content vs GLM 4.7 Flash with no failures"
+  },
+  {
+    "name": "A chief of staff for bots",
+    "slug": "bot-chief-of-staff",
+    "kind": "X post",
+    "category": "Agents & browsers",
+    "author": "@milindlabs",
+    "description": "got @typesafeai's new model Jev as a chief of staff for bots Jev reads the task, wakes the right teammates off the bench and gives each one the right model It is possible on OpenMausBot as it supports all the LLMs from your existing subscriptions Jev as a decision engine is"
+  },
+  {
+    "name": "Headless Chromium agent",
+    "slug": "headless-chromium-agent",
+    "kind": "X post",
+    "category": "Agents & browsers",
+    "author": "@mormonnegro",
+    "description": "Acabo de terminar la implementación de @typesafeai + Chromium Headless para que mis agentes puedan navegar por internet a una buena velocidad! En este ejemplo le pido al agente que entre a la página del término \"Café\" en Wikipedia y navegue por los hipervínculos hasta terminar"
+  },
+  {
+    "name": "jev-voice-browser",
+    "slug": "jev-voice-browser",
+    "kind": "GitHub",
+    "category": "Agents & browsers",
+    "author": "@moritzkremb",
+    "description": "A browser you control by voice, from Moritz Kremb’s Jev tutorial."
+  },
+  {
+    "name": "Keystroke oracle",
+    "slug": "predictive-launcher",
+    "kind": "X post",
+    "category": "Tools & apps",
+    "author": "@dabit3",
+    "description": "Also have been playing with @typesafeai Jev, insane! So many immediate use cases and new apps are possible. What a time to be a builder! Sharing some experiments here starting with: Keystroke oracle / predictive launcher: Your launcher ranks by aliases, fuzzy match, and"
+  },
+  {
+    "name": "Jev Calc",
+    "slug": "jev-calc",
+    "kind": "X post",
+    "category": "Tools & apps",
+    "author": "@thekitze",
+    "description": "i made a smart calculator notebook using jev it can calculate ANYTHING!! 😅"
+  },
+  {
+    "name": "A canvas you control by pointing and speaking",
+    "slug": "gesture-canvas",
+    "kind": "X post",
+    "category": "Tools & apps",
+    "author": "@jackcheng",
+    "description": "Jev is the future"
+  },
+  {
+    "name": "Hard-coded rules moved to Jev",
+    "slug": "regex-to-jev",
+    "kind": "X post",
+    "category": "Tools & apps",
+    "author": "@illyism",
+    "description": "Now using @typesafeai Jev in https://t.co/c8wAW9titP, https://t.co/bt2EomCJNV, https://t.co/Naf5ujgWB4, etc AI ends up vibe coding so much AI regex slop if you don't read the code, so I can finally move all this hard-coding to Jev and it's insanely fast! Also for regular LLM"
+  },
+  {
+    "name": "A second-hand shopping agent",
+    "slug": "second-hand-shopping-agent",
+    "kind": "X post",
+    "category": "Agents & browsers",
+    "author": "@AlanDaitch",
+    "description": "Claude me integró Jev con Playwright para buscar usados. Lee unos 26 artículos por minuto y decide qué hacer con cada uno en 406 milisegundos Descartó los que no encajaban con lo que busco, ofertó por los que sí y hasta les mandó un mensaje a los vendedores cuando faltaba algún"
+  },
+  {
+    "name": "A chat bot with no LLM",
+    "slug": "no-llm-chat-bot",
+    "kind": "X post",
+    "category": "Agents & browsers",
+    "author": "@CodingGarden",
+    "description": "I built a chat bot with jev, no LLM at all! Responses are instant, no hallucinations. I hooked it up to web search, wikipedia, weather, todoist and home assistant. Jev decides what tool to call and what args to use based on the prompt. Instant answers cite sources as well!"
+  },
+  {
+    "name": "Jev plays Subway Surfers",
+    "slug": "subway-surfers",
+    "kind": "X post",
+    "category": "Games & real time",
+    "author": "@_MaxBlade",
+    "description": "jev is insane 🤯 Here is Jev playing subway surfers at super human speed, and also playing 50 games at once. cost less than a cent to do this run. Jev does not replace llms like astra or fable, but opens up an entirely new world of capabilities."
+  },
+  {
+    "name": "Jev plays Smash Bros. against itself",
+    "slug": "smash-bros",
+    "kind": "X post",
+    "category": "Games & real time",
+    "author": "@maubaron",
+    "description": "jev is insane 🤯 here is jev playing smash bros against itself he is controlling all 4 different characters. and literally deciding whats the best move to play against itself all within a fraction of a second i used over 22 million tokens to play this match and it only cost"
+  },
+  {
+    "name": "Predictive spreadsheets",
+    "slug": "predictive-spreadsheets",
+    "kind": "X post",
+    "category": "Tools & apps",
+    "author": "@dabit3",
+    "description": "Another crazy @typesafeai Jev example: Predictive spreadsheets Spreadsheets recalculate numbers, not meaning. Jev reads intent. Type \"Urgency\" at the top of a column and, as you type, it figures out you want each row rated from \"no follow-up needed\" to \"urgent\" in ~100 ms."
+  },
+  {
+    "name": "One-click invoice finder",
+    "slug": "invoice-finder",
+    "kind": "X post",
+    "category": "Tools & apps",
+    "author": "@FarouqAldori",
+    "description": "Jev is fun! One-click invoice finder for any website 🧾 - Automatically finds billing pages using @typesafeai's Jev - List/download all invoices with 1 click - Works with Stripe billing portals too - Remembers where invoices live for next time Should I open-source it?"
+  },
+  {
+    "name": "Agentic browsing in Chrome",
+    "slug": "agentic-browsing-extension",
+    "kind": "X post",
+    "category": "Agents & browsers",
+    "author": "@razaanstha",
+    "description": "I built a Chrome extension for agentic browsing using Jev by @typesafeai, https://t.co/Xa9toMieqT including AI Gateway by @vercel. Now agents can browse, click, and interact with websites directly in your browser. Cost effective and fassst. Decision-making by Jev."
+  },
+  {
+    "name": "Jev Detector",
+    "slug": "jev-detector",
+    "kind": "X post",
+    "category": "Content & growth",
+    "author": "@jozef_gherman",
+    "description": "Announcing Jev Detector The world's fastest AI slop detector, built on jev from @typesafeai ~10,000 words scanned for slop in ~2 seconds Best part, its free, no sign up required, enjoy! https://t.co/8mlq6QpFrR"
+  },
+  {
+    "name": "400 companies matched to one candidate",
+    "slug": "job-match-prediction",
+    "kind": "X post",
+    "category": "Triage & routing",
+    "author": "@sarvagya_kul",
+    "description": "JEV is INSANE. We gave it 400 companies and one candidate profile. In 12 seconds, it predicted which jobs the candidate had the highest chance of getting, assigned a confidence score and detected job-candidate mismatches. All for just $0.0005 It can also score"
+  },
+  {
+    "name": "A Downloads folder that sorts itself",
+    "slug": "downloads-folder-sorter",
+    "kind": "X post",
+    "category": "Tools & apps",
+    "author": "@marcelpociot",
+    "description": "Jev unlocks SO many awesome new ideas. I built a macOS app that monitors my Downloads folder along with a customisable set of rules. Is the downloaded file an invoice? Move it to a special folder with the correct filename. No other LLM calls involved - just Jev!"
+  },
+  {
+    "name": "Jev plays Tetris",
+    "slug": "jev-plays-tetris",
+    "kind": "X post",
+    "category": "Games & real time",
+    "author": "@AlanDaitch",
+    "description": "Puse a Jev, la nueva IA de @typesafeai, a jugar al Tetris en modo súper difícil. Decidió cada jugada en unos 0,3 segundos. Acomodó 357 piezas e hizo 134 líneas en solo 2 minutos. Increíble."
+  },
+  {
+    "name": "Game levels generated in real time",
+    "slug": "realtime-game-levels",
+    "kind": "X post",
+    "category": "Games & real time",
+    "author": "@HugoDuprez",
+    "description": "Jev can generate game levels in real time. Faster and cheaper structured output could be a big deal for game dev!"
+  },
+  {
+    "name": "Real-time Clippy",
+    "slug": "realtime-clippy",
+    "kind": "X post",
+    "category": "Tools & apps",
+    "author": "@sotak",
+    "description": "I built real-time Clippy with Jev. It quietly watches how you use the product and only wakes up when it thinks you’re struggling. Hesitating? Confused? Stuck? Clippy knows. Even its reactions are controlled by Jev. 👀"
+  },
+  {
+    "name": "DiffJury",
+    "slug": "diffjury",
+    "kind": "Site",
+    "category": "Triage & routing",
+    "author": "@raihankhan_rk",
+    "description": "Paste a public PR link; Jev says if it is safe to merge or needs review."
+  },
+  {
+    "name": "A Slack agent, twice as fast",
+    "slug": "slack-agent-skill-routing",
+    "kind": "X post",
+    "category": "Agents & browsers",
+    "author": "@johnyeo_",
+    "description": "Jev made our Slack agent 2x faster ⚡️ Our agent can be quite slow because it needs to read skills and figure out which tools to call. We used @typesafeai's new model to speed this up by first passing it the prompt and classifying the best skill, tool and params to use before"
+  },
+  {
+    "name": "Voice-controlled computer use on a Mac",
+    "slug": "voice-computer-use-mac",
+    "kind": "X post",
+    "category": "Agents & browsers",
+    "author": "@instantricecook",
+    "description": "I built a voice controlled computer-use for my mac using @typesafeai's Jev and it's INSANE how fast it is! I can dictate \"open the notes app and create...\" and the app opens before I even finish my sentence."
+  },
+  {
+    "name": "An always-on assistant with no wake word",
+    "slug": "ambient-assistant",
+    "kind": "X post",
+    "category": "Tools & apps",
+    "author": "@_MaxBlade",
+    "description": "Ai is evolving. Jev can be armed at all times. I can speak freely and it knows ( from probabilities ) if im asking my computer to do something or blaberring away at something else. no wake word. speed + affordability + intelligence is getting to the point where an always"
+  },
+  {
+    "name": "Intent-based search in Gmail",
+    "slug": "gmail-intent-search",
+    "kind": "X post",
+    "category": "Triage & routing",
+    "author": "@dabit3",
+    "description": "Jev is really good at intent-based search! How it looks in Gmail: (for a huge inbox you'd prob let semantic search / embeddings pull first but still much better experience)"
+  },
+  {
+    "name": "Company invoices, classified for the books",
+    "slug": "invoice-accounting",
+    "kind": "X post",
+    "category": "Triage & routing",
+    "author": "@iagolast",
+    "description": "Caso de uso de @typesafeai: Revisar todas las facturas de la empresa y clasificarlas contablemente en segundos 🫠"
+  },
+  {
+    "name": "End-to-end tests run by agents",
+    "slug": "e2e-testing-agents",
+    "kind": "X post",
+    "category": "Agents & browsers",
+    "author": "@o_kwasniewski",
+    "description": "e2e + jev from @typesafeai ⚡ I'm building an open-source framework for running e2e tests with agents. supports web, mobile (and more!) available soon: https://t.co/G3XB2L8tiC"
+  },
+  {
+    "name": "A computer assistant that listens",
+    "slug": "voice-computer-assistant",
+    "kind": "X post",
+    "category": "Agents & browsers",
+    "author": "@marckohlbrugge",
+    "description": "building a computer assistant with Jev local whisper listens to everything I say which then gets classified by Jev to determine what actions to take it uses a small Swift app to provide the full accessibility tree to Jev (i.e. tell its what's on my screen, what can be clicked,"
+  },
+  {
+    "name": "askjev.ai",
+    "slug": "askjev",
+    "kind": "Site",
+    "category": "Tools & apps",
+    "author": "@waynesutton",
+    "description": "Ask Jev anything. It won’t answer, it will judge."
+  },
+  {
+    "name": "A model router on Jev",
+    "slug": "jev-model-router",
+    "kind": "X post",
+    "category": "Triage & routing",
+    "author": "@ephraimduncan",
+    "description": "Built a model router with Jev by @typesafeai. Jev decides what model fits your request best and the request is sent to that model."
+  },
+  {
+    "name": "Support answers in a Mac app",
+    "slug": "mac-app-support-answers",
+    "kind": "X post",
+    "category": "Triage & routing",
+    "author": "@malekoo",
+    "description": "First @typesafeai use case, live in our Mac app: setup and troubleshooting help when no model is loaded. Model downloading, load failed, API returning 503, phone won't pair: the user asks, Jev reads the question with the whole built-in manual as state and decides, with"
+  },
+  {
+    "name": "Jev as an agent safety monitor",
+    "slug": "agent-safety-monitor",
+    "kind": "X post",
+    "category": "Agents & browsers",
+    "author": "@isNickMa",
+    "description": "Tested TypeSafe’s Jev (no-text, probability-only model) as an AI agent safety monitor. Checking each action first worked well caught most attacks with almost no false blocks, and much faster than Gemini."
+  },
+  {
+    "name": "jev-router",
+    "slug": "jev-router",
+    "kind": "GitHub",
+    "category": "Triage & routing",
+    "author": "@gargpratyush20",
+    "description": "Routes each Claude Code task to the cheapest model that can do it."
+  },
+  {
+    "name": "jev-mcp",
+    "slug": "jev-mcp",
+    "kind": "GitHub",
+    "category": "Tools & apps",
+    "author": "@jkudish",
+    "description": "An MCP server with claim checks, screening and ranking built on Jev."
+  },
+  {
+    "name": "unclutter",
+    "slug": "unclutter",
+    "kind": "GitHub",
+    "category": "Tools & apps",
+    "author": "@thekitze",
+    "description": "A browser extension where Jev decides which parts of a page are clutter."
+  },
+  {
+    "name": "Jev Moderation Bot",
+    "slug": "jev-moderation-bot",
+    "kind": "GitHub",
+    "category": "Content & growth",
+    "author": "@brainstormity",
+    "description": "A Discord moderation bot with Jev making the calls."
+  },
+  {
+    "name": "jevmod",
+    "slug": "jevmod",
+    "kind": "GitHub",
+    "category": "Content & growth",
+    "author": "@OmarBastos",
+    "description": "Moderation with a probability per category and thresholds you set."
+  },
+  {
+    "name": "Notra",
+    "slug": "notra",
+    "kind": "GitHub",
+    "category": "Content & growth",
+    "author": "@usenotra",
+    "description": "Turns your work into content, with Jev classifiers for GEO."
+  },
+  {
+    "name": "jev-seo",
+    "slug": "jev-seo",
+    "kind": "GitHub",
+    "category": "Content & growth",
+    "author": "@Akash__ydv001",
+    "description": "An agent-first SEO and GEO CLI in Rust, with DuckDuckGo and Jev."
+  },
+  {
+    "name": "daf-jev",
+    "slug": "daf-jev",
+    "kind": "GitHub",
+    "category": "Tools & apps",
+    "author": "github.com",
+    "description": "A Python toolkit: question builders, confidence gates and calibration."
+  },
+  {
+    "name": "TypeSafe AI playground",
+    "slug": "typesafe-ai-playground",
+    "kind": "GitHub",
+    "category": "Tools & apps",
+    "author": "@BunsDev",
+    "description": "110 use cases, games and dilemmas, with editable prompts and A/B tests."
+  },
+  {
+    "name": "fastbrowse",
+    "slug": "fastbrowse",
+    "kind": "GitHub",
+    "category": "Agents & browsers",
+    "author": "github.com",
+    "description": "Jev picks each action; an LLM plans; every claim cites the page."
+  },
+  {
+    "name": "jev-ra",
+    "slug": "jev-ra",
+    "kind": "GitHub",
+    "category": "Agents & browsers",
+    "author": "github.com",
+    "description": "Browser use for coding agents, with Jev deciding each step in ~300 ms."
+  },
+  {
+    "name": "jev-reflex",
+    "slug": "jev-reflex",
+    "kind": "GitHub",
+    "category": "Agents & browsers",
+    "author": "github.com",
+    "description": "Claude thinks, Jev reacts: browser tasks at about 100 ms a decision."
+  },
+  {
+    "name": "solari-reflex",
+    "slug": "solari-reflex",
+    "kind": "GitHub",
+    "category": "Agents & browsers",
+    "author": "@hitakshii_arora",
+    "description": "A speed layer for computer use: one Jev decision per step."
+  },
+  {
+    "name": "jev-mobile",
+    "slug": "jev-mobile",
+    "kind": "GitHub",
+    "category": "Agents & browsers",
+    "author": "github.com",
+    "description": "Android control loops with Jev and Mobile MCP."
+  },
+  {
+    "name": "super-jev",
+    "slug": "super-jev",
+    "kind": "GitHub",
+    "category": "Agents & browsers",
+    "author": "github.com",
+    "description": "A small decision-to-action harness for Jev."
+  },
+  {
+    "name": "jev-tool-runner",
+    "slug": "jev-tool-runner",
+    "kind": "GitHub",
+    "category": "Agents & browsers",
+    "author": "github.com",
+    "description": "Jev selects the developer tools; Codex writes the code."
+  },
+  {
+    "name": "jev-flash-router",
+    "slug": "jev-flash-router",
+    "kind": "GitHub",
+    "category": "Agents & browsers",
+    "author": "github.com",
+    "description": "An MCP server so coding agents stop spending tokens on small choices."
+  },
+  {
+    "name": "jev-mcp for coding loops",
+    "slug": "jev-mcp-coding-loop",
+    "kind": "GitHub",
+    "category": "Agents & browsers",
+    "author": "github.com",
+    "description": "An MCP server that puts Jev on the coding loop in Cursor and Codex."
+  },
+  {
+    "name": "jev-mcp-dispatcher",
+    "slug": "jev-mcp-dispatcher",
+    "kind": "GitHub",
+    "category": "Agents & browsers",
+    "author": "github.com",
+    "description": "Plain-language MCP tool calls with no LLM at all, only Jev."
+  },
+  {
+    "name": "maza",
+    "slug": "maza",
+    "kind": "GitHub",
+    "category": "Tools & apps",
+    "author": "github.com",
+    "description": "A local MCP gateway with Jev tool discovery and a dashboard."
+  },
+  {
+    "name": "jev-review-action",
+    "slug": "jev-review-action",
+    "kind": "GitHub",
+    "category": "Triage & routing",
+    "author": "github.com",
+    "description": "A GitHub Action that reviews and classifies PRs with Jev alone."
+  },
+  {
+    "name": "patdown",
+    "slug": "patdown",
+    "kind": "GitHub",
+    "category": "Tools & apps",
+    "author": "@tyler_dot_earth",
+    "description": "A fuzzy linter: Jev gives your code an ocular patdown."
+  },
+  {
+    "name": "is-malicious",
+    "slug": "is-malicious",
+    "kind": "GitHub",
+    "category": "Tools & apps",
+    "author": "github.com",
+    "description": "A codebase scanner that helps you not run malicious code."
+  },
+  {
+    "name": "guesswork",
+    "slug": "guesswork",
+    "kind": "GitHub",
+    "category": "Tools & apps",
+    "author": "@foundmalek",
+    "description": "Fish-style zsh autosuggestions, ranked by Jev instead of by prefix."
+  },
+  {
+    "name": "capture",
+    "slug": "capture",
+    "kind": "GitHub",
+    "category": "Tools & apps",
+    "author": "github.com",
+    "description": "A private Mac voice diary: local transcription, Jev sorting, Notion library."
+  },
+  {
+    "name": "jev-search",
+    "slug": "jev-search",
+    "kind": "GitHub",
+    "category": "Research & data",
+    "author": "github.com",
+    "description": "Offline Obsidian search, with an optional Jev rerank you approve first."
+  },
+  {
+    "name": "jev-reviewer",
+    "slug": "jev-reviewer",
+    "kind": "GitHub",
+    "category": "Research & data",
+    "author": "@asofimahmudi",
+    "description": "Systematic-review data from trial reports, every answer a verbatim quote."
+  },
+  {
+    "name": "jevocks",
+    "slug": "jevocks",
+    "kind": "GitHub",
+    "category": "Trading & markets",
+    "author": "@unicodeveloper",
+    "description": "A stock terminal: Valyu brings the evidence, Jev gives the status."
+  },
+  {
+    "name": "Beat Jev",
+    "slug": "beat-jev",
+    "kind": "GitHub",
+    "category": "Games & real time",
+    "author": "github.com",
+    "description": "A penalty shootout against Jev, on Render Workflows and Postgres."
+  },
+  {
+    "name": "Jev runs a city’s traffic",
+    "slug": "jev-traffic-sim",
+    "kind": "GitHub",
+    "category": "Games & real time",
+    "author": "@skcache",
+    "description": "A traffic simulation where Jev controls a whole city."
+  },
+  {
+    "name": "jev-piano",
+    "slug": "jev-piano",
+    "kind": "GitHub",
+    "category": "Games & real time",
+    "author": "@LamplighterPaul",
+    "description": "Jev can’t write a note, but with the right questions it improvises piano."
+  },
+  {
+    "name": "Can Jev steer music?",
+    "slug": "jev-music-playground",
+    "kind": "GitHub",
+    "category": "Games & real time",
+    "author": "@wustep",
+    "description": "Jev picks the plan; code renders the sheet music, audio and MIDI."
+  },
+  {
+    "name": "Guess the age from a Korean name",
+    "slug": "kr-name-age",
+    "kind": "GitHub",
+    "category": "Tools & apps",
+    "author": "github.com",
+    "description": "A small React app where Jev guesses an age band from a name."
+  },
+  {
+    "name": "eve",
+    "slug": "vercel-eve",
+    "kind": "GitHub",
+    "category": "Agents & browsers",
+    "author": "@vercel",
+    "description": "Vercel’s open agent framework, with Jev as its default evaluate model."
+  },
+  {
+    "name": "TypeSafe agent skills",
+    "slug": "typesafe-skills",
+    "kind": "Skill",
+    "category": "Tools & apps",
+    "author": "@typesafeai",
+    "description": "The official skill for building with Jev, installable with one command."
+  },
+  {
+    "name": "skillbox",
+    "slug": "skillbox",
+    "kind": "Skill",
+    "category": "Tools & apps",
+    "author": "@thekitze",
+    "description": "A self-hosted skills library, with optional Jev recommendations."
+  },
+  {
+    "name": "skillranker",
+    "slug": "skillranker",
+    "kind": "Skill",
+    "category": "Tools & apps",
+    "author": "@doodlestein",
+    "description": "A Rust CLI where Jev ranks agent skills for the next step."
+  },
+  {
+    "name": "jev-agent-skill-router",
+    "slug": "jev-agent-skill-router",
+    "kind": "Skill",
+    "category": "Tools & apps",
+    "author": "github.com",
+    "description": "Routes which agent skill runs, with typed Jev decisions and confidence."
+  },
+  {
+    "name": "jev-judgment",
+    "slug": "jev-judgment",
+    "kind": "Skill",
+    "category": "Tools & apps",
+    "author": "github.com",
+    "description": "An agent skill that sends a coding agent’s closed judgments to Jev."
+  },
+  {
+    "name": "tenbin",
+    "slug": "tenbin",
+    "kind": "Skill",
+    "category": "Tools & apps",
+    "author": "github.com",
+    "description": "Split a judgment into Choice, Score and Noul, lint it, then measure it."
+  },
+  {
+    "name": "Augustus",
+    "slug": "augustus",
+    "kind": "Skill",
+    "category": "Tools & apps",
+    "author": "@moltar81435",
+    "description": "An agent skill for designing systems around Jev’s judgments."
+  },
+  {
+    "name": "jev-superpowers",
+    "slug": "jev-superpowers",
+    "kind": "Skill",
+    "category": "Tools & apps",
+    "author": "@Akash__ydv001",
+    "description": "A skills framework for coding agents, with Jev gates and vetting."
+  },
+  {
+    "name": "Building with Jev",
+    "slug": "building-with-jev",
+    "kind": "Skill",
+    "category": "Tools & apps",
+    "author": "@dbreunig",
+    "description": "A skill for writing and fixing programs that call Jev."
+  },
+  {
+    "name": "jev-rules",
+    "slug": "jev-rules",
+    "kind": "GitHub",
+    "category": "Tools & apps",
+    "author": "github.com",
+    "description": "Jev picks which of your rules apply, so Claude only sees those."
+  },
+  {
+    "name": "900 images in 40 seconds",
+    "slug": "ocr-image-classifier",
+    "kind": "X post",
+    "category": "Triage & routing",
+    "author": "@fayazara",
+    "description": "Made myself a little image classifier with OCR + Jev It was able to categorise ~900 images in 40 seconds Pretty cool"
+  },
+  {
+    "name": "Website to App",
+    "slug": "website-to-app",
+    "kind": "X post",
+    "category": "Tools & apps",
+    "author": "@chddaniel",
+    "description": "Introducing Jev for 'Website to App' Turn any website into a native mobile app. Just paste a URL. jev-1.13.0 decides how to build the original website as a *native* mobile app, then shipper submits to the app stores for you. We’ve been using this internally a ton for"
+  },
+  {
+    "name": "A prompt box that fills itself in",
+    "slug": "prompt-box-router",
+    "kind": "X post",
+    "category": "Triage & routing",
+    "author": "@sawyerhood",
+    "description": "thanks to @typesafeai jev I no longer have fill out all of those fields on prompt boxes. It picks the agent / model / computer / folder for me. - For a major rewrite it uses Fable + Claude Code. - Changes to an ios app run on one of my macs"
+  },
+  {
+    "name": "Classify rows in DuckDB",
+    "slug": "duckdb-row-classifier",
+    "kind": "X post",
+    "category": "Research & data",
+    "author": "@hamiltonulmer",
+    "description": "I made a DuckDB extension where you can use @typesafeai 's Jev to do quick classification of rows in any csv/parquet file or duckdb table about 10sec for 1k rows ~ better than using an LLM, way more ergonomic than a classifier game-changing for data analysis!"
+  },
+  {
+    "name": "TypeSafe Typewriter",
+    "slug": "typesafe-typewriter",
+    "kind": "Site",
+    "category": "Content & growth",
+    "author": "@stevekrouse",
+    "description": "Sixteen judgments about your text, asked again on every keystroke."
+  },
+  {
+    "name": "Mobile Jev",
+    "slug": "mobile-jev",
+    "kind": "GitHub",
+    "category": "Agents & browsers",
+    "author": "@droid_run",
+    "description": "A mobile agent on a real Android phone, with Jev making each decision."
+  },
+  {
+    "name": "Jev Recruiter",
+    "slug": "jev-recruiter",
+    "kind": "GitHub",
+    "category": "Agents & browsers",
+    "author": "@skeptrune",
+    "description": "A LinkedIn recruiting agent that browses profiles and saves the evidence."
+  },
+  {
+    "name": "Bouncer",
+    "slug": "bouncer",
+    "kind": "GitHub",
+    "category": "Agents & browsers",
+    "author": "github.com",
+    "description": "A judgment layer that checks every Claude Code tool call against your policy."
+  },
+  {
+    "name": "Interlock",
+    "slug": "interlock",
+    "kind": "GitHub",
+    "category": "Agents & browsers",
+    "author": "github.com",
+    "description": "A gate on every agent tool call, with Jev as one of its sensors."
+  },
+  {
+    "name": "Jev Pong",
+    "slug": "jev-pong",
+    "kind": "GitHub",
+    "category": "Games & real time",
+    "author": "github.com",
+    "description": "Pong where the ball moves one step per model decision. Jev against the LLMs."
+  },
+  {
+    "name": "Kiru Hai Coach",
+    "slug": "kiru-hai-coach",
+    "kind": "GitHub",
+    "category": "Games & real time",
+    "author": "github.com",
+    "description": "A solo mahjong coach: Jev picks the tile to discard. In Japanese."
+  },
+  {
+    "name": "Jevinci",
+    "slug": "jevinci",
+    "kind": "GitHub",
+    "category": "Tools & apps",
+    "author": "@anshuc",
+    "description": "Paintings made from Jev’s pixel probabilities."
+  },
+  {
+    "name": "Jev Review",
+    "slug": "jev-review-dashboard",
+    "kind": "GitHub",
+    "category": "Tools & apps",
+    "author": "@devagrawal09",
+    "description": "A staged code-review workflow with a local dashboard."
+  },
+  {
+    "name": "Jev PR Labeler",
+    "slug": "jev-pr-labeler",
+    "kind": "GitHub",
+    "category": "Triage & routing",
+    "author": "@1jehuang",
+    "description": "GitHub PR labels chosen by Jev, with size measured as scope, not lines."
+  },
+  {
+    "name": "jev-oxlint",
+    "slug": "jev-oxlint",
+    "kind": "GitHub",
+    "category": "Tools & apps",
+    "author": "@cephalization",
+    "description": "Turn an agent skill into an Oxlint plugin that asks Jev."
+  },
+  {
+    "name": "jevcumber",
+    "slug": "jevcumber",
+    "kind": "GitHub",
+    "category": "Tools & apps",
+    "author": "github.com",
+    "description": "Cucumber tests from the .feature file alone. No step definitions."
+  },
+  {
+    "name": "pi-jev",
+    "slug": "pi-jev",
+    "kind": "GitHub",
+    "category": "Tools & apps",
+    "author": "github.com",
+    "description": "A Pi extension: Jev picks the file excerpts, a local model writes the code."
+  },
+  {
+    "name": "Sniff Test",
+    "slug": "snifftest",
+    "kind": "GitHub",
+    "category": "Content & growth",
+    "author": "github.com",
+    "description": "A prose linter for AI writing tells: regex rules plus Jev for judgment."
+  },
+  {
+    "name": "Clarity Judge",
+    "slug": "clarity-judge",
+    "kind": "GitHub",
+    "category": "Content & growth",
+    "author": "github.com",
+    "description": "Writing checked on separate named axes, each with its own verdict."
+  },
+  {
+    "name": "LinkedIn NoSlop",
+    "slug": "linkedin-noslop",
+    "kind": "GitHub",
+    "category": "Content & growth",
+    "author": "github.com",
+    "description": "A Chrome extension that blurs low-value LinkedIn posts."
+  },
+  {
+    "name": "firehose-judge",
+    "slug": "firehose-judge",
+    "kind": "GitHub",
+    "category": "Triage & routing",
+    "author": "github.com",
+    "description": "The live Bluesky firehose, judged post by post, with a lane for humans."
+  },
+  {
+    "name": "Jev Anti-Spam Bot",
+    "slug": "jev-antispam-bot",
+    "kind": "GitHub",
+    "category": "Triage & routing",
+    "author": "@backmeupplz",
+    "description": "A Telegram bot that deletes only the spam Jev is sure about."
+  },
+  {
+    "name": "mastra-jev-moderation",
+    "slug": "mastra-jev-moderation",
+    "kind": "GitHub",
+    "category": "Triage & routing",
+    "author": "github.com",
+    "description": "Input moderation for Mastra agents in one file."
+  },
+  {
+    "name": "Hawk or dove?",
+    "slug": "jev-fedspeech",
+    "kind": "GitHub",
+    "category": "Trading & markets",
+    "author": "github.com",
+    "description": "Fed press conferences scored word by word, Jev against chat models."
+  },
+  {
+    "name": "duckdb-jev",
+    "slug": "duckdb-jev",
+    "kind": "GitHub",
+    "category": "Research & data",
+    "author": "github.com",
+    "description": "Ask a question about every row in SQL, and get a real SQL type back."
+  },
+  {
+    "name": "Jev Capability Atlas",
+    "slug": "jev-capability-atlas",
+    "kind": "GitHub",
+    "category": "Research & data",
+    "author": "github.com",
+    "description": "Where Jev holds up and where it breaks, with real API receipts."
+  },
+  {
+    "name": "Semantic Bookmark",
+    "slug": "semantic-bookmark",
+    "kind": "GitHub",
+    "category": "Tools & apps",
+    "author": "github.com",
+    "description": "A Chrome extension that files bookmarks by rules you write."
+  },
+  {
+    "name": "Port Cleanup",
+    "slug": "port-cleanup",
+    "kind": "GitHub",
+    "category": "Tools & apps",
+    "author": "@EpiphanyDynamic",
+    "description": "A macOS utility that tells you which listening ports are safe to stop."
+  },
+  {
+    "name": "Laravel TypeSafe Jev",
+    "slug": "laravel-typesafe-jev",
+    "kind": "GitHub",
+    "category": "Tools & apps",
+    "author": "github.com",
+    "description": "An unofficial Laravel package for Jev, with typed responses and test fakes."
+  },
+  {
+    "name": "Lurk",
+    "slug": "lurk",
+    "kind": "X post",
+    "category": "Content & growth",
+    "author": "@mxfp4",
+    "description": "everyone's making demos with Jev but nobody is making real products introducing https://t.co/fClaUNrMAn find and monitor reddit threads to get cited by AI > FREE > 4000 reddit threads scanned > email, discord, slack only possible to give for free bc of Jev & @getanyapi"
+  },
+  {
+    "name": "X timeline labeler",
+    "slug": "x-timeline-labeler",
+    "kind": "X post",
+    "category": "Content & growth",
+    "author": "@the_cyw",
+    "description": "I made a chrome extension to label all the X posts on my timeline. It tells me if each post is clean, engagement bait, promo, secondhand or filler. $0.03 for 1000 posts. Open sourced if you want to try it out."
+  },
+  {
+    "name": "Ad creatives from filtered assets",
+    "slug": "higgsfield-ad-creatives",
+    "kind": "X post",
+    "category": "Content & growth",
+    "author": "@higgsfield_ai",
+    "description": "Jev is really good at content filtering and asset selection. DeepSeek + Higgsfield turn the selected assets into ad creatives."
+  },
+  {
+    "name": "SEO and GEO fixes, 90% cheaper",
+    "slug": "ryze-seo-geo-agents",
+    "kind": "X post",
+    "category": "Content & growth",
+    "author": "@irabukht",
+    "description": "Jev dropped the price of SEO/GEO fixes by 90% Agents that audit and fix a client's SEO/GEO used to cost us ~$250 Here's where the savings come from: 1/ 30x faster reads of Search Console and PostHog/Mixpanel data 2/ 30x faster checks of what ChatGPT searches on Bing 3/ 30x"
+  },
+  {
+    "name": "Doomscroll Filter",
+    "slug": "doomscroll-filter",
+    "kind": "Site",
+    "category": "Content & growth",
+    "author": "@robj3d3",
+    "description": "Pick a niche, and Jev sorts fresh X posts into Read, Skim or Pass."
+  },
+  {
+    "name": "Which outreach signals book demos",
+    "slug": "outreach-intent-signals",
+    "kind": "X post",
+    "category": "Research & data",
+    "author": "@pierreeliottlal",
+    "description": "JEV is insanely fast. We gave it a massive dataset based on thousands of outreach messages and asked: Which intent signals generated the most booked demos? 40 seconds later, we had the answer. Cost: less than $0.20. JEV can also rank leads, measure prospect-message fit, and"
+  },
+  {
+    "name": "Seven more SEO and GEO workflows",
+    "slug": "seo-geo-seven-workflows",
+    "kind": "X post",
+    "category": "Content & growth",
+    "author": "@irabukht",
+    "description": "Jev killed 7 more SEO/GEO workflows 👇 1/ Assess which competitor pages to copy -> It scores every competitor page on answer, depth, proof and freshness, then checks its rank in Google and ChatGPT to show which ones are worth copying 2/ Identify which page elements to change"
+  },
+  {
+    "name": "Filtering WIP todos by meaning",
+    "slug": "wip-todo-filter",
+    "kind": "X post",
+    "category": "Research & data",
+    "author": "@marckohlbrugge",
+    "description": "Using Jev to filter through my @wip todos It allows me to super quickly find all the instances where I increased revenue, got stuck, switched to a different SaaS provider, etc Things a regular keyword search would never catch"
+  },
+  {
+    "name": "Natural-language search over Zillow",
+    "slug": "zillow-listing-search",
+    "kind": "X post",
+    "category": "Research & data",
+    "author": "@venturetwins",
+    "description": "Jev can serve as better natural language search on websites. It can scan thousands of Zillow listings and classify properties by things you can't normally filter for - e.g. architecture, renovation status, proximity to freeways. This was done in <20 sec and costs $0.18 👇"
+  },
+  {
+    "name": "Jev for content marketing",
+    "slug": "virlo-content-judge",
+    "kind": "X post",
+    "category": "Content & growth",
+    "author": "@dsqjaffa",
+    "description": "today i'm releasing Jev for content marketing. still doomscrolling to figure out what to post on social media? that's over now... Jev watches EVERY video in your niche and judges it before it ever reaches you: 1. research: pulls every video in your niche from a database of"
+  },
+  {
+    "name": "Breaking, golden nugget, or slop",
+    "slug": "x-post-tagger-live",
+    "kind": "X post",
+    "category": "Content & growth",
+    "author": "@nateherk",
+    "description": "Jev is tagging X posts in real time for me. Breaking, golden nugget, or slop."
+  },
+  {
+    "name": "100,000 viral posts in 20.4 seconds",
+    "slug": "viral-post-analyser",
+    "kind": "X post",
+    "category": "Content & growth",
+    "author": "@0xMovez",
+    "description": "I just built a Jev X Viral Post Analyser. 100,000 viral X posts. 20.4 seconds. $0.67. Claude Opus 5, same corpus, same clock, got through 214 posts and spent $0.98. per post that is ~680x cheaper the full Opus pass would have run $458. viral analysis is the perfect Jev job."
+  },
+  {
+    "name": "Launching agents on a canvas",
+    "slug": "clonk-agent-canvas",
+    "kind": "X post",
+    "category": "Agents & browsers",
+    "author": "@0xPaulius",
+    "description": "Jev brought us closer to JARVIS it instantly does things like launch agents on a canvas - without awkawardly waiting for slowGPT LLM loop @clonkapp is now the fastest agent orchestrator on the planet"
+  },
+  {
+    "name": "Which exam questions come back",
+    "slug": "exam-question-predictor",
+    "kind": "X post",
+    "category": "Research & data",
+    "author": "@hametgholizadeh",
+    "description": "JEV IS INSANE. I gave it 80 real exam questions and 297 practice ones. In 80 seconds, it told me which ones are most likely to appear on the real exam and which ones aren’t. All for $0.0256. Can't stop playing with @typesafeai 😁"
+  },
+  {
+    "name": "1,315 posts across eight dimensions",
+    "slug": "x-archive-dashboard",
+    "kind": "X post",
+    "category": "Content & growth",
+    "author": "@yuhasbeentaken",
+    "description": "Jev classified 1,315 X posts for about $0.086 in estimated model cost 😂 seeing everyone's Jev demos made me want to build something for my own content research. i'd collected a lot of posts, but figuring out what they had in common still meant opening them one by one and"
+  },
+  {
+    "name": "A shortlist from a competitor swipe file",
+    "slug": "competitor-ad-shortlist",
+    "kind": "X post",
+    "category": "Content & growth",
+    "author": "@kenonews",
+    "description": "JEV makes competitor research feel like a cheat code. Give it your competitors’ ads. Break them down by hook, angle, offer and format. Then turn recurring combinations into a shortlist for your next creative test. From an endless swipe file to “here’s what we should try next.”"
+  },
+  {
+    "name": "Watching 25 customer groups on WhatsApp",
+    "slug": "whatsapp-group-monitor",
+    "kind": "X post",
+    "category": "Triage & routing",
+    "author": "@t0t0_build",
+    "description": "Un JEV me está monitoreando más de 25 grupos de whatsapp con clientes en tiempo real y evaluando si tengo que saber algo por urgencia problemas, pedidos irresueltos etc. Si tengo algo que saber, le avisa a una LLM que me escriba. 🔥"
+  },
+  {
+    "name": "1,891 ads in 19 seconds",
+    "slug": "maxfusion-ad-library",
+    "kind": "X post",
+    "category": "Content & growth",
+    "author": "@aresotik",
+    "description": "ESTA HERRAMIENTA ACABA DE ROMPER TODO EL MERCADO DEL AD SPY Maxfusion ha cogido JEV, el modelo nuevo de TypeSafe, y le ha metido la ad library entera de una marca → 1.891 anuncios clasificados → 19 segundos → 0,12 $ Y no es un resumen: cada anuncio etiquetado por etapa del"
+  },
+  {
+    "name": "Jev plays Puyo Puyo",
+    "slug": "jev-plays-puyo-puyo",
+    "kind": "X post",
+    "category": "Games & real time",
+    "author": "@hota911",
+    "description": "Jev にぷよぷよをさせてみた。 - 実行エンジンは https://t.co/Gj4dRDLtMS 。ゲームはリアルタイムで進行 - 盤面とそれぞれのポジションにおいたあとの結果を与え、①今どのフェーズか ②フェーズごとに、戦略からどの結果がベストか の1+3つの質問をして、選択肢を選ぶ 画像は Random"
+  },
+  {
+    "name": "Magic Jev Ball for code review",
+    "slug": "magic-jev-ball",
+    "kind": "X post",
+    "category": "Tools & apps",
+    "author": "@acharyaagamya",
+    "description": "I made a Magic Jev Ball for code reviews 🎱 Click it on any GitHub PR and ask: \"should I approve this?\" It checks CI, diff size, and reviews, then lets @typesafeai Jev decide your fate in ~200 ms No more thinking. Just shaking."
+  },
+  {
+    "name": "jev-skill-router",
+    "slug": "jev-skill-router-droidq",
+    "kind": "GitHub",
+    "category": "Tools & apps",
+    "author": "@droidqw",
+    "description": "Skill routing for an agent, decided by Jev."
+  },
+  {
+    "name": "Jev driving real Chrome from Grok Bot",
+    "slug": "grok-bot-chrome",
+    "kind": "X post",
+    "category": "Agents & browsers",
+    "author": "@ChrisAdcockMD",
+    "description": "Took Gregor’s Ultrafast idea and wired it into Grok Bot. @bot @OpenRouter @typesafeai @gregpr07 Your bots can now use Jev to drive the real Chrome on the machine instead of slow look-and-click. Drop in the API key you already have (OpenRouter or TypeSafe), and it gets going."
+  },
+  {
+    "name": "A 26-sheet plan set in 2.9 seconds",
+    "slug": "construction-plan-classifier",
+    "kind": "X post",
+    "category": "Research & data",
+    "author": "@hari_trinay",
+    "description": "Built a construction plan-set classifier with Jev. Proq turns civil and building plan sets into bills of materials using an LLM pipeline we built on GPT-4.1. Jev classified an entire 26-sheet plan set in 2.9 seconds for $0.0052. It matched GPT-4.1 and GPT-6 Astra on 100% of"
+  },
+  {
+    "name": "An A/B test against 4,000 personas",
+    "slug": "persona-ab-test",
+    "kind": "X post",
+    "category": "Content & growth",
+    "author": "@SimAudience",
+    "description": "Jev is WILD I gave it two launch tweets and fed it over 4000 demographic profiles of real survey participants Twelve seconds later, a simulated A/B test tied to actual personas voting on the best tweet you can just do things i made it 100% free (link below)"
+  },
+  {
+    "name": "Jev plays Pokémon Showdown",
+    "slug": "jev-plays-pokemon-showdown",
+    "kind": "X post",
+    "category": "Games & real time",
+    "author": "@Izzuddin_Shafi",
+    "description": "1/8 Saw Jev from @typesafeai on my feed, so I made it play Pokemon Showdown. Codex built the harness. It was damn fast. Its choices were a mixed bag. Full match, video 1/2. This is a saved replay with decision data, latency and added reading pauses."
+  },
+  {
+    "name": "A syntax highlighter on Jev",
+    "slug": "jev-highlighter",
+    "kind": "Site",
+    "category": "Tools & apps",
+    "author": "@stringsaeed",
+    "description": "Jev names the language, colours every word and fires nine lint rules."
+  },
+  {
+    "name": "Mario Never Dies",
+    "slug": "mario-never-dies",
+    "kind": "X post",
+    "category": "Games & real time",
+    "author": "@theappcypher",
+    "description": "okay Jev is an INSANE unlock, I just gave Mario a multiverse. built \"Mario Never Dies\" with @typesafeai's Jev + microsandbox Jev picks every move and every time Mario dies, we fork the entire VM into 4 timelines and try again. whichever Mario survives becomes canon. it is like"
+  },
+  {
+    "name": "A dual-arm robot with Jev in the middle layer",
+    "slug": "dual-arm-robot",
+    "kind": "X post",
+    "category": "Robotics & devices",
+    "author": "@Raptor_zip",
+    "description": "型付き意思決定AIモデル「Jev」で双腕ロボを動かした結果まとめてみた🦾 3層制御のうち意思決定（2層）をJevに任せ、IKや物理計算はコード側に分離する構造を作りました。500msの応答と0.5円/試行で早くて激安。"
+  },
+  {
+    "name": "AskJev",
+    "slug": "askjev-mcp",
+    "kind": "GitHub",
+    "category": "Agents & browsers",
+    "author": "@manofsteel3129",
+    "description": "Talk to Claude, and Jev moves your real browser on any site."
+  },
+  {
+    "name": "JevForm",
+    "slug": "jevform",
+    "kind": "Site",
+    "category": "Tools & apps",
+    "author": "@TamirSPIRITT",
+    "description": "A form that branches by meaning instead of if-then rules."
+  },
+  {
+    "name": "talkr",
+    "slug": "talkr",
+    "kind": "X post",
+    "category": "Tools & apps",
+    "author": "@0xaniol",
+    "description": "today i built talkr, a speech analyzer using @typesafeai > talkr gives you a topic > you talk about it for 30s > jev analyzes your speech: pauses, filler words, repetitions, confidence, clarity > you get a score and feedback to improve can’t wait to 10x my speaking skills"
+  },
+  {
+    "name": "jev-e2e",
+    "slug": "jev-e2e",
+    "kind": "GitHub",
+    "category": "Tools & apps",
+    "author": "@jasonlu_ai",
+    "description": "The same eBay test flow: 47 s on Jev, 79 s on Claude Sonnet 5."
+  },
+  {
+    "name": "Both hands on a piano, in real time",
+    "slug": "jev-piano-realtime",
+    "kind": "X post",
+    "category": "Games & real time",
+    "author": "@chandamamz",
+    "description": "@typesafeai's Jev controls the 2 hands and each finger to play the piano in real-time. Jev only \"sees\" what we see and plays this from the \"note waterfall\". It uses @browser_use's jev-ultrafast and some decision scheduling to make this happen in real-time. Sound on 🔈🔉🔊"
+  },
+  {
+    "name": "Tocsin",
+    "slug": "tocsin",
+    "kind": "GitHub",
+    "category": "Research & data",
+    "author": "@TPateeq",
+    "description": "22.8M log lines grouped into patterns, then one question each."
+  },
+  {
+    "name": "App Store keywords from the real competition",
+    "slug": "app-store-keyword-finder",
+    "kind": "X post",
+    "category": "Content & growth",
+    "author": "@everton_dev",
+    "description": "I built a tool that finds App Store keywords by reading the competition, and uses Jev to judge them. What it actually does: 1. Turns the app's own listing into a handful of search queries, with Jev filtering out the ones nobody would type. 2. Runs those searches on the App"
+  },
+  {
+    "name": "jev-browser in Cline",
+    "slug": "cline-jev-browser",
+    "kind": "X post",
+    "category": "Agents & browsers",
+    "author": "@cline",
+    "description": "We built a plugin that gives Jev a browser in Cline, and have been blown away by the results. 1. Install it in our new desktop app: Customize > Marketplace > Plugins > search 'jev-browser' 2. Create a Vercel AI Gateway API key, then save it to"
+  },
+  {
+    "name": "Voice control over Fusion 360",
+    "slug": "fusion-360-voice",
+    "kind": "X post",
+    "category": "Robotics & devices",
+    "author": "@xyz04274951",
+    "description": "I made this for fun. Wired a mic over Fusion 360: click, speak, Fusion runs the feature. @typesafeai ‘s Jev only decides if the utterance is a command."
+  },
+  {
+    "name": "compact-adviser",
+    "slug": "compact-adviser",
+    "kind": "GitHub",
+    "category": "Tools & apps",
+    "author": "@kunchenguid",
+    "description": "Tells you when your session is at a safe point to compact."
+  },
+  {
+    "name": "jev-align",
+    "slug": "jev-align",
+    "kind": "GitHub",
+    "category": "Research & data",
+    "author": "github.com",
+    "description": "Turns human labels into calibrated Jev classifiers with GEPA."
+  },
+  {
+    "name": "jev-semgrep",
+    "slug": "jev-semgrep",
+    "kind": "GitHub",
+    "category": "Tools & apps",
+    "author": "github.com",
+    "description": "grep by meaning, and across languages."
+  },
+  {
+    "name": "jev-use",
+    "slug": "jev-use-mac",
+    "kind": "GitHub",
+    "category": "Agents & browsers",
+    "author": "github.com",
+    "description": "Say it, and your Mac does it, with no vision model."
+  },
+  {
+    "name": "live-jev",
+    "slug": "live-jev",
+    "kind": "GitHub",
+    "category": "Tools & apps",
+    "author": "github.com",
+    "description": "Control Ableton Live with one short sentence."
+  },
+  {
+    "name": "jevs-fly",
+    "slug": "jevs-fly",
+    "kind": "GitHub",
+    "category": "Games & real time",
+    "author": "github.com",
+    "description": "A Three.js first-person flight, steered by Jev."
+  },
+  {
+    "name": "jev-desktop",
+    "slug": "jev-desktop",
+    "kind": "GitHub",
+    "category": "Agents & browsers",
+    "author": "github.com",
+    "description": "Jev picks the action inside Codex Computer Use."
+  },
+  {
+    "name": "jev-evaluation",
+    "slug": "jev-evaluation",
+    "kind": "GitHub",
+    "category": "Research & data",
+    "author": "github.com",
+    "description": "Nine experiments and 28 predictions, all fixed before any data."
+  },
+  {
+    "name": "jev-crawlers",
+    "slug": "jev-crawlers",
+    "kind": "GitHub",
+    "category": "Tools & apps",
+    "author": "github.com",
+    "description": "Bug-hunting crawlers built from five Unix-style primitives."
+  },
+  {
+    "name": "jev-oas-sentinel",
+    "slug": "jev-oas-sentinel",
+    "kind": "GitHub",
+    "category": "Tools & apps",
+    "author": "github.com",
+    "description": "OpenAPI compatibility checks, structural and semantic."
+  },
+  {
+    "name": "browser-ai",
+    "slug": "browser-ai-go",
+    "kind": "GitHub",
+    "category": "Agents & browsers",
+    "author": "github.com",
+    "description": "A Jev browser agent in pure Go, attached to a real Chrome."
+  },
+  {
+    "name": "minecraft-agent",
+    "slug": "minecraft-agent-astra-jev",
+    "kind": "GitHub",
+    "category": "Games & real time",
+    "author": "github.com",
+    "description": "An Astra planner with Jev as the controller, playing Minecraft."
+  },
+  {
+    "name": "TipTour",
+    "slug": "tiptour-macos",
+    "kind": "GitHub",
+    "category": "Agents & browsers",
+    "author": "@milindlabs",
+    "description": "A pointer companion for the Mac, with Jev driving the cursor."
+  },
+  {
+    "name": "EmbodiedJev",
+    "slug": "embodied-jev",
+    "kind": "GitHub",
+    "category": "Robotics & devices",
+    "author": "github.com",
+    "description": "A MuJoCo workbench for robot decisions, with Jev in the loop."
+  },
+  {
+    "name": "LLM Chess: jev-latest",
+    "slug": "llm-chess-jev",
+    "kind": "GitHub",
+    "category": "Games & real time",
+    "author": "github.com",
+    "description": "Jev played 80 games in a chess benchmark and made no illegal move."
+  },
+  {
+    "name": "大声读 (dasheng)",
+    "slug": "dasheng",
+    "kind": "GitHub",
+    "category": "Tools & apps",
+    "author": "github.com",
+    "description": "Streaming speech recognition listens, and Jev marks each word."
+  },
+  {
+    "name": "crush-monitor",
+    "slug": "crush-monitor",
+    "kind": "GitHub",
+    "category": "Content & growth",
+    "author": "github.com",
+    "description": "Reads a WeChat thread and scores emotion, intent and reply quality."
+  },
+  {
+    "name": "jev-dsh-decision",
+    "slug": "jev-dsh-decision",
+    "kind": "GitHub",
+    "category": "Tools & apps",
+    "author": "github.com",
+    "description": "A structured decision plugin for agent harnesses, built on Jev."
+  },
+  {
+    "name": "jevchat",
+    "slug": "jevchat",
+    "kind": "GitHub",
+    "category": "Research & data",
+    "author": "github.com",
+    "description": "A chatbot built out of a model that only answers typed questions."
+  },
+  {
+    "name": "pi-jev-router",
+    "slug": "philippdubach-pi-jev-router",
+    "kind": "GitHub",
+    "category": "Tools & apps",
+    "author": "github.com",
+    "description": "A Pareto-optimal OpenRouter router for Pi, decided by Jev."
+  },
+  {
+    "name": "call-coach-ai",
+    "slug": "call-coach-ai",
+    "kind": "GitHub",
+    "category": "Content & growth",
+    "author": "github.com",
+    "description": "A sales-call coach where Jev scores what was said."
+  },
+  {
+    "name": "jev-spring-boot-starter",
+    "slug": "jev-spring-boot-starter",
+    "kind": "GitHub",
+    "category": "Tools & apps",
+    "author": "github.com",
+    "description": "Jev as a Spring Boot 4 starter, over Spring MVC and RestClient."
+  },
+  {
+    "name": "jcr",
+    "slug": "jcr-resolver",
+    "kind": "GitHub",
+    "category": "Agents & browsers",
+    "author": "github.com",
+    "description": "Turns a vague agent request into a deterministic command."
+  },
+  {
+    "name": "RoboJEV",
+    "slug": "robojev",
+    "kind": "GitHub",
+    "category": "Robotics & devices",
+    "author": "github.com",
+    "description": "Two-stage Jev control of a Franka Panda arm in MuJoCo."
+  },
+  {
+    "name": "ST-jeved",
+    "slug": "st-jeved",
+    "kind": "GitHub",
+    "category": "Content & growth",
+    "author": "github.com",
+    "description": "A SillyTavern extension that measures each reply before it lands."
+  },
+  {
+    "name": "J++",
+    "slug": "jpp-language",
+    "kind": "GitHub",
+    "category": "Tools & apps",
+    "author": "github.com",
+    "description": "An experimental language for composing Jev questions."
+  },
+  {
+    "name": "ChatJev",
+    "slug": "chatjev",
+    "kind": "GitHub",
+    "category": "Research & data",
+    "author": "github.com",
+    "description": "Driving the classifier as a next-token predictor, one token at a time."
+  },
+  {
+    "name": "jev-auto-approve",
+    "slug": "jev-auto-approve",
+    "kind": "GitHub",
+    "category": "Tools & apps",
+    "author": "github.com",
+    "description": "A pull request approver that asks Jev before it approves."
+  },
+  {
+    "name": "pi-jev-skill-picker",
+    "slug": "pi-jev-skill-picker",
+    "kind": "GitHub",
+    "category": "Tools & apps",
+    "author": "github.com",
+    "description": "Ranks the Pi agent’s skills for the task in front of it."
+  },
+  {
+    "name": "jeval",
+    "slug": "jeval-confidence",
+    "kind": "GitHub",
+    "category": "Research & data",
+    "author": "github.com",
+    "description": "Works out what a Jev confidence score is actually worth."
+  },
+  {
+    "name": "jev-architect",
+    "slug": "jev-architect",
+    "kind": "GitHub",
+    "category": "Tools & apps",
+    "author": "github.com",
+    "description": "Helps you find, design and evaluate a Jev decision loop."
+  },
+  {
+    "name": "JevPR",
+    "slug": "jevpr",
+    "kind": "GitHub",
+    "category": "Tools & apps",
+    "author": "github.com",
+    "description": "Risk review of a pull request, decided rather than written."
+  },
+  {
+    "name": "jev-harness",
+    "slug": "jev-harness-filter",
+    "kind": "GitHub",
+    "category": "Agents & browsers",
+    "author": "github.com",
+    "description": "Every tool result is filtered by Jev before the model reads it."
+  },
+  {
+    "name": "jev-spec",
+    "slug": "jev-spec",
+    "kind": "GitHub",
+    "category": "Tools & apps",
+    "author": "github.com",
+    "description": "Checks generated code against the specification that asked for it."
+  },
+  {
+    "name": "jev-tool-router",
+    "slug": "jev-tool-router",
+    "kind": "GitHub",
+    "category": "Agents & browsers",
+    "author": "github.com",
+    "description": "Picks the MCP tool for Codex, instead of listing them all."
+  },
+  {
+    "name": "taste-lint",
+    "slug": "taste-lint",
+    "kind": "GitHub",
+    "category": "Content & growth",
+    "author": "github.com",
+    "description": "Catches AI slop in a diff before it ships."
+  },
+  {
+    "name": "playjev",
+    "slug": "playjev",
+    "kind": "GitHub",
+    "category": "Agents & browsers",
+    "author": "github.com",
+    "description": "Typed browser automation: Playwright acts, Jev decides."
+  },
+  {
+    "name": "jev-design",
+    "slug": "jev-design-console",
+    "kind": "GitHub",
+    "category": "Tools & apps",
+    "author": "github.com",
+    "description": "A console whose design system is chosen by Jev at runtime."
+  },
+  {
+    "name": "JevMinesweeper",
+    "slug": "jev-minesweeper",
+    "kind": "GitHub",
+    "category": "Games & real time",
+    "author": "github.com",
+    "description": "Jev plays Minesweeper, one square at a time."
+  },
+  {
+    "name": "Jcyber",
+    "slug": "jcyber",
+    "kind": "GitHub",
+    "category": "Tools & apps",
+    "author": "github.com",
+    "description": "A bug-bounty chain where Jev gates every step."
+  },
+  {
+    "name": "jev-search-mcp",
+    "slug": "jev-search-mcp",
+    "kind": "GitHub",
+    "category": "Tools & apps",
+    "author": "github.com",
+    "description": "Plain-language web search where Jev picks the sources."
+  },
+  {
+    "name": "perfectrecall",
+    "slug": "perfectrecall",
+    "kind": "GitHub",
+    "category": "Tools & apps",
+    "author": "github.com",
+    "description": "Agent memory where Jev decides what is worth recalling."
+  },
+  {
+    "name": "JevGuard",
+    "slug": "jevguard",
+    "kind": "GitHub",
+    "category": "Tools & apps",
+    "author": "github.com",
+    "description": "A decision runtime with zero-token caching and a calibrator."
+  },
+  {
+    "name": "jev-cua",
+    "slug": "jev-cua",
+    "kind": "GitHub",
+    "category": "Agents & browsers",
+    "author": "github.com",
+    "description": "A local computer-use fast path for Codex and Waku."
+  },
+  {
+    "name": "dsh-jev-tools",
+    "slug": "dsh-jev-tools",
+    "kind": "GitHub",
+    "category": "Agents & browsers",
+    "author": "github.com",
+    "description": "Judgment, not generation, inside DeepSeek Harness."
+  },
+  {
+    "name": "The Jev-enator",
+    "slug": "the-jev-enator",
+    "kind": "GitHub",
+    "category": "Tools & apps",
+    "author": "github.com",
+    "description": "Three Claude Code hooks that each ask Jev a question."
+  },
+  {
+    "name": "jev-turn-analysis",
+    "slug": "jev-turn-analysis",
+    "kind": "GitHub",
+    "category": "Tools & apps",
+    "author": "github.com",
+    "description": "Reads a finished coding session and judges each turn."
+  },
+  {
+    "name": "UXRay",
+    "slug": "uxray",
+    "kind": "GitHub",
+    "category": "Tools & apps",
+    "author": "github.com",
+    "description": "A screen overlay that flags manipulative interface patterns."
+  },
+  {
+    "name": "typesafe-jev-dojo",
+    "slug": "typesafe-jev-dojo",
+    "kind": "GitHub",
+    "category": "Games & real time",
+    "author": "github.com",
+    "description": "A graphical dojo: routing, Tetris, swarms and a gauntlet."
+  },
+  {
+    "name": "clay-jev-people-ranker",
+    "slug": "clay-jev-people-ranker",
+    "kind": "GitHub",
+    "category": "Content & growth",
+    "author": "github.com",
+    "description": "Lead scoring in Clay, ranked by Jev instead of a prompt."
+  },
+  {
+    "name": "fedjev-bench",
+    "slug": "fedjev-bench",
+    "kind": "GitHub",
+    "category": "Trading & markets",
+    "author": "github.com",
+    "description": "Does Jev hear a rate rise coming in an FOMC statement?"
+  },
+  {
+    "name": "jev-acento",
+    "slug": "jev-acento",
+    "kind": "GitHub",
+    "category": "Research & data",
+    "author": "github.com",
+    "description": "A pre-registered audit of how Jev handles Spanish."
+  },
+  {
+    "name": "A leveling agent that gets cheaper as it runs",
+    "slug": "tbc-leveling-agent",
+    "kind": "GitHub",
+    "category": "Games & real time",
+    "author": "github.com",
+    "description": "A guide-directed WoW agent designed to spend less the longer it plays."
+  },
+  {
+    "name": "723 ads, 30 personas, 22 cents",
+    "slug": "ad-focus-group",
+    "kind": "X post",
+    "category": "Content & growth",
+    "author": "@TheMattBerman",
+    "description": "jev KILLED the focus group. it scrolled 723 ads as 30 buyer personalities 21,690 stop or scroll decisions. 22 cents. (will be avail in @StealAds + mcp)"
+  },
+  {
+    "name": "24,000 Hacker News posts in two minutes",
+    "slug": "venice-hacker-news-classification",
+    "kind": "X post",
+    "category": "Research & data",
+    "author": "@sabrinaesaquino",
+    "description": "Jev is now live on the Venice API. Watch it classify 24,000 Hacker News posts into 12 categories in about 2 minutes"
+  },
+  {
+    "name": "OpenRouter’s Ori Eval",
+    "slug": "openrouter-ori-eval",
+    "kind": "X post",
+    "category": "Research & data",
+    "author": "@OpenRouter",
+    "description": "1/ Jev, a decision model by @typesafeai, sparked a burst of projects and discussion. We tested it using Ori Eval against popular LLMs on OpenRouter at judging. Jev was >5x faster than the next fastest model, and even its slowest requests beat every other model's median."
+  },
+  {
+    "name": "Copy and paste, with a decision in between",
+    "slug": "smart-copy-paste",
+    "kind": "X post",
+    "category": "Tools & apps",
+    "author": "@marcus_lowe",
+    "description": "what if copy/paste was smart? powered by @typesafeai jev it feels like every computer interaction will get rewritten"
+  }
+]

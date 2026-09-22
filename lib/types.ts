@@ -1,7 +1,7 @@
 export const TIERS = ['S', 'A', 'B', 'C', 'D', 'F'] as const
 export type Tier = (typeof TIERS)[number]
 
-export type Item = { name: string; emoji?: string; color?: string; image?: string }
+export type Item = { name: string; emoji?: string; color?: string; image?: string; description?: string }
 
 export type TierSet = {
   id: string
