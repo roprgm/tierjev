@@ -18,6 +18,9 @@ export function startXStub(fixtures: Record<string, unknown>, port = 0) {
       if (request.method === 'POST' && pathname === '/2/tweets') {
         return Response.json({ data: { id: '900', text: (body as { text: string }).text } })
       }
+      if (/^\/2\/users\/[^/]+\/mentions$/.test(pathname)) {
+        return Response.json(fixtures.mentions ?? { data: [] })
+      }
       const fixture = fixtures[pathname.match(/^\/2\/tweets\/([^/]+)$/)?.[1] ?? '']
       if (fixture) return Response.json(fixture)
       return Response.json({ errors: [{ title: 'Not Found Error', detail: pathname }] }, { status: 404 })

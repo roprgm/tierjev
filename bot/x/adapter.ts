@@ -1,4 +1,5 @@
 import { XAdapter, type XApiResponse, type XPost, type XUser } from '@chat-adapter/x'
+import type { WebhookOptions } from 'chat'
 import { MAX_PARENTS } from '@/bot/answer/thread'
 import type { Post } from '@/bot/answer/types'
 import { logError } from '@/bot/log'
@@ -10,10 +11,18 @@ const LOOKUP_QUERY = new URLSearchParams({
   'user.fields': 'username',
 }).toString()
 const ENTITIES: Record<string, string> = { '&amp;': '&', '&lt;': '<', '&gt;': '>' }
+const MENTIONS_QUERY = new URLSearchParams({
+  'tweet.fields': 'text,author_id,conversation_id,lang,note_tweet,referenced_tweets,created_at',
+  expansions: 'author_id',
+  'user.fields': 'username',
+  max_results: '10',
+}).toString()
 
 type Reference = { type: 'replied_to' | 'quoted' | 'retweeted'; id: string }
 type LookupPost = XPost & { note_tweet?: { text: string }; referenced_tweets?: Reference[] }
 type Lookup = XApiResponse<LookupPost> & { includes?: { tweets?: LookupPost[]; users?: XUser[] } }
+type Mentions = XApiResponse<LookupPost[]> & { includes?: { users?: XUser[] } }
+export type Mention = { post: LookupPost; author?: XUser }
 
 const referenceId = (post: LookupPost, type: Reference['type']) =>
   post.referenced_tweets?.find((ref) => ref.type === type)?.id
@@ -58,6 +67,31 @@ export class ThreadXAdapter extends XAdapter {
       authorUsername: post.author_id ? usernames.get(post.author_id) : undefined,
       lang: post.lang,
     }))
+  }
+
+  // Mentions of the bot, newest first. The webhook is the fast path; this is what catches what it drops.
+  async fetchMentions(sinceId?: string): Promise<Mention[]> {
+    const query = sinceId ? `${MENTIONS_QUERY}&since_id=${encodeURIComponent(sinceId)}` : MENTIONS_QUERY
+    const path = `/2/users/${encodeURIComponent(this.botUserId ?? '')}/mentions?${query}`
+    const mentions = await withTimeout(
+      this.xApiFetch<LookupPost[]>(path, 'GET') as Promise<Mentions>,
+      LOOKUP_TIMEOUT_MS,
+    )
+    const users = new Map((mentions.includes?.users ?? []).map((user) => [user.id, user]))
+    return (mentions.data ?? []).map((post) => ({
+      post,
+      author: post.author_id ? users.get(post.author_id) : undefined,
+    }))
+  }
+
+  // Hands a post to the Chat SDK exactly as an inbound webhook would, dedupe and thread lock included.
+  ingest({ post, author }: Mention, options: WebhookOptions) {
+    this.handleIncomingPost(post, author, options)
+  }
+
+  // The Activity API manages subscriptions with a user-context token, so expose the refreshed one.
+  userToken() {
+    return this.resolveAccessToken()
   }
 
   private lookup(id: string) {

@@ -74,16 +74,18 @@ async function overCap(state: StateAdapter, authorId = 'unknown') {
   return count > MENTIONS_PER_AUTHOR_PER_HOUR
 }
 
-let bot: ReturnType<typeof createBot> | undefined
+let context: { bot: ReturnType<typeof createBot>; x: ThreadXAdapter; state: StateAdapter } | undefined
 
-export function getBot() {
-  bot ??= createBot({
-    x: new ThreadXAdapter(xConfig()),
-    state: process.env.REDIS_URL ? createRedisState() : createMemoryState(),
-    answer: answerThread,
-  })
-  return bot
+export function getBotContext() {
+  if (!context) {
+    const x = new ThreadXAdapter(xConfig())
+    const state = process.env.REDIS_URL ? createRedisState() : createMemoryState()
+    context = { bot: createBot({ x, state, answer: answerThread }), x, state }
+  }
+  return context
 }
+
+export const getBot = () => getBotContext().bot
 
 // Mirrors createXAdapter's env handling, which the subclass cannot reuse.
 function xConfig() {

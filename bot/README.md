@@ -6,7 +6,16 @@ Mention [@tierjev](https://x.com/tierjev) on X and it replies with one answer ta
 
 X delivers `post.mention.create` events to `/api/webhooks/x`, where the [Chat SDK](https://chat-sdk.dev) X adapter verifies the signature and dedupes deliveries. The handler (`x/bot.ts`) fetches the mention and up to six parent posts with `GET /2/tweets/:id` (`x/adapter.ts`, one request covers two hops thanks to the `referenced_tweets.id` expansion), then `answerThread` (`answer/verdict.ts`) does the rest: parents are cut to 280 characters, the thread goes to DeepSeek as JSON and it lists the candidate answers as written in the thread, short phrases included (`answer/options.ts`); those candidates become the options of one Jev `choice` question with `none_of_the_above` reserved for when the options do not address the question at all (`answer/question.ts`). Jev commits to whichever option is likeliest, even on a close call, so polls and other opinion questions get a real answer; the bot only stays quiet when Jev picks the escape option or its top pick has too little support. When DeepSeek fails, the candidates fall back to the words of the thread minus handles, links, emoji and the stopwords of each post's language (`answer/words.ts`).
 
-Redis (the Upstash instance of the site, through `REDIS_URL`) holds the dedupe keys, the per-thread locks, the OAuth refresh token that X rotates on every refresh, and a log of every handled mention: the thread as sent to the models, the candidates and where they came from, Jev's choice, the full probability distribution, Jev's confidence, the reply and the timing (`x/answers.ts`, last 1000 mentions, one key per mention id for a future permalink).
+A cron sweep backs the webhook up. X only delivers Activity API events while the bot account has a live OAuth
+token, and the bot only refreshes that token when it handles an event, so a quiet stretch used to kill delivery
+for good: the subscription went silent, nothing refreshed the token, and X then refused to recreate the
+subscription at all ("An active OAuth token with these scope(s) is required for this event type"). Every five
+minutes `/api/cron/x` calls `GET /2/users/:id/mentions` (`x/poll.ts`), answers anything the webhook missed, and
+refreshes the token as a side effect, which is what keeps the subscription alive. It skips mentions that already
+have an answer record and anything older than a day, so it never replies twice or works through a backlog.
+`CRON_SECRET` gates the route.
+
+Redis (the Upstash instance of the site, through `REDIS_URL`) holds the dedupe keys, the per-thread locks, the OAuth refresh token that X rotates on every refresh, the id of the newest mention the sweep has seen, and a log of every handled mention: the thread as sent to the models, the candidates and where they came from, Jev's choice, the full probability distribution, Jev's confidence, the reply and the timing (`x/answers.ts`, last 1000 mentions, one key per mention id for a future permalink).
 
 Every handled mention also becomes a Vercel Web Analytics event (`bot_reply`, `bot_silent`, `bot_failed`, `bot_capped`) with the source of the candidates, their count, the thread length, Jev's confidence and the time taken (`x/analytics.ts`), so the dashboard shows how often the bot answers and how sure it is.
 

@@ -1,3 +1,8 @@
+import { createRedisState } from '@chat-adapter/state-redis'
+import { ConsoleLogger } from 'chat'
+import { answerThread } from '@/bot/answer/verdict'
+import { ThreadXAdapter } from '@/bot/x/adapter'
+import { createBot } from '@/bot/x/bot'
 import { required } from './env'
 
 const EVENT = 'post.mention.create'
@@ -37,7 +42,7 @@ const commands: Record<string, () => Promise<unknown>> = {
       'POST',
       '/2/activity/subscriptions',
       { event_type: EVENT, filter: { user_id: userId }, webhook_id: webhookId },
-      required('X_USER_ACCESS_TOKEN'),
+      await userToken(),
     )
   },
   async list() {
@@ -56,6 +61,28 @@ async function preflight(url: string) {
   const target = res.headers.get('location')
   if (target) throw new Error(`${url} redirects to ${target.split('?')[0]}; register that URL instead`)
   if (!res.ok) throw new Error(`${url} answered ${res.status} to the CRC check; deploy the bot first`)
+}
+
+// The subscription call needs a live user-context token. X deactivates a subscription once the account has
+// none, so mint it from the bot's own refresh chain rather than the two-hour X_USER_ACCESS_TOKEN.
+async function userToken() {
+  const x = new ThreadXAdapter({
+    consumerSecret: required('X_CONSUMER_SECRET'),
+    clientId: required('X_CLIENT_ID'),
+    clientSecret: process.env.X_CLIENT_SECRET,
+    refreshToken: required('X_REFRESH_TOKEN'),
+    encryptionKey: process.env.X_ENCRYPTION_KEY,
+    userId: process.env.X_USER_ID,
+    userName: process.env.X_USERNAME,
+    logger: new ConsoleLogger('warn').child('x'),
+  })
+  const state = createRedisState()
+  await createBot({ x, state, answer: answerThread, logger: 'silent' }).initialize()
+  try {
+    return await x.userToken()
+  } finally {
+    await state.disconnect()
+  }
 }
 
 const run = commands[command ?? '']
